@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<OptionParam Version="1.26.0210.1455" Memo="OIG-R series">
+  <Page Name="SAF" Visible="1">
+    <Param Visible="1" Type="1" Addr="15000" Default="0.5" Unit="mm" Min="" Max="" Memo="砂輪內徑X軸安全行程"/>
+    <Param Visible="1" Type="1" Addr="15001" Default="1" Unit="mm" Min="" Max="" Memo="砂輪內徑Z軸安全行程"/>
+    <Param Visible="1" Type="1" Addr="15002" Default="100" Unit="mm/min" Min="" Max="" Memo="砂輪內徑X軸安全行程速度"/>
+    <Param Visible="1" Type="1" Addr="15003" Default="100" Unit="mm/min" Min="" Max="" Memo="砂輪內徑Z軸安全行程速度"/>
+    <Param Visible="1" Type="1" Addr="15004" Default="2" Unit="mm" Min="" Max="" Memo="砂輪外徑X軸安全行程"/>
+    <Param Visible="1" Type="1" Addr="15005" Default="1" Unit="mm" Min="" Max="" Memo="砂輪外徑Z軸安全行程"/>
+    <Param Visible="1" Type="1" Addr="15006" Default="100" Unit="mm/min" Min="" Max="" Memo="砂輪外徑X軸安全行程速度"/>
+    <Param Visible="1" Type="1" Addr="15007" Default="100" Unit="mm/min" Min="" Max="" Memo="砂輪外徑Z軸安全行程速度"/>
+    <Param Visible="1" Type="1" Addr="15008" Default="0.05" Unit="mm" Min="" Max="" Memo="砂輪內徑安全行程單次進給量"/>
+  </Page>
+
+  <Page Name="PRO" Visible="1">
+    <Param Visible="1" Type="1" Addr="633" Unit="mm" Min="0" Max="5" Memo="端測容許誤差值"/>
+    <Param Visible="1" Type="1" Addr="634" Unit="mm" Min="0" Max="0" Memo="測頭球徑"/>
+    <Param Visible="1" Type="1" Addr="635" Unit="mm" Min="0" Max="0" Memo="端測安全位置"/>
+  </Page>
+
+  <Page Name="OPT" Visible="1">
+    <Param Visible="1" Type="1" Addr="620" Unit="" Memo="工作主軸定位使用">
+      <Value Index="0" Visible="1" Value="0" TextNo="1000" Memo="不使用"/>
+      <Value Index="1" Visible="1" Value="1" TextNo="1004" Memo="C軸定位"/>
+      <Value Index="2" Visible="1" Value="2" TextNo="1005" Memo="SENSOR定位"/>
+    </Param>
+    <Param Visible="1" Type="1" Addr="621" Unit="deg" Min="0" Max="359.999" Memo="C軸定位角度"/>
+    <Param Visible="1" Type="1" Addr="623" Unit="" Memo="程式連動">
+      <Value Index="0" Visible="1" Value="0" TextNo="1000" Memo="不使用"/>
+      <Value Index="1" Visible="1" Value="1" TextNo="1006" Memo="單動(自動送料)"/>
+      <Value Index="2" Visible="1" Value="2" TextNo="1007" Memo="連動(自動送收料)"/>
+    </Param>
+    <Param Visible="1" Type="5" Addr="OffsetMax" Unit="mm" Min="" Max="" Memo="補正上限"/>
+    <Param Visible="1" Type="5" Addr="OffsetMin" Unit="mm" Min="" Max="" Memo="補正下限"/>
+  </Page>
+</OptionParam>

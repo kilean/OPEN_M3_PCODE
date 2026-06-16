@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace OIG
+{
+    public partial class Fo_ProbeMsg : Form
+    {
+        public Fo_ProbeMsg()
+        {
+            InitializeComponent();
+            this.LoadLanguageFile(Units.langfile, this.Name);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
