@@ -1,183 +1,612 @@
 <MachineSetting Version="1.26.0115.1613" Memo="">
-  <GW1 GwType="0" Memo="GwType 0:內圓, 1:外圓(預留)">
-    <Shape DressMode="1"/>
-    <Shape DressMode="2"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-  </GW1>
-  <GW2 GwType="0" Memo="GwType 0:內圓, 1:外圓(預留)">
-    <Shape DressMode="1"/>
-    <Shape DressMode="2"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-  </GW2>
-  <GW3 GwType="0" Memo="GwType 0:內圓, 1:外圓(預留)">
-    <Shape DressMode="1"/>
-    <Shape DressMode="2"/>
-    <Shape DressMode="8"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-  </GW3>
-  <GW4 GwType="0" Memo="GwType 0:內圓, 1:外圓(預留)">
-    <Shape DressMode="1"/>
-    <Shape DressMode="2"/>
-    <Shape DressMode="8"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-    <Shape DressMode="0"/>
-  </GW4>
-  <GwType0 Memo="內圓砂輪參數定義">
-    <ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="2" DressLeft="1" DressRight="0" Memo="外徑+左端面">
-      <Param Macro="10026" Memo="左側幅長"/>
-      <Param Macro="10027" Memo="左側逃離長"/>
-      <Param Macro="10028" Memo="左側逃離量"/>
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="8" DressLeft="1" DressRight="0" Memo="成形修整"/>
-    <Coordinate>
-      <G55 Visible="1" Image="G55.png" ODImage=""/>
-      <G57 Visible="1" Image="G57_H.png" ODImage=""/>
-      <G58 Visible="0" Image="" ODImage=""/>
-      <G54X Visible="1" Image="G54X.png" ODImage="G54X1.png"/>
-      <G54Z Visible="1" Image="G54Z.png" ODImage=""/>
-      <G59Z Visible="0" Image="" ODImage=""/>
-    </Coordinate>
-  </GwType0>
-  <GwType1 Memo="外圓砂輪參數定義(預留)">
-    <ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="2" DressLeft="1" DressRight="0"  Memo="外徑+左端面">
-      <Param Macro="10026" Memo="左側幅長"/>
-      <Param Macro="10027" Memo="左側逃離長"/>
-      <Param Macro="10028" Memo="左側逃離量"/>
-      <Param Macro="10029" Memo="左側R角"/>
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="3" DressLeft="0" DressRight="1"  Memo="外徑+右端面">
-      <Param Macro="10034" Memo="右側幅長"/>
-      <Param Macro="10035" Memo="右側逃離長"/>
-      <Param Macro="10036" Memo="右側逃離量"/>
-      <Param Macro="10037" Memo="右側R角"/>
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="4" DressLeft="1" DressRight="1"  Memo="外徑+左右端面">
-      <Param Macro="10026" Memo="左側幅長"/>
-      <Param Macro="10027" Memo="左側逃離長"/>
-      <Param Macro="10028" Memo="左側逃離量"/>
-      <Param Macro="10029" Memo="左側R角"/>
-      <Param Macro="10034" Memo="右側幅長"/>
-      <Param Macro="10035" Memo="右側逃離長"/>
-      <Param Macro="10036" Memo="右側逃離量"/>
-      <Param Macro="10037" Memo="右側R角"/>
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="5" DressLeft="0" DressRight="0"  Memo="左錐度">
-    </ShapeDef>
-    <ShapeDef DressMode="6" DressLeft="0" DressRight="0"  Memo="右錐度">
-    </ShapeDef>
-    <ShapeDef DressMode="8" DressLeft="1" DressRight="1" Memo="成形修整"/>
-    <Coordinate>
-      <G55 Visible="1" Image="G55.png"/>
-      <G57 Visible="1" Image="G57.png"/>
-      <G58 Visible="0" Image=""/>
-      <G54X Image="G54X.png"/>
-      <G54Z Visible="1" Image="G54Z.png"/>
-      <G59Z Visible="0" Image="G59Z.png"/>
-    </Coordinate>
-  </GwType1>
-  <GwType2 Memo="外圓斜頭砂輪參數定義">
-    <ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="2" DressLeft="1" DressRight="0" Memo="外徑+左端面">
-      <Param Macro="10026" Memo="左側幅長"/>
-      <Param Macro="10027" Memo="左側逃離長"/>
-      <Param Macro="10028" Memo="左側逃離量"/>
-      <Param Macro="10021" Memo="左側超切量"/>
-      <Param Macro="10022" Memo="右側超切量" />
-      <Param Macro="10018" Memo="中凸量" />
-      <Param Macro="10012" Memo="右側偏擺量" />
-    </ShapeDef>
-    <ShapeDef DressMode="7" DressLeft="0" DressRight="0"  Memo="左錐度(斜頭專用)">
-    </ShapeDef>
-    <ShapeDef DressMode="8" DressLeft="1" DressRight="0" Memo="成形修整"/>
-    <Coordinate>
-      <G55 Visible="1" Image="G55.png"/>
-      <G57 Visible="1" Image="G57_H.png"/>
-      <G58 Visible="0" Image=""/>
-      <G54X Visible="1" Image="G54X.png"/>
-      <G54Z Visible="1" Image="G54Z.png"/>
-      <G59Z Visible="0" Image=""/>
-    </Coordinate>
-  </GwType2>
-  <MacroLimit>
-    <Macro No="10014" Min="0" Max="9999" Unit="mm" Memo="砂輪修整次數"/>
-    <Macro No="10015" Min="0" Max="9999" Unit="mm" Memo="空修次數"/>
-    <Macro No="10016" Min="0" Max="0.1" Unit="mm" Memo="外徑修整量"/>
-    <Macro No="10017" Min="0" Max="1000" Unit="mm/min" Memo="外徑修整速度"/>
-    <Macro No="10024" Min="0" Max="0.1" Unit="mm" Memo="左側修整量"/>
-    <Macro No="10025" Min="0" Max="1000" Unit="mm/min" Memo="左側修整速度"/>
-    <Macro No="10032" Min="0" Max="0.1" Unit="mm" Memo="右側修整量"/>
-    <Macro No="10033" Min="0" Max="1000" Unit="mm/min" Memo="右側修整速度"/>
-  </MacroLimit>
+	<GW1 GwType="0" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="4"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="6"/>
+		<Shape DressMode="8"/>
+	</GW1>
+	<GW2 GwType="0" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="4"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="6"/>
+		<Shape DressMode="8"/>
+	</GW2>
+	<GW3 GwType="0" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="4"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="6"/>
+		<Shape DressMode="8"/>
+	</GW3>
+	<GW4 GwType="0" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="4"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="6"/>
+		<Shape DressMode="8"/>
+	</GW4>
+	<GW1 GwType="1" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW1>
+	<GW2 GwType="1" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW2>
+	<GW3 GwType="1" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW3>
+	<GW4 GwType="1" Memo="GwType 0:外圓, 1:內圓">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="5"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW4>
+	<GW1 GwType="2" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW1>
+	<GW2 GwType="2" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW2>
+	<GW3 GwType="2" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW3>
+	<GW4 GwType="2" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="2"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW4>
+	<GW1 GwType="3" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW1>
+	<GW2 GwType="3" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW2>
+	<GW3 GwType="3" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW3>
+	<GW4 GwType="2" Memo="GwType 2:外圓斜頭正角度, 3:外圓斜頭負角度">
+		<Shape DressMode="1"/>
+		<Shape DressMode="3"/>
+		<Shape DressMode="7"/>
+		<Shape DressMode="8"/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+		<Shape DressMode=""/>
+	</GW4>
+	<GwType0 Memo="外圓砂輪參數定義">
+		<ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="0" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>			
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="2" DressLeft="1" DressRight="0" Memo="外徑+左端面">
+			<Param Macro="10026" Memo="左側幅長"/>
+			<Param Macro="10027" Memo="左側逃離長"/>
+			<Param Macro="10028" Memo="左側逃離量"/>
+			<Param Macro="10029" Memo="左側R角"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>				
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="3" DressLeft="0" DressRight="1" Memo="外徑+右端面">
+			<Param Macro="10034" Memo="右側幅長"/>
+			<Param Macro="10035" Memo="右側逃離長"/>
+			<Param Macro="10036" Memo="右側逃離量"/>
+			<Param Macro="10037" Memo="右側R角"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>				
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="4" DressLeft="1" DressRight="1" Memo="外徑+左右端面">
+			<Param Macro="10026" Memo="左側幅長"/>
+			<Param Macro="10027" Memo="左側逃離長"/>
+			<Param Macro="10028" Memo="左側逃離量"/>
+			<Param Macro="10029" Memo="左側R角"/>
+			<Param Macro="10034" Memo="右側幅長"/>
+			<Param Macro="10035" Memo="右側逃離長"/>
+			<Param Macro="10036" Memo="右側逃離量"/>
+			<Param Macro="10037" Memo="右側R角"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>			
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="5" DressLeft="1" DressRight="0" Memo="左錐度">
+			<Param Macro="10040" Memo="直線幅"/>
+			<Param Macro="10041" Memo="錐度幅"/>
+			<Param Macro="10042" Memo="錐度度數"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>			
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="6" DressLeft="0" DressRight="1" Memo="右錐度">
+			<Param Macro="10040" Memo="直線幅"/>
+			<Param Macro="10041" Memo="錐度幅"/>
+			<Param Macro="10042" Memo="錐度度數"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>		
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="8" DressLeft="1" DressRight="0" Memo="成形修整">
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<Coordinate>		
+			<G54G59X Visible="1" Image="G54G59X.png"/>
+			<G54Z Visible="1" Image="G54Z.png"/>
+			<G59Z Visible="1" Image="G59Z.png"/>		
+		</Coordinate>
+	</GwType0>
+	<GwType1 Memo="內圓砂輪參數定義">
+		<ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="2" DressLeft="1" DressRight="0"  Memo="外徑+左端面">
+			<Param Macro="10026" Memo="左側幅長"/>
+			<Param Macro="10027" Memo="左側逃離長"/>
+			<Param Macro="10028" Memo="左側逃離量"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="3" DressLeft="0" DressRight="1"  Memo="外徑+右端面">
+			<Param Macro="10034" Memo="右側幅長"/>
+			<Param Macro="10035" Memo="右側逃離長"/>
+			<Param Macro="10036" Memo="右側逃離量"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="1" Image="G58.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="4" DressLeft="1" DressRight="1"  Memo="外徑+左右端面">
+			<Param Macro="10026" Memo="左側幅長"/>
+			<Param Macro="10027" Memo="左側逃離長"/>
+			<Param Macro="10028" Memo="左側逃離量"/>
+			<Param Macro="10034" Memo="右側幅長"/>
+			<Param Macro="10035" Memo="右側逃離長"/>
+			<Param Macro="10036" Memo="右側逃離量"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="5" DressLeft="1" DressRight="0"  Memo="左錐度">
+			<Param Macro="10041" Memo="錐度幅"/>
+			<Param Macro="10042" Memo="錐度度數"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="6" DressLeft="0" DressRight="1"  Memo="右錐度">
+		</ShapeDef>
+		<ShapeDef DressMode="8" DressLeft="1" DressRight="1" Memo="成形修整">
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<Coordinate>			
+			<G54G59X Visible="1" Image="G54X.png"/>
+			<G54Z Visible="0" Image="G54X1.png"/>
+			<G59Z Visible="1" Image="G54Z.png"/>	
+		</Coordinate>
+	</GwType1>
+	<GwType2 Memo="外圓斜頭正角度砂輪參數定義">
+		<ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="2" DressLeft="1" DressRight="0" Memo="外徑+左端面">
+			<Param Macro="10027" Memo="左側逃離長"/>
+			<Param Macro="10029" Memo="左側R角"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="7" DressLeft="1" DressRight="0"  Memo="左錐度(斜頭專用)">
+			<Param Macro="10040" Memo="直線幅"/>
+			<Param Macro="10041" Memo="錐度幅"/>
+			<Param Macro="10042" Memo="錐度度數"/>
+			<Param Macro="10043" Memo="左側逃離長"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="8" DressLeft="1" DressRight="1" Memo="成形修整">
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="1" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<Coordinate>
+			<G54G59X Visible="1" Image="G54G59X.png"/>
+			<G54Z Visible="0" Image="G54X.png"/>
+			<G59Z Visible="1" Image="G54Z.png"/>
+		</Coordinate>
+	</GwType2>
+	<GwType3 Memo="外圓斜頭負角度砂輪參數定義">
+		<ShapeDef DressMode="1" DressLeft="0" DressRight="0" Memo="外徑修整">
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="0" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="3" DressLeft="0" DressRight="1" Memo="外徑+右端面">
+			<Param Macro="10035" Memo="右側逃離長"/>
+			<Param Macro="10037" Memo="右側R角"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Param Macro="10018" Memo="中凸量" />
+			<Param Macro="10012" Memo="右側偏擺量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="7" DressLeft="0" DressRight="1"  Memo="右錐度">
+			<Param Macro="10040" Memo="直線幅"/>
+			<Param Macro="10041" Memo="錐度幅"/>
+			<Param Macro="10042" Memo="錐度度數"/>
+			<Param Macro="10043" Memo="左側逃離長"/>
+			<Param Macro="10021" Memo="左側超切量"/>
+			<Param Macro="10022" Memo="右側超切量" />
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G58.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<ShapeDef DressMode="8" DressLeft="1" DressRight="1" Memo="成形修整">
+			<Tools>
+				<Tool3>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool3>
+				<Tool2>
+					<G55 Visible="1" Image="G55.png"/>
+					<G57 Visible="0" Image="G57.png"/>
+					<G58 Visible="1" Image="G58.png"/>
+				</Tool2>
+			</Tools>
+		</ShapeDef>
+		<Coordinate>
+			<G54G59X Visible="1" Image="G54G59X.png"/>
+			<G54Z Visible="0" Image="G54X.png"/>
+			<G59Z Visible="1" Image="G54Z.png"/>
+		</Coordinate>
+	</GwType3>
+	<MacroLimit>
+		<Macro No="10014" Min="0" Max="9999" Unit="mm" Memo="砂輪修整次數"/>
+		<Macro No="10015" Min="0" Max="9999" Unit="mm" Memo="空修次數"/>
+		<Macro No="10016" Min="0" Max="0.1" Unit="mm" Memo="外徑修整量"/>
+		<Macro No="10017" Min="0" Max="1000" Unit="mm/min" Memo="外徑修整速度"/>
+		<Macro No="10024" Min="0" Max="0.1" Unit="mm" Memo="左側修整量"/>
+		<Macro No="10025" Min="0" Max="1000" Unit="mm/min" Memo="左側修整速度"/>
+		<Macro No="10032" Min="0" Max="0.1" Unit="mm" Memo="右側修整量"/>
+		<Macro No="10033" Min="0" Max="1000" Unit="mm/min" Memo="右側修整速度"/>
+	</MacroLimit>
 
-  <ProcessList Memo="目前共20個位置可設定工序">
-    <Process ID="50"/>
-    <Process ID="51"/>
-    <Process ID="52"/>
-    <Process ID="53"/>
-    <Process ID="54"/>
+	<ProcessList Memo="目前共20個位置可設定工序">
+		<Process ID="50"/>
+		<Process ID="51"/>
+		<Process ID="52"/>
+		<Process ID="53"/>
+		<Process ID="54"/>
 
-    <Process ID="55"/>
-    <Process ID="56"/>
-    <Process ID="57"/>
-    <Process ID="58"/>
-    <Process ID="59"/>
+		<Process ID="55"/>
+		<Process ID="56"/>
+		<Process ID="57"/>
+		<Process ID="58"/>
+		<Process ID="59"/>
 
-    <Process ID="0"/>
-    <Process ID="0"/>
-    <Process ID="0"/>
-    <Process ID="0"/>
-    <Process ID="0"/>
-    
-    <Process ID="0"/>
-    <Process ID="201"/>
-    <Process ID="202"/>
-    <Process ID="203"/>
-    <Process ID="999"/>
-  </ProcessList>
+		<Process ID="0"/>
+		<Process ID="0"/>
+		<Process ID="0"/>
+		<Process ID="0"/>
+		<Process ID="0"/>
+
+		<Process ID="0"/>
+		<Process ID="201"/>
+		<Process ID="202"/>
+		<Process ID="203"/>
+		<Process ID="999"/>
+	</ProcessList>
 </MachineSetting>

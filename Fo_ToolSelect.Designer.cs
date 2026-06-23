@@ -81,7 +81,7 @@
             this.la_Gw3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_Gw3.ForeColor = System.Drawing.Color.Black;
             this.la_Gw3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_Gw3.Location = new System.Drawing.Point(8, 304);
+            this.la_Gw3.Location = new System.Drawing.Point(280, 136);
             this.la_Gw3.Name = "la_Gw3";
             this.la_Gw3.Size = new System.Drawing.Size(128, 24);
             this.la_Gw3.TabIndex = 20;
@@ -94,7 +94,7 @@
             this.la_Gw4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_Gw4.ForeColor = System.Drawing.Color.Black;
             this.la_Gw4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_Gw4.Location = new System.Drawing.Point(144, 304);
+            this.la_Gw4.Location = new System.Drawing.Point(8, 304);
             this.la_Gw4.Name = "la_Gw4";
             this.la_Gw4.Size = new System.Drawing.Size(128, 24);
             this.la_Gw4.TabIndex = 22;
@@ -124,7 +124,7 @@
             // 
             this.pic_Gw4.BackColor = System.Drawing.Color.Transparent;
             this.pic_Gw4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pic_Gw4.Location = new System.Drawing.Point(144, 176);
+            this.pic_Gw4.Location = new System.Drawing.Point(8, 176);
             this.pic_Gw4.Name = "pic_Gw4";
             this.pic_Gw4.Size = new System.Drawing.Size(128, 128);
             this.pic_Gw4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             // 
             this.pic_Gw3.BackColor = System.Drawing.Color.Transparent;
             this.pic_Gw3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pic_Gw3.Location = new System.Drawing.Point(8, 176);
+            this.pic_Gw3.Location = new System.Drawing.Point(280, 8);
             this.pic_Gw3.Name = "pic_Gw3";
             this.pic_Gw3.Size = new System.Drawing.Size(128, 128);
             this.pic_Gw3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +198,7 @@
             this.la_NoGw.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_NoGw.ForeColor = System.Drawing.Color.Black;
             this.la_NoGw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_NoGw.Location = new System.Drawing.Point(280, 136);
+            this.la_NoGw.Location = new System.Drawing.Point(144, 304);
             this.la_NoGw.Name = "la_NoGw";
             this.la_NoGw.Size = new System.Drawing.Size(128, 24);
             this.la_NoGw.TabIndex = 48;
@@ -210,7 +210,7 @@
             this.pic_NoGw.BackColor = System.Drawing.Color.Transparent;
             this.pic_NoGw.Image = ((System.Drawing.Image)(resources.GetObject("pic_NoGw.Image")));
             this.pic_NoGw.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pic_NoGw.Location = new System.Drawing.Point(280, 8);
+            this.pic_NoGw.Location = new System.Drawing.Point(144, 176);
             this.pic_NoGw.Name = "pic_NoGw";
             this.pic_NoGw.Size = new System.Drawing.Size(128, 128);
             this.pic_NoGw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

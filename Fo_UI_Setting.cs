@@ -62,7 +62,7 @@ namespace OIG
                 {
                     XmlElement xmlGw = machineSetting.GetGw(i);
                     int.TryParse(xmlGw.GetAttribute("GwType"), out int type);
-                    Units.Fo_Main.focas.WriteMacro(10004 + (i - 1) * 100, type);
+                    Units.Fo_Main.focas.WriteMacro(10004 + (i - 1) * 200, type);
                 }
                 bFinish = true;
             }));

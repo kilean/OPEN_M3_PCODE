@@ -26,9 +26,13 @@ namespace OIG
 
             pa_ToolSelect.Dock = DockStyle.Fill;
 
-            if (Units.Fo_Main.MachType == MachineType.OIG_R_M4) this.Height = 336;
-            else this.Height = 168;
-
+            //if (Units.Fo_Main.MachType == MachineType.OIG_R_M4) this.Height = 336;
+            //else this.Height = 168;
+            this.Height = 168;
+            if(Units.Fo_Main.GwCount >= 4)
+            {
+                this.Height = 336;
+            }
             PictureBox[] pics = { pic_Gw1, pic_Gw2, pic_Gw3, pic_Gw4 };
             double[] modes = new double[4];
             int GwNo = 0;
@@ -38,7 +42,7 @@ namespace OIG
                 GwNo = (int)Math.Round(no);
 
                 for(int i=0; i<4; i++) { 
-                    Units.Fo_Main.focas.ReadMacro(10005 + i * 100, out double mode);
+                    Units.Fo_Main.focas.ReadMacro(10005 + i * 200, out double mode);
                     modes[i] = mode;
                 }
                 bFinish = true;
@@ -57,27 +61,25 @@ namespace OIG
             }
 
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < Units.Fo_Main.GwCount; i++)
             {
-                
+                string machineTypeName = "OCD";
+                if (Units.Fo_Main.GWType[i] == MachineType.OIG) machineTypeName = "OIG";
+                else if (Units.Fo_Main.GWType[i] == MachineType.OCD2) machineTypeName = "OCD2";
+                else if (Units.Fo_Main.GWType[i] == MachineType.OCD3) machineTypeName = "OCD3";
                 int DressMode = (int)Math.Round(modes[i]);
-                string filename = Application.StartupPath + "\\image\\OIG\\Shape\\150x150\\Shape" + DressMode + ".png";
+                string filename = Application.StartupPath + $"\\image\\{machineTypeName}\\Shape\\150x150\\Shape" + DressMode + ".png";
                 pics[i].Image = File.Exists(filename) ? Image.FromFile(filename) : null;
             }
-
-            
-
-
-            
 
             la_NoGw.BackColor = GwNo == 0 ? Color.Yellow : Color.Transparent;
             la_Gw1.BackColor = GwNo == 1 ? Color.Yellow : Color.Transparent;
             la_Gw2.BackColor = GwNo == 2 ? Color.Yellow : Color.Transparent;
             la_Gw3.BackColor = GwNo == 3 ? Color.Yellow : Color.Transparent;
             la_Gw4.BackColor = GwNo == 4 ? Color.Yellow : Color.Transparent;
-
-
-
+            la_Gw3.Visible = pic_Gw3.Visible = Units.Fo_Main.GwCount == 3;
+            la_Gw4.Visible = pic_Gw4.Visible = Units.Fo_Main.GwCount == 4;
+            la_NoGw.Visible = pic_NoGw.Visible = false;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)

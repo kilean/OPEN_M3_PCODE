@@ -15,6 +15,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Remoting.Lifetime;
 using System.Security.Cryptography;
 using System.Text;
@@ -403,9 +404,8 @@ namespace OIG
         private string ProcID = "";
         //private bool DressMode1 = false;
         //private bool DressMode2 = false;
-
-        public MachineType MachType = MachineType.OIG_R;
-
+ 
+        public MachineType[] GWType = new MachineType[3] { MachineType.OCD, MachineType.OCD2, MachineType.OIG }; // 砂輪直頭
         // 20260302 alan add 砂輪基準點設定
         public Dictionary<int, double> CurentGw_Data = new Dictionary<int, double>();
         public Fo_Main()
@@ -741,9 +741,12 @@ namespace OIG
             //讀取設定值
             TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
 
-            //0:OIG R(1顆砂輪), 1:OIG D2(2顆砂輪), 2:OIG M4(4顆砂輪)
-            MachType = (MachineType)ini.ReadInteger("System", "OIG Series", 0);
-
+            //0:M2(2顆砂輪), 1:M3(2顆砂輪)
+            GwCount = ini.ReadInteger("System", "MPCODE Series", 3);
+            // 是否斜頭
+            GWType[0] = (MachineType)ini.ReadInteger("System", "GW1Type", 0);
+            GWType[1] = (MachineType)ini.ReadInteger("System", "GW2Type", 2);
+            GWType[2] = (MachineType)ini.ReadInteger("System", "GW3Type", 1);
 
             //初始化
             if (ini.ReadInteger("System", "Init", 1) == 1)
@@ -2438,8 +2441,8 @@ namespace OIG
             if (!bFistOpen) return;
             bFistOpen = false;
 
-            focas.ReadMacro(15050, out double gw_count);
-            GwCount = (int)Math.Round(gw_count);
+            //focas.ReadMacro(15050, out double gw_count);
+            //GwCount = (int)Math.Round(gw_count);
 
             focas.WriteMacro(977, 3);//OIG 300 R系列, 固定寫3
 
@@ -3905,6 +3908,7 @@ namespace OIG
                         if (AxisNo.ContainsKey("B"))
                         {
                             int bIndex = AxisNo["B"];
+                            if(bIndex < 0) return;
                             if (Pos.Machine.Length > bIndex) la_PartsMachAxis3Value.Text = Pos.Machine[bIndex].ToString(Units.DisplayFmt);
                         }
 
@@ -4343,7 +4347,7 @@ namespace OIG
             btns.Add(btn_Redo);
             btns.Add(btn_DressGw1);
             btns.Add(btn_Monitor_ToChgPos2);
-            if (MachType != MachineType.OIG_R) btns.Add(btn_ToolSelect);
+            btns.Add(btn_ToolSelect);
             if (Measopen) btns.Add(btn_MeasureList);
             for (int i = btns.Count - 1; i >= 0; i--)
             {
@@ -4995,12 +4999,12 @@ namespace OIG
 
         private int ReadGwMacro(int GwNo) //讀取 砂輪資料 (CurrentGwMacro)
         {
-
-            int len = 100;
-            int ret = focas.ReadMacro(10000 + (GwNo - 1) * 100, ref len, out double[] macro);
+            CurrentGwMacro.Clear();
+            int len = 200;
+            int ret = focas.ReadMacro(10000 + (GwNo - 1) * 200, ref len, out double[] macro);
             for (int i = 0; i < len; i++)
             {
-                CurrentGwMacro[10000 + i] = macro[i];
+                CurrentGwMacro[10000 + (i + ((GwNo - 1) * 200))] = macro[i];
             }
             return ret;
         }
@@ -5015,16 +5019,41 @@ namespace OIG
             bool bFinish = false;
             Actions.Enqueue(new Action(() =>
             {
-
-                for (int i = 0; i < 4; i++)
+                
+                for (int i = 0; i < GwCount; i++)
                 {
-                    focas.ReadMacro(10005 + i * 100, out double shape);//1, 2, 8
-                    focas.ReadMacro(10004 + i * 100, out double type);//0:內圓, 1:外圓(預留)
+                    focas.ReadMacro(10005 + i * 200, out double shape);//1, 2, 8
+                    focas.ReadMacro(10004 + i * 200, out double type);//0:外圓, 1:內圓(預留)
+                    //focas.ReadMacro(671 + i * 2, out double ocd2);//0:直頭, 不等 0 :斜頭
                     if (!(shape == 1 || shape == 2 || shape == 8)) shape = 1;
                     if (type != 1) type = 0;
                     int iShape = (int)Math.Round(shape);
                     int iType = (int)Math.Round(type);
-                    filenames.Add(Application.StartupPath + "\\image\\" + (iType == 0 ? "OIG" : "OCD") + "\\Shape\\150x150\\Shape" + iShape + ".png");
+
+                    bool bOCD2OrOCD3 = GWType[i] == MachineType.OCD2 || GWType[i] == MachineType.OCD3;
+                    
+                    if (iType == 0 && (GWType[i] == MachineType.OCD2 || GWType[i] == MachineType.OCD3))
+                    {
+                        string machineTypeName = "OCD2";
+                        if(GWType[i] == MachineType.OCD2 && iShape == 3)
+                        {
+                            iShape = 2;
+                        }
+                        if (GWType[i] == MachineType.OCD3)
+                        {
+                            machineTypeName = "OCD3";
+                            if(iShape == 2)
+                            {
+                                iShape = 3;
+                            }
+                        }
+                       
+                        filenames.Add(Application.StartupPath + "\\image\\" + $"{machineTypeName}" + "\\Shape\\150x150\\Shape" + iShape + ".png");
+                    }
+                    else
+                    {
+                        filenames.Add(Application.StartupPath + "\\image\\" + (iType == 1 ? "OIG" : "OCD") + "\\Shape\\150x150\\Shape" + iShape + ".png");
+                    }       
                 }
                 bFinish = true;
             }));
@@ -5041,7 +5070,7 @@ namespace OIG
                 }
                 Application.DoEvents();
             }
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < GwCount; i++)
             {
                 string filename = filenames[i];
                 if (File.Exists(filename))
@@ -5056,29 +5085,21 @@ namespace OIG
                     la_EditGws[i].Visible = false;
                 }
             }
+
         }
 
         private void pic_GW_Click(object sender, EventArgs e)
-        {
-
-            if (MachType == MachineType.OIG_R) //一顆砂輪
-            {
-                pic_EditGw_Click(pic_EditGw1, e);
-            }
-            else //多顆砂輪
-            {
-                UpdateGwImage();//砂輪選擇 - 更新四個砂輪圖片
-                TC_GW.SelectedTab = tab_Gw_GwSelect; //選擇砂輪                
-            }
-
+        {  
+            UpdateGwImage();//砂輪選擇 - 更新四個砂輪圖片
+            TC_GW.SelectedTab = tab_Gw_GwSelect; //選擇砂輪  
 
             TC_Main.SelectedTab = tab_GwDb;//無論一顆或多顆 都要切到 砂輪 頁
             PrevPage.Push(tab_GwDb);
             btn_Prev.Visible = true;
 
 
-            la_EditGw4.Visible = la_EditGw3.Visible = pic_EditGw4.Visible = pic_EditGw3.Visible = MachType == MachineType.OIG_R_M4;
-
+            la_EditGw3.Visible = pic_EditGw3.Visible = GwCount == 3;
+            la_EditGw4.Visible = pic_EditGw4.Visible = GwCount == 4;
             //GwSetEdit = false;
 
 
@@ -5090,15 +5111,20 @@ namespace OIG
             int GwNo = 0;
             int GwType = 0;
             int DressMode = 0;
-
+          
             double G55X = 0;
             double G55Z = 0;
 
             double G56X = 0;
             double G56Z = 0;
 
+            double G57X = 0;
+            double G57Z = 0;
+
             double G58X = 0;
             double G58Z = 0;
+
+            double DressToolPenSetting = 0;
 
             bool bFinish = false;
 
@@ -5107,14 +5133,14 @@ namespace OIG
                 //目前砂輪號
                 focas.ReadMacro(506, out double no);
                 GwNo = (int)Math.Round(no);
-                int shift = (GwNo - 1) * 100;
+                int shift = (GwNo - 1) * 200;
 
                 if (GwNo < 1 || GwNo > 4)
                 {
                     bFinish = true;
                     return;
                 }
-                //砂輪類型(0:內圓, 1:外圓(預留))
+                //砂輪類型(0:外圓, 1:內圓(預留))
                 focas.ReadMacro(10004 + shift, out double type);
                 GwType = (int)Math.Round(type);
                 if (GwType < 0 || GwType > 1) GwType = 0; //例外處理
@@ -5124,16 +5150,23 @@ namespace OIG
                 DressMode = (int)Math.Round(mode);
 
                 //G55
-                focas.ReadMacro(5241, out G55X);
-                focas.ReadMacro(5242, out G55Z);
+                focas.ReadMacro(10102 + shift, out G55X);
+                focas.ReadMacro(10103 + shift, out G55Z);
 
                 //G56
-                focas.ReadMacro(5261, out G56X);
-                focas.ReadMacro(5262, out G56Z);
+                focas.ReadMacro(10104 + shift, out G56X);
+                focas.ReadMacro(10105 + shift, out G56Z);
 
-                //G58(預留)
-                focas.ReadMacro(5301, out G58X);
-                focas.ReadMacro(5302, out G58Z);
+                //G57
+                focas.ReadMacro(10106 + shift, out G57X);
+                focas.ReadMacro(10107 + shift, out G57Z);
+
+                //G58
+                focas.ReadMacro(10108 + shift, out G58X);
+                focas.ReadMacro(10109 + shift, out G58Z);
+
+                // 修刀設定
+                focas.ReadMacro(558, out DressToolPenSetting);
 
                 bFinish = true;
             }));
@@ -5167,6 +5200,20 @@ namespace OIG
             la_DressGwSettingTitle.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 139, "修砂對點 - 砂輪") + GwNo;
             //GwSelect(No);//通知PLC 搬座標系
 
+            
+            if (DressToolPenSetting == 0)
+            {
+                //三支
+                pa_DressTool_3P.BackColor = Color.Lime;
+                pa_DressTool_2P.BackColor = Color.Gray;
+            }
+            else
+            {
+                //兩支
+                pa_DressTool_3P.BackColor = Color.Gray;
+                pa_DressTool_2P.BackColor = Color.Lime;
+            }
+
             //對話式修砂對點流程
             if (DGW_Conv)
             {
@@ -5189,35 +5236,54 @@ namespace OIG
                 //#5221,#5222,#5241,#5242,#5261,#5262,#5281,#5282,#5301,#5302,#5321,#5322
                 TB_G55X.Text = G55X.ToString(Units.DisplayFmt);//G55 X
                 TB_G55Z.Text = G55Z.ToString(Units.DisplayFmt);//G55 Z
-                TB_G56X.Text = G56X.ToString(Units.DisplayFmt);//G56 X
-                TB_G56Z.Text = G56Z.ToString(Units.DisplayFmt);//G56 Z
+                TB_G56X.Text = G57X.ToString(Units.DisplayFmt);//G56 X
+                TB_G56Z.Text = G57Z.ToString(Units.DisplayFmt);//G56 Z
                 TB_G58X.Text = G58X.ToString(Units.DisplayFmt);//G58 X
                 TB_G58Z.Text = G58Z.ToString(Units.DisplayFmt);//G58 Z
 
-                string path = Application.StartupPath + "\\image\\" + (GwType == 0 ? "OIG" : "OCD") + "\\DressGW\\";
+                string path = Application.StartupPath + "\\image\\" + (GwType == 1 ? "OIG" : "OCD") + "\\DressGW\\";
 
                 //修砂對點 座標系顯示
-                XmlElement xmlCoordinate = (GwType == 0 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
-                XmlElement xmlG55 = xmlCoordinate.GetChildNodeAt(0);
-                XmlElement xmlG56 = xmlCoordinate.GetChildNodeAt(1);
-                XmlElement xmlG58 = xmlCoordinate.GetChildNodeAt(2);
-
+                // XmlElement xmlCoordinate = (GwType == 1 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
+                //XmlElement xmlCoordinate = machineSetting.GetGwTypeDressMode(GwType, DressMode);
+                XmlElement xmlTools = machineSetting.GetGwTypeTools(GwType, DressMode);
+                if (GWType[GwNo - 1] == MachineType.OCD2)
+                {
+                    xmlTools = machineSetting.GetGwTypeTools(2, DressMode);
+                    path = Application.StartupPath + "\\image\\" + "OCD2" + "\\DressGW\\";
+                    GwType = 2;
+                }
+                if (GWType[GwNo - 1] == MachineType.OCD3)
+                {
+                    xmlTools = machineSetting.GetGwTypeTools(3, DressMode);
+                    path = Application.StartupPath + "\\image\\" + "OCD3" + "\\DressGW\\";
+                    GwType = 3;
+                }
+                
+                XmlElement xmlTool = xmlTools.GetChildNodeAt(0);
+                if(DressToolPenSetting == 1)
+                {
+                    xmlTool = xmlTools.GetChildNodeAt(1);
+                }
+                XmlElement xmlG55 = xmlTool.GetChildNodeAt(0);
+                XmlElement xmlG57 = xmlTool.GetChildNodeAt(1);
+                XmlElement xmlG58 = xmlTool.GetChildNodeAt(2);
                 //這邊只設為顯示, 能不能用要看形狀
                 pic_G55.Visible = GB_G55.Visible = xmlG55 != null ? xmlG55.GetAttribute("Visible") == "1" : true; //砂輪外徑修整器
-                pic_G56.Visible = GB_G56.Visible = xmlG56 != null ? xmlG56.GetAttribute("Visible") == "1" : true; //砂輪左側修整器
+                pic_G56.Visible = GB_G56.Visible = xmlG57 != null ? xmlG57.GetAttribute("Visible") == "1" : true; //砂輪左側修整器
                 pic_G58.Visible = GB_G58.Visible = xmlG58 != null ? xmlG58.GetAttribute("Visible") == "1" : false; //砂輪右側修整器
 
                 string filename = path + xmlG55.GetAttribute("Image"); //修外徑專用                   
                 pic_G55.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
-                filename = path + xmlG56.GetAttribute("Image"); //修砂輪左側專用
+                filename = path + xmlG57.GetAttribute("Image"); //修砂輪左側專用
                 pic_G56.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
                 filename = path + xmlG58.GetAttribute("Image"); //修砂輪右側專用(預留)
                 pic_G58.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
                 //用 MachineSetting.xml 檢查此砂輪是不是有這個 修整模式(形狀)
-                XmlElement xmlGw = machineSetting.GetGw(GwNo);
+                XmlElement xmlGw = machineSetting.GetGw(GwNo, GwType);
                 if (xmlGw == null) return;
                 bool bFind = false;//true:合法使用, false:非法使用
                 for (int i = 0; i < xmlGw.ChildNodes.Count; i++)
@@ -5238,19 +5304,20 @@ namespace OIG
                 }
 
                 //砂輪參數
-                XmlElement xmlGwParam = GwType == 0 ? machineSetting.xmlOIG_Param : machineSetting.xmlOCD_Param;
+                //XmlElement xmlGwParam = GwType == 0 ? machineSetting.xmlOIG_Param : machineSetting.xmlOCD_Param;
 
                 //定義的砂輪形狀(修整模式)
-                XmlElement xmlShapeDef = xmlGwParam.GetShape(DressMode);
-                if (xmlShapeDef == null)
-                {
-                    Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 97, "檔案錯誤"));
-                    return;
-                }
-                int.TryParse(xmlShapeDef.GetAttribute("DressLeft"), out int DressLeft); //這個形狀要修左側
-                int.TryParse(xmlShapeDef.GetAttribute("DressRight"), out int DressRight); //這個形狀要修右側
-                GB_G56.Enabled = DressLeft == 1; //要修左側才要設定
-                GB_G58.Enabled = DressRight == 1; //要修右側才要設定
+                //XmlElement xmlShapeDef = xmlGwParam.GetShape(DressMode);
+                //XmlElement xmlShapeDef = machineSetting.GetGwTypeShapeDef(GwType, DressMode);
+                //if (xmlShapeDef == null)
+                //{
+                //    Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 97, "檔案錯誤"));
+                //    return;
+                //}
+                //int.TryParse(xmlShapeDef.GetAttribute("DressLeft"), out int DressLeft); //這個形狀要修左側
+                //int.TryParse(xmlShapeDef.GetAttribute("DressRight"), out int DressRight); //這個形狀要修右側
+                //GB_G56.Enabled = DressLeft == 1; //要修左側才要設定
+                //GB_G58.Enabled = DressRight == 1; //要修右側才要設定
 
 
                 TC_Main.SelectedTab = tab_DressGwSetting;
@@ -5266,7 +5333,7 @@ namespace OIG
             if (AxisNo.ContainsKey("B"))
             {
                 int bIndex = AxisNo["B"];
-                if (Pos != null && Pos.Machine.Length > bIndex && Pos.Machine[bIndex] != 0)
+                if (bIndex > 0 && Pos != null && Pos.Machine.Length > bIndex && Pos.Machine[bIndex] != 0)
                 {
                     Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 155, "B軸請先回到0度"), "");
                 }
@@ -5286,6 +5353,7 @@ namespace OIG
             double G54Z = 0;
             double G59X = 0;
             double G59Z = 0;
+            int DressMode= 0;
 
             Actions.Enqueue(new Action(() =>
             {
@@ -5297,17 +5365,24 @@ namespace OIG
                     bFinish = true;
                     return;//例外處理
                 }
-                int shift = (GwNo - 1) * 100;
+                int shift = (GwNo - 1) * 200;
 
                 //砂輪類型(0:內圓, 1:外圓(預留))
                 focas.ReadMacro(10004 + shift, out double type);
                 GwType = (int)Math.Round(type);
                 if (GwType < 0 || GwType > 1) GwType = 0; //例外處理
 
-                focas.ReadMacro(5221, out G54X);
-                focas.ReadMacro(5222, out G54Z);
-                focas.ReadMacro(5321, out G59X);
-                focas.ReadMacro(5322, out G59Z);
+                //修整模式(形狀)
+                focas.ReadMacro(10005 + shift, out double mode);
+                DressMode = (int)Math.Round(mode);
+                //focas.ReadMacro(5221, out G54X);
+                //focas.ReadMacro(5222, out G54Z);
+                //focas.ReadMacro(5321, out G59X);
+                //focas.ReadMacro(5322, out G59Z);
+                focas.ReadMacro(10100 + shift, out G54X);
+                focas.ReadMacro(10101 + shift, out G54Z);
+                focas.ReadMacro(10110 + shift, out G59X);
+                focas.ReadMacro(10111 + shift, out G59Z);
 
                 bFinish = true;
             }));
@@ -5366,10 +5441,24 @@ namespace OIG
             else //一般加工對點
             {
                 //修砂對點 座標系顯示
-                XmlElement xmlCoordinate = (GwType == 0 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
-                XmlElement xmlG54X = xmlCoordinate.GetChildNodeAt(3);
-                XmlElement xmlG54Z = xmlCoordinate.GetChildNodeAt(4);
-                XmlElement xmlG59Z = xmlCoordinate.GetChildNodeAt(5);
+                string path = Application.StartupPath + "\\image\\" + (GwType == 1 ? "OIG" : "OCD") + "\\DressWorkpiece\\";
+                //XmlElement xmlCoordinate = (GwType == 0 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
+                XmlElement xmlCoordinate = machineSetting.GetGwTypeCoordinate(GwType);
+                if (GWType[GwNo - 1] == MachineType.OCD2)
+                {
+                    xmlCoordinate = machineSetting.GetGwTypeCoordinate(2);
+                    path = Application.StartupPath + "\\image\\" + "OCD2" + "\\DressWorkpiece\\";
+                    GwType = 2;
+                }
+                if (GWType[GwNo - 1] == MachineType.OCD3)
+                {
+                    xmlCoordinate = machineSetting.GetGwTypeCoordinate(3);
+                    path = Application.StartupPath + "\\image\\" + "OCD3" + "\\DressWorkpiece\\";
+                    GwType = 3;
+                }
+                XmlElement xmlG54G59X = xmlCoordinate.GetChildNodeAt(0);
+                XmlElement xmlG54Z = xmlCoordinate.GetChildNodeAt(1);
+                XmlElement xmlG59Z = xmlCoordinate.GetChildNodeAt(2);
 
                 //這邊只設為顯示, 能不能用要看形狀
                 pa_G54Z.Visible = xmlG54Z != null ? xmlG54Z.GetAttribute("Visible") == "1" : true; //砂輪左側研磨工件右端面
@@ -5388,9 +5477,9 @@ namespace OIG
                 TB_G59Cal_Length.Text = "0";
 
 
-                string path = Application.StartupPath + "\\image\\" + (GwType == 0 ? "OIG" : "OCD") + "\\DressWorkpiece\\";
+                
                 String filename;
-                filename = path + xmlG54X.GetAttribute("Image"); //研磨工件外徑
+                filename = path + xmlG54G59X.GetAttribute("Image"); //研磨工件外徑
                 pic_G5459X.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
                 pic_G5459X.Tag = GwType.ToString();
 
@@ -5402,15 +5491,16 @@ namespace OIG
 
                 if (GwType == 0)
                 {
-                    gb_DiamCalcKind.Visible = true;
-                    btn_DiamIn.PerformClick();
+                    //gb_DiamCalcKind.Visible = true;
+                    //btn_DiamIn.PerformClick();
                 }
+                gb_DiamCalcKind.Visible = false;
             }
         }
 
         private int WriteGwMacro(int GwNo, int MacroNo, double val)
         {
-            int shift = (GwNo - 1) * 100;
+            int shift = (GwNo - 1) * 200;
             bool bFinish = false;
             int ret = -1;
             Actions.Enqueue(new Action(() =>
@@ -5419,12 +5509,12 @@ namespace OIG
                 if (MacroNo == 10006 || MacroNo == 10009)
                 {
                     //更新 T Code 只能傳整數, 控制器內會自己轉公英制
-                    int TCode_Z = (int)Math.Round((CurrentGwMacro[10009] + CurrentGwMacro[10006]) / (bInchTrans ? 0.00001 : 0.0001));
+                    int TCode_Z = (int)Math.Round((CurrentGwMacro[10009 + shift] + CurrentGwMacro[10006 + shift]) / (bInchTrans ? 0.00001 : 0.0001));
                     focas.WriteGeom(GeomType.Z, 124 + GwNo, TCode_Z);
                 }
                 else if (MacroNo == 10011)
                 {
-                    int TCode_X = (int)Math.Round(CurrentGwMacro[10011] / (bInchTrans ? -0.00001 : -0.0001));
+                    int TCode_X = (int)Math.Round(CurrentGwMacro[10011 + shift] / (bInchTrans ? -0.00001 : -0.0001));
                     focas.WriteGeom(GeomType.X, 124 + GwNo, TCode_X);
                 }
 
@@ -5451,8 +5541,8 @@ namespace OIG
         {
             pa_DressToRight.BackColor = Color.Lime;
             pa_DressToLeft.BackColor = Color.Transparent;
-
-            CurrentGwMacro[10019] = 0;//啟始位置 0:左側(往砂輪右側修整)
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            CurrentGwMacro[10019 + GwMarcoOffset] = 0;//啟始位置 0:左側(往砂輪右側修整)
             WriteGwMacro(CurrentEditGwNo, 10019, 0);//啟始位置 0:左側(往砂輪右側修整)
 
             //btn_RegisterGw_Save.Visible = true;
@@ -5464,19 +5554,13 @@ namespace OIG
             pa_DressToLeft.BackColor = Color.Lime;
             pa_DressToRight.BackColor = Color.Transparent;
 
-            CurrentGwMacro[10019] = 1;//啟始位置 1:右側(往砂輪左側修整)
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            CurrentGwMacro[10019 + GwMarcoOffset] = 1;//啟始位置 1:右側(往砂輪左側修整)
             WriteGwMacro(CurrentEditGwNo, 10019, 1);//啟始位置 1:右側(往砂輪左側修整)
 
             //btn_RegisterGw_Save.Visible = true;
             //GwSetEdit = true;
         }
-
-        private void pic_ToAndBack_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         //private void DGV_GwParam_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
@@ -5557,7 +5641,7 @@ namespace OIG
             double.TryParse(TB_G55Z.Text, out double G55ZPos);
             double.TryParse(TB_G56X.Text, out double G56XPos);
             double.TryParse(TB_G56Z.Text, out double G56ZPos);
-
+           
             int GwNo = 0;
             bool bFinish = false;
 
@@ -5574,7 +5658,7 @@ namespace OIG
 
                 //ReadGwMacro(GwNo);//??為什麼要讀取砂輪資料??
 
-                int shift = (GwNo - 1) * 100;
+                int shift = (GwNo - 1) * 200;
 
                 //G54         G55         G56         G57         G58         G59
                 //#5221,#5222,#5241,#5242,#5261,#5262,#5281,#5282,#5301,#5302,#5321,#5322
@@ -5582,21 +5666,21 @@ namespace OIG
                 //G55座標系 修砂對點 修外徑用
                 //X軸
                 focas.WriteMacro(5241, G55XPos);//寫到 座標系
-                focas.WriteMacro(10068 + shift, G55XPos);//寫到 砂輪資料
+                focas.WriteMacro(10102 + shift, G55XPos);//寫到 砂輪資料
 
                 //Z軸                
                 focas.WriteMacro(5242, G55ZPos);//寫到 座標系
-                focas.WriteMacro(10069 + shift, G55ZPos);//寫到 砂輪資料
+                focas.WriteMacro(10103 + shift, G55ZPos);//寫到 砂輪資料
 
 
-                //G56座標系 修砂對點 修左側+外徑用
+                //G57座標系 修砂對點 修左側+外徑用
                 //X軸                
-                focas.WriteMacro(5261, G56XPos);//寫到 座標系
-                focas.WriteMacro(10070 + shift, G56XPos);//寫到 砂輪資料
+                focas.WriteMacro(5281, G56XPos);//寫到 座標系
+                focas.WriteMacro(10106 + shift, G56XPos);//寫到 砂輪資料
 
                 //Z軸
-                focas.WriteMacro(5262, G56ZPos);//寫到 座標系
-                focas.WriteMacro(10071 + shift, G56ZPos);//寫到 砂輪資料
+                focas.WriteMacro(5282, G56ZPos);//寫到 座標系
+                focas.WriteMacro(10107 + shift, G56ZPos);//寫到 砂輪資料
 
 
 
@@ -5606,12 +5690,12 @@ namespace OIG
                     if (double.TryParse(TB_G58X.Text, out double G58XPos))
                     {
                         focas.WriteMacro(5301, G58XPos);//寫到 座標系
-                        focas.WriteMacro(10074 + shift, G58XPos);//寫到 砂輪資料
+                        focas.WriteMacro(10108 + shift, G58XPos);//寫到 砂輪資料
                     }
                     if (double.TryParse(TB_G58Z.Text, out double G58ZPos))
                     {
                         focas.WriteMacro(5302, G58ZPos);//寫到 座標系
-                        focas.WriteMacro(10075 + shift, G58ZPos);//寫到 砂輪資料
+                        focas.WriteMacro(10109 + shift, G58ZPos);//寫到 砂輪資料
                     }
                 }
 
@@ -5683,7 +5767,7 @@ namespace OIG
 
             bool bFinish = false;
             int GwNo = 0;
-
+            int GwType = 0;
             Actions.Enqueue(new Action(() =>
             {
                 focas.ReadMacro(506, out double no);//砂輪號
@@ -5694,8 +5778,13 @@ namespace OIG
                     return;
                 }
 
-                int shift = (GwNo - 1) * 100;//用 砂輪號 偏移區塊
+                int shift = (GwNo - 1) * 200;//用 砂輪號 偏移區塊
 
+                
+                //砂輪類型(0:內圓, 1:外圓(預留))
+                focas.ReadMacro(10004 + shift, out double type);
+                GwType = (int)Math.Round(type);
+                if (GwType < 0 || GwType > 1) GwType = 0; //例外處理
 
                 double val;
 
@@ -5705,24 +5794,25 @@ namespace OIG
                 //G54          G55          G57          G58          G59
                 //#5221,#5222, #5241,#5242, #5281,#5282, #5301,#5302, #5321,#5322
                 val = PosX - Diam;
-                if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+                //if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+                if (GwType == 0)
                 {
                     val = PosX + Diam;
                 }
                 focas.WriteMacro(5221, val); //控制器用的 G54X
-                focas.WriteMacro(10066 + shift, val); //加工程式用的 G54X
+                focas.WriteMacro(10100 + shift, val); //加工程式用的 G54X
 
                 val = LPosZ - LLength;
                 focas.WriteMacro(5222, val); //控制器用的 G54Z
-                focas.WriteMacro(10067 + shift, val); //加工程式用的 G54Z
+                focas.WriteMacro(10101 + shift, val); //加工程式用的 G54Z
 
                 val = PosX - Diam;
                 focas.WriteMacro(5321, val); //控制器用的 G59X
-                focas.WriteMacro(10076 + shift, val); //加工程式用的 G59X
+                focas.WriteMacro(10110 + shift, val); //加工程式用的 G59X
 
                 val = RPosZ - RLength;
                 focas.WriteMacro(5322, val); //控制器用的 G59Z
-                focas.WriteMacro(10077 + shift, val); //加工程式用的 G59Z
+                focas.WriteMacro(10111 + shift, val); //加工程式用的 G59Z
 
 
 
@@ -5747,15 +5837,17 @@ namespace OIG
                 Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 164, "砂輪號錯誤"), "");
                 return;
             }
-
+            
             la_G54XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
-            if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+            //if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+            if(GwType == 0)
             {
                 la_G54XValue.Text = (PosX + Diam).ToString(Units.DisplayFmt);
             }
             la_G54ZValue.Text = (LPosZ - LLength).ToString(Units.DisplayFmt);
             la_G59XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
-            if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+            //if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+            if (GwType == 0)
             {
                 la_G59XValue.Text = (PosX + Diam).ToString(Units.DisplayFmt);
             }
@@ -9719,7 +9811,7 @@ namespace OIG
             Col_Advance_Name.CellTemplate.Style.Font = new Font(fontName, fontSize, (FontStyle)fontStyle);
             Col_Dress1_Name.CellTemplate.Style.Font = new Font(fontName, fontSize, (FontStyle)fontStyle);
             Col_Dress2_Name.CellTemplate.Style.Font = new Font(fontName, fontSize, (FontStyle)fontStyle);
-            
+
             //砂輪
             DGV_GwParam.RowsDefaultCellStyle.Font = new Font(fontName, fontSize, (FontStyle)fontStyle);
             //程式
@@ -10479,30 +10571,38 @@ namespace OIG
             Actions.Enqueue(new Action(() =>
             {
 
-                focas.ReadMacro(652, out double Macro652);//動力修砂功能
-                focas.ReadMacro(653, out double Macro653);//擺臂式修整座功能
-                focas.ReadMacro(654, out double Macro654);//自動門功能
-                focas.ReadMacro(658, out double Macro658);//量測治具寬
+                //focas.ReadMacro(652, out double Macro652);//動力修砂功能
+                //focas.ReadMacro(653, out double Macro653);//擺臂式修整座功能
+                //focas.ReadMacro(654, out double Macro654);//自動門功能
+                //focas.ReadMacro(658, out double Macro658);//量測治具寬
                 focas.ReadMacro(10004, out double Macro10004);//GW1 Type
-                focas.ReadMacro(10104, out double Macro10104);//GW2 Type
-                focas.ReadMacro(10204, out double Macro10204);//GW3 Type
-                focas.ReadMacro(10304, out double Macro10304);//GW4 Type
-
+                focas.ReadMacro(10204, out double Macro10204);//GW2 Type
+                focas.ReadMacro(10404, out double Macro10404);//GW3 Type
+                focas.ReadMacro(10604, out double Macro10604);//GW4 Type
+                //focas.ReadMacro(671, out double Macro671);// GW1 0:直頭 不等 0 斜頭 
+                //focas.ReadMacro(673, out double Macro673);// GW2 0:直頭 不等 0 斜頭 
+                //focas.ReadMacro(675, out double Macro675);// GW3 0:直頭 不等 0 斜頭 
                 this.Invoke(new Action(() =>
                 {
-                    ch_DGW_Func.Checked = Macro652 == 1;
-                    ch_SwingDress.Checked = Macro653 == 1;
-                    ch_AutoDoor.Checked = Macro654 == 1;
-                    btn_JigWidth.DisplayText = Macro658.ToString(Units.DisplayFmt);
+                    //ch_DGW_Func.Checked = Macro652 == 1;
+                    //ch_SwingDress.Checked = Macro653 == 1;
+                    //ch_AutoDoor.Checked = Macro654 == 1;
+                    //btn_JigWidth.DisplayText = Macro658.ToString(Units.DisplayFmt);
 
-                    rb_Gw1Type0.Checked = Macro10004 == 0;
+                    rb_Gw1Type0.Checked = (Macro10004 == 0 && GWType[0] == MachineType.OCD);                   
                     rb_Gw1Type1.Checked = Macro10004 == 1;
-                    rb_Gw2Type0.Checked = Macro10104 == 0;
-                    rb_Gw2Type1.Checked = Macro10104 == 1;
-                    rb_Gw3Type0.Checked = Macro10204 == 0;
-                    rb_Gw3Type1.Checked = Macro10204 == 1;
-                    rb_Gw4Type0.Checked = Macro10304 == 0;
-                    rb_Gw4Type1.Checked = Macro10304 == 1;
+                    rb_Gw1Type2.Checked = (Macro10004 == 0 && GWType[0] == MachineType.OCD2);
+                    rb_Gw1Type3.Checked = (Macro10004 == 0 && GWType[0] == MachineType.OCD3);
+
+                    rb_Gw2Type0.Checked = (Macro10204 == 0 && GWType[1] == MachineType.OCD);                
+                    rb_Gw2Type1.Checked = Macro10204 == 1;
+                    rb_Gw2Type2.Checked = (Macro10204 == 0 && GWType[1] == MachineType.OCD2);
+                    rb_Gw2Type3.Checked = (Macro10204 == 0 && GWType[1] == MachineType.OCD3);
+
+                    rb_Gw3Type0.Checked = (Macro10404 == 0 && GWType[2] == MachineType.OCD);
+                    rb_Gw3Type1.Checked = Macro10404 == 1;
+                    rb_Gw3Type2.Checked = (Macro10404 == 0 && GWType[2] == MachineType.OCD2);
+                    rb_Gw3Type3.Checked = (Macro10404 == 0 && GWType[2] == MachineType.OCD3);
                 }));
 
             }));
@@ -10516,9 +10616,21 @@ namespace OIG
 
 
             //機型
-            rb_OIG_D2.Checked = MachType == MachineType.OIG_R_D2;
-            rb_OIG_M4.Checked = MachType == MachineType.OIG_R_M4;
-            rb_OIG_R.Checked = MachType == MachineType.OIG_R;
+            rb_M3.Checked = GwCount == 3;
+            
+            rb_M2.Checked = GwCount == 2;
+
+            //rb_Gw1Type0.Checked = GW1Type == MachineType.OCD;
+            //rb_Gw1Type1.Checked = GW1Type == MachineType.OCD2;
+            //rb_Gw1Type2.Checked = GW1Type == MachineType.OIG;
+
+            //rb_Gw2Type0.Checked = GW2Type == MachineType.OCD;
+            //rb_Gw2Type1.Checked = GW2Type == MachineType.OCD2;
+            //rb_Gw2Type2.Checked = GW2Type == MachineType.OIG;
+
+            //rb_Gw3Type0.Checked = GW3Type == MachineType.OCD;
+            //rb_Gw3Type1.Checked = GW3Type == MachineType.OCD2;
+            //rb_Gw3Type2.Checked = GW3Type == MachineType.OIG;
 
             la_Gw1GrindGap_Value.Text = GW1_Grind_GAP.ToString("0.0");
             la_Gw1GrindCrash_Value.Text = GW1_Grind_CRASH.ToString("0.0");
@@ -11979,11 +12091,20 @@ namespace OIG
                 Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 164, "砂輪號錯誤"), "");
                 return;
             }
+            int shift = (gw_no - 1) * 200;
+            int shape = (int)Math.Round(CurrentGwMacro[10005 + shift]);//砂輪形狀(修整模式)
+            int type = (int)Math.Round(CurrentGwMacro[10004 + shift]);//砂輪型式(0:內圓, 1:外圓)
 
-            int shape = (int)Math.Round(CurrentGwMacro[10005]);//砂輪形狀(修整模式)
-            int type = (int)Math.Round(CurrentGwMacro[10004]);//砂輪型式(0:內圓, 1:外圓)
-
-            String filename;
+            String filename = Application.StartupPath + "\\image\\" + (type == 1 ? "OIG" : "OCD");
+           
+            if (GWType[gw_no - 1] == MachineType.OCD2)
+            {
+                filename = Application.StartupPath + "\\image\\" + "OCD2";
+            }
+            if (GWType[gw_no - 1] == MachineType.OCD3)
+            {
+                filename = Application.StartupPath + "\\image\\" + "OCD3";
+            }
             switch (DressGwStep)
             {
                 case 0://請啟動輪→下一步
@@ -11995,8 +12116,16 @@ namespace OIG
 
 
                         btn_DG_Btn2.DisplayText = "下一步";
-                        filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G55.png";
-                        pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                        string fileStep1 = filename + "\\DressGW\\G55.png";
+                        if(GWType[gw_no - 1] == MachineType.OCD2)
+                        {
+                            fileStep1 = filename + "\\DressGW\\G55.png";
+                        }
+                        if (GWType[gw_no - 1] == MachineType.OCD3)
+                        {
+                            fileStep1 = filename + "\\DressGW\\G55.png";
+                        }
+                        pic_DressGwStep.Image = File.Exists(fileStep1) ? Image.FromFile(fileStep1) : null;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 25, "請使用手輪移動X軸，使砂輪接觸到修整器。");
                         break;
@@ -12008,8 +12137,17 @@ namespace OIG
                         //記錄G55X
                         TB_G55X.Text = la_DressGwMachAxis1Value.Text;
 
-                        filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G55.png";
-                        pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                        //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G55.png";
+                        string fileStep2 = filename + "\\DressGW\\G55.png";
+                        if (GWType[gw_no - 1] == MachineType.OCD2)
+                        {
+                            fileStep2 = filename + "\\DressGW\\G55.png";
+                        }
+                        if (GWType[gw_no - 1] == MachineType.OCD3)
+                        {
+                            fileStep2 = filename + "\\DressGW\\G55.png";
+                        }
+                        pic_DressGwStep.Image = File.Exists(fileStep2) ? Image.FromFile(fileStep2) : null;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 26, "請使用手輪移動Z軸，使修整器往正向離開砂輪。");
                         break;
@@ -12040,24 +12178,51 @@ namespace OIG
 
                             case 2://外徑+左側→跳到左側流程
                                 DressGwStep = 3;
-                                filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                                pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                                //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
+                                string fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                if (GWType[gw_no - 1] == MachineType.OCD2)
+                                {
+                                    fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                }
+                                if (GWType[gw_no - 1] == MachineType.OCD3)
+                                {
+                                    fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                }
+                                pic_DressGwStep.Image = File.Exists(fileStep3_2) ? Image.FromFile(fileStep3_2) : null;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 29, "請使用手輪移動Z軸，使修整器接觸砂輪左側。");
                                 break;
 
                             case 3://外徑+右側→跳到右側流程
                                 DressGwStep = 5;
-                                filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                                pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                                //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
+                                string fileStep3_3 = filename + "\\DressGW\\G58.png";
+                                if (GWType[gw_no - 1] == MachineType.OCD2)
+                                {
+                                    fileStep3_3 = filename + "\\DressGW\\G57.png";
+                                }
+                                if (GWType[gw_no - 1] == MachineType.OCD3)
+                                {
+                                    fileStep3_3 = filename + "\\DressGW\\G57.png";
+                                }
+                                pic_DressGwStep.Image = File.Exists(fileStep3_3) ? Image.FromFile(fileStep3_3) : null;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 30, "請使用手輪移動Z軸，使修整器接觸砂輪右側。");
                                 break;
 
                             case 4://外徑+左右側→跳到左側流程
                                 DressGwStep = 3;
-                                filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                                pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                                //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
+                                string fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                if (GWType[gw_no - 1] == MachineType.OCD2)
+                                {
+                                    fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                }
+                                if (GWType[gw_no - 1] == MachineType.OCD3)
+                                {
+                                    fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                }
+                                pic_DressGwStep.Image = File.Exists(fileStep3_4) ? Image.FromFile(fileStep3_4) : null;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 29, "請使用手輪移動Z軸，使修整器接觸砂輪左側。");
                                 break;
@@ -12073,8 +12238,17 @@ namespace OIG
                         //記錄G56 Z軸
                         TB_G56Z.Text = la_DressGwMachAxis2Value.Text;
 
-                        filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                        pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                        //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
+                        string fileStep4 = filename + "\\DressGW\\G57.png";
+                        if (GWType[gw_no - 1] == MachineType.OCD2)
+                        {
+                            fileStep4 = filename + "\\DressGW\\G57.png";
+                        }
+                        if (GWType[gw_no - 1] == MachineType.OCD3)
+                        {
+                            fileStep4 = filename + "\\DressGW\\G57.png";
+                        }
+                        pic_DressGwStep.Image = File.Exists(fileStep4) ? Image.FromFile(fileStep4) : null;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 31, "請使用手輪移動X軸，使修整器離開砂輪。");
                         break;
@@ -12104,8 +12278,17 @@ namespace OIG
 
                             case 4://外徑+左右側→跳到右側流程
                                 DressGwStep = 5;
-                                filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                                pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                                //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
+                                string fileStep5_4 = filename + "\\DressGW\\G58.png";
+                                if (GWType[gw_no - 1] == MachineType.OCD2)
+                                {
+                                    fileStep5_4 = filename + "\\DressGW\\G57.png";
+                                }
+                                if (GWType[gw_no - 1] == MachineType.OCD3)
+                                {
+                                    fileStep5_4 = filename + "\\DressGW\\G57.png";
+                                }
+                                pic_DressGwStep.Image = File.Exists(fileStep5_4) ? Image.FromFile(fileStep5_4) : null;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 30, "請使用手輪移動Z軸，使修整器接觸砂輪右側。");
                                 break;
@@ -12118,8 +12301,17 @@ namespace OIG
                         //記錄G58 Z軸
                         TB_G58Z.Text = la_DressGwMachAxis2Value.Text;
 
-                        filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                        pic_DressGwStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+                        //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
+                        string fileStep6 = filename + "\\DressGW\\G58.png";
+                        if (GWType[gw_no - 1] == MachineType.OCD2)
+                        {
+                            fileStep6 = filename + "\\DressGW\\G57.png";
+                        }
+                        if (GWType[gw_no - 1] == MachineType.OCD3)
+                        {
+                            fileStep6 = filename + "\\DressGW\\G57.png";
+                        }
+                        pic_DressGwStep.Image = File.Exists(fileStep6) ? Image.FromFile(fileStep6) : null;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 31, "請使用手輪移動X軸，使修整器離開砂輪。");
                         break;
@@ -12162,10 +12354,17 @@ namespace OIG
                         {
                             focas.WriteMacro(5241, G55X);
                             focas.WriteMacro(5242, G55Z);
-                            focas.WriteMacro(5261, G56X);
-                            focas.WriteMacro(5262, G56Z);
+                            focas.WriteMacro(5281, G56X); // 目前是用 G57
+                            focas.WriteMacro(5282, G56Z); // 目前是用 G57
                             focas.WriteMacro(5301, G58X);
                             focas.WriteMacro(5302, G58Z);
+
+                            focas.WriteMacro(10102, G55X);
+                            focas.WriteMacro(10103, G55Z);
+                            focas.WriteMacro(10106, G56X);
+                            focas.WriteMacro(10107, G56Z);
+                            focas.WriteMacro(10108, G58X);
+                            focas.WriteMacro(10109, G58Z);
                         }));
 
                         btn_Prev.PerformClick();
@@ -13243,7 +13442,7 @@ namespace OIG
             btn_Offset.Visible = TC_Main.SelectedTab == tab_Monitor;
             btn_MeasureList.Visible = (TC_Main.SelectedTab == tab_Monitor && Measopen);
 
-            btn_ToolSelect.Visible = MachType != MachineType.OIG_R &&  (TC_Main.SelectedTab == tab_Monitor ||
+            btn_ToolSelect.Visible = (TC_Main.SelectedTab == tab_Monitor ||
                                      TC_Main.SelectedTab == tab_Regist ||
                                      TC_Main.SelectedTab == tab_GWRPS ||
                                      TC_Main.SelectedTab == tab_GWRPS2);
@@ -13555,7 +13754,7 @@ namespace OIG
             }
         }
 
-        private void ChangeGwShape(int no)
+        private void ChangeGwShape(int no, int gwDataOffset)
         {
 
             PictureBox[] pics = { pic_Gw_S1, pic_Gw_S2, pic_Gw_S3, pic_Gw_S4, pic_Gw_S5, pic_Gw_S6, pic_Gw_S8 };
@@ -13587,7 +13786,18 @@ namespace OIG
             }
 
             //依照內圓/外圓去取得 XML 設定值
-            XmlElement xmlGwType = (CurrentGwMacro[10004] == 0 ? machineSetting.xmlOIG_Param : machineSetting.xmlOCD_Param);
+            XmlElement xmlGwType = (CurrentGwMacro[10004 + gwDataOffset] == 1 ? machineSetting.xmlOIG_Param : machineSetting.xmlOCD_Param);
+            double dGwType = CurrentGwMacro[10004 + gwDataOffset];
+           
+            
+            if (dGwType == 0 && (GWType[CurrentEditGwNo - 1] == MachineType.OCD2 || GWType[CurrentEditGwNo - 1] == MachineType.OCD3))
+            {
+                xmlGwType = machineSetting.xmlOCD_PA_Param;
+                if (GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+                {
+                    xmlGwType = machineSetting.xmlOCD_NA_Param;
+                }
+            }
             //取得這個形狀(修整模式)的畫面設定值
             XmlElement xmlShape = xmlGwType.GetShape(SelectShapeNo);
             int.TryParse(xmlShape.GetAttribute("DressLeft"), out int dress_left);
@@ -13598,8 +13808,8 @@ namespace OIG
             btn_ToAndBack.Enabled = la_ToAndBack.Enabled = SelectShapeNo == 1;//形狀1(只修外徑)才有往復修整
             if (SelectShapeNo != 1)
             {
-                CurrentGwMacro[10020] = 0;//設定為不使用
-                WriteGwMacro(CurrentEditGwNo, 10020, 0);
+                CurrentGwMacro[10020 + gwDataOffset] = 0;//設定為不使用
+                WriteGwMacro(CurrentEditGwNo, 10020 + gwDataOffset, 0);
 
                 btn_ToAndBack.DisplayText = "OFF";
 
@@ -13616,9 +13826,10 @@ namespace OIG
             if (pic == null) return;
             if (int.Parse(pic.Tag.ToString()) == 0) return;
             int.TryParse(pic.Tag.ToString(), out int no);
-            ChangeGwShape(no); //顯示砂輪形狀
-            CurrentGwMacro[10005] = SelectShapeNo; //寫回暫存
-            WriteGwMacro(CurrentEditGwNo, 10005, SelectShapeNo);
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            ChangeGwShape(no, GwMarcoOffset); //顯示砂輪形狀
+            CurrentGwMacro[10005 + GwMarcoOffset] = SelectShapeNo; //寫回暫存
+            WriteGwMacro(CurrentEditGwNo, 10005 , SelectShapeNo);
 
             //btn_RegisterGw_Save.Visible = true;
             //GwSetEdit = true;
@@ -13663,9 +13874,31 @@ namespace OIG
                 Application.DoEvents();                
             }
 
+            int GwMarcoOffset = (no - 1) * 200;
+            double dGwType = CurrentGwMacro[10004 + GwMarcoOffset];
+
 
             //讀取砂輪畫面 從MachineSetting.xml
-            XmlElement xmlGw = machineSetting.GetGw(no);
+            //XmlElement xmlGw = dGwType == 0 ? machineSetting.GetGw(no) : machineSetting.GetGw(no);
+            string dressName = dGwType == 0 ? "OCD" : "OIG";
+            
+            if (dGwType == 0 && (GWType[CurrentEditGwNo - 1] == MachineType.OCD2 || GWType[CurrentEditGwNo - 1] == MachineType.OCD3))
+            {
+                dGwType = 2;
+                dressName = "OCD2";
+                if (GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+                {
+                    dGwType = 3;
+                    dressName = "OCD3";
+                }
+            }
+            string dressToLeftAnRight = Application.StartupPath + "\\image\\" + dressName + "\\DressGW\\";
+            string dressLeftName = dressToLeftAnRight + "DressToLeft.png";
+            string dressRightName = dressToLeftAnRight + "DressToRight.png";
+            pic_DressToLeft.Image = File.Exists(dressLeftName) ? Image.FromFile(dressLeftName) : null;
+            pic_DressToRight.Image = File.Exists(dressRightName) ? Image.FromFile(dressRightName) : null;
+
+            XmlElement xmlGw = machineSetting.GetGw(no, (int)dGwType);
 
             String dgw_file = Application.StartupPath + "\\GW" + no + ".xml";
             if (File.Exists(dgw_file)) dgwFile.LoadFromFile(dgw_file); //讀取成形修整的檔案
@@ -13675,13 +13908,18 @@ namespace OIG
             TIniFile ini = new TIniFile(Units.langfile);
 
             //圖片來源
-            string imgPathName = CurrentGwMacro[10004] == 1 ? "OCD" : "OIG"; //#10004 = 0:內圓, 1:外圓
+            
+            string imgPathName = "OCD"; //#10004 = 0:外圓, 1:內圓
+            if (dGwType == 1) imgPathName = "OIG";
+            else if(dGwType == 2) imgPathName = "OCD2";
+            else if (dGwType == 3) imgPathName = "OCD3";
+
             path = Application.StartupPath + "\\image\\" + imgPathName + "\\Shape\\150x150\\";
 
             //砂輪形狀選擇 - 載入圖片 (Fo_UI_Setting 中設定的)
             PictureBox[] pics = { pic_Gw_S1, pic_Gw_S2, pic_Gw_S3, pic_Gw_S4, pic_Gw_S5, pic_Gw_S6, pic_Gw_S8 };
             Label[] lbs = { la_GW_Shape1, la_GW_Shape2, la_GW_Shape3, la_GW_Shape4, la_GW_Shape5, la_GW_Shape6, la_GW_Shape7 };
-
+            
             for (int i = 0; i < pics.Length; i++)
             {
                 if (i < xmlGw.ChildNodes.Count)
@@ -13701,42 +13939,53 @@ namespace OIG
                 else
                 {
                     pics[i].Tag = 0;
-                    pics[i].Image = null;
+                    pics[i].Image = null;                              
                 }
             }
 
 
             try
             {
-                int shape_no = (int)Math.Round(CurrentGwMacro[10005]); //砂輪形狀
-                ChangeGwShape(shape_no); //顯示目前設定的形狀, 含例外處理, 沒有就選形狀1(只修外徑)
-                CurrentGwMacro[10005] = SelectShapeNo;//避免有修正成形狀1, 固定寫回
+                int shape_no = (int)Math.Round(CurrentGwMacro[10005 + GwMarcoOffset]); //砂輪形狀
+                ChangeGwShape(shape_no, GwMarcoOffset); //顯示目前設定的形狀, 含例外處理, 沒有就選形狀1(只修外徑)
+                CurrentGwMacro[10005 + GwMarcoOffset] = SelectShapeNo;//避免有修正成形狀1, 固定寫回
 
                 //砂輪資料
-                btn_GWDiameter.DisplayText = CurrentGwMacro[10011].ToString(Units.DisplayFmt);//目前砂輪外徑
-                btn_GWMinDiameter.DisplayText = CurrentGwMacro[10010].ToString(Units.DisplayFmt);//最小砂輪外徑
-                btn_GWWidth.DisplayText = CurrentGwMacro[10009].ToString(Units.DisplayFmt);//目前砂輪寬度
-                btn_GWMinWidth.DisplayText = CurrentGwMacro[10008].ToString(Units.DisplayFmt);//最小砂輪寬度
-                btn_GWHL.DisplayText = CurrentGwMacro[10006].ToString(Units.DisplayFmt);//砂輪柄長
-                btn_GWDressTimes.DisplayText = CurrentGwMacro[10014].ToString("0");//修整次數                                                         
-                btn_GWAirDress.DisplayText = CurrentGwMacro[10015].ToString("0");//空修次數
-
+                btn_GWDiameter.DisplayText = CurrentGwMacro[10011 + GwMarcoOffset].ToString(Units.DisplayFmt);//目前砂輪外徑
+                btn_GWMinDiameter.DisplayText = CurrentGwMacro[10010 + GwMarcoOffset].ToString(Units.DisplayFmt);//最小砂輪外徑
+                btn_GWWidth.DisplayText = CurrentGwMacro[10009 + GwMarcoOffset].ToString(Units.DisplayFmt);//目前砂輪寬度
+                btn_GWMinWidth.DisplayText = CurrentGwMacro[10008 + GwMarcoOffset].ToString(Units.DisplayFmt);//最小砂輪寬度
+                btn_GWHL.DisplayText = CurrentGwMacro[10006 + GwMarcoOffset].ToString(Units.DisplayFmt);//砂輪柄長
+                btn_GWDressTimes.DisplayText = CurrentGwMacro[10014 + GwMarcoOffset].ToString("0");//修整次數                                                         
+                btn_GWAirDress.DisplayText = CurrentGwMacro[10015 + GwMarcoOffset].ToString("0");//空修次數
+                bool bShowGWHL = CurrentGwMacro[10004 + GwMarcoOffset] == 1;
+                la_GWHL.Visible = la_GwData_Code5.Visible = btn_GWHL.Visible = la_GWHLUnit.Visible = bShowGWHL;
+                // 斜頭需要設定角度
+                CheckOCD2Type(out double ocd2);
+                
+                btn_GWAngle.DisplayText = Math.Abs(ocd2).ToString(Units.DisplayFmt);
+                bool bShowGWAngle = false;
+                if (GWType[CurrentEditGwNo - 1] == MachineType.OCD2 || GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+                {
+                    bShowGWAngle = true;
+                }
+                la_GWAngle.Visible = la_GwData_Code6.Visible = btn_GWAngle.Visible = la_GWAngleUnit.Visible = bShowGWAngle;
                 //修整條件
-                btn_D_DD.DisplayText = CurrentGwMacro[10016].ToString(Units.DisplayFmt);//外徑修整量
-                btn_D_DDD.DisplayText = CurrentGwMacro[10023].ToString(Units.DisplayFmt);//外徑修整預留量
-                btn_D_DS.DisplayText = CurrentGwMacro[10017].ToString(Units.DisplayFmt);//外徑修整速度
-                btn_L_DD.DisplayText = CurrentGwMacro[10024].ToString(Units.DisplayFmt);//左側修整量
-                btn_L_DDD.DisplayText = CurrentGwMacro[10031].ToString(Units.DisplayFmt);//左側修整預留量
-                btn_L_DS.DisplayText = CurrentGwMacro[10025].ToString(Units.DisplayFmt);//左側修整速度
-                btn_R_DD.DisplayText = CurrentGwMacro[10032].ToString(Units.DisplayFmt);//右側修整量
-                btn_R_DDD.DisplayText = CurrentGwMacro[10039].ToString(Units.DisplayFmt);//右側修整預留量
-                btn_R_DS.DisplayText = CurrentGwMacro[10033].ToString(Units.DisplayFmt);//右側修整速度
+                btn_D_DD.DisplayText = CurrentGwMacro[10016 + GwMarcoOffset].ToString(Units.DisplayFmt);//外徑修整量
+                btn_D_DDD.DisplayText = CurrentGwMacro[10023 + GwMarcoOffset].ToString(Units.DisplayFmt);//外徑修整預留量
+                btn_D_DS.DisplayText = CurrentGwMacro[10017 + GwMarcoOffset].ToString(Units.DisplayFmt);//外徑修整速度
+                btn_L_DD.DisplayText = CurrentGwMacro[10024 + GwMarcoOffset].ToString(Units.DisplayFmt);//左側修整量
+                btn_L_DDD.DisplayText = CurrentGwMacro[10031 + GwMarcoOffset].ToString(Units.DisplayFmt);//左側修整預留量
+                btn_L_DS.DisplayText = CurrentGwMacro[10025 + GwMarcoOffset].ToString(Units.DisplayFmt);//左側修整速度
+                btn_R_DD.DisplayText = CurrentGwMacro[10032 + GwMarcoOffset].ToString(Units.DisplayFmt);//右側修整量
+                btn_R_DDD.DisplayText = CurrentGwMacro[10039 + GwMarcoOffset].ToString(Units.DisplayFmt);//右側修整預留量
+                btn_R_DS.DisplayText = CurrentGwMacro[10033 + GwMarcoOffset].ToString(Units.DisplayFmt);//右側修整速度
 
                 //tb_DiamOfsZ.Text = dgwFile.DGWDiamOffsetZ.ToString(Units.DisplayFmt);
-                tb_DiamOfsZ.Text = CurrentGwMacro[10048].ToString(Units.DisplayFmt);//成形 - 外徑修整Z軸補正
+                tb_DiamOfsZ.Text = CurrentGwMacro[10048 + GwMarcoOffset].ToString(Units.DisplayFmt);//成形 - 外徑修整Z軸補正
 
                 //外徑修整啟始方向(位置) (0:從砂輪左側修到右側, 1:從砂輪右側修到左側)
-                if (Math.Round(CurrentGwMacro[10019]) == 0)
+                if (Math.Round(CurrentGwMacro[10019 + GwMarcoOffset]) == 0)
                 {
                     pa_DressToRight.BackColor = Color.Lime;
                     pa_DressToLeft.BackColor = Color.Transparent;
@@ -13748,7 +13997,7 @@ namespace OIG
                 }
 
                 //砂輪往復修整
-                if (Math.Round(CurrentGwMacro[10020]) == 1)
+                if (Math.Round(CurrentGwMacro[10020 + GwMarcoOffset]) == 1)
                 {
                     btn_ToAndBack.DisplayText = "ON";
                 }
@@ -13758,19 +14007,19 @@ namespace OIG
                 }
 
                 //動力修砂轉向
-                int index = (int)Math.Round(CurrentGwMacro[10007]);
+                int index = (int)Math.Round(CurrentGwMacro[10007 + GwMarcoOffset]);
                 if (index < 0 || index > 1) index = 0;//例外處理
                                                       //if (index < CB_PWGWDress.Items.Count) CB_PWGWDress.SelectedIndex = index;
                 btn_RollerRotation.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", (1008 + index), "正轉/反轉");
 
                 //修整不補正座標系
-                index = (int)Math.Round(CurrentGwMacro[10047]);
+                index = (int)Math.Round(CurrentGwMacro[10047 + GwMarcoOffset]);
                 if (index < 0 || index > 1) index = 0;//例外處理
                                                       //if (index < cb_DressGwNoOffset.Items.Count) cb_DressGwNoOffset.SelectedIndex = index;
                 btn_DressGwNoOffset.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", (1010 + index), "補正/不補正");
 
                 //加工完成後砂輪停止
-                index = (int)Math.Round(CurrentGwMacro[10013]);
+                index = (int)Math.Round(CurrentGwMacro[10013 + GwMarcoOffset]);
                 if (index < 0 || index > 1) index = 0;//例外處理
                                                       //cb_AfterMachining.SelectedIndex = index;
                 btn_AfterMachining.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", (1002 + index), "不停止/停止");
@@ -13886,42 +14135,42 @@ namespace OIG
 
             double val;
 
-            int shift = (gw_no - 1) * 100;
+            int shift = (gw_no - 1) * 200;
 
             Actions.Enqueue(new Action(() =>
             {
                 //更新 - 砂輪資料
-                focas.WriteMacro(10005 + shift, CurrentGwMacro[10005]);//修整(形狀)模式選擇
-                focas.WriteMacro(10009 + shift, CurrentGwMacro[10009]);//砂輪目前寬度
-                focas.WriteMacro(10008 + shift, CurrentGwMacro[10008]);//砂輪最小寬度
-                focas.WriteMacro(10006 + shift, CurrentGwMacro[10006]);//砂輪炳長
-                focas.WriteMacro(10011 + shift, CurrentGwMacro[10011]);//砂輪目前外徑
-                focas.WriteMacro(10010 + shift, CurrentGwMacro[10010]);//砂輪最小外徑
-                focas.WriteMacro(10013 + shift, CurrentGwMacro[10013]);//加工結束停止砂輪
-                focas.WriteMacro(10014 + shift, CurrentGwMacro[10014]);//修整次數
-                focas.WriteMacro(10015 + shift, CurrentGwMacro[10015]);//空修次數
+                focas.WriteMacro(10005 + shift, CurrentGwMacro[10005 + shift]);//修整(形狀)模式選擇
+                focas.WriteMacro(10009 + shift, CurrentGwMacro[10009 + shift]);//砂輪目前寬度
+                focas.WriteMacro(10008 + shift, CurrentGwMacro[10008 + shift]);//砂輪最小寬度
+                focas.WriteMacro(10006 + shift, CurrentGwMacro[10006 + shift]);//砂輪炳長
+                focas.WriteMacro(10011 + shift, CurrentGwMacro[10011 + shift]);//砂輪目前外徑
+                focas.WriteMacro(10010 + shift, CurrentGwMacro[10010 + shift]);//砂輪最小外徑
+                focas.WriteMacro(10013 + shift, CurrentGwMacro[10013 + shift]);//加工結束停止砂輪
+                focas.WriteMacro(10014 + shift, CurrentGwMacro[10014 + shift]);//修整次數
+                focas.WriteMacro(10015 + shift, CurrentGwMacro[10015 + shift]);//空修次數
 
 
                 //更新 T Code 只能傳整數, 控制器內會自己轉公英制
-                int TCode_Z = (int)Math.Round((CurrentGwMacro[10009] + CurrentGwMacro[10006]) / (bInchTrans ? 0.00001 : 0.0001));
+                int TCode_Z = (int)Math.Round((CurrentGwMacro[10009 + shift] + CurrentGwMacro[10006 + shift]) / (bInchTrans ? 0.00001 : 0.0001));
                 focas.WriteGeom(GeomType.Z, 124 + gw_no, TCode_Z);
-                int TCode_X = (int)Math.Round(CurrentGwMacro[10011] / (bInchTrans ? -0.00001 : -0.0001));
+                int TCode_X = (int)Math.Round(CurrentGwMacro[10011 + shift] / (bInchTrans ? -0.00001 : -0.0001));
                 focas.WriteGeom(GeomType.X, 124 + gw_no, TCode_X);
 
                 //更新 - 修整條件
-                focas.WriteMacro(10016 + shift, CurrentGwMacro[10016]);//外徑修整量
-                focas.WriteMacro(10017 + shift, CurrentGwMacro[10017]);//外徑修整速度
-                focas.WriteMacro(10023 + shift, CurrentGwMacro[10023]);//外徑修整預留量
-                focas.WriteMacro(10024 + shift, CurrentGwMacro[10024]);//左側修整量
-                focas.WriteMacro(10031 + shift, CurrentGwMacro[10031]);//左側修整預留量
-                focas.WriteMacro(10025 + shift, CurrentGwMacro[10025]);//左側修整速度
-                focas.WriteMacro(10032 + shift, CurrentGwMacro[10032]);//右側修整量
-                focas.WriteMacro(10039 + shift, CurrentGwMacro[10039]);//右側修整預留量
-                focas.WriteMacro(10033 + shift, CurrentGwMacro[10033]);//右側修整速度
-                focas.WriteMacro(10020 + shift, CurrentGwMacro[10020]);//往復修整 (0:無往復, 1:往復修整)
-                focas.WriteMacro(10019 + shift, CurrentGwMacro[10019]);//修整方向 (0:由左至右, 1:由右至左)
-                focas.WriteMacro(10007 + shift, CurrentGwMacro[10007]);//動力修砂方向 (0:正轉, 1:反轉)
-                focas.WriteMacro(10047 + shift, CurrentGwMacro[10047]);//加工不補正 (0:補正, 1:不補正)
+                focas.WriteMacro(10016 + shift, CurrentGwMacro[10016 + shift]);//外徑修整量
+                focas.WriteMacro(10017 + shift, CurrentGwMacro[10017 + shift]);//外徑修整速度
+                focas.WriteMacro(10023 + shift, CurrentGwMacro[10023 + shift]);//外徑修整預留量
+                focas.WriteMacro(10024 + shift, CurrentGwMacro[10024 + shift]);//左側修整量
+                focas.WriteMacro(10031 + shift, CurrentGwMacro[10031 + shift]);//左側修整預留量
+                focas.WriteMacro(10025 + shift, CurrentGwMacro[10025 + shift]);//左側修整速度
+                focas.WriteMacro(10032 + shift, CurrentGwMacro[10032 + shift]);//右側修整量
+                focas.WriteMacro(10039 + shift, CurrentGwMacro[10039 + shift]);//右側修整預留量
+                focas.WriteMacro(10033 + shift, CurrentGwMacro[10033 + shift]);//右側修整速度
+                focas.WriteMacro(10020 + shift, CurrentGwMacro[10020 + shift]);//往復修整 (0:無往復, 1:往復修整)
+                focas.WriteMacro(10019 + shift, CurrentGwMacro[10019 + shift]);//修整方向 (0:由左至右, 1:由右至左)
+                focas.WriteMacro(10007 + shift, CurrentGwMacro[10007 + shift]);//動力修砂方向 (0:正轉, 1:反轉)
+                focas.WriteMacro(10047 + shift, CurrentGwMacro[10047 + shift]);//加工不補正 (0:補正, 1:不補正)
 
             }));
 
@@ -13938,17 +14187,17 @@ namespace OIG
                 Actions.Enqueue(new Action(() =>
                 {
                     focas.WriteMacro(10048 + shift, mode);//成形模式
-                    focas.WriteMacro(10049 + shift, CurrentGwMacro[10049]);//成形外徑修整Z軸補正
+                    focas.WriteMacro(10049 + shift, CurrentGwMacro[10049 + shift]);//成形外徑修整Z軸補正
                     focas.WriteMacro(10050 + shift, dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].X * 2 : 0);//左側起始位置X
                     focas.WriteMacro(10051 + shift, dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].Z : 0);//左側起始位置Z
                     focas.WriteMacro(10052 + shift, dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].X * 2 : 0);//外徑起始位置X
                     focas.WriteMacro(10053 + shift, dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].Z : 0);//外徑起始位置Z
                     focas.WriteMacro(10054 + shift, dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].X * 2 : 0);//右側起始位置X
                     focas.WriteMacro(10055 + shift, dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].Z : 0);//右側起始位置Z
-                    focas.WriteMacro(10056 + shift, CurrentGwMacro[10056]);//外徑刀尖功能
-                    focas.WriteMacro(10057 + shift, CurrentGwMacro[10057]);//外徑刀尖半徑
-                    focas.WriteMacro(10058 + shift, CurrentGwMacro[10058]);//左側刀尖功能
-                    focas.WriteMacro(10059 + shift, CurrentGwMacro[10059]);//左側刀尖半徑
+                    focas.WriteMacro(10056 + shift, CurrentGwMacro[10056 + shift]);//外徑刀尖功能
+                    focas.WriteMacro(10057 + shift, CurrentGwMacro[10057 + shift]);//外徑刀尖半徑
+                    focas.WriteMacro(10058 + shift, CurrentGwMacro[10058 + shift]);//左側刀尖功能
+                    focas.WriteMacro(10059 + shift, CurrentGwMacro[10059 + shift]);//左側刀尖半徑
                 }));
                 WritePath();//將路徑寫到控制器 GW1:O8002, GW2:O8003, GW3:O8004
 
@@ -14014,16 +14263,38 @@ namespace OIG
                 //String AppPath = Application.StartupPath;
                 DGV_GwParam.Rows.Clear();
 
+                int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
                 //讀取 - 砂輪形狀資料
-                XmlElement xmlGwType = (CurrentGwMacro[10004] == 1 ? machineSetting.xmlOCD_Param : machineSetting.xmlOIG_Param);
+                XmlElement xmlGwType = (CurrentGwMacro[10004 + GwMarcoOffset] == 0 ? machineSetting.xmlOCD_Param : machineSetting.xmlOIG_Param);
+                double dGwType = CurrentGwMacro[10004 + GwMarcoOffset];
+
+               
+                int iOCD2OrOCD3 = 0;
+                if (GWType[CurrentEditGwNo - 1] == MachineType.OCD2)
+                {
+                    xmlGwType = machineSetting.xmlOCD_PA_Param;
+                    iOCD2OrOCD3 = 2;
+                }
+                if (GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+                {
+                    xmlGwType = machineSetting.xmlOCD_NA_Param;
+                    iOCD2OrOCD3 = 3;
+                }
                 if (xmlGwType == null) return;//例外處理
                 XmlElement xmlShape = xmlGwType.GetShape(SelectShapeNo);//尋找形狀節點
                 if (xmlShape == null) return;//例外處理
 
                 TIniFile ini = new TIniFile(Units.langfile);//多國語言
 
-                string filepath = Application.StartupPath + "\\image\\" + (CurrentGwMacro[10004] == 0 ? "OIG" : "OCD") + "\\Param\\";
-
+                string filepath = Application.StartupPath + "\\image\\" + (CurrentGwMacro[10004 + GwMarcoOffset] == 1 ? "OIG" : "OCD") + "\\Param\\";
+                if(iOCD2OrOCD3 == 2)
+                {
+                    filepath = Application.StartupPath + "\\image\\" + "OCD2" + "\\Param\\";
+                }
+                if (iOCD2OrOCD3 == 3)
+                {
+                    filepath = Application.StartupPath + "\\image\\" + "OCD3" + "\\Param\\";
+                }
                 //將形狀參數 讀取到 DataGridView
                 for (int i = 0; i < xmlShape.ChildNodes.Count; i++)
                 {
@@ -14033,7 +14304,7 @@ namespace OIG
                     string pic_filename = filepath + "Shape" + SelectShapeNo + "\\" + (i + 1) + ".png";//設定圖片路徑
                     string param_name = ini.ReadString("Macro", macro_no.ToString(), "");//從語言檔 讀取 參數名稱
                     DGV_GwParam.Rows.Add(param_name,
-                                         CurrentGwMacro[macro_no].ToString(Units.DisplayFmt),
+                                         CurrentGwMacro[macro_no + GwMarcoOffset].ToString(Units.DisplayFmt),
                                          pic_filename,
                                          macro_no);
 
@@ -17290,7 +17561,7 @@ namespace OIG
         }
 
 
-        private void OIG_SeriesChoose(object sender, EventArgs e)
+        private void MPCOE_SeriesChoose(object sender, EventArgs e)
         {
             TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
 
@@ -17300,37 +17571,20 @@ namespace OIG
                                 MessageBoxButtons.YesNo);
             if (r != DialogResult.Yes)
             {
-
-                switch (MachType)
-                {
-                    case MachineType.OIG_R_D2:
-                        rb_OIG_D2.Checked = true;
-                        break;
-                    case MachineType.OIG_R_M4:
-                        rb_OIG_M4.Checked = true;
-                        break;
-                    default:
-                        rb_OIG_R.Checked = true;
-                        break;
-                }
                 return;
             }
             
-            if (rb_OIG_D2.Checked)
-            {
-                MachType = MachineType.OIG_R_D2;
-                GwCount = 2;
+            
+            if (rb_M2.Checked)
+            {                
+                GwCount = 2;           
             }
-            else if (rb_OIG_M4.Checked)
-            {
-                MachType = MachineType.OIG_R_M4;
-                GwCount = 4;
+            else if (rb_M3.Checked)
+            {   
+                GwCount = 3;
             }
-            else
-            {
-                MachType = MachineType.OIG_R;
-                GwCount = 1;
-            }
+            ini = new TIniFile(Application.StartupPath + "\\sys.ini");
+            ini.WriteInteger("System", "MPCODE Series", GwCount);
 
             RadioButton rd = sender as RadioButton;
             if (rd == null) return;
@@ -17338,17 +17592,15 @@ namespace OIG
             ResetProcess();//重設工序 ini
             ResetProglist();//刪除程式清單
 
-            Actions.Enqueue(new Action(() =>
-            {
-                focas.WriteMacro(977, 3);//機型 (此系列固定為 3)
-                focas.WriteMacro(15050, GwCount);// 設定砂輪數量
-            }));
+            //Actions.Enqueue(new Action(() =>
+            //{
+            //    //focas.WriteMacro(977, 3);//機型 (此系列固定為 3)
+            //    focas.WriteMacro(15050, GwCount);// 設定砂輪數量
+            //}));
 
-            ini = new TIniFile(Application.StartupPath + "\\sys.ini");
-            ini.WriteInteger("System", "OIG Series", (int)MachType);
-            ini.WriteInteger("System", "GW2_Comm_Enabled", (MachType == MachineType.OIG_R_D2) ? 1 : 0);// 砂輪2是否啟用
-            ini.WriteInteger("System", "GW3_Comm_Enabled", (MachType == MachineType.OIG_R_M4) ? 1 : 0);// 砂輪3是否啟用
-            ini.WriteInteger("System", "GW4_Comm_Enabled", (MachType == MachineType.OIG_R_M4) ? 1 : 0);// 砂輪4是否啟用
+            
+            //ini.WriteInteger("System", "GW3_Comm_Enabled", (MachType == MachineType.M3) ? 1 : 0);// 砂輪3是否啟用
+            
 
             SetMonitorBtns();//切換機型 - 監視 - 下方按鍵變更
         }
@@ -17363,25 +17615,7 @@ namespace OIG
             }
 
 
-            if (MachType == MachineType.OIG_R_D2) //OIG D series (兩個內圓)
-            {
-                GW2_Comm_Enabled = true;
-                GW3_Comm_Enabled = false;
-                GW4_Comm_Enabled = false;
-            }
-            else if (MachType == MachineType.OIG_R_M4)//OIG DE series (一個內圓 一個外圓)
-            {
-                GW2_Comm_Enabled = true;
-                GW3_Comm_Enabled = true;
-                GW4_Comm_Enabled = true;
-
-            }
-            else if (MachType == MachineType.OIG_R) //OIG R series
-            {
-                GW2_Comm_Enabled = false;
-                GW3_Comm_Enabled = false;
-                GW4_Comm_Enabled = false;
-            }
+            
 
             ini.WriteInteger("UI", "ProcessTag20", 999);//code
             ini.WriteString("UI", "ProcessImg20", "\\image\\Process\\150x150\\Process999.png");//code
@@ -17513,7 +17747,7 @@ namespace OIG
             //關閉軟體面板
             pa_SoftPanel.Visible = false;
 
-            fo_Warmup = new Fo_Warmup(MachType);
+            fo_Warmup = new Fo_Warmup(0);
             fo_Warmup.TopLevel = false;
             fo_Warmup.Parent = tab_Warmup;
             fo_Warmup.Left = 0;
@@ -18194,7 +18428,8 @@ namespace OIG
             Units.MacroInfo.CheckMacroMinMax(no, ref data);//檢查上下限並修正, 沒問題會回傳 true
 
             DGV_GwParam.CurrentRow.Cells[1].Value = data.ToString(Units.DisplayFmt); //更新畫面
-            CurrentGwMacro[no] = data;
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            CurrentGwMacro[no + GwMarcoOffset] = data;
 
             DataGridViewCell cell = DGV_GwParam.CurrentCell;//先記錄目前位置
             DGV_GwParam.CurrentCell = null; //未選擇任何欄位
@@ -18435,7 +18670,7 @@ namespace OIG
             pic_ODCenterPos_Gw1_X1.Visible = false;
             pic_ODCenterPos_Gw1_X2.Visible = false;
             tc_PositionSet.SelectedTab = tab_PosSet_IDCenterPos;
-            if (MachType == MachineType.OIG_R)
+            //if (MachType == MachineType.OIG_R)
             {
                 Label[] buf1 = { la_PosSetMach1, la_PosSetMach2, la_PosSetMach3, la_PosSetMach4, la_PosSetMach5, la_PosSetMach6 };
                 Label[] buf2 = { la_PosSetMach_1, la_PosSetMach_2, la_PosSetMach_3, la_PosSetMach_4, la_PosSetMach_5, la_PosSetMach_6 };
@@ -19892,9 +20127,21 @@ namespace OIG
             Units.MacroInfo.CheckMacroMinMax(no, ref data); //檢查上下限並修正, 沒問題會回傳 true
 
             btn.DisplayText = data.ToString(Units.DisplayFmt);//更新欄位數值(浮點數型)
-
-            CurrentGwMacro[no] = data;//寫回暫存
-            WriteGwMacro(CurrentEditGwNo, no, data);
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            if (btn.Name.Contains("GWAngle"))
+            {
+                GwMarcoOffset = (CurrentEditGwNo - 1) * 2;
+                if(GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+                {
+                    data = data * -1;
+                }
+                Action_WriteMacro(no + GwMarcoOffset, data);           
+            }
+            else
+            {           
+                CurrentGwMacro[no + GwMarcoOffset] = data;//寫回暫存
+                WriteGwMacro(CurrentEditGwNo, no, data);
+            }
         }
         private void un_Gw_Condition_OnBtnOkClick(object sender, EventArgs e)
         {
@@ -19918,8 +20165,8 @@ namespace OIG
                 btn.DisplayText = data.ToString(Units.DisplayFmt);//更新欄位數值(浮點數型)
                 un_Gw_Condition.la_Num.Text = data.ToString(Units.DisplayFmt);
             }
-
-            CurrentGwMacro[no] = data;//寫回暫存
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            CurrentGwMacro[no + GwMarcoOffset] = data;//寫回暫存
             WriteGwMacro(CurrentEditGwNo, no, data);
         }
         private void TC_GW_SelectedIndexChanged(object sender, EventArgs e)
@@ -19950,7 +20197,7 @@ namespace OIG
         {
             dgwFile.SaveToFile(Application.StartupPath + "\\GW" + CurrentEditGwNo + ".xml");
 
-            int shift = (CurrentEditGwNo - 1) * 100;
+            int shift = (CurrentEditGwNo - 1) * 200;
 
             int mode = 0;
             if (dgwFile.LeftList.Count > 0) mode |= 1;//成形模式 - 包含左側修整
@@ -19960,17 +20207,17 @@ namespace OIG
             Actions.Enqueue(new Action(() =>
             {
                 focas.WriteMacro(10048 + shift, mode);//成形模式
-                focas.WriteMacro(10049 + shift, CurrentGwMacro[10049]);//成形外徑修整Z軸補正
+                focas.WriteMacro(10049 + shift, CurrentGwMacro[10049 + shift]);//成形外徑修整Z軸補正
                 focas.WriteMacro(10050 + shift, dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].X * 2 : 0);//左側起始位置X
                 focas.WriteMacro(10051 + shift, dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].Z : 0);//左側起始位置Z
                 focas.WriteMacro(10052 + shift, dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].X * 2 : 0);//外徑起始位置X
                 focas.WriteMacro(10053 + shift, dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].Z : 0);//外徑起始位置Z
                 focas.WriteMacro(10054 + shift, dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].X * 2 : 0);//右側起始位置X
                 focas.WriteMacro(10055 + shift, dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].Z : 0);//右側起始位置Z
-                focas.WriteMacro(10056 + shift, CurrentGwMacro[10056]);//外徑刀尖功能
-                focas.WriteMacro(10057 + shift, CurrentGwMacro[10057]);//外徑刀尖半徑
-                focas.WriteMacro(10058 + shift, CurrentGwMacro[10058]);//左側刀尖功能
-                focas.WriteMacro(10059 + shift, CurrentGwMacro[10059]);//左側刀尖半徑           
+                focas.WriteMacro(10056 + shift, CurrentGwMacro[10056 + shift]);//外徑刀尖功能
+                focas.WriteMacro(10057 + shift, CurrentGwMacro[10057 + shift]);//外徑刀尖半徑
+                focas.WriteMacro(10058 + shift, CurrentGwMacro[10058 + shift]);//左側刀尖功能
+                focas.WriteMacro(10059 + shift, CurrentGwMacro[10059 + shift]);//左側刀尖半徑           
 
             }));
             WritePath();//將路徑寫到控制器 GW1:O8002, GW2:O8003, GW3:O8004
@@ -19984,18 +20231,19 @@ namespace OIG
             un_Gw_Condition.la_Msg.Text = "";
             un_Gw_Condition.la_Num.Text = "";
             btn_DressGwNoOffset.Lamp = true;
-            if (CurrentGwMacro[10047] == 0)//補正 -> 不補正
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            if (CurrentGwMacro[10073 + GwMarcoOffset] == 0)//補正 -> 不補正
             {
-                CurrentGwMacro[10047] = 1;
+                CurrentGwMacro[10073 + GwMarcoOffset] = 1;
                 btn_DressGwNoOffset.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1011, "不補正");
-                WriteGwMacro(CurrentEditGwNo, 10047, 1);
+                WriteGwMacro(CurrentEditGwNo, 10073, 1);
 
             }
             else //不補正 -> 補正
             {
-                CurrentGwMacro[10047] = 0;
+                CurrentGwMacro[10073 + GwMarcoOffset] = 0;
                 btn_DressGwNoOffset.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1010, "補正");
-                WriteGwMacro(CurrentEditGwNo, 10047, 0);
+                WriteGwMacro(CurrentEditGwNo, 10073, 0);
 
             }
         }
@@ -20007,16 +20255,17 @@ namespace OIG
             un_Gw_Condition.la_Msg.Text = "";
             un_Gw_Condition.la_Num.Text = "";
             btn_AfterMachining.Lamp = true;
-            if (CurrentGwMacro[10013] == 0)//不停止 -> 停止
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            if (CurrentGwMacro[10013 + GwMarcoOffset] == 0)//不停止 -> 停止
             {
-                CurrentGwMacro[10013] = 1;
+                CurrentGwMacro[10013 + GwMarcoOffset] = 1;
                 btn_AfterMachining.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1003, "停止");
                 WriteGwMacro(CurrentEditGwNo, 10013, 1);
 
             }
             else //停止 -> 不停止
             {
-                CurrentGwMacro[10013] = 0;
+                CurrentGwMacro[10013 + GwMarcoOffset] = 0;
                 btn_AfterMachining.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1002, "不停止");
                 WriteGwMacro(CurrentEditGwNo, 10013, 0);
 
@@ -20030,18 +20279,19 @@ namespace OIG
             un_Gw_Condition.la_Msg.Text = "";
             un_Gw_Condition.la_Num.Text = "";
             btn_RollerRotation.Lamp = true;
-            if (CurrentGwMacro[10007] == 0)//正轉 -> 反轉
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            if (CurrentGwMacro[10072 + GwMarcoOffset] == 0)//正轉 -> 反轉
             {
-                CurrentGwMacro[10007] = 1;
+                CurrentGwMacro[10072 + GwMarcoOffset] = 1;
                 btn_RollerRotation.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1009, "反轉");
-                WriteGwMacro(CurrentEditGwNo, 10007, 1);
+                WriteGwMacro(CurrentEditGwNo, 10072, 1);
 
             }
             else //反轉 -> 正轉
             {
-                CurrentGwMacro[10007] = 0;
+                CurrentGwMacro[10072 + GwMarcoOffset] = 0;
                 btn_RollerRotation.DisplayText = LanguageManager.LoadMessage(Units.langfile, "MaintainParam", 1008, "正轉");
-                WriteGwMacro(CurrentEditGwNo, 10007, 0);
+                WriteGwMacro(CurrentEditGwNo, 10072, 0);
 
             }
         }
@@ -20053,17 +20303,17 @@ namespace OIG
             un_Gw_Condition.la_Msg.Text = "";
             un_Gw_Condition.la_Num.Text = "";
             btn_ToAndBack.Lamp = true;
-
-            if (CurrentGwMacro[10020] == 1) //目前是使用
+            int GwMarcoOffset = (CurrentEditGwNo - 1) * 200;
+            if (CurrentGwMacro[10020 + GwMarcoOffset] == 1) //目前是使用
             {
-                CurrentGwMacro[10020] = 0; //不使用
+                CurrentGwMacro[10020 + GwMarcoOffset] = 0; //不使用
                 btn_ToAndBack.DisplayText = "OFF";
                 WriteGwMacro(CurrentEditGwNo, 10020, 0);
 
             }
             else //目前不使用
             {
-                CurrentGwMacro[10020] = 1; //使用
+                CurrentGwMacro[10020 + GwMarcoOffset] = 1; //使用
                 btn_ToAndBack.DisplayText = "ON";
                 WriteGwMacro(CurrentEditGwNo, 10020, 1);
 
@@ -20076,11 +20326,6 @@ namespace OIG
         private void btn_SaveProg_VisibleChanged(object sender, EventArgs e)
         {
             //Col_ProcList_Btn.Visible = !btn_SaveProg.Visible;
-        }
-
-        private void btn_ToAndBack_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_Gw_Click(object sender, EventArgs e)
@@ -20115,7 +20360,17 @@ namespace OIG
             }
 
             //載入圖檔 (暫時先寫OIG的, 以後有OCD的再補)
-            string filename = Application.StartupPath + "\\image\\OIG\\Data\\" + no + ".png";
+            string GWTypeName = CurrentGwMacro[10004 + ((CurrentEditGwNo - 1) * 200)] == 0 ? "OCD" : "OIG";
+           
+            if (GWType[CurrentEditGwNo - 1] == MachineType.OCD2)
+            {
+                GWTypeName = "OCD2";
+            }
+            if (GWType[CurrentEditGwNo - 1] == MachineType.OCD3)
+            {
+                GWTypeName = "OCD3";
+            }
+            string filename = Application.StartupPath + $"\\image\\{GWTypeName}\\Data\\" + no + ".png";
             pic_GwData.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
         }
 
@@ -20637,12 +20892,44 @@ namespace OIG
         {
             if (sender == rb_Gw1Type0) Action_WriteMacro(10004, 0);
             else if (sender == rb_Gw1Type1) Action_WriteMacro(10004, 1);
-            else if (sender == rb_Gw2Type0) Action_WriteMacro(10104, 0);
-            else if (sender == rb_Gw2Type1) Action_WriteMacro(10104, 1);
-            else if (sender == rb_Gw3Type0) Action_WriteMacro(10204, 0);
-            else if (sender == rb_Gw3Type1) Action_WriteMacro(10204, 1);
-            else if (sender == rb_Gw4Type0) Action_WriteMacro(10304, 0);
-            else if (sender == rb_Gw4Type1) Action_WriteMacro(10304, 1);
+            else if (sender == rb_Gw1Type2) Action_WriteMacro(10004, 0); // GW1斜頭是外圓，但要設角度 #671
+            else if (sender == rb_Gw1Type3) Action_WriteMacro(10004, 0); // GW1斜頭是外圓，但要設角度 #671
+            else if (sender == rb_Gw2Type0) Action_WriteMacro(10204, 0);
+            else if (sender == rb_Gw2Type1) Action_WriteMacro(10204, 1);
+            else if (sender == rb_Gw2Type2) Action_WriteMacro(10204, 0); // GW2斜頭是外圓，但要設角度 #673
+            else if (sender == rb_Gw2Type3) Action_WriteMacro(10204, 0); // GW2斜頭是外圓，但要設角度 #673
+            else if (sender == rb_Gw3Type0) Action_WriteMacro(10404, 0);
+            else if (sender == rb_Gw3Type1) Action_WriteMacro(10404, 1);
+            else if (sender == rb_Gw3Type2) Action_WriteMacro(10404, 0); // GW3斜頭是外圓，但要設角度 #675
+            else if (sender == rb_Gw3Type3) Action_WriteMacro(10404, 0); // GW3斜頭是外圓，但要設角度 #675
+            RadioButton rb = (RadioButton)sender;
+            string tagValue = rb.Tag.ToString();
+            TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
+            if (!string.IsNullOrEmpty(tagValue))
+            {
+                string sectionName = "";
+                int value = int.Parse(tagValue);
+                if (rb.Name.Contains("Gw1"))
+                {
+                    sectionName = "GW1Type";
+                    GWType[0] = (MachineType)value;
+                }
+                else if (rb.Name.Contains("Gw2"))
+                {
+                    sectionName = "GW2Type";
+                    GWType[1] = (MachineType)value;
+                }
+                else if (rb.Name.Contains("Gw3"))
+                {
+                    sectionName = "GW3Type";
+                    GWType[2] = (MachineType)value;
+                }
+              
+                if (!string.IsNullOrEmpty(sectionName))
+                {
+                    ini.WriteInteger("System", sectionName, value);
+                }
+            }
         }
 
         private void btn_GWRPS_save_Click(object sender, EventArgs e)
@@ -20697,6 +20984,74 @@ namespace OIG
                     break;
                 }
                 Application.DoEvents();//等待通訊結束
+            }
+        }
+        public void CheckOCD2Type(out double ocd2)
+        {
+            bool bFinish = false;
+            ocd2 = 0;
+            double tmpOcd2 = 0;
+            Actions.Enqueue(new Action(() =>
+            {
+                focas.ReadMacro(671 + ((CurrentEditGwNo - 1) * 2), out tmpOcd2);//0:直頭, 不等 0 :斜頭
+                bFinish = true;
+            }));
+            int iStart = Environment.TickCount;
+            while (!bFinish)
+            {
+                int iTime = Environment.TickCount - iStart;
+                if (iTime > 5000)
+                {
+                    return;
+                }
+                Application.DoEvents();
+            }
+            ocd2 = tmpOcd2;
+        }
+
+        private void btn_dgvScrollUpOrDown_Click(object sender, EventArgs e)
+        {
+            Uc_RoundBtn btn = (Uc_RoundBtn)sender;
+            int currentIndex = DGV_GwParam.FirstDisplayedScrollingRowIndex;
+            int scrollAmount = 5; // 每次點擊滾動的列數
+
+            if (btn.Tag != null)
+            {
+                if (btn.Tag.ToString() == "1")
+                {
+                    if (currentIndex - scrollAmount >= 0)
+                    {
+                        DGV_GwParam.FirstDisplayedScrollingRowIndex = currentIndex - scrollAmount;
+                    }
+                    else
+                    {
+                        DGV_GwParam.FirstDisplayedScrollingRowIndex = 0;
+                    }
+                }
+                if (btn.Tag.ToString() == "2")
+                {
+                    if (currentIndex + scrollAmount < DGV_GwParam.RowCount)
+                    {
+                        DGV_GwParam.FirstDisplayedScrollingRowIndex = currentIndex + scrollAmount;
+                    }
+                    else
+                    {
+                        DGV_GwParam.FirstDisplayedScrollingRowIndex = DGV_GwParam.RowCount - 1;
+                    }
+                }
+                
+            }
+        }
+
+        private void pic_DressTool_Click(object sender, EventArgs e)
+        {
+            PictureBox pic = (PictureBox)sender;
+            
+            if (pic.Tag != null)
+            {
+                double val = double.Parse(pic.Tag.ToString());
+                Action_WriteMacro(558, val);
+                btn_Prev.PerformClick();
             }
         }
     }
@@ -20897,6 +21252,8 @@ public class DGWFile
         ////File.WriteAllLines(Application.StartupPath + "\\path.txt", lines);
         //File.WriteAllLines(FileName, lines);
     }
+
+    
 }
 
 public class DGWData//成形修整資料
@@ -20969,8 +21326,9 @@ enum PathOrigin
 
 public enum MachineType
 {
-    OIG_R = 0,
-    OIG_R_D2 = 1,
-    OIG_R_M4 = 2
+    OCD = 0,
+    OIG = 1,
+    OCD2,
+    OCD3
 }
 

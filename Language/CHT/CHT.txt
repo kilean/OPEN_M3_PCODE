@@ -455,6 +455,7 @@ la_GWDressCount=修整計次
 la_GWDressTimes=修整次數
 la_Retract=修整回退量
 la_GWHL=砂輪柄長
+la_GWAngle=砂輪角度
 la_Must5=(必填)
 la_Must4=(必填)
 la_GWMinWidth=最小寬度
@@ -471,9 +472,9 @@ la_SetGW5Title=砂輪參數
 btn_SaveDressGw=儲存
 btn_G58Z=使用目前座標
 btn_G58X=使用目前座標
-GB_G55=外徑修砂位置
-GB_G56=左側修砂位置
-GB_G58=右側修砂位置
+GB_G55=G55
+GB_G56=G57
+GB_G58=G58
 btn_G56Z=使用目前座標
 btn_G56X=使用目前座標
 btn_G55Z=使用目前座標
@@ -904,6 +905,17 @@ Shape7=左錐度
 Shape8=成形修整
 Shape9=
 
+[OCD3_Shape]
+Shape1=外徑修整
+Shape2=
+Shape3=外徑+右端面
+Shape4=
+Shape5=
+Shape6=
+Shape7=右錐度
+Shape8=成形修整
+Shape9=
+
 [Fo_Msg]
 btn_Cancel3=取消
 btn_Retyr2=重試
@@ -1135,6 +1147,7 @@ Message634=端測球徑
 10040=錐度直線幅
 10041=錐度幅
 10042=錐度修整度
+10043=左側逃離長
 10048=GW1 成形模式
 10049=成形外徑修整Z軸補正
 10050=成形左端X起點
@@ -1189,6 +1202,7 @@ btn_GWMinDiameter=砂輪最小外徑
 btn_GWWidth=砂輪目前寬度
 btn_GWMinWidth=砂輪最小寬度
 btn_GWHL=砂輪柄長
+btn_GWAngle=砂輪角度
 
 ;修整條件
 btn_D_DD=外徑修整量

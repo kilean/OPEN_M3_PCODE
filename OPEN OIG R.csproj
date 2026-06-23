@@ -358,6 +358,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fo_Main.resx">
       <DependentUpon>Fo_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Fo_Logo.resx">
       <DependentUpon>Fo_Logo.cs</DependentUpon>

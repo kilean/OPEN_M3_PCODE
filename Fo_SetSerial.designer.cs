@@ -166,7 +166,7 @@
             this.CB_Port485.Location = new System.Drawing.Point(64, 9);
             this.CB_Port485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.CB_Port485.Name = "CB_Port485";
-            this.CB_Port485.Size = new System.Drawing.Size(72, 28);
+            this.CB_Port485.Size = new System.Drawing.Size(72, 33);
             this.CB_Port485.TabIndex = 23;
             // 
             // RB_ODD485
@@ -175,7 +175,7 @@
             this.RB_ODD485.Location = new System.Drawing.Point(192, 8);
             this.RB_ODD485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_ODD485.Name = "RB_ODD485";
-            this.RB_ODD485.Size = new System.Drawing.Size(64, 24);
+            this.RB_ODD485.Size = new System.Drawing.Size(79, 29);
             this.RB_ODD485.TabIndex = 2;
             this.RB_ODD485.Text = "ODD";
             this.RB_ODD485.UseVisualStyleBackColor = true;
@@ -187,7 +187,7 @@
             this.RB_EVEN485.Location = new System.Drawing.Point(104, 8);
             this.RB_EVEN485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_EVEN485.Name = "RB_EVEN485";
-            this.RB_EVEN485.Size = new System.Drawing.Size(69, 24);
+            this.RB_EVEN485.Size = new System.Drawing.Size(84, 29);
             this.RB_EVEN485.TabIndex = 1;
             this.RB_EVEN485.TabStop = true;
             this.RB_EVEN485.Text = "EVEN";
@@ -199,7 +199,7 @@
             this.RB_NONE485.Location = new System.Drawing.Point(8, 8);
             this.RB_NONE485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_NONE485.Name = "RB_NONE485";
-            this.RB_NONE485.Size = new System.Drawing.Size(75, 24);
+            this.RB_NONE485.Size = new System.Drawing.Size(92, 29);
             this.RB_NONE485.TabIndex = 0;
             this.RB_NONE485.Text = "NONE";
             this.RB_NONE485.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.RB_2Bit485.Location = new System.Drawing.Point(144, 8);
             this.RB_2Bit485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_2Bit485.Name = "RB_2Bit485";
-            this.RB_2Bit485.Size = new System.Drawing.Size(36, 24);
+            this.RB_2Bit485.Size = new System.Drawing.Size(45, 29);
             this.RB_2Bit485.TabIndex = 7;
             this.RB_2Bit485.Text = "2";
             this.RB_2Bit485.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.RB_1Bit485.Location = new System.Drawing.Point(96, 8);
             this.RB_1Bit485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_1Bit485.Name = "RB_1Bit485";
-            this.RB_1Bit485.Size = new System.Drawing.Size(36, 24);
+            this.RB_1Bit485.Size = new System.Drawing.Size(45, 29);
             this.RB_1Bit485.TabIndex = 6;
             this.RB_1Bit485.TabStop = true;
             this.RB_1Bit485.Text = "1";
@@ -235,7 +235,7 @@
             this.RB_8Bit485.Location = new System.Drawing.Point(144, 8);
             this.RB_8Bit485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_8Bit485.Name = "RB_8Bit485";
-            this.RB_8Bit485.Size = new System.Drawing.Size(36, 24);
+            this.RB_8Bit485.Size = new System.Drawing.Size(45, 29);
             this.RB_8Bit485.TabIndex = 7;
             this.RB_8Bit485.TabStop = true;
             this.RB_8Bit485.Text = "8";
@@ -248,7 +248,7 @@
             this.RB_7Bit485.Location = new System.Drawing.Point(96, 8);
             this.RB_7Bit485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_7Bit485.Name = "RB_7Bit485";
-            this.RB_7Bit485.Size = new System.Drawing.Size(36, 24);
+            this.RB_7Bit485.Size = new System.Drawing.Size(45, 29);
             this.RB_7Bit485.TabIndex = 6;
             this.RB_7Bit485.Text = "7";
             this.RB_7Bit485.UseVisualStyleBackColor = true;
@@ -265,7 +265,7 @@
             this.CB_BaudRate485.Location = new System.Drawing.Point(227, 9);
             this.CB_BaudRate485.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.CB_BaudRate485.Name = "CB_BaudRate485";
-            this.CB_BaudRate485.Size = new System.Drawing.Size(80, 28);
+            this.CB_BaudRate485.Size = new System.Drawing.Size(80, 33);
             this.CB_BaudRate485.TabIndex = 19;
             // 
             // la_BaudRate
@@ -274,7 +274,7 @@
             this.la_BaudRate.Location = new System.Drawing.Point(139, 13);
             this.la_BaudRate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_BaudRate.Name = "la_BaudRate";
-            this.la_BaudRate.Size = new System.Drawing.Size(86, 20);
+            this.la_BaudRate.Size = new System.Drawing.Size(107, 25);
             this.la_BaudRate.TabIndex = 18;
             this.la_BaudRate.Text = "Baud Rate";
             // 
@@ -295,7 +295,7 @@
             this.la_COM.Location = new System.Drawing.Point(3, 13);
             this.la_COM.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_COM.Name = "la_COM";
-            this.la_COM.Size = new System.Drawing.Size(48, 20);
+            this.la_COM.Size = new System.Drawing.Size(60, 25);
             this.la_COM.TabIndex = 16;
             this.la_COM.Text = "COM";
             // 
@@ -303,7 +303,7 @@
             // 
             this.TB_GW1_Unit.Location = new System.Drawing.Point(744, 136);
             this.TB_GW1_Unit.Name = "TB_GW1_Unit";
-            this.TB_GW1_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW1_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_GW1_Unit.TabIndex = 28;
             this.TB_GW1_Unit.Text = "0.01";
             this.TB_GW1_Unit.Click += new System.EventHandler(this.TextBoxClick);
@@ -312,7 +312,7 @@
             // 
             this.TB_GW1_Max.Location = new System.Drawing.Point(600, 136);
             this.TB_GW1_Max.Name = "TB_GW1_Max";
-            this.TB_GW1_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW1_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_GW1_Max.TabIndex = 26;
             this.TB_GW1_Max.Text = "2000";
             this.TB_GW1_Max.Click += new System.EventHandler(this.TextBoxClick);
@@ -321,7 +321,7 @@
             // 
             this.TB_GW1_Min.Location = new System.Drawing.Point(528, 136);
             this.TB_GW1_Min.Name = "TB_GW1_Min";
-            this.TB_GW1_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW1_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_GW1_Min.TabIndex = 24;
             this.TB_GW1_Min.Text = "0";
             this.TB_GW1_Min.Click += new System.EventHandler(this.TextBoxClick);
@@ -330,7 +330,7 @@
             // 
             this.TB_GW1_ShowRate.Location = new System.Drawing.Point(464, 136);
             this.TB_GW1_ShowRate.Name = "TB_GW1_ShowRate";
-            this.TB_GW1_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW1_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_GW1_ShowRate.TabIndex = 22;
             this.TB_GW1_ShowRate.Text = "1";
             this.TB_GW1_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
@@ -339,7 +339,7 @@
             // 
             this.TB_GW1_Slave.Location = new System.Drawing.Point(320, 136);
             this.TB_GW1_Slave.Name = "TB_GW1_Slave";
-            this.TB_GW1_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_GW1_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_GW1_Slave.TabIndex = 20;
             this.TB_GW1_Slave.Text = "1";
             this.TB_GW1_Slave.Click += new System.EventHandler(this.TextBoxClick);
@@ -349,7 +349,7 @@
             this.TB_GW1_Rate.Enabled = false;
             this.TB_GW1_Rate.Location = new System.Drawing.Point(368, 136);
             this.TB_GW1_Rate.Name = "TB_GW1_Rate";
-            this.TB_GW1_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_GW1_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_GW1_Rate.TabIndex = 18;
             this.TB_GW1_Rate.Text = "30";
             this.TB_GW1_Rate.Click += new System.EventHandler(this.TextBoxClick);
@@ -361,7 +361,7 @@
             this.ch_GW1_Enabled.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ch_GW1_Enabled.Location = new System.Drawing.Point(288, 144);
             this.ch_GW1_Enabled.Name = "ch_GW1_Enabled";
-            this.ch_GW1_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_GW1_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_GW1_Enabled.TabIndex = 30;
             this.ch_GW1_Enabled.UseVisualStyleBackColor = true;
             // 
@@ -369,7 +369,7 @@
             // 
             this.TB_GW2_Unit.Location = new System.Drawing.Point(744, 176);
             this.TB_GW2_Unit.Name = "TB_GW2_Unit";
-            this.TB_GW2_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW2_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_GW2_Unit.TabIndex = 30;
             this.TB_GW2_Unit.Text = "0.01";
             this.TB_GW2_Unit.Click += new System.EventHandler(this.TextBoxClick);
@@ -390,7 +390,7 @@
             // 
             this.TB_GW2_Max.Location = new System.Drawing.Point(600, 176);
             this.TB_GW2_Max.Name = "TB_GW2_Max";
-            this.TB_GW2_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW2_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_GW2_Max.TabIndex = 26;
             this.TB_GW2_Max.Text = "2000";
             this.TB_GW2_Max.Click += new System.EventHandler(this.TextBoxClick);
@@ -411,7 +411,7 @@
             // 
             this.TB_GW2_Min.Location = new System.Drawing.Point(528, 176);
             this.TB_GW2_Min.Name = "TB_GW2_Min";
-            this.TB_GW2_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW2_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_GW2_Min.TabIndex = 24;
             this.TB_GW2_Min.Text = "0";
             this.TB_GW2_Min.Click += new System.EventHandler(this.TextBoxClick);
@@ -432,7 +432,7 @@
             // 
             this.TB_GW2_ShowRate.Location = new System.Drawing.Point(464, 176);
             this.TB_GW2_ShowRate.Name = "TB_GW2_ShowRate";
-            this.TB_GW2_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW2_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_GW2_ShowRate.TabIndex = 22;
             this.TB_GW2_ShowRate.Text = "1";
             this.TB_GW2_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
@@ -453,7 +453,7 @@
             // 
             this.TB_GW2_Slave.Location = new System.Drawing.Point(320, 176);
             this.TB_GW2_Slave.Name = "TB_GW2_Slave";
-            this.TB_GW2_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_GW2_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_GW2_Slave.TabIndex = 20;
             this.TB_GW2_Slave.Text = "2";
             this.TB_GW2_Slave.Click += new System.EventHandler(this.TextBoxClick);
@@ -475,7 +475,7 @@
             this.TB_GW2_Rate.Enabled = false;
             this.TB_GW2_Rate.Location = new System.Drawing.Point(368, 176);
             this.TB_GW2_Rate.Name = "TB_GW2_Rate";
-            this.TB_GW2_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_GW2_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_GW2_Rate.TabIndex = 18;
             this.TB_GW2_Rate.Text = "30";
             this.TB_GW2_Rate.Click += new System.EventHandler(this.TextBoxClick);
@@ -498,7 +498,7 @@
             this.ch_GW2_Enabled.AutoSize = true;
             this.ch_GW2_Enabled.Location = new System.Drawing.Point(288, 184);
             this.ch_GW2_Enabled.Name = "ch_GW2_Enabled";
-            this.ch_GW2_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_GW2_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_GW2_Enabled.TabIndex = 32;
             this.ch_GW2_Enabled.UseVisualStyleBackColor = true;
             // 
@@ -519,7 +519,7 @@
             this.la_StopBits.Location = new System.Drawing.Point(8, 10);
             this.la_StopBits.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_StopBits.Name = "la_StopBits";
-            this.la_StopBits.Size = new System.Drawing.Size(75, 20);
+            this.la_StopBits.Size = new System.Drawing.Size(94, 25);
             this.la_StopBits.TabIndex = 25;
             this.la_StopBits.Text = "Stop Bits";
             // 
@@ -551,7 +551,7 @@
             this.la_DataBits.Location = new System.Drawing.Point(8, 10);
             this.la_DataBits.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_DataBits.Name = "la_DataBits";
-            this.la_DataBits.Size = new System.Drawing.Size(76, 20);
+            this.la_DataBits.Size = new System.Drawing.Size(94, 25);
             this.la_DataBits.TabIndex = 24;
             this.la_DataBits.Text = "Data Bits";
             // 
@@ -559,7 +559,7 @@
             // 
             this.TB_Roller_Unit.Location = new System.Drawing.Point(744, 296);
             this.TB_Roller_Unit.Name = "TB_Roller_Unit";
-            this.TB_Roller_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_Roller_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_Roller_Unit.TabIndex = 30;
             this.TB_Roller_Unit.Text = "0.01";
             this.TB_Roller_Unit.Click += new System.EventHandler(this.TextBoxClick);
@@ -568,7 +568,7 @@
             // 
             this.TB_Roller_Max.Location = new System.Drawing.Point(600, 296);
             this.TB_Roller_Max.Name = "TB_Roller_Max";
-            this.TB_Roller_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_Roller_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_Roller_Max.TabIndex = 26;
             this.TB_Roller_Max.Text = "2000";
             this.TB_Roller_Max.Click += new System.EventHandler(this.TextBoxClick);
@@ -577,7 +577,7 @@
             // 
             this.TB_Roller_Min.Location = new System.Drawing.Point(528, 296);
             this.TB_Roller_Min.Name = "TB_Roller_Min";
-            this.TB_Roller_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_Roller_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_Roller_Min.TabIndex = 24;
             this.TB_Roller_Min.Text = "0";
             this.TB_Roller_Min.Click += new System.EventHandler(this.TextBoxClick);
@@ -586,7 +586,7 @@
             // 
             this.TB_Roller_ShowRate.Location = new System.Drawing.Point(464, 296);
             this.TB_Roller_ShowRate.Name = "TB_Roller_ShowRate";
-            this.TB_Roller_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_Roller_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_Roller_ShowRate.TabIndex = 22;
             this.TB_Roller_ShowRate.Text = "1";
             this.TB_Roller_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
@@ -595,7 +595,7 @@
             // 
             this.TB_Roller_Slave.Location = new System.Drawing.Point(320, 296);
             this.TB_Roller_Slave.Name = "TB_Roller_Slave";
-            this.TB_Roller_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_Roller_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_Roller_Slave.TabIndex = 20;
             this.TB_Roller_Slave.Text = "5";
             this.TB_Roller_Slave.Click += new System.EventHandler(this.TextBoxClick);
@@ -604,7 +604,7 @@
             // 
             this.TB_Roller_Rate.Location = new System.Drawing.Point(368, 296);
             this.TB_Roller_Rate.Name = "TB_Roller_Rate";
-            this.TB_Roller_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_Roller_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_Roller_Rate.TabIndex = 18;
             this.TB_Roller_Rate.Text = "30";
             this.TB_Roller_Rate.Click += new System.EventHandler(this.TextBoxClick);
@@ -614,7 +614,7 @@
             this.ch_Rollor_Enabled.AutoSize = true;
             this.ch_Rollor_Enabled.Location = new System.Drawing.Point(288, 304);
             this.ch_Rollor_Enabled.Name = "ch_Rollor_Enabled";
-            this.ch_Rollor_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_Rollor_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_Rollor_Enabled.TabIndex = 28;
             this.ch_Rollor_Enabled.UseVisualStyleBackColor = true;
             // 
@@ -627,7 +627,7 @@
             "士林變頻器"});
             this.CB_SP_Dev.Location = new System.Drawing.Point(104, 336);
             this.CB_SP_Dev.Name = "CB_SP_Dev";
-            this.CB_SP_Dev.Size = new System.Drawing.Size(160, 28);
+            this.CB_SP_Dev.Size = new System.Drawing.Size(160, 33);
             this.CB_SP_Dev.TabIndex = 32;
             this.CB_SP_Dev.SelectedIndexChanged += new System.EventHandler(this.CB_Dev5_SelectedIndexChanged);
             // 
@@ -635,7 +635,7 @@
             // 
             this.TB_SP_Unit.Location = new System.Drawing.Point(744, 336);
             this.TB_SP_Unit.Name = "TB_SP_Unit";
-            this.TB_SP_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_SP_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_SP_Unit.TabIndex = 30;
             this.TB_SP_Unit.Text = "0.01";
             this.TB_SP_Unit.Click += new System.EventHandler(this.TextBoxClick);
@@ -644,7 +644,7 @@
             // 
             this.TB_SP_Max.Location = new System.Drawing.Point(600, 336);
             this.TB_SP_Max.Name = "TB_SP_Max";
-            this.TB_SP_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_SP_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_SP_Max.TabIndex = 26;
             this.TB_SP_Max.Text = "2000";
             this.TB_SP_Max.Click += new System.EventHandler(this.TextBoxClick);
@@ -653,7 +653,7 @@
             // 
             this.TB_SP_Min.Location = new System.Drawing.Point(528, 336);
             this.TB_SP_Min.Name = "TB_SP_Min";
-            this.TB_SP_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_SP_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_SP_Min.TabIndex = 24;
             this.TB_SP_Min.Text = "0";
             this.TB_SP_Min.Click += new System.EventHandler(this.TextBoxClick);
@@ -662,7 +662,7 @@
             // 
             this.TB_SP_ShowRate.Location = new System.Drawing.Point(464, 336);
             this.TB_SP_ShowRate.Name = "TB_SP_ShowRate";
-            this.TB_SP_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_SP_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_SP_ShowRate.TabIndex = 22;
             this.TB_SP_ShowRate.Text = "1";
             this.TB_SP_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
@@ -671,7 +671,7 @@
             // 
             this.TB_SP_Slave.Location = new System.Drawing.Point(320, 336);
             this.TB_SP_Slave.Name = "TB_SP_Slave";
-            this.TB_SP_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_SP_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_SP_Slave.TabIndex = 20;
             this.TB_SP_Slave.Text = "6";
             this.TB_SP_Slave.Click += new System.EventHandler(this.TextBoxClick);
@@ -680,7 +680,7 @@
             // 
             this.TB_SP_Rate.Location = new System.Drawing.Point(368, 336);
             this.TB_SP_Rate.Name = "TB_SP_Rate";
-            this.TB_SP_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_SP_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_SP_Rate.TabIndex = 18;
             this.TB_SP_Rate.Text = "30";
             this.TB_SP_Rate.Click += new System.EventHandler(this.TextBoxClick);
@@ -690,7 +690,7 @@
             this.ch_Spindle_Enabled.AutoSize = true;
             this.ch_Spindle_Enabled.Location = new System.Drawing.Point(288, 344);
             this.ch_Spindle_Enabled.Name = "ch_Spindle_Enabled";
-            this.ch_Spindle_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_Spindle_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_Spindle_Enabled.TabIndex = 34;
             this.ch_Spindle_Enabled.UseVisualStyleBackColor = true;
             // 
@@ -698,7 +698,7 @@
             // 
             this.TB_GW1_SetHz.Location = new System.Drawing.Point(808, 136);
             this.TB_GW1_SetHz.Name = "TB_GW1_SetHz";
-            this.TB_GW1_SetHz.Size = new System.Drawing.Size(96, 29);
+            this.TB_GW1_SetHz.Size = new System.Drawing.Size(96, 34);
             this.TB_GW1_SetHz.TabIndex = 30;
             this.TB_GW1_SetHz.Text = "0";
             this.TB_GW1_SetHz.Click += new System.EventHandler(this.TextBoxClick);
@@ -721,7 +721,7 @@
             // 
             this.TB_GW2_SetHz.Location = new System.Drawing.Point(808, 176);
             this.TB_GW2_SetHz.Name = "TB_GW2_SetHz";
-            this.TB_GW2_SetHz.Size = new System.Drawing.Size(96, 29);
+            this.TB_GW2_SetHz.Size = new System.Drawing.Size(96, 34);
             this.TB_GW2_SetHz.TabIndex = 35;
             this.TB_GW2_SetHz.Text = "0";
             this.TB_GW2_SetHz.Click += new System.EventHandler(this.TextBoxClick);
@@ -821,7 +821,7 @@
             "三菱變頻器"});
             this.cb_GW1_Dev.Location = new System.Drawing.Point(104, 136);
             this.cb_GW1_Dev.Name = "cb_GW1_Dev";
-            this.cb_GW1_Dev.Size = new System.Drawing.Size(160, 28);
+            this.cb_GW1_Dev.Size = new System.Drawing.Size(160, 33);
             this.cb_GW1_Dev.TabIndex = 47;
             // 
             // cb_GW2_Dev
@@ -833,7 +833,7 @@
             "三菱變頻器"});
             this.cb_GW2_Dev.Location = new System.Drawing.Point(104, 176);
             this.cb_GW2_Dev.Name = "cb_GW2_Dev";
-            this.cb_GW2_Dev.Size = new System.Drawing.Size(160, 28);
+            this.cb_GW2_Dev.Size = new System.Drawing.Size(160, 33);
             this.cb_GW2_Dev.TabIndex = 48;
             // 
             // la_Channel
@@ -856,7 +856,7 @@
             "RS422"});
             this.CB_SP_Channel.Location = new System.Drawing.Point(912, 336);
             this.CB_SP_Channel.Name = "CB_SP_Channel";
-            this.CB_SP_Channel.Size = new System.Drawing.Size(72, 28);
+            this.CB_SP_Channel.Size = new System.Drawing.Size(72, 33);
             this.CB_SP_Channel.TabIndex = 32;
             this.CB_SP_Channel.Text = "RS485";
             // 
@@ -879,10 +879,10 @@
             this.TB_RS485.Controls.Add(this.la_BaudRate);
             this.TB_RS485.Controls.Add(this.CB_Port485);
             this.TB_RS485.Controls.Add(this.CB_BaudRate485);
-            this.TB_RS485.Location = new System.Drawing.Point(4, 29);
+            this.TB_RS485.Location = new System.Drawing.Point(4, 34);
             this.TB_RS485.Name = "TB_RS485";
             this.TB_RS485.Padding = new System.Windows.Forms.Padding(3);
-            this.TB_RS485.Size = new System.Drawing.Size(984, 47);
+            this.TB_RS485.Size = new System.Drawing.Size(984, 42);
             this.TB_RS485.TabIndex = 0;
             this.TB_RS485.Text = "RS485";
             this.TB_RS485.UseVisualStyleBackColor = true;
@@ -896,10 +896,10 @@
             this.TB_RS422.Controls.Add(this.la_BaudRate2);
             this.TB_RS422.Controls.Add(this.CB_Port422);
             this.TB_RS422.Controls.Add(this.CB_BaudRate422);
-            this.TB_RS422.Location = new System.Drawing.Point(4, 29);
+            this.TB_RS422.Location = new System.Drawing.Point(4, 34);
             this.TB_RS422.Name = "TB_RS422";
             this.TB_RS422.Padding = new System.Windows.Forms.Padding(3);
-            this.TB_RS422.Size = new System.Drawing.Size(984, 47);
+            this.TB_RS422.Size = new System.Drawing.Size(984, 42);
             this.TB_RS422.TabIndex = 1;
             this.TB_RS422.Text = "RS422";
             this.TB_RS422.UseVisualStyleBackColor = true;
@@ -921,7 +921,7 @@
             this.la_StopBits2.Location = new System.Drawing.Point(8, 10);
             this.la_StopBits2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_StopBits2.Name = "la_StopBits2";
-            this.la_StopBits2.Size = new System.Drawing.Size(75, 20);
+            this.la_StopBits2.Size = new System.Drawing.Size(94, 25);
             this.la_StopBits2.TabIndex = 25;
             this.la_StopBits2.Text = "Stop Bits";
             // 
@@ -931,7 +931,7 @@
             this.RB_2Bit422.Location = new System.Drawing.Point(144, 8);
             this.RB_2Bit422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_2Bit422.Name = "RB_2Bit422";
-            this.RB_2Bit422.Size = new System.Drawing.Size(36, 24);
+            this.RB_2Bit422.Size = new System.Drawing.Size(45, 29);
             this.RB_2Bit422.TabIndex = 7;
             this.RB_2Bit422.Text = "2";
             this.RB_2Bit422.UseVisualStyleBackColor = true;
@@ -943,7 +943,7 @@
             this.RB_1Bit422.Location = new System.Drawing.Point(96, 8);
             this.RB_1Bit422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_1Bit422.Name = "RB_1Bit422";
-            this.RB_1Bit422.Size = new System.Drawing.Size(36, 24);
+            this.RB_1Bit422.Size = new System.Drawing.Size(45, 29);
             this.RB_1Bit422.TabIndex = 6;
             this.RB_1Bit422.TabStop = true;
             this.RB_1Bit422.Text = "1";
@@ -967,7 +967,7 @@
             this.RB_8Bit422.Location = new System.Drawing.Point(144, 8);
             this.RB_8Bit422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_8Bit422.Name = "RB_8Bit422";
-            this.RB_8Bit422.Size = new System.Drawing.Size(36, 24);
+            this.RB_8Bit422.Size = new System.Drawing.Size(45, 29);
             this.RB_8Bit422.TabIndex = 7;
             this.RB_8Bit422.TabStop = true;
             this.RB_8Bit422.Text = "8";
@@ -979,7 +979,7 @@
             this.la_DataBits2.Location = new System.Drawing.Point(8, 10);
             this.la_DataBits2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_DataBits2.Name = "la_DataBits2";
-            this.la_DataBits2.Size = new System.Drawing.Size(76, 20);
+            this.la_DataBits2.Size = new System.Drawing.Size(94, 25);
             this.la_DataBits2.TabIndex = 24;
             this.la_DataBits2.Text = "Data Bits";
             // 
@@ -990,7 +990,7 @@
             this.RB_7Bit422.Location = new System.Drawing.Point(96, 8);
             this.RB_7Bit422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_7Bit422.Name = "RB_7Bit422";
-            this.RB_7Bit422.Size = new System.Drawing.Size(36, 24);
+            this.RB_7Bit422.Size = new System.Drawing.Size(45, 29);
             this.RB_7Bit422.TabIndex = 6;
             this.RB_7Bit422.Text = "7";
             this.RB_7Bit422.UseVisualStyleBackColor = true;
@@ -1012,7 +1012,7 @@
             this.RB_ODD422.Location = new System.Drawing.Point(192, 8);
             this.RB_ODD422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_ODD422.Name = "RB_ODD422";
-            this.RB_ODD422.Size = new System.Drawing.Size(64, 24);
+            this.RB_ODD422.Size = new System.Drawing.Size(79, 29);
             this.RB_ODD422.TabIndex = 2;
             this.RB_ODD422.Text = "ODD";
             this.RB_ODD422.UseVisualStyleBackColor = true;
@@ -1024,7 +1024,7 @@
             this.RB_EVEN422.Location = new System.Drawing.Point(104, 8);
             this.RB_EVEN422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_EVEN422.Name = "RB_EVEN422";
-            this.RB_EVEN422.Size = new System.Drawing.Size(69, 24);
+            this.RB_EVEN422.Size = new System.Drawing.Size(84, 29);
             this.RB_EVEN422.TabIndex = 1;
             this.RB_EVEN422.TabStop = true;
             this.RB_EVEN422.Text = "EVEN";
@@ -1036,7 +1036,7 @@
             this.RB_NONE422.Location = new System.Drawing.Point(8, 8);
             this.RB_NONE422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.RB_NONE422.Name = "RB_NONE422";
-            this.RB_NONE422.Size = new System.Drawing.Size(75, 24);
+            this.RB_NONE422.Size = new System.Drawing.Size(92, 29);
             this.RB_NONE422.TabIndex = 0;
             this.RB_NONE422.Text = "NONE";
             this.RB_NONE422.UseVisualStyleBackColor = true;
@@ -1047,7 +1047,7 @@
             this.la_COM2.Location = new System.Drawing.Point(3, 13);
             this.la_COM2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_COM2.Name = "la_COM2";
-            this.la_COM2.Size = new System.Drawing.Size(48, 20);
+            this.la_COM2.Size = new System.Drawing.Size(60, 25);
             this.la_COM2.TabIndex = 28;
             this.la_COM2.Text = "COM";
             // 
@@ -1057,7 +1057,7 @@
             this.la_BaudRate2.Location = new System.Drawing.Point(139, 13);
             this.la_BaudRate2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.la_BaudRate2.Name = "la_BaudRate2";
-            this.la_BaudRate2.Size = new System.Drawing.Size(86, 20);
+            this.la_BaudRate2.Size = new System.Drawing.Size(107, 25);
             this.la_BaudRate2.TabIndex = 29;
             this.la_BaudRate2.Text = "Baud Rate";
             // 
@@ -1067,7 +1067,7 @@
             this.CB_Port422.Location = new System.Drawing.Point(64, 9);
             this.CB_Port422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.CB_Port422.Name = "CB_Port422";
-            this.CB_Port422.Size = new System.Drawing.Size(72, 28);
+            this.CB_Port422.Size = new System.Drawing.Size(72, 33);
             this.CB_Port422.TabIndex = 31;
             // 
             // CB_BaudRate422
@@ -1082,7 +1082,7 @@
             this.CB_BaudRate422.Location = new System.Drawing.Point(227, 9);
             this.CB_BaudRate422.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.CB_BaudRate422.Name = "CB_BaudRate422";
-            this.CB_BaudRate422.Size = new System.Drawing.Size(80, 28);
+            this.CB_BaudRate422.Size = new System.Drawing.Size(80, 33);
             this.CB_BaudRate422.TabIndex = 30;
             // 
             // la_Roller_Hz
@@ -1161,7 +1161,7 @@
             // 
             this.TB_GW2_SetRPM.Location = new System.Drawing.Point(672, 176);
             this.TB_GW2_SetRPM.Name = "TB_GW2_SetRPM";
-            this.TB_GW2_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW2_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_GW2_SetRPM.TabIndex = 26;
             this.TB_GW2_SetRPM.Text = "2000";
             this.TB_GW2_SetRPM.Click += new System.EventHandler(this.TextBoxClick);
@@ -1172,7 +1172,7 @@
             // 
             this.TB_GW1_SetRPM.Location = new System.Drawing.Point(672, 136);
             this.TB_GW1_SetRPM.Name = "TB_GW1_SetRPM";
-            this.TB_GW1_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW1_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_GW1_SetRPM.TabIndex = 26;
             this.TB_GW1_SetRPM.Text = "2000";
             this.TB_GW1_SetRPM.Click += new System.EventHandler(this.TextBoxClick);
@@ -1183,7 +1183,7 @@
             // 
             this.TB_Roller_SetRPM.Location = new System.Drawing.Point(672, 296);
             this.TB_Roller_SetRPM.Name = "TB_Roller_SetRPM";
-            this.TB_Roller_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_Roller_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_Roller_SetRPM.TabIndex = 26;
             this.TB_Roller_SetRPM.Text = "2000";
             this.TB_Roller_SetRPM.Visible = false;
@@ -1193,7 +1193,7 @@
             // 
             this.TB_SP_SetRPM.Location = new System.Drawing.Point(672, 336);
             this.TB_SP_SetRPM.Name = "TB_SP_SetRPM";
-            this.TB_SP_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_SP_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_SP_SetRPM.TabIndex = 26;
             this.TB_SP_SetRPM.Text = "2000";
             this.TB_SP_SetRPM.Visible = false;
@@ -1210,6 +1210,7 @@
             this.la_GW4_CH.TabIndex = 78;
             this.la_GW4_CH.Text = "RS485";
             this.la_GW4_CH.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.la_GW4_CH.Visible = false;
             // 
             // la_GW3_CH
             // 
@@ -1232,8 +1233,9 @@
             "三菱變頻器"});
             this.cb_GW4_Dev.Location = new System.Drawing.Point(104, 256);
             this.cb_GW4_Dev.Name = "cb_GW4_Dev";
-            this.cb_GW4_Dev.Size = new System.Drawing.Size(160, 28);
+            this.cb_GW4_Dev.Size = new System.Drawing.Size(160, 33);
             this.cb_GW4_Dev.TabIndex = 76;
+            this.cb_GW4_Dev.Visible = false;
             // 
             // cb_GW3_Dev
             // 
@@ -1244,14 +1246,14 @@
             "三菱變頻器"});
             this.cb_GW3_Dev.Location = new System.Drawing.Point(104, 216);
             this.cb_GW3_Dev.Name = "cb_GW3_Dev";
-            this.cb_GW3_Dev.Size = new System.Drawing.Size(160, 28);
+            this.cb_GW3_Dev.Size = new System.Drawing.Size(160, 33);
             this.cb_GW3_Dev.TabIndex = 75;
             // 
             // TB_GW3_Unit
             // 
             this.TB_GW3_Unit.Location = new System.Drawing.Point(744, 216);
             this.TB_GW3_Unit.Name = "TB_GW3_Unit";
-            this.TB_GW3_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW3_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_GW3_Unit.TabIndex = 67;
             this.TB_GW3_Unit.Text = "0.01";
             this.TB_GW3_Unit.Click += new System.EventHandler(this.TextBoxClick);
@@ -1260,7 +1262,7 @@
             // 
             this.TB_GW3_SetRPM.Location = new System.Drawing.Point(672, 216);
             this.TB_GW3_SetRPM.Name = "TB_GW3_SetRPM";
-            this.TB_GW3_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW3_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_GW3_SetRPM.TabIndex = 63;
             this.TB_GW3_SetRPM.Text = "2000";
             this.TB_GW3_SetRPM.Click += new System.EventHandler(this.TextBoxClick);
@@ -1270,7 +1272,7 @@
             // 
             this.TB_GW3_Max.Location = new System.Drawing.Point(600, 216);
             this.TB_GW3_Max.Name = "TB_GW3_Max";
-            this.TB_GW3_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW3_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_GW3_Max.TabIndex = 64;
             this.TB_GW3_Max.Text = "2000";
             this.TB_GW3_Max.Click += new System.EventHandler(this.TextBoxClick);
@@ -1286,6 +1288,7 @@
             this.la_Name_GW4.TabIndex = 74;
             this.la_Name_GW4.Text = "GW4";
             this.la_Name_GW4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.la_Name_GW4.Visible = false;
             // 
             // la_Name_GW3
             // 
@@ -1303,7 +1306,7 @@
             // 
             this.TB_GW3_Min.Location = new System.Drawing.Point(528, 216);
             this.TB_GW3_Min.Name = "TB_GW3_Min";
-            this.TB_GW3_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW3_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_GW3_Min.TabIndex = 62;
             this.TB_GW3_Min.Text = "0";
             this.TB_GW3_Min.Click += new System.EventHandler(this.TextBoxClick);
@@ -1312,7 +1315,7 @@
             // 
             this.TB_GW3_ShowRate.Location = new System.Drawing.Point(464, 216);
             this.TB_GW3_ShowRate.Name = "TB_GW3_ShowRate";
-            this.TB_GW3_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW3_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_GW3_ShowRate.TabIndex = 60;
             this.TB_GW3_ShowRate.Text = "1";
             this.TB_GW3_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
@@ -1321,16 +1324,17 @@
             // 
             this.TB_GW4_Unit.Location = new System.Drawing.Point(744, 256);
             this.TB_GW4_Unit.Name = "TB_GW4_Unit";
-            this.TB_GW4_Unit.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW4_Unit.Size = new System.Drawing.Size(56, 34);
             this.TB_GW4_Unit.TabIndex = 68;
             this.TB_GW4_Unit.Text = "0.01";
+            this.TB_GW4_Unit.Visible = false;
             this.TB_GW4_Unit.Click += new System.EventHandler(this.TextBoxClick);
             // 
             // TB_GW3_Slave
             // 
             this.TB_GW3_Slave.Location = new System.Drawing.Point(320, 216);
             this.TB_GW3_Slave.Name = "TB_GW3_Slave";
-            this.TB_GW3_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_GW3_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_GW3_Slave.TabIndex = 58;
             this.TB_GW3_Slave.Text = "3";
             this.TB_GW3_Slave.Click += new System.EventHandler(this.TextBoxClick);
@@ -1340,7 +1344,7 @@
             this.TB_GW3_Rate.Enabled = false;
             this.TB_GW3_Rate.Location = new System.Drawing.Point(368, 216);
             this.TB_GW3_Rate.Name = "TB_GW3_Rate";
-            this.TB_GW3_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_GW3_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_GW3_Rate.TabIndex = 56;
             this.TB_GW3_Rate.Text = "30";
             this.TB_GW3_Rate.Click += new System.EventHandler(this.TextBoxClick);
@@ -1350,9 +1354,10 @@
             // 
             this.TB_GW4_SetHz.Location = new System.Drawing.Point(808, 256);
             this.TB_GW4_SetHz.Name = "TB_GW4_SetHz";
-            this.TB_GW4_SetHz.Size = new System.Drawing.Size(96, 29);
+            this.TB_GW4_SetHz.Size = new System.Drawing.Size(96, 34);
             this.TB_GW4_SetHz.TabIndex = 73;
             this.TB_GW4_SetHz.Text = "0";
+            this.TB_GW4_SetHz.Visible = false;
             this.TB_GW4_SetHz.Click += new System.EventHandler(this.TextBoxClick);
             this.TB_GW4_SetHz.TextChanged += new System.EventHandler(this.TextBoxColor);
             this.TB_GW4_SetHz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TB_Gw4Hz_KeyDown);
@@ -1361,9 +1366,10 @@
             // 
             this.TB_GW4_SetRPM.Location = new System.Drawing.Point(672, 256);
             this.TB_GW4_SetRPM.Name = "TB_GW4_SetRPM";
-            this.TB_GW4_SetRPM.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW4_SetRPM.Size = new System.Drawing.Size(64, 34);
             this.TB_GW4_SetRPM.TabIndex = 66;
             this.TB_GW4_SetRPM.Text = "2000";
+            this.TB_GW4_SetRPM.Visible = false;
             this.TB_GW4_SetRPM.Click += new System.EventHandler(this.TextBoxClick);
             this.TB_GW4_SetRPM.TextChanged += new System.EventHandler(this.TextBoxColor);
             // 
@@ -1371,16 +1377,17 @@
             // 
             this.TB_GW4_Max.Location = new System.Drawing.Point(600, 256);
             this.TB_GW4_Max.Name = "TB_GW4_Max";
-            this.TB_GW4_Max.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW4_Max.Size = new System.Drawing.Size(64, 34);
             this.TB_GW4_Max.TabIndex = 65;
             this.TB_GW4_Max.Text = "2000";
+            this.TB_GW4_Max.Visible = false;
             this.TB_GW4_Max.Click += new System.EventHandler(this.TextBoxClick);
             // 
             // TB_GW3_SetHz
             // 
             this.TB_GW3_SetHz.Location = new System.Drawing.Point(808, 216);
             this.TB_GW3_SetHz.Name = "TB_GW3_SetHz";
-            this.TB_GW3_SetHz.Size = new System.Drawing.Size(96, 29);
+            this.TB_GW3_SetHz.Size = new System.Drawing.Size(96, 34);
             this.TB_GW3_SetHz.TabIndex = 69;
             this.TB_GW3_SetHz.Text = "0";
             this.TB_GW3_SetHz.Click += new System.EventHandler(this.TextBoxClick);
@@ -1391,18 +1398,20 @@
             // 
             this.TB_GW4_Min.Location = new System.Drawing.Point(528, 256);
             this.TB_GW4_Min.Name = "TB_GW4_Min";
-            this.TB_GW4_Min.Size = new System.Drawing.Size(64, 29);
+            this.TB_GW4_Min.Size = new System.Drawing.Size(64, 34);
             this.TB_GW4_Min.TabIndex = 61;
             this.TB_GW4_Min.Text = "0";
+            this.TB_GW4_Min.Visible = false;
             this.TB_GW4_Min.Click += new System.EventHandler(this.TextBoxClick);
             // 
             // TB_GW4_ShowRate
             // 
             this.TB_GW4_ShowRate.Location = new System.Drawing.Point(464, 256);
             this.TB_GW4_ShowRate.Name = "TB_GW4_ShowRate";
-            this.TB_GW4_ShowRate.Size = new System.Drawing.Size(56, 29);
+            this.TB_GW4_ShowRate.Size = new System.Drawing.Size(56, 34);
             this.TB_GW4_ShowRate.TabIndex = 59;
             this.TB_GW4_ShowRate.Text = "1";
+            this.TB_GW4_ShowRate.Visible = false;
             this.TB_GW4_ShowRate.Click += new System.EventHandler(this.TextBoxClick);
             // 
             // TB_GW4_Rate
@@ -1410,9 +1419,10 @@
             this.TB_GW4_Rate.Enabled = false;
             this.TB_GW4_Rate.Location = new System.Drawing.Point(368, 256);
             this.TB_GW4_Rate.Name = "TB_GW4_Rate";
-            this.TB_GW4_Rate.Size = new System.Drawing.Size(88, 29);
+            this.TB_GW4_Rate.Size = new System.Drawing.Size(88, 34);
             this.TB_GW4_Rate.TabIndex = 55;
             this.TB_GW4_Rate.Text = "30";
+            this.TB_GW4_Rate.Visible = false;
             this.TB_GW4_Rate.Click += new System.EventHandler(this.TextBoxClick);
             this.TB_GW4_Rate.TextChanged += new System.EventHandler(this.TextBoxColor);
             // 
@@ -1420,9 +1430,10 @@
             // 
             this.TB_GW4_Slave.Location = new System.Drawing.Point(320, 256);
             this.TB_GW4_Slave.Name = "TB_GW4_Slave";
-            this.TB_GW4_Slave.Size = new System.Drawing.Size(40, 29);
+            this.TB_GW4_Slave.Size = new System.Drawing.Size(40, 34);
             this.TB_GW4_Slave.TabIndex = 57;
             this.TB_GW4_Slave.Text = "4";
+            this.TB_GW4_Slave.Visible = false;
             this.TB_GW4_Slave.Click += new System.EventHandler(this.TextBoxClick);
             // 
             // ch_GW4_Enabled
@@ -1430,9 +1441,10 @@
             this.ch_GW4_Enabled.AutoSize = true;
             this.ch_GW4_Enabled.Location = new System.Drawing.Point(288, 264);
             this.ch_GW4_Enabled.Name = "ch_GW4_Enabled";
-            this.ch_GW4_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_GW4_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_GW4_Enabled.TabIndex = 72;
             this.ch_GW4_Enabled.UseVisualStyleBackColor = true;
+            this.ch_GW4_Enabled.Visible = false;
             // 
             // ch_GW3_Enabled
             // 
@@ -1440,7 +1452,7 @@
             this.ch_GW3_Enabled.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ch_GW3_Enabled.Location = new System.Drawing.Point(288, 224);
             this.ch_GW3_Enabled.Name = "ch_GW3_Enabled";
-            this.ch_GW3_Enabled.Size = new System.Drawing.Size(15, 14);
+            this.ch_GW3_Enabled.Size = new System.Drawing.Size(18, 17);
             this.ch_GW3_Enabled.TabIndex = 70;
             this.ch_GW3_Enabled.UseVisualStyleBackColor = true;
             // 
@@ -1452,7 +1464,7 @@
             "三菱變頻器"});
             this.cb_Roller_Dev.Location = new System.Drawing.Point(104, 296);
             this.cb_Roller_Dev.Name = "cb_Roller_Dev";
-            this.cb_Roller_Dev.Size = new System.Drawing.Size(160, 28);
+            this.cb_Roller_Dev.Size = new System.Drawing.Size(160, 33);
             this.cb_Roller_Dev.TabIndex = 79;
             // 
             // Fo_SetSerial

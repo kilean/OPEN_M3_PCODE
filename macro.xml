@@ -243,5 +243,6 @@
   <Macro No="637" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="638" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="639" Min="0" Max="0" Unit="" Memo=""/>
-  
+
+  <Macro No="671" Min="0" Max="180" Unit="deg" Memo="砂輪角度"/>
 </MacroInfo>

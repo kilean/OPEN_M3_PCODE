@@ -97,6 +97,10 @@
             this.pic_EditGw2 = new System.Windows.Forms.PictureBox();
             this.pic_EditGw1 = new System.Windows.Forms.PictureBox();
             this.tab_Gw_GwData = new System.Windows.Forms.TabPage();
+            this.la_GwData_Code6 = new System.Windows.Forms.Label();
+            this.la_GWAngleUnit = new System.Windows.Forms.Label();
+            this.la_GWAngle = new System.Windows.Forms.Label();
+            this.btn_GWAngle = new Uc_RoundBtn();
             this.pa_GwData = new System.Windows.Forms.Panel();
             this.pic_GwData = new System.Windows.Forms.PictureBox();
             this.la_GwData_Code5 = new System.Windows.Forms.Label();
@@ -145,6 +149,9 @@
             this.pic_Gw_S2 = new System.Windows.Forms.PictureBox();
             this.pic_Gw_S1 = new System.Windows.Forms.PictureBox();
             this.tab_Gw_ShapeData = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_dgvScrollDown = new Uc_RoundBtn();
+            this.btn_dgvScrollUp = new Uc_RoundBtn();
             this.uc_UserNumSetGW = new UserNumLib.Uc_UserNum();
             this.la_GW_ShapeDataTitle = new System.Windows.Forms.Label();
             this.DGV_GwParam = new System.Windows.Forms.DataGridView();
@@ -270,6 +277,10 @@
             this.btn_Path_Add = new Uc_RoundBtn();
             this.la_OD_Path = new System.Windows.Forms.Label();
             this.tab_DressGwSetting = new System.Windows.Forms.TabPage();
+            this.pa_DressTool_2P = new System.Windows.Forms.Panel();
+            this.pa_DressTool_3P = new System.Windows.Forms.Panel();
+            this.pic_DressTool_2P = new System.Windows.Forms.PictureBox();
+            this.pic_DressTool_3P = new System.Windows.Forms.PictureBox();
             this.btn_SaveDressGw = new Uc_RoundBtn();
             this.pa_DressAbs = new System.Windows.Forms.Panel();
             this.la_DressAbsAxis2Value = new System.Windows.Forms.Label();
@@ -1020,24 +1031,29 @@
             this.rb_Gw4Type1 = new System.Windows.Forms.RadioButton();
             this.rb_Gw4Type0 = new System.Windows.Forms.RadioButton();
             this.gb_Gw3Type = new System.Windows.Forms.GroupBox();
-            this.la_Gw3Type = new System.Windows.Forms.Label();
+            this.rb_Gw3Type3 = new System.Windows.Forms.RadioButton();
+            this.rb_Gw3Type2 = new System.Windows.Forms.RadioButton();
             this.rb_Gw3Type1 = new System.Windows.Forms.RadioButton();
+            this.la_Gw3Type = new System.Windows.Forms.Label();
             this.rb_Gw3Type0 = new System.Windows.Forms.RadioButton();
             this.gb_Gw2Type = new System.Windows.Forms.GroupBox();
-            this.la_Gw2Type = new System.Windows.Forms.Label();
+            this.rb_Gw2Type3 = new System.Windows.Forms.RadioButton();
+            this.rb_Gw2Type2 = new System.Windows.Forms.RadioButton();
             this.rb_Gw2Type1 = new System.Windows.Forms.RadioButton();
+            this.la_Gw2Type = new System.Windows.Forms.Label();
             this.rb_Gw2Type0 = new System.Windows.Forms.RadioButton();
             this.gb_Gw1Type = new System.Windows.Forms.GroupBox();
-            this.la_Gw1Type = new System.Windows.Forms.Label();
+            this.rb_Gw1Type3 = new System.Windows.Forms.RadioButton();
+            this.rb_Gw1Type2 = new System.Windows.Forms.RadioButton();
             this.rb_Gw1Type1 = new System.Windows.Forms.RadioButton();
+            this.la_Gw1Type = new System.Windows.Forms.Label();
             this.rb_Gw1Type0 = new System.Windows.Forms.RadioButton();
             this.ch_Gap = new System.Windows.Forms.CheckBox();
             this.la_JigWidth = new System.Windows.Forms.Label();
             this.btn_JigWidth = new Uc_RoundBtn();
             this.gb_MachineType = new System.Windows.Forms.GroupBox();
-            this.rb_OIG_M4 = new System.Windows.Forms.RadioButton();
-            this.rb_OIG_D2 = new System.Windows.Forms.RadioButton();
-            this.rb_OIG_R = new System.Windows.Forms.RadioButton();
+            this.rb_M3 = new System.Windows.Forms.RadioButton();
+            this.rb_M2 = new System.Windows.Forms.RadioButton();
             this.ch_Right = new System.Windows.Forms.CheckBox();
             this.ch_Meas = new System.Windows.Forms.CheckBox();
             this.ch_Specialopen = new System.Windows.Forms.CheckBox();
@@ -1396,6 +1412,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Gw_S2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Gw_S1)).BeginInit();
             this.tab_Gw_ShapeData.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GwParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_GW_Param)).BeginInit();
             this.tab_Gw_DressCondition.SuspendLayout();
@@ -1420,6 +1437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditPath)).BeginInit();
             this.tab_DressGwSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_2P)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_3P)).BeginInit();
             this.pa_DressAbs.SuspendLayout();
             this.pa_DressMach.SuspendLayout();
             this.GB_G58.SuspendLayout();
@@ -1829,9 +1848,9 @@
             this.la_Version.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Version.Location = new System.Drawing.Point(776, 24);
             this.la_Version.Name = "la_Version";
-            this.la_Version.Size = new System.Drawing.Size(158, 20);
+            this.la_Version.Size = new System.Drawing.Size(205, 25);
             this.la_Version.TabIndex = 10;
-            this.la_Version.Text = "Ver : 1.26.0331.1427";
+            this.la_Version.Text = "Ver : 1.26.0623.1412";
             // 
             // pa_Alarm
             // 
@@ -2386,9 +2405,9 @@
             this.tab_Regist.Controls.Add(this.pic_DressGW);
             this.tab_Regist.Controls.Add(this.la_GW);
             this.tab_Regist.Controls.Add(this.pic_GW);
-            this.tab_Regist.Location = new System.Drawing.Point(4, 58);
+            this.tab_Regist.Location = new System.Drawing.Point(4, 67);
             this.tab_Regist.Name = "tab_Regist";
-            this.tab_Regist.Size = new System.Drawing.Size(936, 570);
+            this.tab_Regist.Size = new System.Drawing.Size(936, 561);
             this.tab_Regist.TabIndex = 3;
             this.tab_Regist.Text = "登錄";
             this.tab_Regist.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -2492,9 +2511,9 @@
             this.tab_GwDb.BackColor = System.Drawing.SystemColors.Control;
             this.tab_GwDb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tab_GwDb.Controls.Add(this.TC_GW);
-            this.tab_GwDb.Location = new System.Drawing.Point(4, 58);
+            this.tab_GwDb.Location = new System.Drawing.Point(4, 67);
             this.tab_GwDb.Name = "tab_GwDb";
-            this.tab_GwDb.Size = new System.Drawing.Size(936, 570);
+            this.tab_GwDb.Size = new System.Drawing.Size(936, 561);
             this.tab_GwDb.TabIndex = 8;
             this.tab_GwDb.Text = "砂輪";
             this.tab_GwDb.Leave += new System.EventHandler(this.tab_GwDb_Leave);
@@ -2512,7 +2531,7 @@
             this.TC_GW.Location = new System.Drawing.Point(0, 0);
             this.TC_GW.Name = "TC_GW";
             this.TC_GW.SelectedIndex = 0;
-            this.TC_GW.Size = new System.Drawing.Size(936, 570);
+            this.TC_GW.Size = new System.Drawing.Size(936, 561);
             this.TC_GW.TabIndex = 0;
             this.TC_GW.TabStop = false;
             this.TC_GW.SelectedIndexChanged += new System.EventHandler(this.TC_GW_SelectedIndexChanged);
@@ -2533,10 +2552,10 @@
             this.tab_Gw_GwSelect.Controls.Add(this.la_EditGw1);
             this.tab_Gw_GwSelect.Controls.Add(this.pic_EditGw2);
             this.tab_Gw_GwSelect.Controls.Add(this.pic_EditGw1);
-            this.tab_Gw_GwSelect.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_GwSelect.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_GwSelect.Name = "tab_Gw_GwSelect";
             this.tab_Gw_GwSelect.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gw_GwSelect.Size = new System.Drawing.Size(928, 544);
+            this.tab_Gw_GwSelect.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_GwSelect.TabIndex = 2;
             this.tab_Gw_GwSelect.Text = "選擇砂輪";
             this.tab_Gw_GwSelect.UseVisualStyleBackColor = true;
@@ -2763,6 +2782,10 @@
             // 
             this.tab_Gw_GwData.BackColor = System.Drawing.Color.Transparent;
             this.tab_Gw_GwData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tab_Gw_GwData.Controls.Add(this.la_GwData_Code6);
+            this.tab_Gw_GwData.Controls.Add(this.la_GWAngleUnit);
+            this.tab_Gw_GwData.Controls.Add(this.la_GWAngle);
+            this.tab_Gw_GwData.Controls.Add(this.btn_GWAngle);
             this.tab_Gw_GwData.Controls.Add(this.pa_GwData);
             this.tab_Gw_GwData.Controls.Add(this.la_GwData_Code5);
             this.tab_Gw_GwData.Controls.Add(this.la_GwData_Code4);
@@ -2787,13 +2810,70 @@
             this.tab_Gw_GwData.Controls.Add(this.btn_GWMinDiameter);
             this.tab_Gw_GwData.Controls.Add(this.btn_GWDiameter);
             this.tab_Gw_GwData.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tab_Gw_GwData.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_GwData.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_GwData.Name = "tab_Gw_GwData";
             this.tab_Gw_GwData.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gw_GwData.Size = new System.Drawing.Size(928, 535);
+            this.tab_Gw_GwData.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_GwData.TabIndex = 0;
             this.tab_Gw_GwData.Text = "砂輪資料";
             this.tab_Gw_GwData.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
+            // 
+            // la_GwData_Code6
+            // 
+            this.la_GwData_Code6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.la_GwData_Code6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_GwData_Code6.Location = new System.Drawing.Point(272, 256);
+            this.la_GwData_Code6.Name = "la_GwData_Code6";
+            this.la_GwData_Code6.Size = new System.Drawing.Size(24, 32);
+            this.la_GwData_Code6.TabIndex = 148;
+            this.la_GwData_Code6.Text = "A";
+            this.la_GwData_Code6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.la_GwData_Code6.Visible = false;
+            // 
+            // la_GWAngleUnit
+            // 
+            this.la_GWAngleUnit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.la_GWAngleUnit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_GWAngleUnit.Location = new System.Drawing.Point(408, 256);
+            this.la_GWAngleUnit.Name = "la_GWAngleUnit";
+            this.la_GWAngleUnit.Size = new System.Drawing.Size(56, 32);
+            this.la_GWAngleUnit.TabIndex = 147;
+            this.la_GWAngleUnit.Text = "deg";
+            this.la_GWAngleUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.la_GWAngleUnit.Visible = false;
+            // 
+            // la_GWAngle
+            // 
+            this.la_GWAngle.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.la_GWAngle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_GWAngle.Location = new System.Drawing.Point(8, 256);
+            this.la_GWAngle.Name = "la_GWAngle";
+            this.la_GWAngle.Size = new System.Drawing.Size(256, 32);
+            this.la_GWAngle.TabIndex = 146;
+            this.la_GWAngle.Text = "砂輪角度";
+            this.la_GWAngle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.la_GWAngle.Visible = false;
+            // 
+            // btn_GWAngle
+            // 
+            this.btn_GWAngle.BackColor = System.Drawing.Color.Transparent;
+            this.btn_GWAngle.DisplayText = "0";
+            this.btn_GWAngle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_GWAngle.ForeColor = System.Drawing.Color.Black;
+            this.btn_GWAngle.Image = null;
+            this.btn_GWAngle.Lamp = false;
+            this.btn_GWAngle.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWAngle.Location = new System.Drawing.Point(304, 256);
+            this.btn_GWAngle.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWAngle.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWAngle.Name = "btn_GWAngle";
+            this.btn_GWAngle.Size = new System.Drawing.Size(96, 32);
+            this.btn_GWAngle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_GWAngle.Switch = false;
+            this.btn_GWAngle.TabIndex = 149;
+            this.btn_GWAngle.Tag = "671";
+            this.btn_GWAngle.Visible = false;
+            this.btn_GWAngle.Click += new System.EventHandler(this.btn_Gw_Click);
             // 
             // pa_GwData
             // 
@@ -3125,10 +3205,10 @@
             this.tab_Gw_ShapeSelect.Controls.Add(this.pic_Gw_S2);
             this.tab_Gw_ShapeSelect.Controls.Add(this.pic_Gw_S1);
             this.tab_Gw_ShapeSelect.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Gw_ShapeSelect.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_ShapeSelect.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_ShapeSelect.Name = "tab_Gw_ShapeSelect";
             this.tab_Gw_ShapeSelect.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gw_ShapeSelect.Size = new System.Drawing.Size(928, 535);
+            this.tab_Gw_ShapeSelect.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_ShapeSelect.TabIndex = 4;
             this.tab_Gw_ShapeSelect.Text = "形狀選擇";
             this.tab_Gw_ShapeSelect.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -3366,18 +3446,70 @@
             // 
             this.tab_Gw_ShapeData.BackColor = System.Drawing.Color.Transparent;
             this.tab_Gw_ShapeData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tab_Gw_ShapeData.Controls.Add(this.panel9);
             this.tab_Gw_ShapeData.Controls.Add(this.uc_UserNumSetGW);
             this.tab_Gw_ShapeData.Controls.Add(this.la_GW_ShapeDataTitle);
             this.tab_Gw_ShapeData.Controls.Add(this.DGV_GwParam);
             this.tab_Gw_ShapeData.Controls.Add(this.pic_GW_Param);
             this.tab_Gw_ShapeData.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tab_Gw_ShapeData.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_ShapeData.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_ShapeData.Name = "tab_Gw_ShapeData";
             this.tab_Gw_ShapeData.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gw_ShapeData.Size = new System.Drawing.Size(928, 535);
+            this.tab_Gw_ShapeData.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_ShapeData.TabIndex = 1;
             this.tab_Gw_ShapeData.Text = "形狀資料";
             this.tab_Gw_ShapeData.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.btn_dgvScrollDown);
+            this.panel9.Controls.Add(this.btn_dgvScrollUp);
+            this.panel9.Location = new System.Drawing.Point(512, 56);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(40, 100);
+            this.panel9.TabIndex = 132;
+            // 
+            // btn_dgvScrollDown
+            // 
+            this.btn_dgvScrollDown.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dgvScrollDown.DisplayText = "";
+            this.btn_dgvScrollDown.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_dgvScrollDown.ForeColor = System.Drawing.Color.White;
+            this.btn_dgvScrollDown.Image = ((System.Drawing.Image)(resources.GetObject("btn_dgvScrollDown.Image")));
+            this.btn_dgvScrollDown.Lamp = false;
+            this.btn_dgvScrollDown.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_dgvScrollDown.Location = new System.Drawing.Point(0, 50);
+            this.btn_dgvScrollDown.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_dgvScrollDown.MouseUpImage = null;
+            this.btn_dgvScrollDown.Name = "btn_dgvScrollDown";
+            this.btn_dgvScrollDown.Size = new System.Drawing.Size(40, 48);
+            this.btn_dgvScrollDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_dgvScrollDown.Switch = false;
+            this.btn_dgvScrollDown.TabIndex = 133;
+            this.btn_dgvScrollDown.Tag = "2";
+            this.btn_dgvScrollDown.Click += new System.EventHandler(this.btn_dgvScrollUpOrDown_Click);
+            // 
+            // btn_dgvScrollUp
+            // 
+            this.btn_dgvScrollUp.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dgvScrollUp.DisplayText = "";
+            this.btn_dgvScrollUp.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_dgvScrollUp.ForeColor = System.Drawing.Color.White;
+            this.btn_dgvScrollUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_dgvScrollUp.Image")));
+            this.btn_dgvScrollUp.Lamp = false;
+            this.btn_dgvScrollUp.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_dgvScrollUp.Location = new System.Drawing.Point(0, 2);
+            this.btn_dgvScrollUp.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_dgvScrollUp.MouseUpImage = null;
+            this.btn_dgvScrollUp.Name = "btn_dgvScrollUp";
+            this.btn_dgvScrollUp.Size = new System.Drawing.Size(40, 40);
+            this.btn_dgvScrollUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_dgvScrollUp.Switch = false;
+            this.btn_dgvScrollUp.TabIndex = 132;
+            this.btn_dgvScrollUp.Tag = "1";
+            this.btn_dgvScrollUp.Click += new System.EventHandler(this.btn_dgvScrollUpOrDown_Click);
             // 
             // uc_UserNumSetGW
             // 
@@ -3425,6 +3557,7 @@
             this.DGV_GwParam.RowHeadersVisible = false;
             this.DGV_GwParam.RowHeadersWidth = 51;
             this.DGV_GwParam.RowTemplate.Height = 24;
+            this.DGV_GwParam.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.DGV_GwParam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGV_GwParam.Size = new System.Drawing.Size(504, 528);
             this.DGV_GwParam.TabIndex = 26;
@@ -3511,9 +3644,9 @@
             this.tab_Gw_DressCondition.Controls.Add(this.btn_AfterMachining);
             this.tab_Gw_DressCondition.Controls.Add(this.btn_DressGwNoOffset);
             this.tab_Gw_DressCondition.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Gw_DressCondition.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_DressCondition.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_DressCondition.Name = "tab_Gw_DressCondition";
-            this.tab_Gw_DressCondition.Size = new System.Drawing.Size(928, 535);
+            this.tab_Gw_DressCondition.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_DressCondition.TabIndex = 5;
             this.tab_Gw_DressCondition.Text = "修整條件";
             this.tab_Gw_DressCondition.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -3680,7 +3813,7 @@
             this.la_Cond_Dist2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Dist2.Location = new System.Drawing.Point(8, 56);
             this.la_Cond_Dist2.Name = "la_Cond_Dist2";
-            this.la_Cond_Dist2.Size = new System.Drawing.Size(20, 21);
+            this.la_Cond_Dist2.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Dist2.TabIndex = 23;
             this.la_Cond_Dist2.Text = "Z";
             // 
@@ -3706,7 +3839,7 @@
             this.la_Cond_Dist1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Dist1.Location = new System.Drawing.Point(8, 32);
             this.la_Cond_Dist1.Name = "la_Cond_Dist1";
-            this.la_Cond_Dist1.Size = new System.Drawing.Size(21, 21);
+            this.la_Cond_Dist1.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Dist1.TabIndex = 21;
             this.la_Cond_Dist1.Text = "X";
             // 
@@ -3759,7 +3892,7 @@
             this.la_Cond_Abs2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Abs2.Location = new System.Drawing.Point(8, 56);
             this.la_Cond_Abs2.Name = "la_Cond_Abs2";
-            this.la_Cond_Abs2.Size = new System.Drawing.Size(20, 21);
+            this.la_Cond_Abs2.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Abs2.TabIndex = 23;
             this.la_Cond_Abs2.Text = "Z";
             // 
@@ -3785,7 +3918,7 @@
             this.la_Cond_Abs1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Abs1.Location = new System.Drawing.Point(8, 32);
             this.la_Cond_Abs1.Name = "la_Cond_Abs1";
-            this.la_Cond_Abs1.Size = new System.Drawing.Size(21, 21);
+            this.la_Cond_Abs1.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Abs1.TabIndex = 21;
             this.la_Cond_Abs1.Text = "X";
             // 
@@ -3838,7 +3971,7 @@
             this.la_Cond_Mach2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Mach2.Location = new System.Drawing.Point(8, 56);
             this.la_Cond_Mach2.Name = "la_Cond_Mach2";
-            this.la_Cond_Mach2.Size = new System.Drawing.Size(20, 21);
+            this.la_Cond_Mach2.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Mach2.TabIndex = 17;
             this.la_Cond_Mach2.Text = "Z";
             // 
@@ -3864,7 +3997,7 @@
             this.la_Cond_Mach1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cond_Mach1.Location = new System.Drawing.Point(8, 32);
             this.la_Cond_Mach1.Name = "la_Cond_Mach1";
-            this.la_Cond_Mach1.Size = new System.Drawing.Size(21, 21);
+            this.la_Cond_Mach1.Size = new System.Drawing.Size(25, 25);
             this.la_Cond_Mach1.TabIndex = 15;
             this.la_Cond_Mach1.Text = "X";
             // 
@@ -4385,7 +4518,6 @@
             this.btn_ToAndBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
             this.btn_ToAndBack.Switch = false;
             this.btn_ToAndBack.TabIndex = 143;
-            this.btn_ToAndBack.Click += new System.EventHandler(this.btn_ToAndBack_Click);
             this.btn_ToAndBack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_ToAndBack_MouseDown);
             // 
             // btn_RollerRotation
@@ -4455,10 +4587,10 @@
             this.tab_Gw_ShapeEdit.Controls.Add(this.la_OD_Path_Width);
             this.tab_Gw_ShapeEdit.Controls.Add(this.TC_Path);
             this.tab_Gw_ShapeEdit.Controls.Add(this.la_OD_Path);
-            this.tab_Gw_ShapeEdit.Location = new System.Drawing.Point(4, 22);
+            this.tab_Gw_ShapeEdit.Location = new System.Drawing.Point(4, 25);
             this.tab_Gw_ShapeEdit.Name = "tab_Gw_ShapeEdit";
             this.tab_Gw_ShapeEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Gw_ShapeEdit.Size = new System.Drawing.Size(928, 535);
+            this.tab_Gw_ShapeEdit.Size = new System.Drawing.Size(928, 532);
             this.tab_Gw_ShapeEdit.TabIndex = 3;
             this.tab_Gw_ShapeEdit.Text = "成型修整";
             this.tab_Gw_ShapeEdit.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -4621,7 +4753,7 @@
             this.la_OD_Path_Diameter_Val.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_OD_Path_Diameter_Val.Location = new System.Drawing.Point(704, 24);
             this.la_OD_Path_Diameter_Val.Name = "la_OD_Path_Diameter_Val";
-            this.la_OD_Path_Diameter_Val.Size = new System.Drawing.Size(16, 20);
+            this.la_OD_Path_Diameter_Val.Size = new System.Drawing.Size(21, 25);
             this.la_OD_Path_Diameter_Val.TabIndex = 155;
             this.la_OD_Path_Diameter_Val.Text = "-";
             // 
@@ -4632,7 +4764,7 @@
             this.la_OD_Path_Width_Val.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_OD_Path_Width_Val.Location = new System.Drawing.Point(536, 24);
             this.la_OD_Path_Width_Val.Name = "la_OD_Path_Width_Val";
-            this.la_OD_Path_Width_Val.Size = new System.Drawing.Size(16, 20);
+            this.la_OD_Path_Width_Val.Size = new System.Drawing.Size(21, 25);
             this.la_OD_Path_Width_Val.TabIndex = 154;
             this.la_OD_Path_Width_Val.Text = "-";
             // 
@@ -4643,7 +4775,7 @@
             this.la_OD_Path_Diameter.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_OD_Path_Diameter.Location = new System.Drawing.Point(704, 0);
             this.la_OD_Path_Diameter.Name = "la_OD_Path_Diameter";
-            this.la_OD_Path_Diameter.Size = new System.Drawing.Size(89, 20);
+            this.la_OD_Path_Diameter.Size = new System.Drawing.Size(112, 25);
             this.la_OD_Path_Diameter.TabIndex = 153;
             this.la_OD_Path_Diameter.Text = "砂輪外徑：";
             // 
@@ -4654,7 +4786,7 @@
             this.la_OD_Path_Width.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_OD_Path_Width.Location = new System.Drawing.Point(536, 0);
             this.la_OD_Path_Width.Name = "la_OD_Path_Width";
-            this.la_OD_Path_Width.Size = new System.Drawing.Size(89, 20);
+            this.la_OD_Path_Width.Size = new System.Drawing.Size(112, 25);
             this.la_OD_Path_Width.TabIndex = 152;
             this.la_OD_Path_Width.Text = "砂輪寬度：";
             // 
@@ -4674,10 +4806,10 @@
             this.tab_PreviewPath.Controls.Add(this.btn_Path_Export);
             this.tab_PreviewPath.Controls.Add(this.pic_PathPreview);
             this.tab_PreviewPath.Controls.Add(this.btn_Path_Import);
-            this.tab_PreviewPath.Location = new System.Drawing.Point(4, 22);
+            this.tab_PreviewPath.Location = new System.Drawing.Point(4, 25);
             this.tab_PreviewPath.Name = "tab_PreviewPath";
             this.tab_PreviewPath.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PreviewPath.Size = new System.Drawing.Size(816, 518);
+            this.tab_PreviewPath.Size = new System.Drawing.Size(816, 515);
             this.tab_PreviewPath.TabIndex = 0;
             this.tab_PreviewPath.Text = "預覽";
             this.tab_PreviewPath.UseVisualStyleBackColor = true;
@@ -4751,10 +4883,10 @@
             this.tab_EditPath.Controls.Add(this.btn_ClearAllOffsetPath);
             this.tab_EditPath.Controls.Add(this.btn_Path_Delete);
             this.tab_EditPath.Controls.Add(this.btn_Path_Add);
-            this.tab_EditPath.Location = new System.Drawing.Point(4, 22);
+            this.tab_EditPath.Location = new System.Drawing.Point(4, 25);
             this.tab_EditPath.Name = "tab_EditPath";
             this.tab_EditPath.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_EditPath.Size = new System.Drawing.Size(816, 518);
+            this.tab_EditPath.Size = new System.Drawing.Size(816, 515);
             this.tab_EditPath.TabIndex = 1;
             this.tab_EditPath.Text = "編輯";
             this.tab_EditPath.UseVisualStyleBackColor = true;
@@ -4773,7 +4905,7 @@
             this.tb_ToolR.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_ToolR.Location = new System.Drawing.Point(672, 368);
             this.tb_ToolR.Name = "tb_ToolR";
-            this.tb_ToolR.Size = new System.Drawing.Size(128, 29);
+            this.tb_ToolR.Size = new System.Drawing.Size(128, 34);
             this.tb_ToolR.TabIndex = 159;
             this.tb_ToolR.Click += new System.EventHandler(this.tb_ToolR_Click);
             // 
@@ -4787,7 +4919,7 @@
             "右(G42)"});
             this.cb_ToolRCompFunc.Location = new System.Drawing.Point(528, 368);
             this.cb_ToolRCompFunc.Name = "cb_ToolRCompFunc";
-            this.cb_ToolRCompFunc.Size = new System.Drawing.Size(136, 28);
+            this.cb_ToolRCompFunc.Size = new System.Drawing.Size(136, 33);
             this.cb_ToolRCompFunc.TabIndex = 161;
             this.cb_ToolRCompFunc.SelectedIndexChanged += new System.EventHandler(this.cb_ToolRCompFunc_SelectedIndexChanged);
             this.cb_ToolRCompFunc.Click += new System.EventHandler(this.cb_ToolRCompFunc_Click);
@@ -4843,7 +4975,7 @@
             this.tb_DiamOfsZ.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_DiamOfsZ.Location = new System.Drawing.Point(392, 368);
             this.tb_DiamOfsZ.Name = "tb_DiamOfsZ";
-            this.tb_DiamOfsZ.Size = new System.Drawing.Size(128, 29);
+            this.tb_DiamOfsZ.Size = new System.Drawing.Size(128, 34);
             this.tb_DiamOfsZ.TabIndex = 157;
             this.tb_DiamOfsZ.Click += new System.EventHandler(this.tb_DiamOfsZ_Click);
             // 
@@ -5126,6 +5258,10 @@
             // tab_DressGwSetting
             // 
             this.tab_DressGwSetting.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_DressGwSetting.Controls.Add(this.pa_DressTool_2P);
+            this.tab_DressGwSetting.Controls.Add(this.pa_DressTool_3P);
+            this.tab_DressGwSetting.Controls.Add(this.pic_DressTool_2P);
+            this.tab_DressGwSetting.Controls.Add(this.pic_DressTool_3P);
             this.tab_DressGwSetting.Controls.Add(this.btn_SaveDressGw);
             this.tab_DressGwSetting.Controls.Add(this.pa_DressAbs);
             this.tab_DressGwSetting.Controls.Add(this.pa_DressMach);
@@ -5136,13 +5272,59 @@
             this.tab_DressGwSetting.Controls.Add(this.pic_G55);
             this.tab_DressGwSetting.Controls.Add(this.pic_G58);
             this.tab_DressGwSetting.Controls.Add(this.pic_G56);
-            this.tab_DressGwSetting.Location = new System.Drawing.Point(4, 58);
+            this.tab_DressGwSetting.Location = new System.Drawing.Point(4, 67);
             this.tab_DressGwSetting.Name = "tab_DressGwSetting";
-            this.tab_DressGwSetting.Size = new System.Drawing.Size(936, 570);
+            this.tab_DressGwSetting.Size = new System.Drawing.Size(936, 561);
             this.tab_DressGwSetting.TabIndex = 13;
             this.tab_DressGwSetting.Text = "修砂對點";
             this.tab_DressGwSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_DressGwSetting.Leave += new System.EventHandler(this.tab_DressGwSetting_Leave);
+            // 
+            // pa_DressTool_2P
+            // 
+            this.pa_DressTool_2P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pa_DressTool_2P.Location = new System.Drawing.Point(552, 56);
+            this.pa_DressTool_2P.Name = "pa_DressTool_2P";
+            this.pa_DressTool_2P.Size = new System.Drawing.Size(64, 16);
+            this.pa_DressTool_2P.TabIndex = 145;
+            // 
+            // pa_DressTool_3P
+            // 
+            this.pa_DressTool_3P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pa_DressTool_3P.Location = new System.Drawing.Point(480, 56);
+            this.pa_DressTool_3P.Name = "pa_DressTool_3P";
+            this.pa_DressTool_3P.Size = new System.Drawing.Size(64, 16);
+            this.pa_DressTool_3P.TabIndex = 144;
+            // 
+            // pic_DressTool_2P
+            // 
+            this.pic_DressTool_2P.BackColor = System.Drawing.Color.Transparent;
+            this.pic_DressTool_2P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_DressTool_2P.Image = ((System.Drawing.Image)(resources.GetObject("pic_DressTool_2P.Image")));
+            this.pic_DressTool_2P.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pic_DressTool_2P.Location = new System.Drawing.Point(552, 72);
+            this.pic_DressTool_2P.Name = "pic_DressTool_2P";
+            this.pic_DressTool_2P.Size = new System.Drawing.Size(64, 64);
+            this.pic_DressTool_2P.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_DressTool_2P.TabIndex = 143;
+            this.pic_DressTool_2P.TabStop = false;
+            this.pic_DressTool_2P.Tag = "1";
+            this.pic_DressTool_2P.Click += new System.EventHandler(this.pic_DressTool_Click);
+            // 
+            // pic_DressTool_3P
+            // 
+            this.pic_DressTool_3P.BackColor = System.Drawing.Color.Transparent;
+            this.pic_DressTool_3P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_DressTool_3P.Image = ((System.Drawing.Image)(resources.GetObject("pic_DressTool_3P.Image")));
+            this.pic_DressTool_3P.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pic_DressTool_3P.Location = new System.Drawing.Point(480, 72);
+            this.pic_DressTool_3P.Name = "pic_DressTool_3P";
+            this.pic_DressTool_3P.Size = new System.Drawing.Size(64, 64);
+            this.pic_DressTool_3P.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_DressTool_3P.TabIndex = 142;
+            this.pic_DressTool_3P.TabStop = false;
+            this.pic_DressTool_3P.Tag = "0";
+            this.pic_DressTool_3P.Click += new System.EventHandler(this.pic_DressTool_Click);
             // 
             // btn_SaveDressGw
             // 
@@ -5198,7 +5380,7 @@
             this.la_DressAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressAbsAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_DressAbsAxis2.Name = "la_DressAbsAxis2";
-            this.la_DressAbsAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_DressAbsAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_DressAbsAxis2.TabIndex = 17;
             this.la_DressAbsAxis2.Text = "Z";
             // 
@@ -5223,7 +5405,7 @@
             this.la_DressAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressAbsAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressAbsAxis1.Name = "la_DressAbsAxis1";
-            this.la_DressAbsAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_DressAbsAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_DressAbsAxis1.TabIndex = 15;
             this.la_DressAbsAxis1.Text = "X";
             // 
@@ -5275,7 +5457,7 @@
             this.la_DressMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressMachAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_DressMachAxis2.Name = "la_DressMachAxis2";
-            this.la_DressMachAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_DressMachAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_DressMachAxis2.TabIndex = 17;
             this.la_DressMachAxis2.Text = "Z";
             // 
@@ -5300,7 +5482,7 @@
             this.la_DressMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressMachAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressMachAxis1.Name = "la_DressMachAxis1";
-            this.la_DressMachAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_DressMachAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_DressMachAxis1.TabIndex = 15;
             this.la_DressMachAxis1.Text = "X";
             // 
@@ -5386,7 +5568,7 @@
             // 
             this.TB_G58Z.Location = new System.Drawing.Point(32, 72);
             this.TB_G58Z.Name = "TB_G58Z";
-            this.TB_G58Z.Size = new System.Drawing.Size(168, 29);
+            this.TB_G58Z.Size = new System.Drawing.Size(168, 34);
             this.TB_G58Z.TabIndex = 11;
             this.TB_G58Z.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5394,7 +5576,7 @@
             // 
             this.TB_G58X.Location = new System.Drawing.Point(32, 32);
             this.TB_G58X.Name = "TB_G58X";
-            this.TB_G58X.Size = new System.Drawing.Size(168, 29);
+            this.TB_G58X.Size = new System.Drawing.Size(168, 34);
             this.TB_G58X.TabIndex = 10;
             this.TB_G58X.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5489,7 +5671,7 @@
             // 
             this.TB_G56Z.Location = new System.Drawing.Point(32, 72);
             this.TB_G56Z.Name = "TB_G56Z";
-            this.TB_G56Z.Size = new System.Drawing.Size(168, 29);
+            this.TB_G56Z.Size = new System.Drawing.Size(168, 34);
             this.TB_G56Z.TabIndex = 11;
             this.TB_G56Z.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5497,7 +5679,7 @@
             // 
             this.TB_G56X.Location = new System.Drawing.Point(32, 32);
             this.TB_G56X.Name = "TB_G56X";
-            this.TB_G56X.Size = new System.Drawing.Size(168, 29);
+            this.TB_G56X.Size = new System.Drawing.Size(168, 34);
             this.TB_G56X.TabIndex = 10;
             this.TB_G56X.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5542,7 +5724,7 @@
             this.GB_G55.Size = new System.Drawing.Size(504, 112);
             this.GB_G55.TabIndex = 54;
             this.GB_G55.TabStop = false;
-            this.GB_G55.Text = "外徑修砂位置";
+            this.GB_G55.Text = "G55";
             // 
             // btn_G55Z_Input
             // 
@@ -5592,7 +5774,7 @@
             // 
             this.TB_G55Z.Location = new System.Drawing.Point(32, 72);
             this.TB_G55Z.Name = "TB_G55Z";
-            this.TB_G55Z.Size = new System.Drawing.Size(168, 29);
+            this.TB_G55Z.Size = new System.Drawing.Size(168, 34);
             this.TB_G55Z.TabIndex = 11;
             this.TB_G55Z.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5600,7 +5782,7 @@
             // 
             this.TB_G55X.Location = new System.Drawing.Point(32, 32);
             this.TB_G55X.Name = "TB_G55X";
-            this.TB_G55X.Size = new System.Drawing.Size(168, 29);
+            this.TB_G55X.Size = new System.Drawing.Size(168, 34);
             this.TB_G55X.TabIndex = 10;
             this.TB_G55X.Click += new System.EventHandler(this.tb_DressGw_TextBoxClick);
             // 
@@ -5681,10 +5863,10 @@
             this.tab_DressGwConv.Controls.Add(this.panel3);
             this.tab_DressGwConv.Controls.Add(this.la_DressGwConvTitle);
             this.tab_DressGwConv.Controls.Add(this.pic_DressGwStep);
-            this.tab_DressGwConv.Location = new System.Drawing.Point(4, 58);
+            this.tab_DressGwConv.Location = new System.Drawing.Point(4, 67);
             this.tab_DressGwConv.Name = "tab_DressGwConv";
             this.tab_DressGwConv.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DressGwConv.Size = new System.Drawing.Size(936, 570);
+            this.tab_DressGwConv.Size = new System.Drawing.Size(936, 561);
             this.tab_DressGwConv.TabIndex = 22;
             this.tab_DressGwConv.Text = "修砂對點2";
             this.tab_DressGwConv.UseVisualStyleBackColor = true;
@@ -5774,7 +5956,7 @@
             this.la_DressGwAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressGwAbsAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_DressGwAbsAxis2.Name = "la_DressGwAbsAxis2";
-            this.la_DressGwAbsAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_DressGwAbsAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_DressGwAbsAxis2.TabIndex = 17;
             this.la_DressGwAbsAxis2.Text = "Z";
             // 
@@ -5799,7 +5981,7 @@
             this.la_DressGwAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressGwAbsAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressGwAbsAxis1.Name = "la_DressGwAbsAxis1";
-            this.la_DressGwAbsAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_DressGwAbsAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_DressGwAbsAxis1.TabIndex = 15;
             this.la_DressGwAbsAxis1.Text = "X";
             // 
@@ -5851,7 +6033,7 @@
             this.la_DressGwMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressGwMachAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_DressGwMachAxis2.Name = "la_DressGwMachAxis2";
-            this.la_DressGwMachAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_DressGwMachAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_DressGwMachAxis2.TabIndex = 17;
             this.la_DressGwMachAxis2.Text = "Z";
             // 
@@ -5876,7 +6058,7 @@
             this.la_DressGwMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressGwMachAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressGwMachAxis1.Name = "la_DressGwMachAxis1";
-            this.la_DressGwMachAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_DressGwMachAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_DressGwMachAxis1.TabIndex = 15;
             this.la_DressGwMachAxis1.Text = "X";
             // 
@@ -5936,9 +6118,9 @@
             this.tab_DressPartsSetting.Controls.Add(this.la_WorkSettingTitle);
             this.tab_DressPartsSetting.Controls.Add(this.btn_SaveGrindCoor);
             this.tab_DressPartsSetting.Controls.Add(this.pic_G5459X);
-            this.tab_DressPartsSetting.Location = new System.Drawing.Point(4, 58);
+            this.tab_DressPartsSetting.Location = new System.Drawing.Point(4, 67);
             this.tab_DressPartsSetting.Name = "tab_DressPartsSetting";
-            this.tab_DressPartsSetting.Size = new System.Drawing.Size(936, 570);
+            this.tab_DressPartsSetting.Size = new System.Drawing.Size(936, 561);
             this.tab_DressPartsSetting.TabIndex = 16;
             this.tab_DressPartsSetting.Text = "加工對點";
             this.tab_DressPartsSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -6050,7 +6232,7 @@
             this.la_DP_Msg3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DP_Msg3.Location = new System.Drawing.Point(120, 0);
             this.la_DP_Msg3.Name = "la_DP_Msg3";
-            this.la_DP_Msg3.Size = new System.Drawing.Size(186, 21);
+            this.la_DP_Msg3.Size = new System.Drawing.Size(232, 25);
             this.la_DP_Msg3.TabIndex = 75;
             this.la_DP_Msg3.Text = "請移動工件接觸砂輪右側";
             this.la_DP_Msg3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6060,7 +6242,7 @@
             this.TB_G59Cal_Length.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G59Cal_Length.Location = new System.Drawing.Point(560, 72);
             this.TB_G59Cal_Length.Name = "TB_G59Cal_Length";
-            this.TB_G59Cal_Length.Size = new System.Drawing.Size(88, 29);
+            this.TB_G59Cal_Length.Size = new System.Drawing.Size(88, 34);
             this.TB_G59Cal_Length.TabIndex = 11;
             this.TB_G59Cal_Length.Click += new System.EventHandler(this.GwWorkPieceTextbox);
             // 
@@ -6084,7 +6266,7 @@
             this.la_G59Cal_Length.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_G59Cal_Length.Location = new System.Drawing.Point(560, 48);
             this.la_G59Cal_Length.Name = "la_G59Cal_Length";
-            this.la_G59Cal_Length.Size = new System.Drawing.Size(89, 20);
+            this.la_G59Cal_Length.Size = new System.Drawing.Size(112, 25);
             this.la_G59Cal_Length.TabIndex = 9;
             this.la_G59Cal_Length.Text = "端面量測值";
             this.la_G59Cal_Length.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6094,7 +6276,7 @@
             this.TB_G59Z.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G59Z.Location = new System.Drawing.Point(120, 72);
             this.TB_G59Z.Name = "TB_G59Z";
-            this.TB_G59Z.Size = new System.Drawing.Size(88, 29);
+            this.TB_G59Z.Size = new System.Drawing.Size(88, 34);
             this.TB_G59Z.TabIndex = 11;
             this.TB_G59Z.Click += new System.EventHandler(this.TB_CoorClick);
             // 
@@ -6157,7 +6339,7 @@
             this.la_DP_Msg2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DP_Msg2.Location = new System.Drawing.Point(120, 0);
             this.la_DP_Msg2.Name = "la_DP_Msg2";
-            this.la_DP_Msg2.Size = new System.Drawing.Size(186, 21);
+            this.la_DP_Msg2.Size = new System.Drawing.Size(232, 25);
             this.la_DP_Msg2.TabIndex = 74;
             this.la_DP_Msg2.Text = "請移動工件接觸砂輪左側";
             this.la_DP_Msg2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6167,7 +6349,7 @@
             this.TB_G54Cal_Length.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G54Cal_Length.Location = new System.Drawing.Point(560, 80);
             this.TB_G54Cal_Length.Name = "TB_G54Cal_Length";
-            this.TB_G54Cal_Length.Size = new System.Drawing.Size(88, 29);
+            this.TB_G54Cal_Length.Size = new System.Drawing.Size(88, 34);
             this.TB_G54Cal_Length.TabIndex = 11;
             this.TB_G54Cal_Length.Click += new System.EventHandler(this.GwWorkPieceTextbox);
             // 
@@ -6179,7 +6361,7 @@
             this.la_G54Cal_Length.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_G54Cal_Length.Location = new System.Drawing.Point(560, 56);
             this.la_G54Cal_Length.Name = "la_G54Cal_Length";
-            this.la_G54Cal_Length.Size = new System.Drawing.Size(89, 20);
+            this.la_G54Cal_Length.Size = new System.Drawing.Size(112, 25);
             this.la_G54Cal_Length.TabIndex = 9;
             this.la_G54Cal_Length.Text = "端面量測值";
             this.la_G54Cal_Length.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6201,7 +6383,7 @@
             this.TB_G54Z.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G54Z.Location = new System.Drawing.Point(120, 80);
             this.TB_G54Z.Name = "TB_G54Z";
-            this.TB_G54Z.Size = new System.Drawing.Size(88, 29);
+            this.TB_G54Z.Size = new System.Drawing.Size(88, 34);
             this.TB_G54Z.TabIndex = 11;
             this.TB_G54Z.Click += new System.EventHandler(this.TB_CoorClick);
             // 
@@ -6373,7 +6555,7 @@
             this.TB_G54G59Cal_Diam.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G54G59Cal_Diam.Location = new System.Drawing.Point(568, 288);
             this.TB_G54G59Cal_Diam.Name = "TB_G54G59Cal_Diam";
-            this.TB_G54G59Cal_Diam.Size = new System.Drawing.Size(88, 29);
+            this.TB_G54G59Cal_Diam.Size = new System.Drawing.Size(88, 34);
             this.TB_G54G59Cal_Diam.TabIndex = 10;
             this.TB_G54G59Cal_Diam.Click += new System.EventHandler(this.GwWorkPieceTextbox);
             // 
@@ -6394,7 +6576,7 @@
             this.TB_G54G59X.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_G54G59X.Location = new System.Drawing.Point(128, 288);
             this.TB_G54G59X.Name = "TB_G54G59X";
-            this.TB_G54G59X.Size = new System.Drawing.Size(88, 29);
+            this.TB_G54G59X.Size = new System.Drawing.Size(88, 34);
             this.TB_G54G59X.TabIndex = 10;
             this.TB_G54G59X.Click += new System.EventHandler(this.TB_CoorClick);
             // 
@@ -6406,7 +6588,7 @@
             this.la_Cal_Diam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Cal_Diam.Location = new System.Drawing.Point(568, 264);
             this.la_Cal_Diam.Name = "la_Cal_Diam";
-            this.la_Cal_Diam.Size = new System.Drawing.Size(89, 20);
+            this.la_Cal_Diam.Size = new System.Drawing.Size(112, 25);
             this.la_Cal_Diam.TabIndex = 8;
             this.la_Cal_Diam.Text = "直徑量測值";
             this.la_Cal_Diam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6447,7 +6629,7 @@
             this.la_PartsAbsAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsAbsAxis3.Location = new System.Drawing.Point(8, 88);
             this.la_PartsAbsAxis3.Name = "la_PartsAbsAxis3";
-            this.la_PartsAbsAxis3.Size = new System.Drawing.Size(22, 24);
+            this.la_PartsAbsAxis3.Size = new System.Drawing.Size(29, 31);
             this.la_PartsAbsAxis3.TabIndex = 19;
             this.la_PartsAbsAxis3.Text = "B";
             // 
@@ -6472,7 +6654,7 @@
             this.la_PartsAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsAbsAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_PartsAbsAxis2.Name = "la_PartsAbsAxis2";
-            this.la_PartsAbsAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_PartsAbsAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_PartsAbsAxis2.TabIndex = 17;
             this.la_PartsAbsAxis2.Text = "Z";
             // 
@@ -6497,7 +6679,7 @@
             this.la_PartsAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsAbsAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_PartsAbsAxis1.Name = "la_PartsAbsAxis1";
-            this.la_PartsAbsAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_PartsAbsAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_PartsAbsAxis1.TabIndex = 15;
             this.la_PartsAbsAxis1.Text = "X";
             // 
@@ -6523,7 +6705,7 @@
             this.la_DP_Msg1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DP_Msg1.Location = new System.Drawing.Point(128, 208);
             this.la_DP_Msg1.Name = "la_DP_Msg1";
-            this.la_DP_Msg1.Size = new System.Drawing.Size(186, 21);
+            this.la_DP_Msg1.Size = new System.Drawing.Size(232, 25);
             this.la_DP_Msg1.TabIndex = 8;
             this.la_DP_Msg1.Text = "請移動砂輪接觸工件外徑";
             this.la_DP_Msg1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -6564,7 +6746,7 @@
             this.la_PartsMachAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsMachAxis3.Location = new System.Drawing.Point(8, 88);
             this.la_PartsMachAxis3.Name = "la_PartsMachAxis3";
-            this.la_PartsMachAxis3.Size = new System.Drawing.Size(22, 24);
+            this.la_PartsMachAxis3.Size = new System.Drawing.Size(29, 31);
             this.la_PartsMachAxis3.TabIndex = 19;
             this.la_PartsMachAxis3.Text = "B";
             // 
@@ -6589,7 +6771,7 @@
             this.la_PartsMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsMachAxis2.Location = new System.Drawing.Point(8, 64);
             this.la_PartsMachAxis2.Name = "la_PartsMachAxis2";
-            this.la_PartsMachAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_PartsMachAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_PartsMachAxis2.TabIndex = 17;
             this.la_PartsMachAxis2.Text = "Z";
             // 
@@ -6614,7 +6796,7 @@
             this.la_PartsMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_PartsMachAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_PartsMachAxis1.Name = "la_PartsMachAxis1";
-            this.la_PartsMachAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_PartsMachAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_PartsMachAxis1.TabIndex = 15;
             this.la_PartsMachAxis1.Text = "X";
             // 
@@ -6692,10 +6874,10 @@
             this.tab_DressPartsConv.Controls.Add(this.btn_DP_Btn2);
             this.tab_DressPartsConv.Controls.Add(this.btn_DP_Btn1);
             this.tab_DressPartsConv.Controls.Add(this.pic_DressPartsStep);
-            this.tab_DressPartsConv.Location = new System.Drawing.Point(4, 58);
+            this.tab_DressPartsConv.Location = new System.Drawing.Point(4, 67);
             this.tab_DressPartsConv.Name = "tab_DressPartsConv";
             this.tab_DressPartsConv.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DressPartsConv.Size = new System.Drawing.Size(936, 570);
+            this.tab_DressPartsConv.Size = new System.Drawing.Size(936, 561);
             this.tab_DressPartsConv.TabIndex = 23;
             this.tab_DressPartsConv.Text = "加工對點2";
             this.tab_DressPartsConv.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -6756,7 +6938,7 @@
             this.la_DP_Rel_Z_Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DP_Rel_Z_Title.Location = new System.Drawing.Point(8, 128);
             this.la_DP_Rel_Z_Title.Name = "la_DP_Rel_Z_Title";
-            this.la_DP_Rel_Z_Title.Size = new System.Drawing.Size(29, 31);
+            this.la_DP_Rel_Z_Title.Size = new System.Drawing.Size(36, 38);
             this.la_DP_Rel_Z_Title.TabIndex = 90;
             this.la_DP_Rel_Z_Title.Text = "Z";
             // 
@@ -6799,7 +6981,7 @@
             this.la_DP_Rel_X_Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DP_Rel_X_Title.Location = new System.Drawing.Point(8, 40);
             this.la_DP_Rel_X_Title.Name = "la_DP_Rel_X_Title";
-            this.la_DP_Rel_X_Title.Size = new System.Drawing.Size(30, 31);
+            this.la_DP_Rel_X_Title.Size = new System.Drawing.Size(37, 38);
             this.la_DP_Rel_X_Title.TabIndex = 25;
             this.la_DP_Rel_X_Title.Text = "X";
             // 
@@ -6851,7 +7033,7 @@
             this.la_DressPartsDistAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsDistAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_DressPartsDistAxis2.Name = "la_DressPartsDistAxis2";
-            this.la_DressPartsDistAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_DressPartsDistAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_DressPartsDistAxis2.TabIndex = 23;
             this.la_DressPartsDistAxis2.Text = "Z";
             // 
@@ -6876,7 +7058,7 @@
             this.la_DressPartsDistAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsDistAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressPartsDistAxis1.Name = "la_DressPartsDistAxis1";
-            this.la_DressPartsDistAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_DressPartsDistAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_DressPartsDistAxis1.TabIndex = 21;
             this.la_DressPartsDistAxis1.Text = "X";
             // 
@@ -6899,7 +7081,7 @@
             this.tb_DP_Field1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_DP_Field1.Location = new System.Drawing.Point(560, 376);
             this.tb_DP_Field1.Name = "tb_DP_Field1";
-            this.tb_DP_Field1.Size = new System.Drawing.Size(224, 39);
+            this.tb_DP_Field1.Size = new System.Drawing.Size(224, 47);
             this.tb_DP_Field1.TabIndex = 84;
             this.tb_DP_Field1.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -6948,7 +7130,7 @@
             this.la_DressPartsMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsMachAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_DressPartsMachAxis2.Name = "la_DressPartsMachAxis2";
-            this.la_DressPartsMachAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_DressPartsMachAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_DressPartsMachAxis2.TabIndex = 17;
             this.la_DressPartsMachAxis2.Text = "Z";
             // 
@@ -6973,7 +7155,7 @@
             this.la_DressPartsMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsMachAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressPartsMachAxis1.Name = "la_DressPartsMachAxis1";
-            this.la_DressPartsMachAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_DressPartsMachAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_DressPartsMachAxis1.TabIndex = 15;
             this.la_DressPartsMachAxis1.Text = "X";
             // 
@@ -7025,7 +7207,7 @@
             this.la_DressPartsAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsAbsAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_DressPartsAbsAxis2.Name = "la_DressPartsAbsAxis2";
-            this.la_DressPartsAbsAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_DressPartsAbsAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_DressPartsAbsAxis2.TabIndex = 17;
             this.la_DressPartsAbsAxis2.Text = "Z";
             // 
@@ -7050,7 +7232,7 @@
             this.la_DressPartsAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_DressPartsAbsAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_DressPartsAbsAxis1.Name = "la_DressPartsAbsAxis1";
-            this.la_DressPartsAbsAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_DressPartsAbsAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_DressPartsAbsAxis1.TabIndex = 15;
             this.la_DressPartsAbsAxis1.Text = "X";
             // 
@@ -7292,10 +7474,10 @@
             this.tab_Monitor.Controls.Add(this.pa_MonitorMach);
             this.tab_Monitor.Controls.Add(this.pa_Monitor_Prog);
             this.tab_Monitor.Controls.Add(this.pa_Monitor_Info);
-            this.tab_Monitor.Location = new System.Drawing.Point(4, 58);
+            this.tab_Monitor.Location = new System.Drawing.Point(4, 67);
             this.tab_Monitor.Margin = new System.Windows.Forms.Padding(0);
             this.tab_Monitor.Name = "tab_Monitor";
-            this.tab_Monitor.Size = new System.Drawing.Size(936, 570);
+            this.tab_Monitor.Size = new System.Drawing.Size(936, 561);
             this.tab_Monitor.TabIndex = 0;
             this.tab_Monitor.Text = "監視";
             this.tab_Monitor.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -7557,7 +7739,7 @@
             this.la_RemainGrindAmount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_RemainGrindAmount.Location = new System.Drawing.Point(8, 120);
             this.la_RemainGrindAmount.Name = "la_RemainGrindAmount";
-            this.la_RemainGrindAmount.Size = new System.Drawing.Size(89, 20);
+            this.la_RemainGrindAmount.Size = new System.Drawing.Size(112, 25);
             this.la_RemainGrindAmount.TabIndex = 95;
             this.la_RemainGrindAmount.Text = "剩餘研磨量";
             this.la_RemainGrindAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -8158,7 +8340,7 @@
             this.la_Monitor_Rel_Z_Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Monitor_Rel_Z_Title.Location = new System.Drawing.Point(8, 67);
             this.la_Monitor_Rel_Z_Title.Name = "la_Monitor_Rel_Z_Title";
-            this.la_Monitor_Rel_Z_Title.Size = new System.Drawing.Size(20, 21);
+            this.la_Monitor_Rel_Z_Title.Size = new System.Drawing.Size(25, 25);
             this.la_Monitor_Rel_Z_Title.TabIndex = 91;
             this.la_Monitor_Rel_Z_Title.Text = "Z";
             // 
@@ -8201,7 +8383,7 @@
             this.la_Monitor_Rel_X_Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Monitor_Rel_X_Title.Location = new System.Drawing.Point(8, 32);
             this.la_Monitor_Rel_X_Title.Name = "la_Monitor_Rel_X_Title";
-            this.la_Monitor_Rel_X_Title.Size = new System.Drawing.Size(21, 21);
+            this.la_Monitor_Rel_X_Title.Size = new System.Drawing.Size(25, 25);
             this.la_Monitor_Rel_X_Title.TabIndex = 25;
             this.la_Monitor_Rel_X_Title.Text = "X";
             // 
@@ -8270,7 +8452,7 @@
             this.la_MonitorDistAxis6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis6.Location = new System.Drawing.Point(8, 152);
             this.la_MonitorDistAxis6.Name = "la_MonitorDistAxis6";
-            this.la_MonitorDistAxis6.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorDistAxis6.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorDistAxis6.TabIndex = 41;
             this.la_MonitorDistAxis6.Text = "B";
             this.la_MonitorDistAxis6.Visible = false;
@@ -8298,7 +8480,7 @@
             this.la_MonitorDistAxis5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis5.Location = new System.Drawing.Point(8, 128);
             this.la_MonitorDistAxis5.Name = "la_MonitorDistAxis5";
-            this.la_MonitorDistAxis5.Size = new System.Drawing.Size(22, 21);
+            this.la_MonitorDistAxis5.Size = new System.Drawing.Size(26, 25);
             this.la_MonitorDistAxis5.TabIndex = 39;
             this.la_MonitorDistAxis5.Text = "A";
             this.la_MonitorDistAxis5.Visible = false;
@@ -8312,7 +8494,7 @@
             this.la_MonitorDistAxis6s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis6s.Location = new System.Drawing.Point(26, 160);
             this.la_MonitorDistAxis6s.Name = "la_MonitorDistAxis6s";
-            this.la_MonitorDistAxis6s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorDistAxis6s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorDistAxis6s.TabIndex = 44;
             this.la_MonitorDistAxis6s.Text = "B";
             this.la_MonitorDistAxis6s.Visible = false;
@@ -8326,7 +8508,7 @@
             this.la_MonitorDistAxis5s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis5s.Location = new System.Drawing.Point(26, 136);
             this.la_MonitorDistAxis5s.Name = "la_MonitorDistAxis5s";
-            this.la_MonitorDistAxis5s.Size = new System.Drawing.Size(15, 15);
+            this.la_MonitorDistAxis5s.Size = new System.Drawing.Size(18, 18);
             this.la_MonitorDistAxis5s.TabIndex = 43;
             this.la_MonitorDistAxis5s.Text = "A";
             this.la_MonitorDistAxis5s.Visible = false;
@@ -8340,7 +8522,7 @@
             this.la_MonitorDistAxis4s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis4s.Location = new System.Drawing.Point(26, 112);
             this.la_MonitorDistAxis4s.Name = "la_MonitorDistAxis4s";
-            this.la_MonitorDistAxis4s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorDistAxis4s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorDistAxis4s.TabIndex = 36;
             this.la_MonitorDistAxis4s.Text = "C";
             this.la_MonitorDistAxis4s.Visible = false;
@@ -8354,7 +8536,7 @@
             this.la_MonitorDistAxis3s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis3s.Location = new System.Drawing.Point(26, 88);
             this.la_MonitorDistAxis3s.Name = "la_MonitorDistAxis3s";
-            this.la_MonitorDistAxis3s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorDistAxis3s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorDistAxis3s.TabIndex = 35;
             this.la_MonitorDistAxis3s.Text = "Y";
             this.la_MonitorDistAxis3s.Visible = false;
@@ -8368,7 +8550,7 @@
             this.la_MonitorDistAxis2s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis2s.Location = new System.Drawing.Point(26, 64);
             this.la_MonitorDistAxis2s.Name = "la_MonitorDistAxis2s";
-            this.la_MonitorDistAxis2s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorDistAxis2s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorDistAxis2s.TabIndex = 34;
             this.la_MonitorDistAxis2s.Text = "Z";
             // 
@@ -8381,7 +8563,7 @@
             this.la_MonitorDistAxis1s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis1s.Location = new System.Drawing.Point(26, 40);
             this.la_MonitorDistAxis1s.Name = "la_MonitorDistAxis1s";
-            this.la_MonitorDistAxis1s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorDistAxis1s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorDistAxis1s.TabIndex = 33;
             this.la_MonitorDistAxis1s.Text = "X";
             // 
@@ -8408,7 +8590,7 @@
             this.la_MonitorDistAxis4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis4.Location = new System.Drawing.Point(8, 104);
             this.la_MonitorDistAxis4.Name = "la_MonitorDistAxis4";
-            this.la_MonitorDistAxis4.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorDistAxis4.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorDistAxis4.TabIndex = 31;
             this.la_MonitorDistAxis4.Text = "C";
             this.la_MonitorDistAxis4.Visible = false;
@@ -8436,7 +8618,7 @@
             this.la_MonitorDistAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis3.Location = new System.Drawing.Point(8, 80);
             this.la_MonitorDistAxis3.Name = "la_MonitorDistAxis3";
-            this.la_MonitorDistAxis3.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorDistAxis3.Size = new System.Drawing.Size(24, 25);
             this.la_MonitorDistAxis3.TabIndex = 29;
             this.la_MonitorDistAxis3.Text = "Y";
             this.la_MonitorDistAxis3.Visible = false;
@@ -8463,7 +8645,7 @@
             this.la_MonitorDistAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis2.Location = new System.Drawing.Point(8, 56);
             this.la_MonitorDistAxis2.Name = "la_MonitorDistAxis2";
-            this.la_MonitorDistAxis2.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorDistAxis2.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorDistAxis2.TabIndex = 23;
             this.la_MonitorDistAxis2.Text = "Z";
             // 
@@ -8489,7 +8671,7 @@
             this.la_MonitorDistAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorDistAxis1.Location = new System.Drawing.Point(8, 32);
             this.la_MonitorDistAxis1.Name = "la_MonitorDistAxis1";
-            this.la_MonitorDistAxis1.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorDistAxis1.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorDistAxis1.TabIndex = 21;
             this.la_MonitorDistAxis1.Text = "X";
             // 
@@ -8660,7 +8842,7 @@
             this.la_MonitorAbsAxis6s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis6s.Location = new System.Drawing.Point(26, 160);
             this.la_MonitorAbsAxis6s.Name = "la_MonitorAbsAxis6s";
-            this.la_MonitorAbsAxis6s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorAbsAxis6s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorAbsAxis6s.TabIndex = 38;
             this.la_MonitorAbsAxis6s.Text = "B";
             this.la_MonitorAbsAxis6s.Visible = false;
@@ -8674,7 +8856,7 @@
             this.la_MonitorAbsAxis5s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis5s.Location = new System.Drawing.Point(26, 136);
             this.la_MonitorAbsAxis5s.Name = "la_MonitorAbsAxis5s";
-            this.la_MonitorAbsAxis5s.Size = new System.Drawing.Size(15, 15);
+            this.la_MonitorAbsAxis5s.Size = new System.Drawing.Size(18, 18);
             this.la_MonitorAbsAxis5s.TabIndex = 37;
             this.la_MonitorAbsAxis5s.Text = "A";
             this.la_MonitorAbsAxis5s.Visible = false;
@@ -8688,7 +8870,7 @@
             this.la_MonitorAbsAxis4s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis4s.Location = new System.Drawing.Point(26, 112);
             this.la_MonitorAbsAxis4s.Name = "la_MonitorAbsAxis4s";
-            this.la_MonitorAbsAxis4s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorAbsAxis4s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorAbsAxis4s.TabIndex = 32;
             this.la_MonitorAbsAxis4s.Text = "C";
             this.la_MonitorAbsAxis4s.Visible = false;
@@ -8702,7 +8884,7 @@
             this.la_MonitorAbsAxis3s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis3s.Location = new System.Drawing.Point(26, 88);
             this.la_MonitorAbsAxis3s.Name = "la_MonitorAbsAxis3s";
-            this.la_MonitorAbsAxis3s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorAbsAxis3s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorAbsAxis3s.TabIndex = 31;
             this.la_MonitorAbsAxis3s.Text = "Y";
             this.la_MonitorAbsAxis3s.Visible = false;
@@ -8716,7 +8898,7 @@
             this.la_MonitorAbsAxis2s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis2s.Location = new System.Drawing.Point(26, 64);
             this.la_MonitorAbsAxis2s.Name = "la_MonitorAbsAxis2s";
-            this.la_MonitorAbsAxis2s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorAbsAxis2s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorAbsAxis2s.TabIndex = 30;
             this.la_MonitorAbsAxis2s.Text = "Z";
             // 
@@ -8729,7 +8911,7 @@
             this.la_MonitorAbsAxis1s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis1s.Location = new System.Drawing.Point(26, 40);
             this.la_MonitorAbsAxis1s.Name = "la_MonitorAbsAxis1s";
-            this.la_MonitorAbsAxis1s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorAbsAxis1s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorAbsAxis1s.TabIndex = 29;
             this.la_MonitorAbsAxis1s.Text = "X";
             // 
@@ -8756,7 +8938,7 @@
             this.la_MonitorAbsAxis6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis6.Location = new System.Drawing.Point(8, 152);
             this.la_MonitorAbsAxis6.Name = "la_MonitorAbsAxis6";
-            this.la_MonitorAbsAxis6.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorAbsAxis6.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorAbsAxis6.TabIndex = 35;
             this.la_MonitorAbsAxis6.Text = "B";
             this.la_MonitorAbsAxis6.Visible = false;
@@ -8784,7 +8966,7 @@
             this.la_MonitorAbsAxis5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis5.Location = new System.Drawing.Point(8, 128);
             this.la_MonitorAbsAxis5.Name = "la_MonitorAbsAxis5";
-            this.la_MonitorAbsAxis5.Size = new System.Drawing.Size(22, 21);
+            this.la_MonitorAbsAxis5.Size = new System.Drawing.Size(26, 25);
             this.la_MonitorAbsAxis5.TabIndex = 33;
             this.la_MonitorAbsAxis5.Text = "A";
             this.la_MonitorAbsAxis5.Visible = false;
@@ -8812,7 +8994,7 @@
             this.la_MonitorAbsAxis4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis4.Location = new System.Drawing.Point(8, 104);
             this.la_MonitorAbsAxis4.Name = "la_MonitorAbsAxis4";
-            this.la_MonitorAbsAxis4.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorAbsAxis4.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorAbsAxis4.TabIndex = 27;
             this.la_MonitorAbsAxis4.Text = "C";
             this.la_MonitorAbsAxis4.Visible = false;
@@ -8840,7 +9022,7 @@
             this.la_MonitorAbsAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis3.Location = new System.Drawing.Point(8, 80);
             this.la_MonitorAbsAxis3.Name = "la_MonitorAbsAxis3";
-            this.la_MonitorAbsAxis3.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorAbsAxis3.Size = new System.Drawing.Size(24, 25);
             this.la_MonitorAbsAxis3.TabIndex = 25;
             this.la_MonitorAbsAxis3.Text = "Y";
             this.la_MonitorAbsAxis3.Visible = false;
@@ -8867,7 +9049,7 @@
             this.la_MonitorAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis2.Location = new System.Drawing.Point(8, 56);
             this.la_MonitorAbsAxis2.Name = "la_MonitorAbsAxis2";
-            this.la_MonitorAbsAxis2.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorAbsAxis2.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorAbsAxis2.TabIndex = 23;
             this.la_MonitorAbsAxis2.Text = "Z";
             // 
@@ -8893,7 +9075,7 @@
             this.la_MonitorAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorAbsAxis1.Location = new System.Drawing.Point(8, 32);
             this.la_MonitorAbsAxis1.Name = "la_MonitorAbsAxis1";
-            this.la_MonitorAbsAxis1.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorAbsAxis1.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorAbsAxis1.TabIndex = 21;
             this.la_MonitorAbsAxis1.Text = "X";
             // 
@@ -8990,7 +9172,7 @@
             this.la_MonitorMachAxis6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis6.Location = new System.Drawing.Point(8, 152);
             this.la_MonitorMachAxis6.Name = "la_MonitorMachAxis6";
-            this.la_MonitorMachAxis6.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorMachAxis6.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorMachAxis6.TabIndex = 47;
             this.la_MonitorMachAxis6.Text = "B";
             this.la_MonitorMachAxis6.Visible = false;
@@ -9018,7 +9200,7 @@
             this.la_MonitorMachAxis5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis5.Location = new System.Drawing.Point(8, 128);
             this.la_MonitorMachAxis5.Name = "la_MonitorMachAxis5";
-            this.la_MonitorMachAxis5.Size = new System.Drawing.Size(22, 21);
+            this.la_MonitorMachAxis5.Size = new System.Drawing.Size(26, 25);
             this.la_MonitorMachAxis5.TabIndex = 45;
             this.la_MonitorMachAxis5.Text = "A";
             this.la_MonitorMachAxis5.Visible = false;
@@ -9032,7 +9214,7 @@
             this.la_MonitorMachAxis6s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis6s.Location = new System.Drawing.Point(26, 160);
             this.la_MonitorMachAxis6s.Name = "la_MonitorMachAxis6s";
-            this.la_MonitorMachAxis6s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorMachAxis6s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorMachAxis6s.TabIndex = 50;
             this.la_MonitorMachAxis6s.Text = "B";
             this.la_MonitorMachAxis6s.Visible = false;
@@ -9046,7 +9228,7 @@
             this.la_MonitorMachAxis5s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis5s.Location = new System.Drawing.Point(26, 136);
             this.la_MonitorMachAxis5s.Name = "la_MonitorMachAxis5s";
-            this.la_MonitorMachAxis5s.Size = new System.Drawing.Size(15, 15);
+            this.la_MonitorMachAxis5s.Size = new System.Drawing.Size(18, 18);
             this.la_MonitorMachAxis5s.TabIndex = 49;
             this.la_MonitorMachAxis5s.Text = "A";
             this.la_MonitorMachAxis5s.Visible = false;
@@ -9060,7 +9242,7 @@
             this.la_MonitorMachAxis4s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis4s.Location = new System.Drawing.Point(26, 112);
             this.la_MonitorMachAxis4s.Name = "la_MonitorMachAxis4s";
-            this.la_MonitorMachAxis4s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorMachAxis4s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorMachAxis4s.TabIndex = 40;
             this.la_MonitorMachAxis4s.Text = "C";
             this.la_MonitorMachAxis4s.Visible = false;
@@ -9074,7 +9256,7 @@
             this.la_MonitorMachAxis3s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis3s.Location = new System.Drawing.Point(26, 88);
             this.la_MonitorMachAxis3s.Name = "la_MonitorMachAxis3s";
-            this.la_MonitorMachAxis3s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorMachAxis3s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorMachAxis3s.TabIndex = 39;
             this.la_MonitorMachAxis3s.Text = "Y";
             this.la_MonitorMachAxis3s.Visible = false;
@@ -9088,7 +9270,7 @@
             this.la_MonitorMachAxis2s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis2s.Location = new System.Drawing.Point(26, 64);
             this.la_MonitorMachAxis2s.Name = "la_MonitorMachAxis2s";
-            this.la_MonitorMachAxis2s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorMachAxis2s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorMachAxis2s.TabIndex = 38;
             this.la_MonitorMachAxis2s.Text = "Z";
             // 
@@ -9101,7 +9283,7 @@
             this.la_MonitorMachAxis1s.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis1s.Location = new System.Drawing.Point(26, 40);
             this.la_MonitorMachAxis1s.Name = "la_MonitorMachAxis1s";
-            this.la_MonitorMachAxis1s.Size = new System.Drawing.Size(14, 15);
+            this.la_MonitorMachAxis1s.Size = new System.Drawing.Size(17, 18);
             this.la_MonitorMachAxis1s.TabIndex = 37;
             this.la_MonitorMachAxis1s.Text = "X";
             // 
@@ -9170,7 +9352,7 @@
             this.la_MonitorMachAxis4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis4.Location = new System.Drawing.Point(8, 104);
             this.la_MonitorMachAxis4.Name = "la_MonitorMachAxis4";
-            this.la_MonitorMachAxis4.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorMachAxis4.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorMachAxis4.TabIndex = 31;
             this.la_MonitorMachAxis4.Text = "C";
             this.la_MonitorMachAxis4.Visible = false;
@@ -9198,7 +9380,7 @@
             this.la_MonitorMachAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis3.Location = new System.Drawing.Point(8, 80);
             this.la_MonitorMachAxis3.Name = "la_MonitorMachAxis3";
-            this.la_MonitorMachAxis3.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorMachAxis3.Size = new System.Drawing.Size(24, 25);
             this.la_MonitorMachAxis3.TabIndex = 29;
             this.la_MonitorMachAxis3.Text = "Y";
             this.la_MonitorMachAxis3.Visible = false;
@@ -9225,7 +9407,7 @@
             this.la_MonitorMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis2.Location = new System.Drawing.Point(8, 56);
             this.la_MonitorMachAxis2.Name = "la_MonitorMachAxis2";
-            this.la_MonitorMachAxis2.Size = new System.Drawing.Size(20, 21);
+            this.la_MonitorMachAxis2.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorMachAxis2.TabIndex = 17;
             this.la_MonitorMachAxis2.Text = "Z";
             // 
@@ -9251,7 +9433,7 @@
             this.la_MonitorMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MonitorMachAxis1.Location = new System.Drawing.Point(8, 32);
             this.la_MonitorMachAxis1.Name = "la_MonitorMachAxis1";
-            this.la_MonitorMachAxis1.Size = new System.Drawing.Size(21, 21);
+            this.la_MonitorMachAxis1.Size = new System.Drawing.Size(25, 25);
             this.la_MonitorMachAxis1.TabIndex = 15;
             this.la_MonitorMachAxis1.Text = "X";
             // 
@@ -9297,7 +9479,7 @@
             // SB_N_CurrentProcess
             // 
             this.SB_N_CurrentProcess.Name = "SB_N_CurrentProcess";
-            this.SB_N_CurrentProcess.Size = new System.Drawing.Size(55, 20);
+            this.SB_N_CurrentProcess.Size = new System.Drawing.Size(69, 19);
             this.SB_N_CurrentProcess.Text = "目前工序";
             // 
             // SB_CurrentProcess
@@ -9307,7 +9489,7 @@
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.SB_CurrentProcess.Name = "SB_CurrentProcess";
-            this.SB_CurrentProcess.Size = new System.Drawing.Size(80, 20);
+            this.SB_CurrentProcess.Size = new System.Drawing.Size(80, 19);
             this.SB_CurrentProcess.Text = "----";
             // 
             // DGV_Monitor_Program
@@ -9442,7 +9624,7 @@
             this.label50.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label50.Location = new System.Drawing.Point(8, 128);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(18, 20);
+            this.label50.Size = new System.Drawing.Size(23, 25);
             this.label50.TabIndex = 68;
             this.label50.Text = "T";
             // 
@@ -9480,7 +9662,7 @@
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label15.Location = new System.Drawing.Point(8, 104);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(18, 20);
+            this.label15.Size = new System.Drawing.Size(23, 25);
             this.label15.TabIndex = 13;
             this.label15.Text = "S";
             // 
@@ -9492,7 +9674,7 @@
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(8, 80);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(17, 20);
+            this.label7.Size = new System.Drawing.Size(23, 25);
             this.label7.TabIndex = 11;
             this.label7.Text = "F";
             // 
@@ -9517,7 +9699,7 @@
             this.la_FinishCount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_FinishCount.Location = new System.Drawing.Point(8, 56);
             this.la_FinishCount.Name = "la_FinishCount";
-            this.la_FinishCount.Size = new System.Drawing.Size(57, 20);
+            this.la_FinishCount.Size = new System.Drawing.Size(72, 25);
             this.la_FinishCount.TabIndex = 6;
             this.la_FinishCount.Text = "加工數";
             // 
@@ -9542,7 +9724,7 @@
             this.la_CycleTime2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_CycleTime2.Location = new System.Drawing.Point(8, 32);
             this.la_CycleTime2.Name = "la_CycleTime2";
-            this.la_CycleTime2.Size = new System.Drawing.Size(73, 20);
+            this.la_CycleTime2.Size = new System.Drawing.Size(92, 25);
             this.la_CycleTime2.TabIndex = 2;
             this.la_CycleTime2.Text = "加工時間";
             // 
@@ -9577,9 +9759,9 @@
             this.tab_ProgList.Controls.Add(this.btn_Prog_Del);
             this.tab_ProgList.Controls.Add(this.btn_Prog_Add);
             this.tab_ProgList.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_ProgList.Location = new System.Drawing.Point(4, 58);
+            this.tab_ProgList.Location = new System.Drawing.Point(4, 67);
             this.tab_ProgList.Name = "tab_ProgList";
-            this.tab_ProgList.Size = new System.Drawing.Size(936, 570);
+            this.tab_ProgList.Size = new System.Drawing.Size(936, 561);
             this.tab_ProgList.TabIndex = 8;
             this.tab_ProgList.Text = "程式清單";
             this.tab_ProgList.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -9598,7 +9780,7 @@
             // 
             this.tb_Search.Location = new System.Drawing.Point(528, 552);
             this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(272, 29);
+            this.tb_Search.Size = new System.Drawing.Size(272, 34);
             this.tb_Search.TabIndex = 60;
             this.tb_Search.Click += new System.EventHandler(this.tb_Search_Click);
             // 
@@ -9625,7 +9807,7 @@
             this.DGV_ProgView.RowHeadersWidth = 40;
             this.DGV_ProgView.RowTemplate.Height = 40;
             this.DGV_ProgView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ProgView.Size = new System.Drawing.Size(456, 404);
+            this.DGV_ProgView.Size = new System.Drawing.Size(456, 395);
             this.DGV_ProgView.TabIndex = 46;
             this.DGV_ProgView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ProgView_CellDoubleClick);
             // 
@@ -9663,7 +9845,7 @@
             this.la_ProgPreview.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
             this.la_ProgPreview.Location = new System.Drawing.Point(456, 8);
             this.la_ProgPreview.Name = "la_ProgPreview";
-            this.la_ProgPreview.Size = new System.Drawing.Size(74, 21);
+            this.la_ProgPreview.Size = new System.Drawing.Size(92, 25);
             this.la_ProgPreview.TabIndex = 57;
             this.la_ProgPreview.Text = "工序預覽";
             // 
@@ -9674,7 +9856,7 @@
             this.la_ProgList.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
             this.la_ProgList.Location = new System.Drawing.Point(8, 8);
             this.la_ProgList.Name = "la_ProgList";
-            this.la_ProgList.Size = new System.Drawing.Size(74, 21);
+            this.la_ProgList.Size = new System.Drawing.Size(92, 25);
             this.la_ProgList.TabIndex = 56;
             this.la_ProgList.Text = "程式清單";
             // 
@@ -9701,7 +9883,7 @@
             this.DGV_ProgList.RowHeadersWidth = 51;
             this.DGV_ProgList.RowTemplate.Height = 24;
             this.DGV_ProgList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_ProgList.Size = new System.Drawing.Size(433, 404);
+            this.DGV_ProgList.Size = new System.Drawing.Size(433, 395);
             this.DGV_ProgList.TabIndex = 28;
             this.DGV_ProgList.CurrentCellChanged += new System.EventHandler(this.DGV_ProgList_CurrentCellChanged);
             this.DGV_ProgList.DoubleClick += new System.EventHandler(this.DGV_ProgList_DoubleClick);
@@ -9843,10 +10025,10 @@
             this.tab_ProcList.Controls.Add(this.btn_InsertProcFront);
             this.tab_ProcList.Controls.Add(this.btn_RemoveProc);
             this.tab_ProcList.Controls.Add(this.btn_AddProc);
-            this.tab_ProcList.Location = new System.Drawing.Point(4, 58);
+            this.tab_ProcList.Location = new System.Drawing.Point(4, 67);
             this.tab_ProcList.Name = "tab_ProcList";
             this.tab_ProcList.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ProcList.Size = new System.Drawing.Size(936, 570);
+            this.tab_ProcList.Size = new System.Drawing.Size(936, 561);
             this.tab_ProcList.TabIndex = 28;
             this.tab_ProcList.Text = "程式";
             this.tab_ProcList.UseVisualStyleBackColor = true;
@@ -9859,7 +10041,7 @@
             this.la_ProcList_Prog_Name.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
             this.la_ProcList_Prog_Name.Location = new System.Drawing.Point(104, 56);
             this.la_ProcList_Prog_Name.Name = "la_ProcList_Prog_Name";
-            this.la_ProcList_Prog_Name.Size = new System.Drawing.Size(17, 21);
+            this.la_ProcList_Prog_Name.Size = new System.Drawing.Size(21, 25);
             this.la_ProcList_Prog_Name.TabIndex = 129;
             this.la_ProcList_Prog_Name.Text = "-";
             // 
@@ -9870,7 +10052,7 @@
             this.la_ProcList_ProgName.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
             this.la_ProcList_ProgName.Location = new System.Drawing.Point(8, 56);
             this.la_ProcList_ProgName.Name = "la_ProcList_ProgName";
-            this.la_ProcList_ProgName.Size = new System.Drawing.Size(42, 21);
+            this.la_ProcList_ProgName.Size = new System.Drawing.Size(52, 25);
             this.la_ProcList_ProgName.TabIndex = 128;
             this.la_ProcList_ProgName.Text = "程式";
             // 
@@ -10140,9 +10322,9 @@
             this.tab_EditProc.Controls.Add(this.la_EditProgTitle);
             this.tab_EditProc.Controls.Add(this.TC_EditProc);
             this.tab_EditProc.Controls.Add(this.pic_Descript);
-            this.tab_EditProc.Location = new System.Drawing.Point(4, 58);
+            this.tab_EditProc.Location = new System.Drawing.Point(4, 67);
             this.tab_EditProc.Name = "tab_EditProc";
-            this.tab_EditProc.Size = new System.Drawing.Size(936, 570);
+            this.tab_EditProc.Size = new System.Drawing.Size(936, 561);
             this.tab_EditProc.TabIndex = 14;
             this.tab_EditProc.Text = "編輯工序";
             this.tab_EditProc.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -10314,7 +10496,7 @@
             this.la_EditAbsAxisProbe2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditAbsAxisProbe2.Location = new System.Drawing.Point(8, 56);
             this.la_EditAbsAxisProbe2.Name = "la_EditAbsAxisProbe2";
-            this.la_EditAbsAxisProbe2.Size = new System.Drawing.Size(22, 24);
+            this.la_EditAbsAxisProbe2.Size = new System.Drawing.Size(29, 31);
             this.la_EditAbsAxisProbe2.TabIndex = 23;
             this.la_EditAbsAxisProbe2.Text = "Z";
             // 
@@ -10338,7 +10520,7 @@
             this.la_EditAbsAxisProbe1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditAbsAxisProbe1.Location = new System.Drawing.Point(8, 32);
             this.la_EditAbsAxisProbe1.Name = "la_EditAbsAxisProbe1";
-            this.la_EditAbsAxisProbe1.Size = new System.Drawing.Size(23, 24);
+            this.la_EditAbsAxisProbe1.Size = new System.Drawing.Size(30, 31);
             this.la_EditAbsAxisProbe1.TabIndex = 21;
             this.la_EditAbsAxisProbe1.Text = "X";
             // 
@@ -10389,7 +10571,7 @@
             this.la_ManualDistAxisProbe2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualDistAxisProbe2.Location = new System.Drawing.Point(8, 56);
             this.la_ManualDistAxisProbe2.Name = "la_ManualDistAxisProbe2";
-            this.la_ManualDistAxisProbe2.Size = new System.Drawing.Size(22, 24);
+            this.la_ManualDistAxisProbe2.Size = new System.Drawing.Size(29, 31);
             this.la_ManualDistAxisProbe2.TabIndex = 17;
             this.la_ManualDistAxisProbe2.Text = "Z";
             // 
@@ -10413,7 +10595,7 @@
             this.la_ManualDistAxisProbe1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualDistAxisProbe1.Location = new System.Drawing.Point(8, 32);
             this.la_ManualDistAxisProbe1.Name = "la_ManualDistAxisProbe1";
-            this.la_ManualDistAxisProbe1.Size = new System.Drawing.Size(23, 24);
+            this.la_ManualDistAxisProbe1.Size = new System.Drawing.Size(30, 31);
             this.la_ManualDistAxisProbe1.TabIndex = 15;
             this.la_ManualDistAxisProbe1.Text = "X";
             // 
@@ -10484,9 +10666,9 @@
             this.tab_Param1.Controls.Add(this.pa_ParamTop);
             this.tab_Param1.Controls.Add(this.DGV_Param1);
             this.tab_Param1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Param1.Location = new System.Drawing.Point(4, 35);
+            this.tab_Param1.Location = new System.Drawing.Point(4, 42);
             this.tab_Param1.Name = "tab_Param1";
-            this.tab_Param1.Size = new System.Drawing.Size(487, 497);
+            this.tab_Param1.Size = new System.Drawing.Size(487, 490);
             this.tab_Param1.TabIndex = 6;
             this.tab_Param1.Text = "參數1";
             this.tab_Param1.UseVisualStyleBackColor = true;
@@ -10536,7 +10718,7 @@
             this.la_EditAbsAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditAbsAxis3.Location = new System.Drawing.Point(8, 80);
             this.la_EditAbsAxis3.Name = "la_EditAbsAxis3";
-            this.la_EditAbsAxis3.Size = new System.Drawing.Size(22, 24);
+            this.la_EditAbsAxis3.Size = new System.Drawing.Size(29, 31);
             this.la_EditAbsAxis3.TabIndex = 25;
             this.la_EditAbsAxis3.Text = "B";
             // 
@@ -10560,7 +10742,7 @@
             this.la_EditAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditAbsAxis2.Location = new System.Drawing.Point(8, 56);
             this.la_EditAbsAxis2.Name = "la_EditAbsAxis2";
-            this.la_EditAbsAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_EditAbsAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_EditAbsAxis2.TabIndex = 23;
             this.la_EditAbsAxis2.Text = "Z";
             // 
@@ -10584,7 +10766,7 @@
             this.la_EditAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditAbsAxis1.Location = new System.Drawing.Point(8, 32);
             this.la_EditAbsAxis1.Name = "la_EditAbsAxis1";
-            this.la_EditAbsAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_EditAbsAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_EditAbsAxis1.TabIndex = 21;
             this.la_EditAbsAxis1.Text = "X";
             // 
@@ -10637,7 +10819,7 @@
             this.la_EditMachAxis3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditMachAxis3.Location = new System.Drawing.Point(8, 80);
             this.la_EditMachAxis3.Name = "la_EditMachAxis3";
-            this.la_EditMachAxis3.Size = new System.Drawing.Size(22, 24);
+            this.la_EditMachAxis3.Size = new System.Drawing.Size(29, 31);
             this.la_EditMachAxis3.TabIndex = 19;
             this.la_EditMachAxis3.Text = "B";
             // 
@@ -10661,7 +10843,7 @@
             this.la_EditMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditMachAxis2.Location = new System.Drawing.Point(8, 56);
             this.la_EditMachAxis2.Name = "la_EditMachAxis2";
-            this.la_EditMachAxis2.Size = new System.Drawing.Size(22, 24);
+            this.la_EditMachAxis2.Size = new System.Drawing.Size(29, 31);
             this.la_EditMachAxis2.TabIndex = 17;
             this.la_EditMachAxis2.Text = "Z";
             // 
@@ -10685,7 +10867,7 @@
             this.la_EditMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EditMachAxis1.Location = new System.Drawing.Point(8, 32);
             this.la_EditMachAxis1.Name = "la_EditMachAxis1";
-            this.la_EditMachAxis1.Size = new System.Drawing.Size(23, 24);
+            this.la_EditMachAxis1.Size = new System.Drawing.Size(30, 31);
             this.la_EditMachAxis1.TabIndex = 15;
             this.la_EditMachAxis1.Text = "X";
             // 
@@ -10793,9 +10975,9 @@
             this.tab_Param2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Param2.Controls.Add(this.DGV_Param2);
             this.tab_Param2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Param2.Location = new System.Drawing.Point(4, 35);
+            this.tab_Param2.Location = new System.Drawing.Point(4, 42);
             this.tab_Param2.Name = "tab_Param2";
-            this.tab_Param2.Size = new System.Drawing.Size(487, 497);
+            this.tab_Param2.Size = new System.Drawing.Size(487, 490);
             this.tab_Param2.TabIndex = 7;
             this.tab_Param2.Text = "參數2";
             this.tab_Param2.UseVisualStyleBackColor = true;
@@ -10824,7 +11006,7 @@
             this.DGV_Param2.RowTemplate.Height = 32;
             this.DGV_Param2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.DGV_Param2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Param2.Size = new System.Drawing.Size(485, 495);
+            this.DGV_Param2.Size = new System.Drawing.Size(485, 488);
             this.DGV_Param2.TabIndex = 2;
             this.DGV_Param2.TabStop = false;
             this.DGV_Param2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
@@ -10890,9 +11072,9 @@
             // 
             this.tab_Param3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Param3.Controls.Add(this.DGV_Param3);
-            this.tab_Param3.Location = new System.Drawing.Point(4, 35);
+            this.tab_Param3.Location = new System.Drawing.Point(4, 42);
             this.tab_Param3.Name = "tab_Param3";
-            this.tab_Param3.Size = new System.Drawing.Size(487, 497);
+            this.tab_Param3.Size = new System.Drawing.Size(487, 490);
             this.tab_Param3.TabIndex = 8;
             this.tab_Param3.Text = "參數3";
             this.tab_Param3.UseVisualStyleBackColor = true;
@@ -10921,7 +11103,7 @@
             this.DGV_Param3.RowTemplate.Height = 32;
             this.DGV_Param3.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.DGV_Param3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Param3.Size = new System.Drawing.Size(485, 495);
+            this.DGV_Param3.Size = new System.Drawing.Size(485, 488);
             this.DGV_Param3.TabIndex = 3;
             this.DGV_Param3.TabStop = false;
             this.DGV_Param3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
@@ -10988,9 +11170,9 @@
             this.tab_Advance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Advance.Controls.Add(this.DGV_Advance);
             this.tab_Advance.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
-            this.tab_Advance.Location = new System.Drawing.Point(4, 35);
+            this.tab_Advance.Location = new System.Drawing.Point(4, 42);
             this.tab_Advance.Name = "tab_Advance";
-            this.tab_Advance.Size = new System.Drawing.Size(487, 497);
+            this.tab_Advance.Size = new System.Drawing.Size(487, 490);
             this.tab_Advance.TabIndex = 1;
             this.tab_Advance.Text = "進階";
             this.tab_Advance.UseVisualStyleBackColor = true;
@@ -11019,7 +11201,7 @@
             this.DGV_Advance.RowTemplate.Height = 32;
             this.DGV_Advance.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.DGV_Advance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Advance.Size = new System.Drawing.Size(485, 495);
+            this.DGV_Advance.Size = new System.Drawing.Size(485, 488);
             this.DGV_Advance.TabIndex = 2;
             this.DGV_Advance.TabStop = false;
             this.DGV_Advance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CellClick);
@@ -11081,9 +11263,9 @@
             // 
             this.tab_Dress1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Dress1.Controls.Add(this.DGV_Dress1);
-            this.tab_Dress1.Location = new System.Drawing.Point(4, 35);
+            this.tab_Dress1.Location = new System.Drawing.Point(4, 42);
             this.tab_Dress1.Name = "tab_Dress1";
-            this.tab_Dress1.Size = new System.Drawing.Size(487, 497);
+            this.tab_Dress1.Size = new System.Drawing.Size(487, 490);
             this.tab_Dress1.TabIndex = 2;
             this.tab_Dress1.Text = "修整1";
             this.tab_Dress1.UseVisualStyleBackColor = true;
@@ -11112,7 +11294,7 @@
             this.DGV_Dress1.RowTemplate.Height = 32;
             this.DGV_Dress1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGV_Dress1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Dress1.Size = new System.Drawing.Size(485, 495);
+            this.DGV_Dress1.Size = new System.Drawing.Size(485, 488);
             this.DGV_Dress1.TabIndex = 3;
             this.DGV_Dress1.TabStop = false;
             this.DGV_Dress1.Tag = "1";
@@ -11180,9 +11362,9 @@
             // 
             this.tab_Dress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Dress2.Controls.Add(this.DGV_Dress2);
-            this.tab_Dress2.Location = new System.Drawing.Point(4, 35);
+            this.tab_Dress2.Location = new System.Drawing.Point(4, 42);
             this.tab_Dress2.Name = "tab_Dress2";
-            this.tab_Dress2.Size = new System.Drawing.Size(487, 497);
+            this.tab_Dress2.Size = new System.Drawing.Size(487, 490);
             this.tab_Dress2.TabIndex = 9;
             this.tab_Dress2.Text = "修整2";
             this.tab_Dress2.UseVisualStyleBackColor = true;
@@ -11211,7 +11393,7 @@
             this.DGV_Dress2.RowTemplate.Height = 32;
             this.DGV_Dress2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DGV_Dress2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Dress2.Size = new System.Drawing.Size(485, 495);
+            this.DGV_Dress2.Size = new System.Drawing.Size(485, 488);
             this.DGV_Dress2.TabIndex = 4;
             this.DGV_Dress2.TabStop = false;
             this.DGV_Dress2.Tag = "2";
@@ -11279,9 +11461,9 @@
             // 
             this.tab_Probe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Probe.Controls.Add(this.pa_Probe);
-            this.tab_Probe.Location = new System.Drawing.Point(4, 35);
+            this.tab_Probe.Location = new System.Drawing.Point(4, 42);
             this.tab_Probe.Name = "tab_Probe";
-            this.tab_Probe.Size = new System.Drawing.Size(487, 497);
+            this.tab_Probe.Size = new System.Drawing.Size(487, 490);
             this.tab_Probe.TabIndex = 3;
             this.tab_Probe.Text = "端測";
             this.tab_Probe.UseVisualStyleBackColor = true;
@@ -11341,7 +11523,7 @@
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(8, 224);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 21);
+            this.label12.Size = new System.Drawing.Size(132, 25);
             this.label12.TabIndex = 55;
             this.label12.Text = "端完安全位置";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11352,7 +11534,7 @@
             this.TB_PROBE_SafePos.Location = new System.Drawing.Point(136, 216);
             this.TB_PROBE_SafePos.Name = "TB_PROBE_SafePos";
             this.TB_PROBE_SafePos.ReadOnly = true;
-            this.TB_PROBE_SafePos.Size = new System.Drawing.Size(120, 29);
+            this.TB_PROBE_SafePos.Size = new System.Drawing.Size(120, 34);
             this.TB_PROBE_SafePos.TabIndex = 54;
             this.TB_PROBE_SafePos.Text = "0";
             this.TB_PROBE_SafePos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11383,7 +11565,7 @@
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(8, 192);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 21);
+            this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 51;
             this.label4.Text = "Master 值";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11393,7 +11575,7 @@
             this.TB_Master.Location = new System.Drawing.Point(136, 184);
             this.TB_Master.Name = "TB_Master";
             this.TB_Master.ReadOnly = true;
-            this.TB_Master.Size = new System.Drawing.Size(120, 29);
+            this.TB_Master.Size = new System.Drawing.Size(120, 34);
             this.TB_Master.TabIndex = 50;
             this.TB_Master.Text = "0";
             this.TB_Master.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11407,7 +11589,7 @@
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(8, 160);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 21);
+            this.label5.Size = new System.Drawing.Size(85, 25);
             this.label5.TabIndex = 49;
             this.label5.Text = "Z軸位置";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11417,7 +11599,7 @@
             this.TB_Z.Location = new System.Drawing.Point(136, 152);
             this.TB_Z.Name = "TB_Z";
             this.TB_Z.ReadOnly = true;
-            this.TB_Z.Size = new System.Drawing.Size(120, 29);
+            this.TB_Z.Size = new System.Drawing.Size(120, 34);
             this.TB_Z.TabIndex = 48;
             this.TB_Z.Text = "0";
             this.TB_Z.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11427,7 +11609,7 @@
             this.TB_X.Location = new System.Drawing.Point(136, 120);
             this.TB_X.Name = "TB_X";
             this.TB_X.ReadOnly = true;
-            this.TB_X.Size = new System.Drawing.Size(120, 29);
+            this.TB_X.Size = new System.Drawing.Size(120, 34);
             this.TB_X.TabIndex = 47;
             this.TB_X.Text = "0";
             this.TB_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11441,7 +11623,7 @@
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(8, 128);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 21);
+            this.label6.Size = new System.Drawing.Size(85, 25);
             this.label6.TabIndex = 46;
             this.label6.Text = "X軸位置";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11455,7 +11637,7 @@
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label11.Location = new System.Drawing.Point(8, 66);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 21);
+            this.label11.Size = new System.Drawing.Size(92, 25);
             this.label11.TabIndex = 44;
             this.label11.Text = "端測距離";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11464,7 +11646,7 @@
             // 
             this.TB_Dist.Location = new System.Drawing.Point(136, 62);
             this.TB_Dist.Name = "TB_Dist";
-            this.TB_Dist.Size = new System.Drawing.Size(152, 29);
+            this.TB_Dist.Size = new System.Drawing.Size(152, 34);
             this.TB_Dist.TabIndex = 43;
             this.TB_Dist.Text = "10";
             this.TB_Dist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11476,7 +11658,7 @@
             this.la_ProbeRange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ProbeRange.Location = new System.Drawing.Point(168, 96);
             this.la_ProbeRange.Name = "la_ProbeRange";
-            this.la_ProbeRange.Size = new System.Drawing.Size(98, 15);
+            this.la_ProbeRange.Size = new System.Drawing.Size(118, 18);
             this.la_ProbeRange.TabIndex = 42;
             this.la_ProbeRange.Text = "(1~100，預設10)";
             // 
@@ -11486,7 +11668,7 @@
             this.TB_Ready.Location = new System.Drawing.Point(136, 28);
             this.TB_Ready.Name = "TB_Ready";
             this.TB_Ready.ReadOnly = true;
-            this.TB_Ready.Size = new System.Drawing.Size(152, 29);
+            this.TB_Ready.Size = new System.Drawing.Size(152, 34);
             this.TB_Ready.TabIndex = 38;
             this.TB_Ready.Text = "未設定";
             this.TB_Ready.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11500,7 +11682,7 @@
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label14.Location = new System.Drawing.Point(8, 32);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 21);
+            this.label14.Size = new System.Drawing.Size(92, 25);
             this.label14.TabIndex = 37;
             this.label14.Text = "位置設定";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11509,9 +11691,9 @@
             // 
             this.tab_Code.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tab_Code.Controls.Add(this.pa_GM_Code);
-            this.tab_Code.Location = new System.Drawing.Point(4, 35);
+            this.tab_Code.Location = new System.Drawing.Point(4, 42);
             this.tab_Code.Name = "tab_Code";
-            this.tab_Code.Size = new System.Drawing.Size(487, 497);
+            this.tab_Code.Size = new System.Drawing.Size(487, 490);
             this.tab_Code.TabIndex = 4;
             this.tab_Code.Text = "自訂義";
             this.tab_Code.UseVisualStyleBackColor = true;
@@ -11555,7 +11737,7 @@
             this.TB_Input.Font = new System.Drawing.Font("新細明體", 15.75F);
             this.TB_Input.Location = new System.Drawing.Point(152, 120);
             this.TB_Input.Name = "TB_Input";
-            this.TB_Input.Size = new System.Drawing.Size(440, 33);
+            this.TB_Input.Size = new System.Drawing.Size(440, 39);
             this.TB_Input.TabIndex = 85;
             this.TB_Input.Text = "LB_GM_CodeEnterLine";
             this.TB_Input.Click += new System.EventHandler(this.TB_Input_Click);
@@ -11734,10 +11916,10 @@
             // LB_GM_Code
             // 
             this.LB_GM_Code.FormattingEnabled = true;
-            this.LB_GM_Code.ItemHeight = 26;
+            this.LB_GM_Code.ItemHeight = 33;
             this.LB_GM_Code.Location = new System.Drawing.Point(8, 32);
             this.LB_GM_Code.Name = "LB_GM_Code";
-            this.LB_GM_Code.Size = new System.Drawing.Size(448, 212);
+            this.LB_GM_Code.Size = new System.Drawing.Size(448, 202);
             this.LB_GM_Code.TabIndex = 81;
             this.LB_GM_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LB_GM_Code_KeyPress);
             // 
@@ -11764,9 +11946,9 @@
             this.tab_Measure.Controls.Add(this.la_MeasureRoughPos);
             this.tab_Measure.Controls.Add(this.la_MeasureRange);
             this.tab_Measure.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Measure.Location = new System.Drawing.Point(4, 35);
+            this.tab_Measure.Location = new System.Drawing.Point(4, 42);
             this.tab_Measure.Name = "tab_Measure";
-            this.tab_Measure.Size = new System.Drawing.Size(487, 497);
+            this.tab_Measure.Size = new System.Drawing.Size(487, 490);
             this.tab_Measure.TabIndex = 5;
             this.tab_Measure.Text = "量測";
             this.tab_Measure.UseVisualStyleBackColor = true;
@@ -11802,7 +11984,7 @@
             "ON"});
             this.cb_MeasureOffset.Location = new System.Drawing.Point(368, 176);
             this.cb_MeasureOffset.Name = "cb_MeasureOffset";
-            this.cb_MeasureOffset.Size = new System.Drawing.Size(112, 34);
+            this.cb_MeasureOffset.Size = new System.Drawing.Size(112, 41);
             this.cb_MeasureOffset.TabIndex = 70;
             this.cb_MeasureOffset.Text = "OFF";
             this.cb_MeasureOffset.Visible = false;
@@ -11817,7 +11999,7 @@
             this.cb_MeasureGroup.Location = new System.Drawing.Point(120, 56);
             this.cb_MeasureGroup.Name = "cb_MeasureGroup";
             this.cb_MeasureGroup.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cb_MeasureGroup.Size = new System.Drawing.Size(112, 34);
+            this.cb_MeasureGroup.Size = new System.Drawing.Size(112, 41);
             this.cb_MeasureGroup.TabIndex = 69;
             this.cb_MeasureGroup.SelectedIndexChanged += new System.EventHandler(this.cb_MeasureGroup_SelectedIndexChanged);
             // 
@@ -11841,7 +12023,7 @@
             this.la_MeasureGroup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasureGroup.Location = new System.Drawing.Point(-3, 61);
             this.la_MeasureGroup.Name = "la_MeasureGroup";
-            this.la_MeasureGroup.Size = new System.Drawing.Size(74, 21);
+            this.la_MeasureGroup.Size = new System.Drawing.Size(92, 25);
             this.la_MeasureGroup.TabIndex = 66;
             this.la_MeasureGroup.Text = "量測組別";
             this.la_MeasureGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11851,7 +12033,7 @@
             this.tb_MeasureSparkless.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_MeasureSparkless.Location = new System.Drawing.Point(368, 137);
             this.tb_MeasureSparkless.Name = "tb_MeasureSparkless";
-            this.tb_MeasureSparkless.Size = new System.Drawing.Size(112, 33);
+            this.tb_MeasureSparkless.Size = new System.Drawing.Size(112, 39);
             this.tb_MeasureSparkless.TabIndex = 62;
             this.tb_MeasureSparkless.Text = "0.0000";
             this.tb_MeasureSparkless.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11863,7 +12045,7 @@
             this.tb_MeasurePrecisionPos.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_MeasurePrecisionPos.Location = new System.Drawing.Point(368, 97);
             this.tb_MeasurePrecisionPos.Name = "tb_MeasurePrecisionPos";
-            this.tb_MeasurePrecisionPos.Size = new System.Drawing.Size(112, 33);
+            this.tb_MeasurePrecisionPos.Size = new System.Drawing.Size(112, 39);
             this.tb_MeasurePrecisionPos.TabIndex = 61;
             this.tb_MeasurePrecisionPos.Text = "0.000";
             this.tb_MeasurePrecisionPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11886,7 +12068,7 @@
             this.tb_MeasureFinePos.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_MeasureFinePos.Location = new System.Drawing.Point(120, 177);
             this.tb_MeasureFinePos.Name = "tb_MeasureFinePos";
-            this.tb_MeasureFinePos.Size = new System.Drawing.Size(112, 33);
+            this.tb_MeasureFinePos.Size = new System.Drawing.Size(112, 39);
             this.tb_MeasureFinePos.TabIndex = 60;
             this.tb_MeasureFinePos.Text = "0.000";
             this.tb_MeasureFinePos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11898,7 +12080,7 @@
             this.tb_MeasureRoughPos.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_MeasureRoughPos.Location = new System.Drawing.Point(120, 138);
             this.tb_MeasureRoughPos.Name = "tb_MeasureRoughPos";
-            this.tb_MeasureRoughPos.Size = new System.Drawing.Size(112, 33);
+            this.tb_MeasureRoughPos.Size = new System.Drawing.Size(112, 39);
             this.tb_MeasureRoughPos.TabIndex = 59;
             this.tb_MeasureRoughPos.Text = "0.000";
             this.tb_MeasureRoughPos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11922,7 +12104,7 @@
             this.tb_MeasureRange.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_MeasureRange.Location = new System.Drawing.Point(120, 98);
             this.tb_MeasureRange.Name = "tb_MeasureRange";
-            this.tb_MeasureRange.Size = new System.Drawing.Size(112, 33);
+            this.tb_MeasureRange.Size = new System.Drawing.Size(112, 39);
             this.tb_MeasureRange.TabIndex = 58;
             this.tb_MeasureRange.Text = "0.0000";
             this.tb_MeasureRange.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -11938,7 +12120,7 @@
             this.la_OffsetPosSetting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_OffsetPosSetting.Location = new System.Drawing.Point(237, 181);
             this.la_OffsetPosSetting.Name = "la_OffsetPosSetting";
-            this.la_OffsetPosSetting.Size = new System.Drawing.Size(106, 21);
+            this.la_OffsetPosSetting.Size = new System.Drawing.Size(132, 25);
             this.la_OffsetPosSetting.TabIndex = 45;
             this.la_OffsetPosSetting.Text = "補正座標設定";
             this.la_OffsetPosSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11953,7 +12135,7 @@
             this.la_MeasureNoSpark.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasureNoSpark.Location = new System.Drawing.Point(237, 141);
             this.la_MeasureNoSpark.Name = "la_MeasureNoSpark";
-            this.la_MeasureNoSpark.Size = new System.Drawing.Size(122, 21);
+            this.la_MeasureNoSpark.Size = new System.Drawing.Size(152, 25);
             this.la_MeasureNoSpark.TabIndex = 44;
             this.la_MeasureNoSpark.Text = "量測無火花速度";
             this.la_MeasureNoSpark.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11967,7 +12149,7 @@
             this.la_MeasurePercesionPos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasurePercesionPos.Location = new System.Drawing.Point(237, 101);
             this.la_MeasurePercesionPos.Name = "la_MeasurePercesionPos";
-            this.la_MeasurePercesionPos.Size = new System.Drawing.Size(106, 21);
+            this.la_MeasurePercesionPos.Size = new System.Drawing.Size(132, 25);
             this.la_MeasurePercesionPos.TabIndex = 43;
             this.la_MeasurePercesionPos.Text = "精量測點控制";
             this.la_MeasurePercesionPos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11981,7 +12163,7 @@
             this.la_MeasureFinePos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasureFinePos.Location = new System.Drawing.Point(-3, 180);
             this.la_MeasureFinePos.Name = "la_MeasureFinePos";
-            this.la_MeasureFinePos.Size = new System.Drawing.Size(106, 21);
+            this.la_MeasureFinePos.Size = new System.Drawing.Size(132, 25);
             this.la_MeasureFinePos.TabIndex = 42;
             this.la_MeasureFinePos.Text = "細量測點控制";
             this.la_MeasureFinePos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -11995,7 +12177,7 @@
             this.la_MeasureRoughPos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasureRoughPos.Location = new System.Drawing.Point(-3, 141);
             this.la_MeasureRoughPos.Name = "la_MeasureRoughPos";
-            this.la_MeasureRoughPos.Size = new System.Drawing.Size(106, 21);
+            this.la_MeasureRoughPos.Size = new System.Drawing.Size(132, 25);
             this.la_MeasureRoughPos.TabIndex = 41;
             this.la_MeasureRoughPos.Text = "粗量測點控制";
             this.la_MeasureRoughPos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -12009,7 +12191,7 @@
             this.la_MeasureRange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MeasureRange.Location = new System.Drawing.Point(-3, 101);
             this.la_MeasureRange.Name = "la_MeasureRange";
-            this.la_MeasureRange.Size = new System.Drawing.Size(74, 21);
+            this.la_MeasureRange.Size = new System.Drawing.Size(92, 25);
             this.la_MeasureRange.TabIndex = 40;
             this.la_MeasureRange.Text = "量測誤差";
             this.la_MeasureRange.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -12068,9 +12250,9 @@
             this.tab_ProcSelect.Controls.Add(this.pic_Process3);
             this.tab_ProcSelect.Controls.Add(this.pic_Process2);
             this.tab_ProcSelect.Controls.Add(this.pic_Process1);
-            this.tab_ProcSelect.Location = new System.Drawing.Point(4, 58);
+            this.tab_ProcSelect.Location = new System.Drawing.Point(4, 67);
             this.tab_ProcSelect.Name = "tab_ProcSelect";
-            this.tab_ProcSelect.Size = new System.Drawing.Size(936, 570);
+            this.tab_ProcSelect.Size = new System.Drawing.Size(936, 561);
             this.tab_ProcSelect.TabIndex = 15;
             this.tab_ProcSelect.Text = "工序選擇";
             this.tab_ProcSelect.UseVisualStyleBackColor = true;
@@ -12600,10 +12782,10 @@
             this.tab_Manual.Controls.Add(this.pa_ManualAbs);
             this.tab_Manual.Controls.Add(this.pa_ManualMach);
             this.tab_Manual.Controls.Add(this.la_Manual);
-            this.tab_Manual.Location = new System.Drawing.Point(4, 58);
+            this.tab_Manual.Location = new System.Drawing.Point(4, 67);
             this.tab_Manual.Name = "tab_Manual";
             this.tab_Manual.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Manual.Size = new System.Drawing.Size(936, 570);
+            this.tab_Manual.Size = new System.Drawing.Size(936, 561);
             this.tab_Manual.TabIndex = 19;
             this.tab_Manual.Text = "手動研磨";
             this.tab_Manual.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -12646,7 +12828,7 @@
             this.TB_D617_2.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_D617_2.Location = new System.Drawing.Point(16, 112);
             this.TB_D617_2.Name = "TB_D617_2";
-            this.TB_D617_2.Size = new System.Drawing.Size(136, 29);
+            this.TB_D617_2.Size = new System.Drawing.Size(136, 34);
             this.TB_D617_2.TabIndex = 95;
             this.TB_D617_2.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -12657,7 +12839,7 @@
             this.label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label31.Location = new System.Drawing.Point(16, 88);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(131, 20);
+            this.label31.Size = new System.Drawing.Size(164, 25);
             this.label31.TabIndex = 94;
             this.label31.Text = "Z軸移動停秒終點";
             // 
@@ -12666,7 +12848,7 @@
             this.TB_D616_2.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_D616_2.Location = new System.Drawing.Point(16, 48);
             this.TB_D616_2.Name = "TB_D616_2";
-            this.TB_D616_2.Size = new System.Drawing.Size(136, 29);
+            this.TB_D616_2.Size = new System.Drawing.Size(136, 34);
             this.TB_D616_2.TabIndex = 91;
             this.TB_D616_2.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -12677,7 +12859,7 @@
             this.label37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label37.Location = new System.Drawing.Point(16, 24);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(131, 20);
+            this.label37.Size = new System.Drawing.Size(164, 25);
             this.label37.TabIndex = 89;
             this.label37.Text = "Z軸移動停秒起點";
             // 
@@ -12757,7 +12939,7 @@
             this.la_ManualRelAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualRelAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_ManualRelAxis1.Name = "la_ManualRelAxis1";
-            this.la_ManualRelAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_ManualRelAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_ManualRelAxis1.TabIndex = 23;
             this.la_ManualRelAxis1.Text = "X";
             // 
@@ -12841,7 +13023,7 @@
             this.la_SpS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_SpS.Location = new System.Drawing.Point(160, 160);
             this.la_SpS.Name = "la_SpS";
-            this.la_SpS.Size = new System.Drawing.Size(73, 20);
+            this.la_SpS.Size = new System.Drawing.Size(92, 25);
             this.la_SpS.TabIndex = 89;
             this.la_SpS.Text = "主軸轉速";
             // 
@@ -12850,7 +13032,7 @@
             this.TB_SPSpeed.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_SPSpeed.Location = new System.Drawing.Point(160, 184);
             this.TB_SPSpeed.Name = "TB_SPSpeed";
-            this.TB_SPSpeed.Size = new System.Drawing.Size(120, 29);
+            this.TB_SPSpeed.Size = new System.Drawing.Size(120, 34);
             this.TB_SPSpeed.TabIndex = 88;
             this.TB_SPSpeed.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -12902,7 +13084,7 @@
             this.la_MoveSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_MoveSpeed.Location = new System.Drawing.Point(24, 160);
             this.la_MoveSpeed.Name = "la_MoveSpeed";
-            this.la_MoveSpeed.Size = new System.Drawing.Size(73, 20);
+            this.la_MoveSpeed.Size = new System.Drawing.Size(92, 25);
             this.la_MoveSpeed.TabIndex = 80;
             this.la_MoveSpeed.Text = "橫移速度";
             // 
@@ -12932,7 +13114,7 @@
             this.la_EndZ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_EndZ.Location = new System.Drawing.Point(24, 96);
             this.la_EndZ.Name = "la_EndZ";
-            this.la_EndZ.Size = new System.Drawing.Size(99, 20);
+            this.la_EndZ.Size = new System.Drawing.Size(124, 25);
             this.la_EndZ.TabIndex = 79;
             this.la_EndZ.Text = "Z軸終點位置";
             // 
@@ -12943,7 +13125,7 @@
             this.la_StartZ.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_StartZ.Location = new System.Drawing.Point(24, 32);
             this.la_StartZ.Name = "la_StartZ";
-            this.la_StartZ.Size = new System.Drawing.Size(99, 20);
+            this.la_StartZ.Size = new System.Drawing.Size(124, 25);
             this.la_StartZ.TabIndex = 78;
             this.la_StartZ.Text = "Z軸啟始位置";
             // 
@@ -12952,7 +13134,7 @@
             this.TB_ManualSpeed.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_ManualSpeed.Location = new System.Drawing.Point(24, 184);
             this.TB_ManualSpeed.Name = "TB_ManualSpeed";
-            this.TB_ManualSpeed.Size = new System.Drawing.Size(120, 29);
+            this.TB_ManualSpeed.Size = new System.Drawing.Size(120, 34);
             this.TB_ManualSpeed.TabIndex = 77;
             this.TB_ManualSpeed.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -12961,7 +13143,7 @@
             this.TB_ManualZEnd.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_ManualZEnd.Location = new System.Drawing.Point(24, 120);
             this.TB_ManualZEnd.Name = "TB_ManualZEnd";
-            this.TB_ManualZEnd.Size = new System.Drawing.Size(120, 29);
+            this.TB_ManualZEnd.Size = new System.Drawing.Size(120, 34);
             this.TB_ManualZEnd.TabIndex = 76;
             this.TB_ManualZEnd.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -12970,7 +13152,7 @@
             this.TB_ManualZStart.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.TB_ManualZStart.Location = new System.Drawing.Point(24, 56);
             this.TB_ManualZStart.Name = "TB_ManualZStart";
-            this.TB_ManualZStart.Size = new System.Drawing.Size(120, 29);
+            this.TB_ManualZStart.Size = new System.Drawing.Size(120, 34);
             this.TB_ManualZStart.TabIndex = 75;
             this.TB_ManualZStart.Click += new System.EventHandler(this.TextBoxClick);
             // 
@@ -13008,7 +13190,7 @@
             this.la_ManualDistAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualDistAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_ManualDistAxis2.Name = "la_ManualDistAxis2";
-            this.la_ManualDistAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_ManualDistAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_ManualDistAxis2.TabIndex = 23;
             this.la_ManualDistAxis2.Text = "Z";
             // 
@@ -13033,7 +13215,7 @@
             this.la_ManualDistAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualDistAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_ManualDistAxis1.Name = "la_ManualDistAxis1";
-            this.la_ManualDistAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_ManualDistAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_ManualDistAxis1.TabIndex = 21;
             this.la_ManualDistAxis1.Text = "X";
             // 
@@ -13085,7 +13267,7 @@
             this.la_ManualAbsAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualAbsAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_ManualAbsAxis2.Name = "la_ManualAbsAxis2";
-            this.la_ManualAbsAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_ManualAbsAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_ManualAbsAxis2.TabIndex = 23;
             this.la_ManualAbsAxis2.Text = "Z";
             // 
@@ -13110,7 +13292,7 @@
             this.la_ManualAbsAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualAbsAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_ManualAbsAxis1.Name = "la_ManualAbsAxis1";
-            this.la_ManualAbsAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_ManualAbsAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_ManualAbsAxis1.TabIndex = 21;
             this.la_ManualAbsAxis1.Text = "X";
             // 
@@ -13162,7 +13344,7 @@
             this.la_ManualMachAxis2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualMachAxis2.Location = new System.Drawing.Point(8, 80);
             this.la_ManualMachAxis2.Name = "la_ManualMachAxis2";
-            this.la_ManualMachAxis2.Size = new System.Drawing.Size(29, 31);
+            this.la_ManualMachAxis2.Size = new System.Drawing.Size(36, 38);
             this.la_ManualMachAxis2.TabIndex = 17;
             this.la_ManualMachAxis2.Text = "Z";
             // 
@@ -13187,7 +13369,7 @@
             this.la_ManualMachAxis1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_ManualMachAxis1.Location = new System.Drawing.Point(8, 40);
             this.la_ManualMachAxis1.Name = "la_ManualMachAxis1";
-            this.la_ManualMachAxis1.Size = new System.Drawing.Size(30, 31);
+            this.la_ManualMachAxis1.Size = new System.Drawing.Size(37, 38);
             this.la_ManualMachAxis1.TabIndex = 15;
             this.la_ManualMachAxis1.Text = "X";
             // 
@@ -13234,9 +13416,9 @@
             this.tab_Redo.Controls.Add(this.btn_Redo_P001);
             this.tab_Redo.Controls.Add(this.btn_Redo_P0001);
             this.tab_Redo.Controls.Add(this.btn_Redo_N001);
-            this.tab_Redo.Location = new System.Drawing.Point(4, 58);
+            this.tab_Redo.Location = new System.Drawing.Point(4, 67);
             this.tab_Redo.Name = "tab_Redo";
-            this.tab_Redo.Size = new System.Drawing.Size(936, 570);
+            this.tab_Redo.Size = new System.Drawing.Size(936, 561);
             this.tab_Redo.TabIndex = 10;
             this.tab_Redo.Text = "重修";
             this.tab_Redo.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -13434,7 +13616,7 @@
             this.la_R_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_R_Name.Location = new System.Drawing.Point(208, 56);
             this.la_R_Name.Name = "la_R_Name";
-            this.la_R_Name.Size = new System.Drawing.Size(48, 26);
+            this.la_R_Name.Size = new System.Drawing.Size(63, 35);
             this.la_R_Name.TabIndex = 40;
             this.la_R_Name.Text = "----";
             // 
@@ -13446,7 +13628,7 @@
             this.la_RN_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_RN_Name.Location = new System.Drawing.Point(8, 56);
             this.la_RN_Name.Name = "la_RN_Name";
-            this.la_RN_Name.Size = new System.Drawing.Size(111, 26);
+            this.la_RN_Name.Size = new System.Drawing.Size(144, 35);
             this.la_RN_Name.TabIndex = 39;
             this.la_RN_Name.Text = "程式名稱 : ";
             // 
@@ -13582,9 +13764,9 @@
             this.tab_Offset.Controls.Add(this.btn_Ofs_P001);
             this.tab_Offset.Controls.Add(this.btn_Ofs_P0001);
             this.tab_Offset.Controls.Add(this.btn_Ofs_N001);
-            this.tab_Offset.Location = new System.Drawing.Point(4, 58);
+            this.tab_Offset.Location = new System.Drawing.Point(4, 67);
             this.tab_Offset.Name = "tab_Offset";
-            this.tab_Offset.Size = new System.Drawing.Size(936, 570);
+            this.tab_Offset.Size = new System.Drawing.Size(936, 561);
             this.tab_Offset.TabIndex = 11;
             this.tab_Offset.Text = "補正";
             this.tab_Offset.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -13748,7 +13930,7 @@
             this.la_O_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_O_Name.Location = new System.Drawing.Point(208, 56);
             this.la_O_Name.Name = "la_O_Name";
-            this.la_O_Name.Size = new System.Drawing.Size(48, 26);
+            this.la_O_Name.Size = new System.Drawing.Size(63, 35);
             this.la_O_Name.TabIndex = 53;
             this.la_O_Name.Text = "----";
             // 
@@ -13760,7 +13942,7 @@
             this.la_Program2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.la_Program2.Location = new System.Drawing.Point(8, 56);
             this.la_Program2.Name = "la_Program2";
-            this.la_Program2.Size = new System.Drawing.Size(111, 26);
+            this.la_Program2.Size = new System.Drawing.Size(144, 35);
             this.la_Program2.TabIndex = 51;
             this.la_Program2.Text = "程式名稱 : ";
             // 
@@ -13953,10 +14135,10 @@
             this.tab_Message.Controls.Add(this.la_TroubleShooting);
             this.tab_Message.Controls.Add(this.la_MessageTitle);
             this.tab_Message.Controls.Add(this.LB_CurrentAlarm);
-            this.tab_Message.Location = new System.Drawing.Point(4, 58);
+            this.tab_Message.Location = new System.Drawing.Point(4, 67);
             this.tab_Message.Margin = new System.Windows.Forms.Padding(0);
             this.tab_Message.Name = "tab_Message";
-            this.tab_Message.Size = new System.Drawing.Size(936, 570);
+            this.tab_Message.Size = new System.Drawing.Size(936, 561);
             this.tab_Message.TabIndex = 1;
             this.tab_Message.Text = "訊息";
             this.tab_Message.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -13968,7 +14150,7 @@
             this.la_Msg_Help.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_Msg_Help.Location = new System.Drawing.Point(8, 320);
             this.la_Msg_Help.Name = "la_Msg_Help";
-            this.la_Msg_Help.Size = new System.Drawing.Size(57, 20);
+            this.la_Msg_Help.Size = new System.Drawing.Size(72, 25);
             this.la_Msg_Help.TabIndex = 94;
             this.la_Msg_Help.Text = "說明：";
             // 
@@ -13979,7 +14161,7 @@
             this.la_Msg_Message.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.la_Msg_Message.Location = new System.Drawing.Point(8, 56);
             this.la_Msg_Message.Name = "la_Msg_Message";
-            this.la_Msg_Message.Size = new System.Drawing.Size(57, 20);
+            this.la_Msg_Message.Size = new System.Drawing.Size(72, 25);
             this.la_Msg_Message.TabIndex = 93;
             this.la_Msg_Message.Text = "訊息：";
             // 
@@ -14067,10 +14249,10 @@
             // 
             this.LB_CurrentAlarm.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.LB_CurrentAlarm.FormattingEnabled = true;
-            this.LB_CurrentAlarm.ItemHeight = 27;
+            this.LB_CurrentAlarm.ItemHeight = 33;
             this.LB_CurrentAlarm.Location = new System.Drawing.Point(8, 80);
             this.LB_CurrentAlarm.Name = "LB_CurrentAlarm";
-            this.LB_CurrentAlarm.Size = new System.Drawing.Size(504, 85);
+            this.LB_CurrentAlarm.Size = new System.Drawing.Size(504, 70);
             this.LB_CurrentAlarm.TabIndex = 88;
             this.LB_CurrentAlarm.SelectedIndexChanged += new System.EventHandler(this.LB_CurrentAlarm_SelectedIndexChanged);
             // 
@@ -14094,9 +14276,9 @@
             this.tab_Maintenance.Controls.Add(this.la_MaintenanceTitle);
             this.tab_Maintenance.Controls.Add(this.pic_RotationCenterOffset);
             this.tab_Maintenance.Controls.Add(this.pic_GWRPS);
-            this.tab_Maintenance.Location = new System.Drawing.Point(4, 58);
+            this.tab_Maintenance.Location = new System.Drawing.Point(4, 67);
             this.tab_Maintenance.Name = "tab_Maintenance";
-            this.tab_Maintenance.Size = new System.Drawing.Size(936, 570);
+            this.tab_Maintenance.Size = new System.Drawing.Size(936, 561);
             this.tab_Maintenance.TabIndex = 2;
             this.tab_Maintenance.Text = "維護";
             this.tab_Maintenance.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -14652,9 +14834,9 @@
             this.tab_FuncSwitch.Controls.Add(this.pa_SW2);
             this.tab_FuncSwitch.Controls.Add(this.pa_SW1);
             this.tab_FuncSwitch.Controls.Add(this.la_FuncSwitchTitle);
-            this.tab_FuncSwitch.Location = new System.Drawing.Point(4, 58);
+            this.tab_FuncSwitch.Location = new System.Drawing.Point(4, 67);
             this.tab_FuncSwitch.Name = "tab_FuncSwitch";
-            this.tab_FuncSwitch.Size = new System.Drawing.Size(936, 570);
+            this.tab_FuncSwitch.Size = new System.Drawing.Size(936, 561);
             this.tab_FuncSwitch.TabIndex = 5;
             this.tab_FuncSwitch.Text = "功能開關";
             this.tab_FuncSwitch.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -15193,9 +15375,9 @@
             this.tab_Language.Controls.Add(this.pa_LanguageHide);
             this.tab_Language.Controls.Add(this.la_LanguageTitle);
             this.tab_Language.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_Language.Location = new System.Drawing.Point(4, 58);
+            this.tab_Language.Location = new System.Drawing.Point(4, 67);
             this.tab_Language.Name = "tab_Language";
-            this.tab_Language.Size = new System.Drawing.Size(936, 570);
+            this.tab_Language.Size = new System.Drawing.Size(936, 561);
             this.tab_Language.TabIndex = 9;
             this.tab_Language.Text = "語言";
             this.tab_Language.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -15359,9 +15541,9 @@
             this.tab_Developer.Controls.Add(this.pic_EditSP);
             this.tab_Developer.Controls.Add(this.pic_UI);
             this.tab_Developer.Controls.Add(this.pic_Serial);
-            this.tab_Developer.Location = new System.Drawing.Point(4, 58);
+            this.tab_Developer.Location = new System.Drawing.Point(4, 67);
             this.tab_Developer.Name = "tab_Developer";
-            this.tab_Developer.Size = new System.Drawing.Size(936, 570);
+            this.tab_Developer.Size = new System.Drawing.Size(936, 561);
             this.tab_Developer.TabIndex = 12;
             this.tab_Developer.Text = "開發人員";
             this.tab_Developer.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -15443,7 +15625,7 @@
             this.tabControl1.Location = new System.Drawing.Point(8, 376);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(840, 224);
+            this.tabControl1.Size = new System.Drawing.Size(912, 224);
             this.tabControl1.TabIndex = 75;
             // 
             // tabPage1
@@ -15465,10 +15647,10 @@
             this.tabPage1.Controls.Add(this.ch_DGW_Conv);
             this.tabPage1.Controls.Add(this.ch_DWP_Conv);
             this.tabPage1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(832, 198);
+            this.tabPage1.Size = new System.Drawing.Size(904, 195);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "選配功能";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -15480,16 +15662,17 @@
             this.gb_Gw4Type.Controls.Add(this.rb_Gw4Type0);
             this.gb_Gw4Type.Location = new System.Drawing.Point(608, 128);
             this.gb_Gw4Type.Name = "gb_Gw4Type";
-            this.gb_Gw4Type.Size = new System.Drawing.Size(168, 40);
+            this.gb_Gw4Type.Size = new System.Drawing.Size(288, 40);
             this.gb_Gw4Type.TabIndex = 90;
             this.gb_Gw4Type.TabStop = false;
+            this.gb_Gw4Type.Visible = false;
             // 
             // la_Gw4Type
             // 
             this.la_Gw4Type.AutoSize = true;
             this.la_Gw4Type.Location = new System.Drawing.Point(8, 16);
             this.la_Gw4Type.Name = "la_Gw4Type";
-            this.la_Gw4Type.Size = new System.Drawing.Size(38, 16);
+            this.la_Gw4Type.Size = new System.Drawing.Size(48, 19);
             this.la_Gw4Type.TabIndex = 9;
             this.la_Gw4Type.Text = "砂輪4";
             // 
@@ -15498,7 +15681,7 @@
             this.rb_Gw4Type1.AutoSize = true;
             this.rb_Gw4Type1.Location = new System.Drawing.Point(104, 16);
             this.rb_Gw4Type1.Name = "rb_Gw4Type1";
-            this.rb_Gw4Type1.Size = new System.Drawing.Size(49, 20);
+            this.rb_Gw4Type1.Size = new System.Drawing.Size(60, 23);
             this.rb_Gw4Type1.TabIndex = 7;
             this.rb_Gw4Type1.Tag = "1";
             this.rb_Gw4Type1.Text = "外圓";
@@ -15511,7 +15694,7 @@
             this.rb_Gw4Type0.Checked = true;
             this.rb_Gw4Type0.Location = new System.Drawing.Point(48, 16);
             this.rb_Gw4Type0.Name = "rb_Gw4Type0";
-            this.rb_Gw4Type0.Size = new System.Drawing.Size(49, 20);
+            this.rb_Gw4Type0.Size = new System.Drawing.Size(60, 23);
             this.rb_Gw4Type0.TabIndex = 6;
             this.rb_Gw4Type0.TabStop = true;
             this.rb_Gw4Type0.Tag = "0";
@@ -15521,127 +15704,205 @@
             // 
             // gb_Gw3Type
             // 
-            this.gb_Gw3Type.Controls.Add(this.la_Gw3Type);
+            this.gb_Gw3Type.Controls.Add(this.rb_Gw3Type3);
+            this.gb_Gw3Type.Controls.Add(this.rb_Gw3Type2);
             this.gb_Gw3Type.Controls.Add(this.rb_Gw3Type1);
+            this.gb_Gw3Type.Controls.Add(this.la_Gw3Type);
             this.gb_Gw3Type.Controls.Add(this.rb_Gw3Type0);
             this.gb_Gw3Type.Location = new System.Drawing.Point(608, 88);
             this.gb_Gw3Type.Name = "gb_Gw3Type";
-            this.gb_Gw3Type.Size = new System.Drawing.Size(168, 40);
+            this.gb_Gw3Type.Size = new System.Drawing.Size(288, 40);
             this.gb_Gw3Type.TabIndex = 89;
             this.gb_Gw3Type.TabStop = false;
+            // 
+            // rb_Gw3Type3
+            // 
+            this.rb_Gw3Type3.AutoSize = true;
+            this.rb_Gw3Type3.Location = new System.Drawing.Point(216, 16);
+            this.rb_Gw3Type3.Name = "rb_Gw3Type3";
+            this.rb_Gw3Type3.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw3Type3.TabIndex = 11;
+            this.rb_Gw3Type3.Tag = "2";
+            this.rb_Gw3Type3.Text = "右斜";
+            this.rb_Gw3Type3.UseVisualStyleBackColor = true;
+            this.rb_Gw3Type3.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // rb_Gw3Type2
+            // 
+            this.rb_Gw3Type2.AutoSize = true;
+            this.rb_Gw3Type2.Location = new System.Drawing.Point(160, 16);
+            this.rb_Gw3Type2.Name = "rb_Gw3Type2";
+            this.rb_Gw3Type2.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw3Type2.TabIndex = 7;
+            this.rb_Gw3Type2.Tag = "2";
+            this.rb_Gw3Type2.Text = "左斜";
+            this.rb_Gw3Type2.UseVisualStyleBackColor = true;
+            this.rb_Gw3Type2.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // rb_Gw3Type1
+            // 
+            this.rb_Gw3Type1.AutoSize = true;
+            this.rb_Gw3Type1.Checked = true;
+            this.rb_Gw3Type1.Location = new System.Drawing.Point(104, 16);
+            this.rb_Gw3Type1.Name = "rb_Gw3Type1";
+            this.rb_Gw3Type1.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw3Type1.TabIndex = 10;
+            this.rb_Gw3Type1.TabStop = true;
+            this.rb_Gw3Type1.Tag = "1";
+            this.rb_Gw3Type1.Text = "內磨";
+            this.rb_Gw3Type1.UseVisualStyleBackColor = true;
+            this.rb_Gw3Type1.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // la_Gw3Type
             // 
             this.la_Gw3Type.AutoSize = true;
             this.la_Gw3Type.Location = new System.Drawing.Point(8, 16);
             this.la_Gw3Type.Name = "la_Gw3Type";
-            this.la_Gw3Type.Size = new System.Drawing.Size(38, 16);
+            this.la_Gw3Type.Size = new System.Drawing.Size(48, 19);
             this.la_Gw3Type.TabIndex = 9;
             this.la_Gw3Type.Text = "砂輪3";
-            // 
-            // rb_Gw3Type1
-            // 
-            this.rb_Gw3Type1.AutoSize = true;
-            this.rb_Gw3Type1.Location = new System.Drawing.Point(104, 16);
-            this.rb_Gw3Type1.Name = "rb_Gw3Type1";
-            this.rb_Gw3Type1.Size = new System.Drawing.Size(49, 20);
-            this.rb_Gw3Type1.TabIndex = 7;
-            this.rb_Gw3Type1.Tag = "1";
-            this.rb_Gw3Type1.Text = "外圓";
-            this.rb_Gw3Type1.UseVisualStyleBackColor = true;
-            this.rb_Gw3Type1.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // rb_Gw3Type0
             // 
             this.rb_Gw3Type0.AutoSize = true;
-            this.rb_Gw3Type0.Checked = true;
             this.rb_Gw3Type0.Location = new System.Drawing.Point(48, 16);
             this.rb_Gw3Type0.Name = "rb_Gw3Type0";
-            this.rb_Gw3Type0.Size = new System.Drawing.Size(49, 20);
+            this.rb_Gw3Type0.Size = new System.Drawing.Size(60, 23);
             this.rb_Gw3Type0.TabIndex = 6;
-            this.rb_Gw3Type0.TabStop = true;
             this.rb_Gw3Type0.Tag = "0";
-            this.rb_Gw3Type0.Text = "內圓";
+            this.rb_Gw3Type0.Text = "直頭";
             this.rb_Gw3Type0.UseVisualStyleBackColor = true;
             this.rb_Gw3Type0.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // gb_Gw2Type
             // 
-            this.gb_Gw2Type.Controls.Add(this.la_Gw2Type);
+            this.gb_Gw2Type.Controls.Add(this.rb_Gw2Type3);
+            this.gb_Gw2Type.Controls.Add(this.rb_Gw2Type2);
             this.gb_Gw2Type.Controls.Add(this.rb_Gw2Type1);
+            this.gb_Gw2Type.Controls.Add(this.la_Gw2Type);
             this.gb_Gw2Type.Controls.Add(this.rb_Gw2Type0);
             this.gb_Gw2Type.Location = new System.Drawing.Point(608, 48);
             this.gb_Gw2Type.Name = "gb_Gw2Type";
-            this.gb_Gw2Type.Size = new System.Drawing.Size(168, 40);
+            this.gb_Gw2Type.Size = new System.Drawing.Size(288, 40);
             this.gb_Gw2Type.TabIndex = 88;
             this.gb_Gw2Type.TabStop = false;
             // 
-            // la_Gw2Type
+            // rb_Gw2Type3
             // 
-            this.la_Gw2Type.AutoSize = true;
-            this.la_Gw2Type.Location = new System.Drawing.Point(8, 16);
-            this.la_Gw2Type.Name = "la_Gw2Type";
-            this.la_Gw2Type.Size = new System.Drawing.Size(38, 16);
-            this.la_Gw2Type.TabIndex = 9;
-            this.la_Gw2Type.Text = "砂輪2";
+            this.rb_Gw2Type3.AutoSize = true;
+            this.rb_Gw2Type3.Location = new System.Drawing.Point(216, 16);
+            this.rb_Gw2Type3.Name = "rb_Gw2Type3";
+            this.rb_Gw2Type3.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw2Type3.TabIndex = 11;
+            this.rb_Gw2Type3.Tag = "3";
+            this.rb_Gw2Type3.Text = "右斜";
+            this.rb_Gw2Type3.UseVisualStyleBackColor = true;
+            this.rb_Gw2Type3.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // rb_Gw2Type2
+            // 
+            this.rb_Gw2Type2.AutoSize = true;
+            this.rb_Gw2Type2.Checked = true;
+            this.rb_Gw2Type2.Location = new System.Drawing.Point(160, 16);
+            this.rb_Gw2Type2.Name = "rb_Gw2Type2";
+            this.rb_Gw2Type2.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw2Type2.TabIndex = 7;
+            this.rb_Gw2Type2.TabStop = true;
+            this.rb_Gw2Type2.Tag = "2";
+            this.rb_Gw2Type2.Text = "左斜";
+            this.rb_Gw2Type2.UseVisualStyleBackColor = true;
+            this.rb_Gw2Type2.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // rb_Gw2Type1
             // 
             this.rb_Gw2Type1.AutoSize = true;
             this.rb_Gw2Type1.Location = new System.Drawing.Point(104, 16);
             this.rb_Gw2Type1.Name = "rb_Gw2Type1";
-            this.rb_Gw2Type1.Size = new System.Drawing.Size(49, 20);
-            this.rb_Gw2Type1.TabIndex = 7;
+            this.rb_Gw2Type1.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw2Type1.TabIndex = 10;
             this.rb_Gw2Type1.Tag = "1";
-            this.rb_Gw2Type1.Text = "外圓";
+            this.rb_Gw2Type1.Text = "內磨";
             this.rb_Gw2Type1.UseVisualStyleBackColor = true;
             this.rb_Gw2Type1.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // la_Gw2Type
+            // 
+            this.la_Gw2Type.AutoSize = true;
+            this.la_Gw2Type.Location = new System.Drawing.Point(8, 16);
+            this.la_Gw2Type.Name = "la_Gw2Type";
+            this.la_Gw2Type.Size = new System.Drawing.Size(48, 19);
+            this.la_Gw2Type.TabIndex = 9;
+            this.la_Gw2Type.Text = "砂輪2";
             // 
             // rb_Gw2Type0
             // 
             this.rb_Gw2Type0.AutoSize = true;
-            this.rb_Gw2Type0.Checked = true;
             this.rb_Gw2Type0.Location = new System.Drawing.Point(48, 16);
             this.rb_Gw2Type0.Name = "rb_Gw2Type0";
-            this.rb_Gw2Type0.Size = new System.Drawing.Size(49, 20);
+            this.rb_Gw2Type0.Size = new System.Drawing.Size(60, 23);
             this.rb_Gw2Type0.TabIndex = 6;
-            this.rb_Gw2Type0.TabStop = true;
             this.rb_Gw2Type0.Tag = "0";
-            this.rb_Gw2Type0.Text = "內圓";
+            this.rb_Gw2Type0.Text = "直頭";
             this.rb_Gw2Type0.UseVisualStyleBackColor = true;
             this.rb_Gw2Type0.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // gb_Gw1Type
             // 
-            this.gb_Gw1Type.Controls.Add(this.la_Gw1Type);
+            this.gb_Gw1Type.Controls.Add(this.rb_Gw1Type3);
+            this.gb_Gw1Type.Controls.Add(this.rb_Gw1Type2);
             this.gb_Gw1Type.Controls.Add(this.rb_Gw1Type1);
+            this.gb_Gw1Type.Controls.Add(this.la_Gw1Type);
             this.gb_Gw1Type.Controls.Add(this.rb_Gw1Type0);
             this.gb_Gw1Type.Location = new System.Drawing.Point(608, 8);
             this.gb_Gw1Type.Name = "gb_Gw1Type";
-            this.gb_Gw1Type.Size = new System.Drawing.Size(168, 40);
+            this.gb_Gw1Type.Size = new System.Drawing.Size(288, 40);
             this.gb_Gw1Type.TabIndex = 87;
             this.gb_Gw1Type.TabStop = false;
             // 
-            // la_Gw1Type
+            // rb_Gw1Type3
             // 
-            this.la_Gw1Type.AutoSize = true;
-            this.la_Gw1Type.Location = new System.Drawing.Point(8, 16);
-            this.la_Gw1Type.Name = "la_Gw1Type";
-            this.la_Gw1Type.Size = new System.Drawing.Size(38, 16);
-            this.la_Gw1Type.TabIndex = 8;
-            this.la_Gw1Type.Text = "砂輪1";
+            this.rb_Gw1Type3.AutoSize = true;
+            this.rb_Gw1Type3.Location = new System.Drawing.Point(216, 16);
+            this.rb_Gw1Type3.Name = "rb_Gw1Type3";
+            this.rb_Gw1Type3.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw1Type3.TabIndex = 10;
+            this.rb_Gw1Type3.Tag = "3";
+            this.rb_Gw1Type3.Text = "右斜";
+            this.rb_Gw1Type3.UseVisualStyleBackColor = true;
+            this.rb_Gw1Type3.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // rb_Gw1Type2
+            // 
+            this.rb_Gw1Type2.AutoSize = true;
+            this.rb_Gw1Type2.Location = new System.Drawing.Point(160, 16);
+            this.rb_Gw1Type2.Name = "rb_Gw1Type2";
+            this.rb_Gw1Type2.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw1Type2.TabIndex = 7;
+            this.rb_Gw1Type2.Tag = "2";
+            this.rb_Gw1Type2.Text = "左斜";
+            this.rb_Gw1Type2.UseVisualStyleBackColor = true;
+            this.rb_Gw1Type2.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
             // rb_Gw1Type1
             // 
             this.rb_Gw1Type1.AutoSize = true;
             this.rb_Gw1Type1.Location = new System.Drawing.Point(104, 16);
             this.rb_Gw1Type1.Name = "rb_Gw1Type1";
-            this.rb_Gw1Type1.Size = new System.Drawing.Size(49, 20);
-            this.rb_Gw1Type1.TabIndex = 7;
+            this.rb_Gw1Type1.Size = new System.Drawing.Size(60, 23);
+            this.rb_Gw1Type1.TabIndex = 9;
             this.rb_Gw1Type1.Tag = "1";
-            this.rb_Gw1Type1.Text = "外圓";
+            this.rb_Gw1Type1.Text = "內磨";
             this.rb_Gw1Type1.UseVisualStyleBackColor = true;
             this.rb_Gw1Type1.Click += new System.EventHandler(this.rb_GwTypeSelect);
+            // 
+            // la_Gw1Type
+            // 
+            this.la_Gw1Type.AutoSize = true;
+            this.la_Gw1Type.Location = new System.Drawing.Point(8, 16);
+            this.la_Gw1Type.Name = "la_Gw1Type";
+            this.la_Gw1Type.Size = new System.Drawing.Size(48, 19);
+            this.la_Gw1Type.TabIndex = 8;
+            this.la_Gw1Type.Text = "砂輪1";
             // 
             // rb_Gw1Type0
             // 
@@ -15649,11 +15910,11 @@
             this.rb_Gw1Type0.Checked = true;
             this.rb_Gw1Type0.Location = new System.Drawing.Point(48, 16);
             this.rb_Gw1Type0.Name = "rb_Gw1Type0";
-            this.rb_Gw1Type0.Size = new System.Drawing.Size(49, 20);
+            this.rb_Gw1Type0.Size = new System.Drawing.Size(60, 23);
             this.rb_Gw1Type0.TabIndex = 6;
             this.rb_Gw1Type0.TabStop = true;
             this.rb_Gw1Type0.Tag = "0";
-            this.rb_Gw1Type0.Text = "內圓";
+            this.rb_Gw1Type0.Text = "直頭";
             this.rb_Gw1Type0.UseVisualStyleBackColor = true;
             this.rb_Gw1Type0.Click += new System.EventHandler(this.rb_GwTypeSelect);
             // 
@@ -15663,7 +15924,7 @@
             this.ch_Gap.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_Gap.Location = new System.Drawing.Point(16, 64);
             this.ch_Gap.Name = "ch_Gap";
-            this.ch_Gap.Size = new System.Drawing.Size(130, 20);
+            this.ch_Gap.Size = new System.Drawing.Size(161, 23);
             this.ch_Gap.TabIndex = 86;
             this.ch_Gap.Tag = "GapOpen";
             this.ch_Gap.Text = "音頻功能(間隙消除)";
@@ -15675,7 +15936,7 @@
             this.la_JigWidth.AutoSize = true;
             this.la_JigWidth.Location = new System.Drawing.Point(200, 96);
             this.la_JigWidth.Name = "la_JigWidth";
-            this.la_JigWidth.Size = new System.Drawing.Size(67, 16);
+            this.la_JigWidth.Size = new System.Drawing.Size(84, 19);
             this.la_JigWidth.TabIndex = 85;
             this.la_JigWidth.Text = "量測治具寬";
             // 
@@ -15689,7 +15950,7 @@
             this.btn_JigWidth.Image = ((System.Drawing.Image)(resources.GetObject("btn_JigWidth.Image")));
             this.btn_JigWidth.Lamp = false;
             this.btn_JigWidth.LampOnImage = null;
-            this.btn_JigWidth.Location = new System.Drawing.Point(200, 112);
+            this.btn_JigWidth.Location = new System.Drawing.Point(200, 109);
             this.btn_JigWidth.MouseDownImage = null;
             this.btn_JigWidth.MouseUpImage = null;
             this.btn_JigWidth.Name = "btn_JigWidth";
@@ -15701,9 +15962,8 @@
             // 
             // gb_MachineType
             // 
-            this.gb_MachineType.Controls.Add(this.rb_OIG_M4);
-            this.gb_MachineType.Controls.Add(this.rb_OIG_D2);
-            this.gb_MachineType.Controls.Add(this.rb_OIG_R);
+            this.gb_MachineType.Controls.Add(this.rb_M3);
+            this.gb_MachineType.Controls.Add(this.rb_M2);
             this.gb_MachineType.Location = new System.Drawing.Point(456, 8);
             this.gb_MachineType.Name = "gb_MachineType";
             this.gb_MachineType.Size = new System.Drawing.Size(144, 96);
@@ -15711,44 +15971,32 @@
             this.gb_MachineType.TabStop = false;
             this.gb_MachineType.Text = "機型選擇";
             // 
-            // rb_OIG_M4
+            // rb_M3
             // 
-            this.rb_OIG_M4.AutoSize = true;
-            this.rb_OIG_M4.Location = new System.Drawing.Point(16, 72);
-            this.rb_OIG_M4.Name = "rb_OIG_M4";
-            this.rb_OIG_M4.Size = new System.Drawing.Size(130, 20);
-            this.rb_OIG_M4.TabIndex = 7;
-            this.rb_OIG_M4.TabStop = true;
-            this.rb_OIG_M4.Tag = "4";
-            this.rb_OIG_M4.Text = "OIG 300R-M4(4軸)";
-            this.rb_OIG_M4.UseVisualStyleBackColor = true;
-            this.rb_OIG_M4.Click += new System.EventHandler(this.OIG_SeriesChoose);
+            this.rb_M3.AutoSize = true;
+            this.rb_M3.Location = new System.Drawing.Point(16, 48);
+            this.rb_M3.Name = "rb_M3";
+            this.rb_M3.Size = new System.Drawing.Size(87, 23);
+            this.rb_M3.TabIndex = 6;
+            this.rb_M3.TabStop = true;
+            this.rb_M3.Tag = "2";
+            this.rb_M3.Text = "M3(3軸)";
+            this.rb_M3.UseVisualStyleBackColor = true;
+            this.rb_M3.Click += new System.EventHandler(this.MPCOE_SeriesChoose);
             // 
-            // rb_OIG_D2
+            // rb_M2
             // 
-            this.rb_OIG_D2.AutoSize = true;
-            this.rb_OIG_D2.Location = new System.Drawing.Point(16, 48);
-            this.rb_OIG_D2.Name = "rb_OIG_D2";
-            this.rb_OIG_D2.Size = new System.Drawing.Size(127, 20);
-            this.rb_OIG_D2.TabIndex = 6;
-            this.rb_OIG_D2.TabStop = true;
-            this.rb_OIG_D2.Tag = "2";
-            this.rb_OIG_D2.Text = "OIG 300R-D2(2軸)";
-            this.rb_OIG_D2.UseVisualStyleBackColor = true;
-            this.rb_OIG_D2.Click += new System.EventHandler(this.OIG_SeriesChoose);
-            // 
-            // rb_OIG_R
-            // 
-            this.rb_OIG_R.AutoSize = true;
-            this.rb_OIG_R.Location = new System.Drawing.Point(16, 24);
-            this.rb_OIG_R.Name = "rb_OIG_R";
-            this.rb_OIG_R.Size = new System.Drawing.Size(106, 20);
-            this.rb_OIG_R.TabIndex = 5;
-            this.rb_OIG_R.TabStop = true;
-            this.rb_OIG_R.Tag = "1";
-            this.rb_OIG_R.Text = "OIG 300R(1軸)";
-            this.rb_OIG_R.UseVisualStyleBackColor = true;
-            this.rb_OIG_R.Click += new System.EventHandler(this.OIG_SeriesChoose);
+            this.rb_M2.AutoSize = true;
+            this.rb_M2.Checked = true;
+            this.rb_M2.Location = new System.Drawing.Point(16, 24);
+            this.rb_M2.Name = "rb_M2";
+            this.rb_M2.Size = new System.Drawing.Size(87, 23);
+            this.rb_M2.TabIndex = 5;
+            this.rb_M2.TabStop = true;
+            this.rb_M2.Tag = "1";
+            this.rb_M2.Text = "M2(2軸)";
+            this.rb_M2.UseVisualStyleBackColor = true;
+            this.rb_M2.Click += new System.EventHandler(this.MPCOE_SeriesChoose);
             // 
             // ch_Right
             // 
@@ -15756,7 +16004,7 @@
             this.ch_Right.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_Right.Location = new System.Drawing.Point(16, 112);
             this.ch_Right.Name = "ch_Right";
-            this.ch_Right.Size = new System.Drawing.Size(98, 20);
+            this.ch_Right.Size = new System.Drawing.Size(121, 23);
             this.ch_Right.TabIndex = 79;
             this.ch_Right.Tag = "Rightopen";
             this.ch_Right.Text = "右側修整功能";
@@ -15769,7 +16017,7 @@
             this.ch_Meas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_Meas.Location = new System.Drawing.Point(16, 88);
             this.ch_Meas.Name = "ch_Meas";
-            this.ch_Meas.Size = new System.Drawing.Size(122, 20);
+            this.ch_Meas.Size = new System.Drawing.Size(151, 23);
             this.ch_Meas.TabIndex = 79;
             this.ch_Meas.Tag = "Measopen";
             this.ch_Meas.Text = "工序中的量測功能";
@@ -15782,7 +16030,7 @@
             this.ch_Specialopen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_Specialopen.Location = new System.Drawing.Point(16, 136);
             this.ch_Specialopen.Name = "ch_Specialopen";
-            this.ch_Specialopen.Size = new System.Drawing.Size(110, 20);
+            this.ch_Specialopen.Size = new System.Drawing.Size(136, 23);
             this.ch_Specialopen.TabIndex = 12;
             this.ch_Specialopen.Tag = "656";
             this.ch_Specialopen.Text = "特殊橫進刀啟用";
@@ -15795,7 +16043,7 @@
             this.ch_AutoDoor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_AutoDoor.Location = new System.Drawing.Point(200, 64);
             this.ch_AutoDoor.Name = "ch_AutoDoor";
-            this.ch_AutoDoor.Size = new System.Drawing.Size(126, 20);
+            this.ch_AutoDoor.Size = new System.Drawing.Size(157, 23);
             this.ch_AutoDoor.TabIndex = 10;
             this.ch_AutoDoor.Tag = "654";
             this.ch_AutoDoor.Text = "(#654) 自動門功能";
@@ -15808,7 +16056,7 @@
             this.ch_SwingDress.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_SwingDress.Location = new System.Drawing.Point(200, 40);
             this.ch_SwingDress.Name = "ch_SwingDress";
-            this.ch_SwingDress.Size = new System.Drawing.Size(162, 20);
+            this.ch_SwingDress.Size = new System.Drawing.Size(202, 23);
             this.ch_SwingDress.TabIndex = 9;
             this.ch_SwingDress.Tag = "653";
             this.ch_SwingDress.Text = "(#653) 擺臂式修整座功能";
@@ -15821,7 +16069,7 @@
             this.ch_DGW_Func.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_DGW_Func.Location = new System.Drawing.Point(200, 16);
             this.ch_DGW_Func.Name = "ch_DGW_Func";
-            this.ch_DGW_Func.Size = new System.Drawing.Size(138, 20);
+            this.ch_DGW_Func.Size = new System.Drawing.Size(172, 23);
             this.ch_DGW_Func.TabIndex = 8;
             this.ch_DGW_Func.Tag = "652";
             this.ch_DGW_Func.Text = "(#652) 動力修砂功能";
@@ -15834,7 +16082,7 @@
             this.ch_DGW_Conv.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.ch_DGW_Conv.Location = new System.Drawing.Point(16, 16);
             this.ch_DGW_Conv.Name = "ch_DGW_Conv";
-            this.ch_DGW_Conv.Size = new System.Drawing.Size(110, 20);
+            this.ch_DGW_Conv.Size = new System.Drawing.Size(136, 23);
             this.ch_DGW_Conv.TabIndex = 3;
             this.ch_DGW_Conv.Text = "對話式修砂對點";
             this.ch_DGW_Conv.UseVisualStyleBackColor = true;
@@ -15845,7 +16093,7 @@
             this.ch_DWP_Conv.AutoSize = true;
             this.ch_DWP_Conv.Location = new System.Drawing.Point(16, 40);
             this.ch_DWP_Conv.Name = "ch_DWP_Conv";
-            this.ch_DWP_Conv.Size = new System.Drawing.Size(110, 20);
+            this.ch_DWP_Conv.Size = new System.Drawing.Size(136, 23);
             this.ch_DWP_Conv.TabIndex = 4;
             this.ch_DWP_Conv.Text = "對話式加工對點";
             this.ch_DWP_Conv.UseVisualStyleBackColor = true;
@@ -15856,10 +16104,10 @@
             this.tabPage2.Controls.Add(this.tb_serialMsg);
             this.tabPage2.Controls.Add(this.la_SerialData);
             this.tabPage2.Controls.Add(this.tb_serial);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(832, 198);
+            this.tabPage2.Size = new System.Drawing.Size(904, 195);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "通訊檢測";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -15879,7 +16127,7 @@
             this.la_SerialData.AutoSize = true;
             this.la_SerialData.Location = new System.Drawing.Point(8, 8);
             this.la_SerialData.Name = "la_SerialData";
-            this.la_SerialData.Size = new System.Drawing.Size(53, 12);
+            this.la_SerialData.Size = new System.Drawing.Size(67, 15);
             this.la_SerialData.TabIndex = 76;
             this.la_SerialData.Text = "通訊資料";
             // 
@@ -15896,10 +16144,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.gb_UI_BalanceGW);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(832, 198);
+            this.tabPage3.Size = new System.Drawing.Size(904, 195);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "砂輪手動平衡";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -15921,7 +16169,7 @@
             this.ch_UI_BalanceGW2.AutoSize = true;
             this.ch_UI_BalanceGW2.Location = new System.Drawing.Point(16, 48);
             this.ch_UI_BalanceGW2.Name = "ch_UI_BalanceGW2";
-            this.ch_UI_BalanceGW2.Size = new System.Drawing.Size(81, 16);
+            this.ch_UI_BalanceGW2.Size = new System.Drawing.Size(100, 19);
             this.ch_UI_BalanceGW2.TabIndex = 1;
             this.ch_UI_BalanceGW2.Tag = "2";
             this.ch_UI_BalanceGW2.Text = "砂輪2 啟用";
@@ -15935,7 +16183,7 @@
             this.ch_UI_BalanceGW1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ch_UI_BalanceGW1.Location = new System.Drawing.Point(16, 24);
             this.ch_UI_BalanceGW1.Name = "ch_UI_BalanceGW1";
-            this.ch_UI_BalanceGW1.Size = new System.Drawing.Size(81, 16);
+            this.ch_UI_BalanceGW1.Size = new System.Drawing.Size(100, 19);
             this.ch_UI_BalanceGW1.TabIndex = 0;
             this.ch_UI_BalanceGW1.Tag = "1";
             this.ch_UI_BalanceGW1.Text = "砂輪1 啟用";
@@ -15946,10 +16194,10 @@
             // 
             this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.tb_Debug);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(832, 198);
+            this.tabPage4.Size = new System.Drawing.Size(904, 195);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "系統訊息";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -15998,9 +16246,9 @@
             this.tabPage5.Controls.Add(this.pic_Gw1DressCrash);
             this.tabPage5.Controls.Add(this.pic_Gw1GrindCrash);
             this.tabPage5.Controls.Add(this.pic_Gw1CrashEnabled);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(832, 198);
+            this.tabPage5.Size = new System.Drawing.Size(904, 195);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "電流防撞旗標";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -16010,7 +16258,7 @@
             this.la_ClearCrash.AutoSize = true;
             this.la_ClearCrash.Location = new System.Drawing.Point(40, 16);
             this.la_ClearCrash.Name = "la_ClearCrash";
-            this.la_ClearCrash.Size = new System.Drawing.Size(129, 12);
+            this.la_ClearCrash.Size = new System.Drawing.Size(158, 15);
             this.la_ClearCrash.TabIndex = 41;
             this.la_ClearCrash.Text = "R513.1 清除CRASH狀態";
             // 
@@ -16019,7 +16267,7 @@
             this.la_Gw2Crash.AutoSize = true;
             this.la_Gw2Crash.Location = new System.Drawing.Point(232, 176);
             this.la_Gw2Crash.Name = "la_Gw2Crash";
-            this.la_Gw2Crash.Size = new System.Drawing.Size(71, 12);
+            this.la_Gw2Crash.Size = new System.Drawing.Size(87, 15);
             this.la_Gw2Crash.TabIndex = 19;
             this.la_Gw2Crash.Text = "GW2 CRASH";
             // 
@@ -16028,7 +16276,7 @@
             this.la_Gw1Crash.AutoSize = true;
             this.la_Gw1Crash.Location = new System.Drawing.Point(40, 176);
             this.la_Gw1Crash.Name = "la_Gw1Crash";
-            this.la_Gw1Crash.Size = new System.Drawing.Size(71, 12);
+            this.la_Gw1Crash.Size = new System.Drawing.Size(87, 15);
             this.la_Gw1Crash.TabIndex = 17;
             this.la_Gw1Crash.Text = "GW1 CRASH";
             // 
@@ -16037,7 +16285,7 @@
             this.la_Gw2Gap.AutoSize = true;
             this.la_Gw2Gap.Location = new System.Drawing.Point(232, 144);
             this.la_Gw2Gap.Name = "la_Gw2Gap";
-            this.la_Gw2Gap.Size = new System.Drawing.Size(55, 12);
+            this.la_Gw2Gap.Size = new System.Drawing.Size(69, 15);
             this.la_Gw2Gap.TabIndex = 15;
             this.la_Gw2Gap.Text = "GW2 GAP";
             // 
@@ -16046,7 +16294,7 @@
             this.la_Gw2DressCrash.AutoSize = true;
             this.la_Gw2DressCrash.Location = new System.Drawing.Point(232, 112);
             this.la_Gw2DressCrash.Name = "la_Gw2DressCrash";
-            this.la_Gw2DressCrash.Size = new System.Drawing.Size(158, 12);
+            this.la_Gw2DressCrash.Size = new System.Drawing.Size(195, 15);
             this.la_Gw2DressCrash.TabIndex = 14;
             this.la_Gw2DressCrash.Text = "R530.3 GW2 修整中 電流防撞";
             // 
@@ -16055,7 +16303,7 @@
             this.la_Gw2GrindCrash.AutoSize = true;
             this.la_Gw2GrindCrash.Location = new System.Drawing.Point(232, 80);
             this.la_Gw2GrindCrash.Name = "la_Gw2GrindCrash";
-            this.la_Gw2GrindCrash.Size = new System.Drawing.Size(158, 12);
+            this.la_Gw2GrindCrash.Size = new System.Drawing.Size(195, 15);
             this.la_Gw2GrindCrash.TabIndex = 13;
             this.la_Gw2GrindCrash.Text = "R530.2 GW2 研磨中 電流防撞";
             // 
@@ -16064,7 +16312,7 @@
             this.la_Gw2CrashEnabled.AutoSize = true;
             this.la_Gw2CrashEnabled.Location = new System.Drawing.Point(232, 48);
             this.la_Gw2CrashEnabled.Name = "la_Gw2CrashEnabled";
-            this.la_Gw2CrashEnabled.Size = new System.Drawing.Size(140, 12);
+            this.la_Gw2CrashEnabled.Size = new System.Drawing.Size(173, 15);
             this.la_Gw2CrashEnabled.TabIndex = 9;
             this.la_Gw2CrashEnabled.Text = "D908.4 GW1電流防撞功能";
             // 
@@ -16073,7 +16321,7 @@
             this.la_Gw1Gap.AutoSize = true;
             this.la_Gw1Gap.Location = new System.Drawing.Point(40, 144);
             this.la_Gw1Gap.Name = "la_Gw1Gap";
-            this.la_Gw1Gap.Size = new System.Drawing.Size(55, 12);
+            this.la_Gw1Gap.Size = new System.Drawing.Size(69, 15);
             this.la_Gw1Gap.TabIndex = 7;
             this.la_Gw1Gap.Text = "GW1 GAP";
             // 
@@ -16082,7 +16330,7 @@
             this.la_Gw1DressCrash.AutoSize = true;
             this.la_Gw1DressCrash.Location = new System.Drawing.Point(40, 112);
             this.la_Gw1DressCrash.Name = "la_Gw1DressCrash";
-            this.la_Gw1DressCrash.Size = new System.Drawing.Size(158, 12);
+            this.la_Gw1DressCrash.Size = new System.Drawing.Size(195, 15);
             this.la_Gw1DressCrash.TabIndex = 6;
             this.la_Gw1DressCrash.Text = "R530.1 GW1 修整中 電流防撞";
             // 
@@ -16091,7 +16339,7 @@
             this.la_Gw1GrindCrash.AutoSize = true;
             this.la_Gw1GrindCrash.Location = new System.Drawing.Point(40, 80);
             this.la_Gw1GrindCrash.Name = "la_Gw1GrindCrash";
-            this.la_Gw1GrindCrash.Size = new System.Drawing.Size(158, 12);
+            this.la_Gw1GrindCrash.Size = new System.Drawing.Size(195, 15);
             this.la_Gw1GrindCrash.TabIndex = 5;
             this.la_Gw1GrindCrash.Text = "R530.0 GW1 研磨中 電流防撞";
             // 
@@ -16100,7 +16348,7 @@
             this.la_Gw1CrashEnabled.AutoSize = true;
             this.la_Gw1CrashEnabled.Location = new System.Drawing.Point(40, 48);
             this.la_Gw1CrashEnabled.Name = "la_Gw1CrashEnabled";
-            this.la_Gw1CrashEnabled.Size = new System.Drawing.Size(140, 12);
+            this.la_Gw1CrashEnabled.Size = new System.Drawing.Size(173, 15);
             this.la_Gw1CrashEnabled.TabIndex = 1;
             this.la_Gw1CrashEnabled.Text = "D908.6 GW1電流防撞功能";
             // 
@@ -16217,10 +16465,10 @@
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.pa_Dev_GwStatus);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(832, 198);
+            this.tabPage7.Size = new System.Drawing.Size(904, 195);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "監視砂輪";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -16277,7 +16525,7 @@
             this.la_Gw4Ampare_Value.AutoSize = true;
             this.la_Gw4Ampare_Value.Location = new System.Drawing.Point(736, 112);
             this.la_Gw4Ampare_Value.Name = "la_Gw4Ampare_Value";
-            this.la_Gw4Ampare_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw4Ampare_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw4Ampare_Value.TabIndex = 59;
             this.la_Gw4Ampare_Value.Text = "-";
             // 
@@ -16286,7 +16534,7 @@
             this.la_Gw4Ampare.AutoSize = true;
             this.la_Gw4Ampare.Location = new System.Drawing.Point(600, 112);
             this.la_Gw4Ampare.Name = "la_Gw4Ampare";
-            this.la_Gw4Ampare.Size = new System.Drawing.Size(93, 12);
+            this.la_Gw4Ampare.Size = new System.Drawing.Size(116, 15);
             this.la_Gw4Ampare.TabIndex = 58;
             this.la_Gw4Ampare.Text = "GW4 目前電流值";
             // 
@@ -16295,7 +16543,7 @@
             this.la_Gw4DressCrash_Value.AutoSize = true;
             this.la_Gw4DressCrash_Value.Location = new System.Drawing.Point(736, 88);
             this.la_Gw4DressCrash_Value.Name = "la_Gw4DressCrash_Value";
-            this.la_Gw4DressCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw4DressCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw4DressCrash_Value.TabIndex = 57;
             this.la_Gw4DressCrash_Value.Text = "-";
             // 
@@ -16304,7 +16552,7 @@
             this.la_Gw4DressCrashValue.AutoSize = true;
             this.la_Gw4DressCrashValue.Location = new System.Drawing.Point(600, 88);
             this.la_Gw4DressCrashValue.Name = "la_Gw4DressCrashValue";
-            this.la_Gw4DressCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw4DressCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw4DressCrashValue.TabIndex = 56;
             this.la_Gw4DressCrashValue.Text = "GW4 修整中 CRASH 值";
             // 
@@ -16313,7 +16561,7 @@
             this.la_Gw4DressGap_Value.AutoSize = true;
             this.la_Gw4DressGap_Value.Location = new System.Drawing.Point(736, 64);
             this.la_Gw4DressGap_Value.Name = "la_Gw4DressGap_Value";
-            this.la_Gw4DressGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw4DressGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw4DressGap_Value.TabIndex = 55;
             this.la_Gw4DressGap_Value.Text = "-";
             // 
@@ -16322,7 +16570,7 @@
             this.la_Gw4DressGapValue.AutoSize = true;
             this.la_Gw4DressGapValue.Location = new System.Drawing.Point(600, 64);
             this.la_Gw4DressGapValue.Name = "la_Gw4DressGapValue";
-            this.la_Gw4DressGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw4DressGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw4DressGapValue.TabIndex = 54;
             this.la_Gw4DressGapValue.Text = "GW4 修整中 GAP 值";
             // 
@@ -16331,7 +16579,7 @@
             this.la_Gw4GrindCrash_Value.AutoSize = true;
             this.la_Gw4GrindCrash_Value.Location = new System.Drawing.Point(736, 40);
             this.la_Gw4GrindCrash_Value.Name = "la_Gw4GrindCrash_Value";
-            this.la_Gw4GrindCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw4GrindCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw4GrindCrash_Value.TabIndex = 53;
             this.la_Gw4GrindCrash_Value.Text = "-";
             // 
@@ -16340,7 +16588,7 @@
             this.la_Gw4GrindCrashValue.AutoSize = true;
             this.la_Gw4GrindCrashValue.Location = new System.Drawing.Point(600, 40);
             this.la_Gw4GrindCrashValue.Name = "la_Gw4GrindCrashValue";
-            this.la_Gw4GrindCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw4GrindCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw4GrindCrashValue.TabIndex = 52;
             this.la_Gw4GrindCrashValue.Text = "GW4 研磨中 CRASH 值";
             // 
@@ -16349,7 +16597,7 @@
             this.la_Gw4GrindGap_Value.AutoSize = true;
             this.la_Gw4GrindGap_Value.Location = new System.Drawing.Point(736, 16);
             this.la_Gw4GrindGap_Value.Name = "la_Gw4GrindGap_Value";
-            this.la_Gw4GrindGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw4GrindGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw4GrindGap_Value.TabIndex = 51;
             this.la_Gw4GrindGap_Value.Text = "-";
             // 
@@ -16358,7 +16606,7 @@
             this.la_Gw4GrindGapValue.AutoSize = true;
             this.la_Gw4GrindGapValue.Location = new System.Drawing.Point(600, 16);
             this.la_Gw4GrindGapValue.Name = "la_Gw4GrindGapValue";
-            this.la_Gw4GrindGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw4GrindGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw4GrindGapValue.TabIndex = 50;
             this.la_Gw4GrindGapValue.Text = "GW4 研磨中 GAP 值";
             // 
@@ -16367,7 +16615,7 @@
             this.la_Gw3Ampare_Value.AutoSize = true;
             this.la_Gw3Ampare_Value.Location = new System.Drawing.Point(536, 112);
             this.la_Gw3Ampare_Value.Name = "la_Gw3Ampare_Value";
-            this.la_Gw3Ampare_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw3Ampare_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw3Ampare_Value.TabIndex = 49;
             this.la_Gw3Ampare_Value.Text = "-";
             // 
@@ -16376,7 +16624,7 @@
             this.la_Gw3Ampare.AutoSize = true;
             this.la_Gw3Ampare.Location = new System.Drawing.Point(400, 112);
             this.la_Gw3Ampare.Name = "la_Gw3Ampare";
-            this.la_Gw3Ampare.Size = new System.Drawing.Size(93, 12);
+            this.la_Gw3Ampare.Size = new System.Drawing.Size(116, 15);
             this.la_Gw3Ampare.TabIndex = 48;
             this.la_Gw3Ampare.Text = "GW3 目前電流值";
             // 
@@ -16385,7 +16633,7 @@
             this.la_Gw3DressCrash_Value.AutoSize = true;
             this.la_Gw3DressCrash_Value.Location = new System.Drawing.Point(536, 88);
             this.la_Gw3DressCrash_Value.Name = "la_Gw3DressCrash_Value";
-            this.la_Gw3DressCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw3DressCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw3DressCrash_Value.TabIndex = 47;
             this.la_Gw3DressCrash_Value.Text = "-";
             // 
@@ -16394,7 +16642,7 @@
             this.la_Gw3DressCrashValue.AutoSize = true;
             this.la_Gw3DressCrashValue.Location = new System.Drawing.Point(400, 88);
             this.la_Gw3DressCrashValue.Name = "la_Gw3DressCrashValue";
-            this.la_Gw3DressCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw3DressCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw3DressCrashValue.TabIndex = 46;
             this.la_Gw3DressCrashValue.Text = "GW3 修整中 CRASH 值";
             // 
@@ -16403,7 +16651,7 @@
             this.la_Gw3DressGap_Value.AutoSize = true;
             this.la_Gw3DressGap_Value.Location = new System.Drawing.Point(536, 64);
             this.la_Gw3DressGap_Value.Name = "la_Gw3DressGap_Value";
-            this.la_Gw3DressGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw3DressGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw3DressGap_Value.TabIndex = 45;
             this.la_Gw3DressGap_Value.Text = "-";
             // 
@@ -16412,7 +16660,7 @@
             this.la_Gw3DressGapValue.AutoSize = true;
             this.la_Gw3DressGapValue.Location = new System.Drawing.Point(400, 64);
             this.la_Gw3DressGapValue.Name = "la_Gw3DressGapValue";
-            this.la_Gw3DressGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw3DressGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw3DressGapValue.TabIndex = 44;
             this.la_Gw3DressGapValue.Text = "GW3 修整中 GAP 值";
             // 
@@ -16421,7 +16669,7 @@
             this.la_Gw3GrindCrash_Value.AutoSize = true;
             this.la_Gw3GrindCrash_Value.Location = new System.Drawing.Point(536, 40);
             this.la_Gw3GrindCrash_Value.Name = "la_Gw3GrindCrash_Value";
-            this.la_Gw3GrindCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw3GrindCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw3GrindCrash_Value.TabIndex = 43;
             this.la_Gw3GrindCrash_Value.Text = "-";
             // 
@@ -16430,7 +16678,7 @@
             this.la_Gw3GrindCrashValue.AutoSize = true;
             this.la_Gw3GrindCrashValue.Location = new System.Drawing.Point(400, 40);
             this.la_Gw3GrindCrashValue.Name = "la_Gw3GrindCrashValue";
-            this.la_Gw3GrindCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw3GrindCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw3GrindCrashValue.TabIndex = 42;
             this.la_Gw3GrindCrashValue.Text = "GW3 研磨中 CRASH 值";
             // 
@@ -16439,7 +16687,7 @@
             this.la_Gw3GrindGap_Value.AutoSize = true;
             this.la_Gw3GrindGap_Value.Location = new System.Drawing.Point(536, 16);
             this.la_Gw3GrindGap_Value.Name = "la_Gw3GrindGap_Value";
-            this.la_Gw3GrindGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw3GrindGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw3GrindGap_Value.TabIndex = 41;
             this.la_Gw3GrindGap_Value.Text = "-";
             // 
@@ -16448,7 +16696,7 @@
             this.la_Gw3GrindGapValue.AutoSize = true;
             this.la_Gw3GrindGapValue.Location = new System.Drawing.Point(400, 16);
             this.la_Gw3GrindGapValue.Name = "la_Gw3GrindGapValue";
-            this.la_Gw3GrindGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw3GrindGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw3GrindGapValue.TabIndex = 40;
             this.la_Gw3GrindGapValue.Text = "GW3 研磨中 GAP 值";
             // 
@@ -16457,7 +16705,7 @@
             this.la_Gw2Ampare_Value.AutoSize = true;
             this.la_Gw2Ampare_Value.Location = new System.Drawing.Point(344, 112);
             this.la_Gw2Ampare_Value.Name = "la_Gw2Ampare_Value";
-            this.la_Gw2Ampare_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw2Ampare_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw2Ampare_Value.TabIndex = 39;
             this.la_Gw2Ampare_Value.Text = "-";
             // 
@@ -16466,7 +16714,7 @@
             this.la_Gw2Ampare.AutoSize = true;
             this.la_Gw2Ampare.Location = new System.Drawing.Point(208, 112);
             this.la_Gw2Ampare.Name = "la_Gw2Ampare";
-            this.la_Gw2Ampare.Size = new System.Drawing.Size(93, 12);
+            this.la_Gw2Ampare.Size = new System.Drawing.Size(116, 15);
             this.la_Gw2Ampare.TabIndex = 38;
             this.la_Gw2Ampare.Text = "GW2 目前電流值";
             // 
@@ -16475,7 +16723,7 @@
             this.la_Gw1Ampare_Value.AutoSize = true;
             this.la_Gw1Ampare_Value.Location = new System.Drawing.Point(144, 112);
             this.la_Gw1Ampare_Value.Name = "la_Gw1Ampare_Value";
-            this.la_Gw1Ampare_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw1Ampare_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw1Ampare_Value.TabIndex = 37;
             this.la_Gw1Ampare_Value.Text = "-";
             // 
@@ -16484,7 +16732,7 @@
             this.la_Gw1Ampare.AutoSize = true;
             this.la_Gw1Ampare.Location = new System.Drawing.Point(8, 112);
             this.la_Gw1Ampare.Name = "la_Gw1Ampare";
-            this.la_Gw1Ampare.Size = new System.Drawing.Size(93, 12);
+            this.la_Gw1Ampare.Size = new System.Drawing.Size(116, 15);
             this.la_Gw1Ampare.TabIndex = 36;
             this.la_Gw1Ampare.Text = "GW1 目前電流值";
             // 
@@ -16493,7 +16741,7 @@
             this.la_Gw2DressCrash_Value.AutoSize = true;
             this.la_Gw2DressCrash_Value.Location = new System.Drawing.Point(344, 88);
             this.la_Gw2DressCrash_Value.Name = "la_Gw2DressCrash_Value";
-            this.la_Gw2DressCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw2DressCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw2DressCrash_Value.TabIndex = 35;
             this.la_Gw2DressCrash_Value.Text = "-";
             // 
@@ -16502,7 +16750,7 @@
             this.la_Gw2DressCrashValue.AutoSize = true;
             this.la_Gw2DressCrashValue.Location = new System.Drawing.Point(208, 88);
             this.la_Gw2DressCrashValue.Name = "la_Gw2DressCrashValue";
-            this.la_Gw2DressCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw2DressCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw2DressCrashValue.TabIndex = 34;
             this.la_Gw2DressCrashValue.Text = "GW2 修整中 CRASH 值";
             // 
@@ -16511,7 +16759,7 @@
             this.la_Gw2DressGap_Value.AutoSize = true;
             this.la_Gw2DressGap_Value.Location = new System.Drawing.Point(344, 64);
             this.la_Gw2DressGap_Value.Name = "la_Gw2DressGap_Value";
-            this.la_Gw2DressGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw2DressGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw2DressGap_Value.TabIndex = 33;
             this.la_Gw2DressGap_Value.Text = "-";
             // 
@@ -16520,7 +16768,7 @@
             this.la_Gw2DressGapValue.AutoSize = true;
             this.la_Gw2DressGapValue.Location = new System.Drawing.Point(208, 64);
             this.la_Gw2DressGapValue.Name = "la_Gw2DressGapValue";
-            this.la_Gw2DressGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw2DressGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw2DressGapValue.TabIndex = 32;
             this.la_Gw2DressGapValue.Text = "GW2 修整中 GAP 值";
             // 
@@ -16529,7 +16777,7 @@
             this.la_Gw1DressCrash_Value.AutoSize = true;
             this.la_Gw1DressCrash_Value.Location = new System.Drawing.Point(144, 88);
             this.la_Gw1DressCrash_Value.Name = "la_Gw1DressCrash_Value";
-            this.la_Gw1DressCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw1DressCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw1DressCrash_Value.TabIndex = 31;
             this.la_Gw1DressCrash_Value.Text = "-";
             // 
@@ -16538,7 +16786,7 @@
             this.la_Gw1DressCrashValue.AutoSize = true;
             this.la_Gw1DressCrashValue.Location = new System.Drawing.Point(8, 88);
             this.la_Gw1DressCrashValue.Name = "la_Gw1DressCrashValue";
-            this.la_Gw1DressCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw1DressCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw1DressCrashValue.TabIndex = 30;
             this.la_Gw1DressCrashValue.Text = "GW1 修整中 CRASH 值";
             // 
@@ -16547,7 +16795,7 @@
             this.la_Gw1DressGap_Value.AutoSize = true;
             this.la_Gw1DressGap_Value.Location = new System.Drawing.Point(144, 64);
             this.la_Gw1DressGap_Value.Name = "la_Gw1DressGap_Value";
-            this.la_Gw1DressGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw1DressGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw1DressGap_Value.TabIndex = 29;
             this.la_Gw1DressGap_Value.Text = "-";
             // 
@@ -16556,7 +16804,7 @@
             this.la_Gw1DressGapValue.AutoSize = true;
             this.la_Gw1DressGapValue.Location = new System.Drawing.Point(8, 64);
             this.la_Gw1DressGapValue.Name = "la_Gw1DressGapValue";
-            this.la_Gw1DressGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw1DressGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw1DressGapValue.TabIndex = 28;
             this.la_Gw1DressGapValue.Text = "GW1 修整中 GAP 值";
             // 
@@ -16565,7 +16813,7 @@
             this.la_Gw2GrindCrash_Value.AutoSize = true;
             this.la_Gw2GrindCrash_Value.Location = new System.Drawing.Point(344, 40);
             this.la_Gw2GrindCrash_Value.Name = "la_Gw2GrindCrash_Value";
-            this.la_Gw2GrindCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw2GrindCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw2GrindCrash_Value.TabIndex = 27;
             this.la_Gw2GrindCrash_Value.Text = "-";
             // 
@@ -16574,7 +16822,7 @@
             this.la_Gw2GrindCrashValue.AutoSize = true;
             this.la_Gw2GrindCrashValue.Location = new System.Drawing.Point(208, 40);
             this.la_Gw2GrindCrashValue.Name = "la_Gw2GrindCrashValue";
-            this.la_Gw2GrindCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw2GrindCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw2GrindCrashValue.TabIndex = 26;
             this.la_Gw2GrindCrashValue.Text = "GW2 研磨中 CRASH 值";
             // 
@@ -16583,7 +16831,7 @@
             this.la_Gw2GrindGap_Value.AutoSize = true;
             this.la_Gw2GrindGap_Value.Location = new System.Drawing.Point(344, 16);
             this.la_Gw2GrindGap_Value.Name = "la_Gw2GrindGap_Value";
-            this.la_Gw2GrindGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw2GrindGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw2GrindGap_Value.TabIndex = 25;
             this.la_Gw2GrindGap_Value.Text = "-";
             // 
@@ -16592,7 +16840,7 @@
             this.la_Gw2GrindGapValue.AutoSize = true;
             this.la_Gw2GrindGapValue.Location = new System.Drawing.Point(208, 16);
             this.la_Gw2GrindGapValue.Name = "la_Gw2GrindGapValue";
-            this.la_Gw2GrindGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw2GrindGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw2GrindGapValue.TabIndex = 24;
             this.la_Gw2GrindGapValue.Text = "GW2 研磨中 GAP 值";
             // 
@@ -16601,7 +16849,7 @@
             this.la_Gw1GrindCrash_Value.AutoSize = true;
             this.la_Gw1GrindCrash_Value.Location = new System.Drawing.Point(144, 40);
             this.la_Gw1GrindCrash_Value.Name = "la_Gw1GrindCrash_Value";
-            this.la_Gw1GrindCrash_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw1GrindCrash_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw1GrindCrash_Value.TabIndex = 23;
             this.la_Gw1GrindCrash_Value.Text = "-";
             // 
@@ -16610,7 +16858,7 @@
             this.la_Gw1GrindCrashValue.AutoSize = true;
             this.la_Gw1GrindCrashValue.Location = new System.Drawing.Point(8, 40);
             this.la_Gw1GrindCrashValue.Name = "la_Gw1GrindCrashValue";
-            this.la_Gw1GrindCrashValue.Size = new System.Drawing.Size(125, 12);
+            this.la_Gw1GrindCrashValue.Size = new System.Drawing.Size(155, 15);
             this.la_Gw1GrindCrashValue.TabIndex = 22;
             this.la_Gw1GrindCrashValue.Text = "GW1 研磨中 CRASH 值";
             // 
@@ -16619,7 +16867,7 @@
             this.la_Gw1GrindGap_Value.AutoSize = true;
             this.la_Gw1GrindGap_Value.Location = new System.Drawing.Point(144, 16);
             this.la_Gw1GrindGap_Value.Name = "la_Gw1GrindGap_Value";
-            this.la_Gw1GrindGap_Value.Size = new System.Drawing.Size(9, 12);
+            this.la_Gw1GrindGap_Value.Size = new System.Drawing.Size(12, 15);
             this.la_Gw1GrindGap_Value.TabIndex = 21;
             this.la_Gw1GrindGap_Value.Text = "-";
             // 
@@ -16628,7 +16876,7 @@
             this.la_Gw1GrindGapValue.AutoSize = true;
             this.la_Gw1GrindGapValue.Location = new System.Drawing.Point(8, 16);
             this.la_Gw1GrindGapValue.Name = "la_Gw1GrindGapValue";
-            this.la_Gw1GrindGapValue.Size = new System.Drawing.Size(109, 12);
+            this.la_Gw1GrindGapValue.Size = new System.Drawing.Size(137, 15);
             this.la_Gw1GrindGapValue.TabIndex = 20;
             this.la_Gw1GrindGapValue.Text = "GW1 研磨中 GAP 值";
             // 
@@ -16638,10 +16886,10 @@
             this.tabPage6.Controls.Add(this.la_RotationCenter_Param_ZC);
             this.tabPage6.Controls.Add(this.tb_RotationCenter_Param_XC);
             this.tabPage6.Controls.Add(this.la_RotationCenter_Param_XC);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(832, 198);
+            this.tabPage6.Size = new System.Drawing.Size(904, 195);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "其他";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -16650,7 +16898,7 @@
             // 
             this.tb_RotationCenter_Param_ZC.Location = new System.Drawing.Point(120, 40);
             this.tb_RotationCenter_Param_ZC.Name = "tb_RotationCenter_Param_ZC";
-            this.tb_RotationCenter_Param_ZC.Size = new System.Drawing.Size(100, 22);
+            this.tb_RotationCenter_Param_ZC.Size = new System.Drawing.Size(100, 25);
             this.tb_RotationCenter_Param_ZC.TabIndex = 3;
             this.tb_RotationCenter_Param_ZC.Click += new System.EventHandler(this.TextBoxClick);
             this.tb_RotationCenter_Param_ZC.TextChanged += new System.EventHandler(this.tb_RotationCenter_Param_ZC_TextChanged);
@@ -16660,7 +16908,7 @@
             this.la_RotationCenter_Param_ZC.AutoSize = true;
             this.la_RotationCenter_Param_ZC.Location = new System.Drawing.Point(16, 48);
             this.la_RotationCenter_Param_ZC.Name = "la_RotationCenter_Param_ZC";
-            this.la_RotationCenter_Param_ZC.Size = new System.Drawing.Size(96, 12);
+            this.la_RotationCenter_Param_ZC.Size = new System.Drawing.Size(121, 15);
             this.la_RotationCenter_Param_ZC.TabIndex = 2;
             this.la_RotationCenter_Param_ZC.Text = "旋轉中心Z軸常數";
             // 
@@ -16668,7 +16916,7 @@
             // 
             this.tb_RotationCenter_Param_XC.Location = new System.Drawing.Point(120, 8);
             this.tb_RotationCenter_Param_XC.Name = "tb_RotationCenter_Param_XC";
-            this.tb_RotationCenter_Param_XC.Size = new System.Drawing.Size(100, 22);
+            this.tb_RotationCenter_Param_XC.Size = new System.Drawing.Size(100, 25);
             this.tb_RotationCenter_Param_XC.TabIndex = 1;
             this.tb_RotationCenter_Param_XC.Click += new System.EventHandler(this.TextBoxClick);
             this.tb_RotationCenter_Param_XC.TextChanged += new System.EventHandler(this.tb_RotationCenter_Param_XC_TextChanged);
@@ -16678,7 +16926,7 @@
             this.la_RotationCenter_Param_XC.AutoSize = true;
             this.la_RotationCenter_Param_XC.Location = new System.Drawing.Point(16, 16);
             this.la_RotationCenter_Param_XC.Name = "la_RotationCenter_Param_XC";
-            this.la_RotationCenter_Param_XC.Size = new System.Drawing.Size(97, 12);
+            this.la_RotationCenter_Param_XC.Size = new System.Drawing.Size(122, 15);
             this.la_RotationCenter_Param_XC.TabIndex = 0;
             this.la_RotationCenter_Param_XC.Text = "旋轉中心X軸常數";
             // 
@@ -16817,9 +17065,9 @@
             this.tab_ProcessParam.Controls.Add(this.uBtn_Default);
             this.tab_ProcessParam.Controls.Add(this.uBtn_ProcessParam);
             this.tab_ProcessParam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_ProcessParam.Location = new System.Drawing.Point(4, 58);
+            this.tab_ProcessParam.Location = new System.Drawing.Point(4, 67);
             this.tab_ProcessParam.Name = "tab_ProcessParam";
-            this.tab_ProcessParam.Size = new System.Drawing.Size(936, 570);
+            this.tab_ProcessParam.Size = new System.Drawing.Size(936, 561);
             this.tab_ProcessParam.TabIndex = 18;
             this.tab_ProcessParam.Text = "加工參數";
             this.tab_ProcessParam.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -17036,10 +17284,10 @@
             // 
             this.tab_ScreenDisplay.BackColor = System.Drawing.Color.DimGray;
             this.tab_ScreenDisplay.Controls.Add(this.button1);
-            this.tab_ScreenDisplay.Location = new System.Drawing.Point(4, 58);
+            this.tab_ScreenDisplay.Location = new System.Drawing.Point(4, 67);
             this.tab_ScreenDisplay.Name = "tab_ScreenDisplay";
             this.tab_ScreenDisplay.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ScreenDisplay.Size = new System.Drawing.Size(936, 570);
+            this.tab_ScreenDisplay.Size = new System.Drawing.Size(936, 561);
             this.tab_ScreenDisplay.TabIndex = 24;
             this.tab_ScreenDisplay.Text = "ScreenDisplay";
             // 
@@ -17064,10 +17312,10 @@
             this.tab_PosSet.Controls.Add(this.la_PositionSetting);
             this.tab_PosSet.Controls.Add(this.btn_PosSet_IDCenterPos);
             this.tab_PosSet.Controls.Add(this.btn_PosSet_ChangePartPos);
-            this.tab_PosSet.Location = new System.Drawing.Point(4, 58);
+            this.tab_PosSet.Location = new System.Drawing.Point(4, 67);
             this.tab_PosSet.Name = "tab_PosSet";
             this.tab_PosSet.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PosSet.Size = new System.Drawing.Size(936, 570);
+            this.tab_PosSet.Size = new System.Drawing.Size(936, 561);
             this.tab_PosSet.TabIndex = 25;
             this.tab_PosSet.Text = "位置設定";
             this.tab_PosSet.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
@@ -17130,10 +17378,10 @@
             this.tab_PosSet_ChangePartPos.BackColor = System.Drawing.Color.Transparent;
             this.tab_PosSet_ChangePartPos.Controls.Add(this.gb_ChangePartsPos);
             this.tab_PosSet_ChangePartPos.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.tab_PosSet_ChangePartPos.Location = new System.Drawing.Point(4, 22);
+            this.tab_PosSet_ChangePartPos.Location = new System.Drawing.Point(4, 25);
             this.tab_PosSet_ChangePartPos.Name = "tab_PosSet_ChangePartPos";
             this.tab_PosSet_ChangePartPos.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PosSet_ChangePartPos.Size = new System.Drawing.Size(936, 358);
+            this.tab_PosSet_ChangePartPos.Size = new System.Drawing.Size(936, 355);
             this.tab_PosSet_ChangePartPos.TabIndex = 0;
             this.tab_PosSet_ChangePartPos.Text = "換料位置";
             this.tab_PosSet_ChangePartPos.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
@@ -17210,7 +17458,7 @@
             this.TB_ChangePartPosX.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_ChangePartPosX.Location = new System.Drawing.Point(8, 64);
             this.TB_ChangePartPosX.Name = "TB_ChangePartPosX";
-            this.TB_ChangePartPosX.Size = new System.Drawing.Size(168, 29);
+            this.TB_ChangePartPosX.Size = new System.Drawing.Size(168, 34);
             this.TB_ChangePartPosX.TabIndex = 17;
             this.TB_ChangePartPosX.Tag = "SafeX";
             this.TB_ChangePartPosX.Click += new System.EventHandler(this.tb_ChangePart_Click);
@@ -17233,7 +17481,7 @@
             this.TB_ChangePartPosZ.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_ChangePartPosZ.Location = new System.Drawing.Point(8, 136);
             this.TB_ChangePartPosZ.Name = "TB_ChangePartPosZ";
-            this.TB_ChangePartPosZ.Size = new System.Drawing.Size(168, 29);
+            this.TB_ChangePartPosZ.Size = new System.Drawing.Size(168, 34);
             this.TB_ChangePartPosZ.TabIndex = 11;
             this.TB_ChangePartPosZ.Tag = "SafeZ";
             this.TB_ChangePartPosZ.Click += new System.EventHandler(this.tb_ChangePart_Click);
@@ -17244,10 +17492,10 @@
             this.tab_PosSet_IDCenterPos.BackColor = System.Drawing.Color.Transparent;
             this.tab_PosSet_IDCenterPos.Controls.Add(this.gb_WorkCenterPosWay);
             this.tab_PosSet_IDCenterPos.Controls.Add(this.GB_IDParam);
-            this.tab_PosSet_IDCenterPos.Location = new System.Drawing.Point(4, 22);
+            this.tab_PosSet_IDCenterPos.Location = new System.Drawing.Point(4, 25);
             this.tab_PosSet_IDCenterPos.Name = "tab_PosSet_IDCenterPos";
             this.tab_PosSet_IDCenterPos.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PosSet_IDCenterPos.Size = new System.Drawing.Size(936, 358);
+            this.tab_PosSet_IDCenterPos.Size = new System.Drawing.Size(936, 355);
             this.tab_PosSet_IDCenterPos.TabIndex = 1;
             this.tab_PosSet_IDCenterPos.Text = "內圓中心位置";
             this.tab_PosSet_IDCenterPos.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
@@ -17456,7 +17704,7 @@
             this.TB_Gw1PosX2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_Gw1PosX2.Location = new System.Drawing.Point(272, 240);
             this.TB_Gw1PosX2.Name = "TB_Gw1PosX2";
-            this.TB_Gw1PosX2.Size = new System.Drawing.Size(168, 29);
+            this.TB_Gw1PosX2.Size = new System.Drawing.Size(168, 34);
             this.TB_Gw1PosX2.TabIndex = 19;
             this.TB_Gw1PosX2.Tag = "956";
             this.TB_Gw1PosX2.Click += new System.EventHandler(this.tb_IDCenter_Click);
@@ -17479,7 +17727,7 @@
             this.TB_Gw1PosX1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.TB_Gw1PosX1.Location = new System.Drawing.Point(272, 104);
             this.TB_Gw1PosX1.Name = "TB_Gw1PosX1";
-            this.TB_Gw1PosX1.Size = new System.Drawing.Size(168, 29);
+            this.TB_Gw1PosX1.Size = new System.Drawing.Size(168, 34);
             this.TB_Gw1PosX1.TabIndex = 17;
             this.TB_Gw1PosX1.Tag = "956";
             this.TB_Gw1PosX1.Click += new System.EventHandler(this.tb_IDCenter_Click);
@@ -17489,10 +17737,10 @@
             // 
             this.tab_PosSet_ODSafePos.BackColor = System.Drawing.Color.Transparent;
             this.tab_PosSet_ODSafePos.Controls.Add(this.GB_ODParam);
-            this.tab_PosSet_ODSafePos.Location = new System.Drawing.Point(4, 22);
+            this.tab_PosSet_ODSafePos.Location = new System.Drawing.Point(4, 25);
             this.tab_PosSet_ODSafePos.Name = "tab_PosSet_ODSafePos";
             this.tab_PosSet_ODSafePos.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_PosSet_ODSafePos.Size = new System.Drawing.Size(936, 358);
+            this.tab_PosSet_ODSafePos.Size = new System.Drawing.Size(936, 355);
             this.tab_PosSet_ODSafePos.TabIndex = 2;
             this.tab_PosSet_ODSafePos.Text = "外圓安全位置";
             this.tab_PosSet_ODSafePos.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
@@ -17586,7 +17834,7 @@
             this.tb_Gw2_OD_SafePosX.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_Gw2_OD_SafePosX.Location = new System.Drawing.Point(144, 104);
             this.tb_Gw2_OD_SafePosX.Name = "tb_Gw2_OD_SafePosX";
-            this.tb_Gw2_OD_SafePosX.Size = new System.Drawing.Size(168, 29);
+            this.tb_Gw2_OD_SafePosX.Size = new System.Drawing.Size(168, 34);
             this.tb_Gw2_OD_SafePosX.TabIndex = 17;
             this.tb_Gw2_OD_SafePosX.Tag = "957";
             this.tb_Gw2_OD_SafePosX.Click += new System.EventHandler(this.tb_Gw2_OD_SafePosX_Click);
@@ -17830,10 +18078,10 @@
             this.tab_EditSP.Controls.Add(this.la_EditProcParam);
             this.tab_EditSP.Controls.Add(this.dgv_EditProcParam);
             this.tab_EditSP.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_EditSP.Location = new System.Drawing.Point(4, 58);
+            this.tab_EditSP.Location = new System.Drawing.Point(4, 67);
             this.tab_EditSP.Name = "tab_EditSP";
             this.tab_EditSP.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_EditSP.Size = new System.Drawing.Size(936, 570);
+            this.tab_EditSP.Size = new System.Drawing.Size(936, 561);
             this.tab_EditSP.TabIndex = 29;
             this.tab_EditSP.Text = "加工參數編輯";
             this.tab_EditSP.UseVisualStyleBackColor = true;
@@ -17844,7 +18092,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(768, 24);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(152, 172);
+            this.checkedListBox1.Size = new System.Drawing.Size(152, 149);
             this.checkedListBox1.TabIndex = 161;
             // 
             // dgv_EditSelectValue
@@ -17897,7 +18145,7 @@
             this.la_EditSelectValue.AutoSize = true;
             this.la_EditSelectValue.Location = new System.Drawing.Point(8, 432);
             this.la_EditSelectValue.Name = "la_EditSelectValue";
-            this.la_EditSelectValue.Size = new System.Drawing.Size(90, 21);
+            this.la_EditSelectValue.Size = new System.Drawing.Size(112, 25);
             this.la_EditSelectValue.TabIndex = 159;
             this.la_EditSelectValue.Text = "下拉式選項";
             // 
@@ -17906,7 +18154,7 @@
             this.la_EditProcParam.AutoSize = true;
             this.la_EditProcParam.Location = new System.Drawing.Point(8, 16);
             this.la_EditProcParam.Name = "la_EditProcParam";
-            this.la_EditProcParam.Size = new System.Drawing.Size(42, 21);
+            this.la_EditProcParam.Size = new System.Drawing.Size(52, 25);
             this.la_EditProcParam.TabIndex = 158;
             this.la_EditProcParam.Text = "參數";
             // 
@@ -17970,9 +18218,9 @@
             this.tab_SoftPanel.Controls.Add(this.la_SoftPanel2);
             this.tab_SoftPanel.Controls.Add(this.la_SoftPaneltitle);
             this.tab_SoftPanel.Controls.Add(this.panel1);
-            this.tab_SoftPanel.Location = new System.Drawing.Point(4, 58);
+            this.tab_SoftPanel.Location = new System.Drawing.Point(4, 67);
             this.tab_SoftPanel.Name = "tab_SoftPanel";
-            this.tab_SoftPanel.Size = new System.Drawing.Size(936, 570);
+            this.tab_SoftPanel.Size = new System.Drawing.Size(936, 561);
             this.tab_SoftPanel.TabIndex = 30;
             this.tab_SoftPanel.Text = "軟體面板";
             this.tab_SoftPanel.UseVisualStyleBackColor = true;
@@ -18083,9 +18331,9 @@
             this.tab_MacroLimit.Controls.Add(this.la_MacroLimittTitle);
             this.tab_MacroLimit.Controls.Add(this.dgv_MacroLimit);
             this.tab_MacroLimit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_MacroLimit.Location = new System.Drawing.Point(4, 58);
+            this.tab_MacroLimit.Location = new System.Drawing.Point(4, 67);
             this.tab_MacroLimit.Name = "tab_MacroLimit";
-            this.tab_MacroLimit.Size = new System.Drawing.Size(936, 570);
+            this.tab_MacroLimit.Size = new System.Drawing.Size(936, 561);
             this.tab_MacroLimit.TabIndex = 31;
             this.tab_MacroLimit.Text = "Macro上下限設定";
             this.tab_MacroLimit.UseVisualStyleBackColor = true;
@@ -18189,10 +18437,10 @@
             this.tab_MeasureList.Controls.Add(this.dgv_MeasureList);
             this.tab_MeasureList.Controls.Add(this.la_Mealist);
             this.tab_MeasureList.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_MeasureList.Location = new System.Drawing.Point(4, 58);
+            this.tab_MeasureList.Location = new System.Drawing.Point(4, 67);
             this.tab_MeasureList.Name = "tab_MeasureList";
             this.tab_MeasureList.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_MeasureList.Size = new System.Drawing.Size(936, 570);
+            this.tab_MeasureList.Size = new System.Drawing.Size(936, 561);
             this.tab_MeasureList.TabIndex = 32;
             this.tab_MeasureList.Text = "量測清單";
             this.tab_MeasureList.UseVisualStyleBackColor = true;
@@ -18326,10 +18574,10 @@
             this.tab_DIY_Panel.Controls.Add(this.la_F1);
             this.tab_DIY_Panel.Controls.Add(this.la_DIY_Panel);
             this.tab_DIY_Panel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tab_DIY_Panel.Location = new System.Drawing.Point(4, 58);
+            this.tab_DIY_Panel.Location = new System.Drawing.Point(4, 67);
             this.tab_DIY_Panel.Name = "tab_DIY_Panel";
             this.tab_DIY_Panel.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_DIY_Panel.Size = new System.Drawing.Size(936, 570);
+            this.tab_DIY_Panel.Size = new System.Drawing.Size(936, 561);
             this.tab_DIY_Panel.TabIndex = 33;
             this.tab_DIY_Panel.Text = "自製面板";
             this.tab_DIY_Panel.UseVisualStyleBackColor = true;
@@ -18360,7 +18608,7 @@
             "工件主軸正轉"});
             this.cb_F15.Location = new System.Drawing.Point(745, 233);
             this.cb_F15.Name = "cb_F15";
-            this.cb_F15.Size = new System.Drawing.Size(183, 28);
+            this.cb_F15.Size = new System.Drawing.Size(183, 33);
             this.cb_F15.TabIndex = 1;
             this.cb_F15.Tag = "94";
             this.cb_F15.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18390,7 +18638,7 @@
             "工件主軸正轉"});
             this.cb_F14.Location = new System.Drawing.Point(561, 233);
             this.cb_F14.Name = "cb_F14";
-            this.cb_F14.Size = new System.Drawing.Size(175, 28);
+            this.cb_F14.Size = new System.Drawing.Size(175, 33);
             this.cb_F14.TabIndex = 1;
             this.cb_F14.Tag = "93";
             this.cb_F14.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18420,7 +18668,7 @@
             "工件主軸正轉"});
             this.cb_F13.Location = new System.Drawing.Point(377, 233);
             this.cb_F13.Name = "cb_F13";
-            this.cb_F13.Size = new System.Drawing.Size(175, 28);
+            this.cb_F13.Size = new System.Drawing.Size(175, 33);
             this.cb_F13.TabIndex = 1;
             this.cb_F13.Tag = "92";
             this.cb_F13.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18450,7 +18698,7 @@
             "工件主軸正轉"});
             this.cb_F12.Location = new System.Drawing.Point(193, 233);
             this.cb_F12.Name = "cb_F12";
-            this.cb_F12.Size = new System.Drawing.Size(175, 28);
+            this.cb_F12.Size = new System.Drawing.Size(175, 33);
             this.cb_F12.TabIndex = 1;
             this.cb_F12.Tag = "91";
             this.cb_F12.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18480,7 +18728,7 @@
             "工件主軸正轉"});
             this.cb_F11.Location = new System.Drawing.Point(9, 233);
             this.cb_F11.Name = "cb_F11";
-            this.cb_F11.Size = new System.Drawing.Size(175, 28);
+            this.cb_F11.Size = new System.Drawing.Size(175, 33);
             this.cb_F11.TabIndex = 1;
             this.cb_F11.Tag = "90";
             this.cb_F11.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18510,7 +18758,7 @@
             "工件主軸正轉"});
             this.cb_F10.Location = new System.Drawing.Point(745, 161);
             this.cb_F10.Name = "cb_F10";
-            this.cb_F10.Size = new System.Drawing.Size(183, 28);
+            this.cb_F10.Size = new System.Drawing.Size(183, 33);
             this.cb_F10.TabIndex = 1;
             this.cb_F10.Tag = "89";
             this.cb_F10.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18595,7 +18843,7 @@
             "工件主軸正轉"});
             this.cb_F9.Location = new System.Drawing.Point(561, 161);
             this.cb_F9.Name = "cb_F9";
-            this.cb_F9.Size = new System.Drawing.Size(175, 28);
+            this.cb_F9.Size = new System.Drawing.Size(175, 33);
             this.cb_F9.TabIndex = 1;
             this.cb_F9.Tag = "88";
             this.cb_F9.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18625,7 +18873,7 @@
             "工件主軸正轉"});
             this.cb_F8.Location = new System.Drawing.Point(377, 161);
             this.cb_F8.Name = "cb_F8";
-            this.cb_F8.Size = new System.Drawing.Size(175, 28);
+            this.cb_F8.Size = new System.Drawing.Size(175, 33);
             this.cb_F8.TabIndex = 1;
             this.cb_F8.Tag = "87";
             this.cb_F8.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18655,7 +18903,7 @@
             "工件主軸正轉"});
             this.cb_F7.Location = new System.Drawing.Point(193, 161);
             this.cb_F7.Name = "cb_F7";
-            this.cb_F7.Size = new System.Drawing.Size(175, 28);
+            this.cb_F7.Size = new System.Drawing.Size(175, 33);
             this.cb_F7.TabIndex = 1;
             this.cb_F7.Tag = "86";
             this.cb_F7.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18685,7 +18933,7 @@
             "工件主軸正轉"});
             this.cb_F6.Location = new System.Drawing.Point(9, 161);
             this.cb_F6.Name = "cb_F6";
-            this.cb_F6.Size = new System.Drawing.Size(175, 28);
+            this.cb_F6.Size = new System.Drawing.Size(175, 33);
             this.cb_F6.TabIndex = 1;
             this.cb_F6.Tag = "85";
             this.cb_F6.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18715,7 +18963,7 @@
             "工件主軸正轉"});
             this.cb_F5.Location = new System.Drawing.Point(745, 89);
             this.cb_F5.Name = "cb_F5";
-            this.cb_F5.Size = new System.Drawing.Size(183, 28);
+            this.cb_F5.Size = new System.Drawing.Size(183, 33);
             this.cb_F5.TabIndex = 1;
             this.cb_F5.Tag = "84";
             this.cb_F5.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18800,7 +19048,7 @@
             "工件主軸正轉"});
             this.cb_F4.Location = new System.Drawing.Point(561, 89);
             this.cb_F4.Name = "cb_F4";
-            this.cb_F4.Size = new System.Drawing.Size(175, 28);
+            this.cb_F4.Size = new System.Drawing.Size(175, 33);
             this.cb_F4.TabIndex = 1;
             this.cb_F4.Tag = "83";
             this.cb_F4.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18830,7 +19078,7 @@
             "工件主軸正轉"});
             this.cb_F3.Location = new System.Drawing.Point(377, 89);
             this.cb_F3.Name = "cb_F3";
-            this.cb_F3.Size = new System.Drawing.Size(175, 28);
+            this.cb_F3.Size = new System.Drawing.Size(175, 33);
             this.cb_F3.TabIndex = 1;
             this.cb_F3.Tag = "82";
             this.cb_F3.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18860,7 +19108,7 @@
             "工件主軸正轉"});
             this.cb_F2.Location = new System.Drawing.Point(193, 89);
             this.cb_F2.Name = "cb_F2";
-            this.cb_F2.Size = new System.Drawing.Size(175, 28);
+            this.cb_F2.Size = new System.Drawing.Size(175, 33);
             this.cb_F2.TabIndex = 1;
             this.cb_F2.Tag = "81";
             this.cb_F2.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18890,7 +19138,7 @@
             "工件主軸正轉"});
             this.cb_F1.Location = new System.Drawing.Point(9, 89);
             this.cb_F1.Name = "cb_F1";
-            this.cb_F1.Size = new System.Drawing.Size(175, 28);
+            this.cb_F1.Size = new System.Drawing.Size(175, 33);
             this.cb_F1.TabIndex = 1;
             this.cb_F1.Tag = "80";
             this.cb_F1.DropDownClosed += new System.EventHandler(this.cb_F_DropDownClosed);
@@ -18970,9 +19218,9 @@
             this.tab_GWRPS.Controls.Add(this.la_GWRPSset);
             this.tab_GWRPS.Controls.Add(this.btn_GWRPS_Next);
             this.tab_GWRPS.Controls.Add(this.pic_GWRPSset);
-            this.tab_GWRPS.Location = new System.Drawing.Point(4, 58);
+            this.tab_GWRPS.Location = new System.Drawing.Point(4, 67);
             this.tab_GWRPS.Name = "tab_GWRPS";
-            this.tab_GWRPS.Size = new System.Drawing.Size(936, 570);
+            this.tab_GWRPS.Size = new System.Drawing.Size(936, 561);
             this.tab_GWRPS.TabIndex = 34;
             this.tab_GWRPS.Text = "砂輪基準點設定";
             this.tab_GWRPS.UseVisualStyleBackColor = true;
@@ -19124,9 +19372,9 @@
             this.tab_GWRPS2.Controls.Add(this.pic_GWRPSsetting10);
             this.tab_GWRPS2.Controls.Add(this.pic_GWRPSsetting5);
             this.tab_GWRPS2.Controls.Add(this.pic_GWRPSsetting2);
-            this.tab_GWRPS2.Location = new System.Drawing.Point(4, 58);
+            this.tab_GWRPS2.Location = new System.Drawing.Point(4, 67);
             this.tab_GWRPS2.Name = "tab_GWRPS2";
-            this.tab_GWRPS2.Size = new System.Drawing.Size(936, 570);
+            this.tab_GWRPS2.Size = new System.Drawing.Size(936, 561);
             this.tab_GWRPS2.TabIndex = 35;
             this.tab_GWRPS2.Text = "砂輪基準點設定2";
             this.tab_GWRPS2.UseVisualStyleBackColor = true;
@@ -19542,9 +19790,9 @@
             this.tab_RotationCenterOffset.Controls.Add(this.uc_UserNum_RotationCenter);
             this.tab_RotationCenterOffset.Controls.Add(this.la_Rotation_Center_Offset_TItle);
             this.tab_RotationCenterOffset.Controls.Add(this.gb_Gw1_XRotationCenter);
-            this.tab_RotationCenterOffset.Location = new System.Drawing.Point(4, 58);
+            this.tab_RotationCenterOffset.Location = new System.Drawing.Point(4, 67);
             this.tab_RotationCenterOffset.Name = "tab_RotationCenterOffset";
-            this.tab_RotationCenterOffset.Size = new System.Drawing.Size(936, 570);
+            this.tab_RotationCenterOffset.Size = new System.Drawing.Size(936, 561);
             this.tab_RotationCenterOffset.TabIndex = 36;
             this.tab_RotationCenterOffset.Text = "旋轉中心位置補正";
             this.tab_RotationCenterOffset.UseVisualStyleBackColor = true;
@@ -19905,6 +20153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Gw_S2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Gw_S1)).EndInit();
             this.tab_Gw_ShapeData.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_GwParam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_GW_Param)).EndInit();
             this.tab_Gw_DressCondition.ResumeLayout(false);
@@ -19934,6 +20183,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditPath)).EndInit();
             this.tab_DressGwSetting.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_2P)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_3P)).EndInit();
             this.pa_DressAbs.ResumeLayout(false);
             this.pa_DressAbs.PerformLayout();
             this.pa_DressMach.ResumeLayout(false);
@@ -20927,9 +21178,8 @@
         public System.Windows.Forms.Panel pa_CNCDataManager;
         public System.Windows.Forms.Label la_CNCDataManager;
         public System.Windows.Forms.PictureBox pic_CNCDataManager;
-        private System.Windows.Forms.RadioButton rb_OIG_R;
-        private System.Windows.Forms.RadioButton rb_OIG_M4;
-        private System.Windows.Forms.RadioButton rb_OIG_D2;
+        private System.Windows.Forms.RadioButton rb_M2;
+        private System.Windows.Forms.RadioButton rb_M3;
         private Uc_RoundBtn btn_FinishCountClear;
         private Uc_RoundBtn btn_Monitor_RelZ_Zero;
         public System.Windows.Forms.Label la_Monitor_Rel_Z;
@@ -21485,15 +21735,15 @@
         private System.Windows.Forms.RadioButton rb_Gw4Type0;
         private System.Windows.Forms.GroupBox gb_Gw3Type;
         private System.Windows.Forms.Label la_Gw3Type;
-        private System.Windows.Forms.RadioButton rb_Gw3Type1;
+        private System.Windows.Forms.RadioButton rb_Gw3Type2;
         private System.Windows.Forms.RadioButton rb_Gw3Type0;
         private System.Windows.Forms.GroupBox gb_Gw2Type;
         private System.Windows.Forms.Label la_Gw2Type;
-        private System.Windows.Forms.RadioButton rb_Gw2Type1;
+        private System.Windows.Forms.RadioButton rb_Gw2Type2;
         private System.Windows.Forms.RadioButton rb_Gw2Type0;
         private System.Windows.Forms.GroupBox gb_Gw1Type;
         private System.Windows.Forms.Label la_Gw1Type;
-        private System.Windows.Forms.RadioButton rb_Gw1Type1;
+        private System.Windows.Forms.RadioButton rb_Gw1Type2;
         private System.Windows.Forms.RadioButton rb_Gw1Type0;
         private Uc_RoundBtn btn_DiamOut;
         private Uc_RoundBtn btn_DiamIn;
@@ -21574,6 +21824,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_GWRPSvalue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_GWRPSunit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Col_GWRPSscode;
+        private System.Windows.Forms.RadioButton rb_Gw3Type1;
+        private System.Windows.Forms.RadioButton rb_Gw2Type1;
+        private System.Windows.Forms.RadioButton rb_Gw1Type1;
+        public System.Windows.Forms.Label la_GwData_Code6;
+        public System.Windows.Forms.Label la_GWAngleUnit;
+        public System.Windows.Forms.Label la_GWAngle;
+        private Uc_RoundBtn btn_GWAngle;
+        private System.Windows.Forms.RadioButton rb_Gw1Type3;
+        private System.Windows.Forms.RadioButton rb_Gw2Type3;
+        private System.Windows.Forms.RadioButton rb_Gw3Type3;
+        private System.Windows.Forms.Panel panel9;
+        private Uc_RoundBtn btn_dgvScrollDown;
+        private Uc_RoundBtn btn_dgvScrollUp;
+        private System.Windows.Forms.Panel pa_DressTool_2P;
+        private System.Windows.Forms.Panel pa_DressTool_3P;
+        private System.Windows.Forms.PictureBox pic_DressTool_2P;
+        private System.Windows.Forms.PictureBox pic_DressTool_3P;
     }
 }
 
