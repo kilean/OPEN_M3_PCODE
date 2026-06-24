@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -5108,10 +5109,15 @@ namespace OIG
 
         private void pic_DressGW_Click(object sender, EventArgs e) //修整對點
         {
+            InitDressGwSetting();         
+        }
+
+        private void InitDressGwSetting(bool bDressGWClick = true)
+        {
             int GwNo = 0;
             int GwType = 0;
             int DressMode = 0;
-          
+
             double G55X = 0;
             double G55Z = 0;
 
@@ -5199,8 +5205,18 @@ namespace OIG
             //標題顯示目前的砂輪號
             la_DressGwSettingTitle.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 139, "修砂對點 - 砂輪") + GwNo;
             //GwSelect(No);//通知PLC 搬座標系
-
+            string dressToolImgPath = Application.StartupPath + "\\image\\";
+            string tool3PFileName = dressToolImgPath + "DressTool3P.png";
+            string tool2PFileName = dressToolImgPath + "DressTool2P.png";
             
+            if (GwType == 1)
+            {
+                tool3PFileName = dressToolImgPath + "DressTool3P_R.png";
+                tool2PFileName = dressToolImgPath + "DressTool2P_R.png";
+            }
+            pic_DressTool_3P.Image = File.Exists(tool3PFileName) ? Image.FromFile(tool3PFileName) : null;
+            pic_DressTool_2P.Image = File.Exists(tool2PFileName) ? Image.FromFile(tool2PFileName) : null;
+
             if (DressToolPenSetting == 0)
             {
                 //三支
@@ -5217,21 +5233,25 @@ namespace OIG
             //對話式修砂對點流程
             if (DGW_Conv)
             {
+                pa_DressTool.Parent = tab_DressGwConv;
                 DressGwStep = 0;
                 pic_DressGwStep.Image = null;
                 pic_DressGwStep.Visible = false;
                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 21, "即將開啟砂輪，請注意安全。");
                 btn_DG_Btn1.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 22, "中止");
                 btn_DG_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 23, "繼續");
-
-                TC_Main.SelectedTab = tab_DressGwConv;
-                PrevPage.Push(tab_DressGwConv);
-                btn_Prev.Visible = true;
+                if (bDressGWClick)
+                {
+                    TC_Main.SelectedTab = tab_DressGwConv;
+                    PrevPage.Push(tab_DressGwConv);
+                    btn_Prev.Visible = true;
+                }
 
             }
             //直接修改座標系
             else
             {
+                pa_DressTool.Parent = tab_DressGwSetting;
                 //G54         G55         G56         G57         G58         G59
                 //#5221,#5222,#5241,#5242,#5261,#5262,#5281,#5282,#5301,#5302,#5321,#5322
                 TB_G55X.Text = G55X.ToString(Units.DisplayFmt);//G55 X
@@ -5243,25 +5263,27 @@ namespace OIG
 
                 string path = Application.StartupPath + "\\image\\" + (GwType == 1 ? "OIG" : "OCD") + "\\DressGW\\";
 
+                // 不要直接改從 P Code讀取的值
+                int dressModeGwType = GwType;
                 //修砂對點 座標系顯示
                 // XmlElement xmlCoordinate = (GwType == 1 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
                 //XmlElement xmlCoordinate = machineSetting.GetGwTypeDressMode(GwType, DressMode);
-                XmlElement xmlTools = machineSetting.GetGwTypeTools(GwType, DressMode);
+                XmlElement xmlTools = machineSetting.GetGwTypeTools(dressModeGwType, DressMode);
                 if (GWType[GwNo - 1] == MachineType.OCD2)
                 {
                     xmlTools = machineSetting.GetGwTypeTools(2, DressMode);
                     path = Application.StartupPath + "\\image\\" + "OCD2" + "\\DressGW\\";
-                    GwType = 2;
+                    dressModeGwType = 2;
                 }
                 if (GWType[GwNo - 1] == MachineType.OCD3)
                 {
                     xmlTools = machineSetting.GetGwTypeTools(3, DressMode);
                     path = Application.StartupPath + "\\image\\" + "OCD3" + "\\DressGW\\";
-                    GwType = 3;
+                    dressModeGwType = 3;
                 }
-                
+
                 XmlElement xmlTool = xmlTools.GetChildNodeAt(0);
-                if(DressToolPenSetting == 1)
+                if (DressToolPenSetting == 1)
                 {
                     xmlTool = xmlTools.GetChildNodeAt(1);
                 }
@@ -5283,7 +5305,7 @@ namespace OIG
                 pic_G58.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
                 //用 MachineSetting.xml 檢查此砂輪是不是有這個 修整模式(形狀)
-                XmlElement xmlGw = machineSetting.GetGw(GwNo, GwType);
+                XmlElement xmlGw = machineSetting.GetGw(GwNo, dressModeGwType);
                 if (xmlGw == null) return;
                 bool bFind = false;//true:合法使用, false:非法使用
                 for (int i = 0; i < xmlGw.ChildNodes.Count; i++)
@@ -5318,15 +5340,15 @@ namespace OIG
                 //int.TryParse(xmlShapeDef.GetAttribute("DressRight"), out int DressRight); //這個形狀要修右側
                 //GB_G56.Enabled = DressLeft == 1; //要修左側才要設定
                 //GB_G58.Enabled = DressRight == 1; //要修右側才要設定
+                if (bDressGWClick)
+                {
+                    TC_Main.SelectedTab = tab_DressGwSetting;
 
-
-                TC_Main.SelectedTab = tab_DressGwSetting;
-
-                PrevPage.Push(tab_DressGwSetting);
-                btn_Prev.Visible = true;
+                    PrevPage.Push(tab_DressGwSetting);
+                    btn_Prev.Visible = true;
+                }
             }
         }
-
         private void pic_Parts_Click(object sender, EventArgs e) //加工對點(加工設定)
         {
 
@@ -5440,7 +5462,7 @@ namespace OIG
             }
             else //一般加工對點
             {
-                //修砂對點 座標系顯示
+                //加工對點 座標系顯示
                 string path = Application.StartupPath + "\\image\\" + (GwType == 1 ? "OIG" : "OCD") + "\\DressWorkpiece\\";
                 //XmlElement xmlCoordinate = (GwType == 0 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
                 XmlElement xmlCoordinate = machineSetting.GetGwTypeCoordinate(GwType);
@@ -10561,6 +10583,7 @@ namespace OIG
             tb_RotationCenter_Param_ZC.Text = ini.ReadString("RotationCenter", "ZC", Units.DisplayFmt);
 
             ch_DGW_Conv.Checked = ini.ReadBool("System", "DressGwConv", false);
+            ch_DWP_Conv.Checked = ini.ReadBool("System", "DressWorkpieceConv", false);
             ch_Specialopen.Checked = ini.ReadBool("System", "ch_Specialopen", false);//特殊橫進刀
 
             //ch_Param_CSS.Checked = ini.ReadBool("System", "ch_Param_CSS", false);//恆速功能
@@ -12063,11 +12086,15 @@ namespace OIG
         {
             bool bFinish = false;
             int gw_no = 0;
+            double DressToolPenSetting = 0;
+
             Actions.Enqueue(new Action(() =>
             {
                 focas.ReadMacro(506, out double no);
                 gw_no = (int)Math.Round(no);
                 ReadGwMacro(gw_no);
+                // 修刀設定
+                focas.ReadMacro(558, out DressToolPenSetting);
                 bFinish = true;
             }));
 
@@ -12096,15 +12123,43 @@ namespace OIG
             int type = (int)Math.Round(CurrentGwMacro[10004 + shift]);//砂輪型式(0:內圓, 1:外圓)
 
             String filename = Application.StartupPath + "\\image\\" + (type == 1 ? "OIG" : "OCD");
-           
+            int dressModeGwType = type;
+            //修砂對點 座標系顯示
+            XmlElement xmlTools = machineSetting.GetGwTypeTools(dressModeGwType, shape);
             if (GWType[gw_no - 1] == MachineType.OCD2)
             {
                 filename = Application.StartupPath + "\\image\\" + "OCD2";
+                
+                xmlTools = machineSetting.GetGwTypeTools(2, shape);
+                dressModeGwType = 2;
             }
             if (GWType[gw_no - 1] == MachineType.OCD3)
             {
                 filename = Application.StartupPath + "\\image\\" + "OCD3";
+                xmlTools = machineSetting.GetGwTypeTools(3, shape);
+                dressModeGwType = 3;
             }
+            
+            string path = filename + "\\DressGW\\";
+            
+            XmlElement xmlTool = xmlTools.GetChildNodeAt(0);
+            if (DressToolPenSetting == 1)
+            {
+                xmlTool = xmlTools.GetChildNodeAt(1);
+            }
+            XmlElement xmlG55 = xmlTool.GetChildNodeAt(0);
+            XmlElement xmlG57 = xmlTool.GetChildNodeAt(1);
+            XmlElement xmlG58 = xmlTool.GetChildNodeAt(2);
+           
+            string Imgfilename = xmlG55 != null ? path + xmlG55.GetAttribute("Image") : ""; //修外徑專用                   
+            Image imgG55 = File.Exists(Imgfilename) ? Image.FromFile(Imgfilename) : null;
+
+            Imgfilename = xmlG57 != null ? path + xmlG57.GetAttribute("Image") : ""; //修砂輪左側專用
+            Image imgG57 = File.Exists(Imgfilename) ? Image.FromFile(Imgfilename) : null;
+
+            Imgfilename = xmlG58 != null ? path + xmlG58.GetAttribute("Image") : ""; //修砂輪右側專用(預留)
+            Image imgG58 = File.Exists(Imgfilename) ? Image.FromFile(Imgfilename) : null;
+
             switch (DressGwStep)
             {
                 case 0://請啟動輪→下一步
@@ -12116,16 +12171,17 @@ namespace OIG
 
 
                         btn_DG_Btn2.DisplayText = "下一步";
-                        string fileStep1 = filename + "\\DressGW\\G55.png";
-                        if(GWType[gw_no - 1] == MachineType.OCD2)
-                        {
-                            fileStep1 = filename + "\\DressGW\\G55.png";
-                        }
-                        if (GWType[gw_no - 1] == MachineType.OCD3)
-                        {
-                            fileStep1 = filename + "\\DressGW\\G55.png";
-                        }
-                        pic_DressGwStep.Image = File.Exists(fileStep1) ? Image.FromFile(fileStep1) : null;
+                        //string fileStep1 = filename + "\\DressGW\\G55.png";
+                        //if(GWType[gw_no - 1] == MachineType.OCD2)
+                        //{
+                        //    fileStep1 = filename + "\\DressGW\\G55.png";
+                        //}
+                        //if (GWType[gw_no - 1] == MachineType.OCD3)
+                        //{
+                        //    fileStep1 = filename + "\\DressGW\\G55.png";
+                        //}
+                        //pic_DressGwStep.Image = File.Exists(fileStep1) ? Image.FromFile(fileStep1) : null;
+                        pic_DressGwStep.Image = imgG55;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 25, "請使用手輪移動X軸，使砂輪接觸到修整器。");
                         break;
@@ -12138,16 +12194,17 @@ namespace OIG
                         TB_G55X.Text = la_DressGwMachAxis1Value.Text;
 
                         //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G55.png";
-                        string fileStep2 = filename + "\\DressGW\\G55.png";
-                        if (GWType[gw_no - 1] == MachineType.OCD2)
-                        {
-                            fileStep2 = filename + "\\DressGW\\G55.png";
-                        }
-                        if (GWType[gw_no - 1] == MachineType.OCD3)
-                        {
-                            fileStep2 = filename + "\\DressGW\\G55.png";
-                        }
-                        pic_DressGwStep.Image = File.Exists(fileStep2) ? Image.FromFile(fileStep2) : null;
+                        //string fileStep2 = filename + "\\DressGW\\G55.png";
+                        //if (GWType[gw_no - 1] == MachineType.OCD2)
+                        //{
+                        //    fileStep2 = filename + "\\DressGW\\G55.png";
+                        //}
+                        //if (GWType[gw_no - 1] == MachineType.OCD3)
+                        //{
+                        //    fileStep2 = filename + "\\DressGW\\G55.png";
+                        //}
+                        //pic_DressGwStep.Image = File.Exists(fileStep2) ? Image.FromFile(fileStep2) : null;
+                        pic_DressGwStep.Image = imgG55;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 26, "請使用手輪移動Z軸，使修整器往正向離開砂輪。");
                         break;
@@ -12177,18 +12234,20 @@ namespace OIG
                                 break;
 
                             case 2://外徑+左側→跳到左側流程
+                            case 7: // 正角度斜頭 負角度斜頭
                                 DressGwStep = 3;
                                 //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                                string fileStep3_2 = filename + "\\DressGW\\G57.png";
-                                if (GWType[gw_no - 1] == MachineType.OCD2)
-                                {
-                                    fileStep3_2 = filename + "\\DressGW\\G57.png";
-                                }
-                                if (GWType[gw_no - 1] == MachineType.OCD3)
-                                {
-                                    fileStep3_2 = filename + "\\DressGW\\G57.png";
-                                }
-                                pic_DressGwStep.Image = File.Exists(fileStep3_2) ? Image.FromFile(fileStep3_2) : null;
+                                //string fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                //if (GWType[gw_no - 1] == MachineType.OCD2)
+                                //{
+                                //    fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //if (GWType[gw_no - 1] == MachineType.OCD3)
+                                //{
+                                //    fileStep3_2 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //pic_DressGwStep.Image = File.Exists(fileStep3_2) ? Image.FromFile(fileStep3_2) : null;
+                                pic_DressGwStep.Image = imgG57;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 29, "請使用手輪移動Z軸，使修整器接觸砂輪左側。");
                                 break;
@@ -12196,35 +12255,56 @@ namespace OIG
                             case 3://外徑+右側→跳到右側流程
                                 DressGwStep = 5;
                                 //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                                string fileStep3_3 = filename + "\\DressGW\\G58.png";
-                                if (GWType[gw_no - 1] == MachineType.OCD2)
-                                {
-                                    fileStep3_3 = filename + "\\DressGW\\G57.png";
-                                }
-                                if (GWType[gw_no - 1] == MachineType.OCD3)
-                                {
-                                    fileStep3_3 = filename + "\\DressGW\\G57.png";
-                                }
-                                pic_DressGwStep.Image = File.Exists(fileStep3_3) ? Image.FromFile(fileStep3_3) : null;
+                                //string fileStep3_3 = filename + "\\DressGW\\G58.png";
+                                //if (GWType[gw_no - 1] == MachineType.OCD2)
+                                //{
+                                //    fileStep3_3 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //if (GWType[gw_no - 1] == MachineType.OCD3)
+                                //{
+                                //    fileStep3_3 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //pic_DressGwStep.Image = File.Exists(fileStep3_3) ? Image.FromFile(fileStep3_3) : null;
+                                pic_DressGwStep.Image = imgG58;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 30, "請使用手輪移動Z軸，使修整器接觸砂輪右側。");
                                 break;
 
                             case 4://外徑+左右側→跳到左側流程
+                            case 8:
+                                
                                 DressGwStep = 3;
                                 //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                                string fileStep3_4 = filename + "\\DressGW\\G57.png";
-                                if (GWType[gw_no - 1] == MachineType.OCD2)
-                                {
-                                    fileStep3_4 = filename + "\\DressGW\\G57.png";
-                                }
-                                if (GWType[gw_no - 1] == MachineType.OCD3)
-                                {
-                                    fileStep3_4 = filename + "\\DressGW\\G57.png";
-                                }
-                                pic_DressGwStep.Image = File.Exists(fileStep3_4) ? Image.FromFile(fileStep3_4) : null;
+                                //string fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                //if (GWType[gw_no - 1] == MachineType.OCD2)
+                                //{
+                                //    fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //if (GWType[gw_no - 1] == MachineType.OCD3)
+                                //{
+                                //    fileStep3_4 = filename + "\\DressGW\\G57.png";
+                                //}
+                                //pic_DressGwStep.Image = File.Exists(fileStep3_4) ? Image.FromFile(fileStep3_4) : null;
+                                pic_DressGwStep.Image = imgG57;
                                 pic_DressGwStep.Visible = true;
                                 la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 29, "請使用手輪移動Z軸，使修整器接觸砂輪左側。");
+                                
+                                break;
+                            case 5: // 左錐度
+                            case 6: // 右錐度
+                                DressGwStep = 99;
+
+                                //通知加工程式目前的選擇
+                                //focas.WriteMacro(964, 0);//無條件
+                                //M Code Finish
+                                //focas.PMC_WriteByte(PmcAddrType.E, 4501, 1);//啟動 ON
+                                //Thread.Sleep(1000);
+                                //focas.PMC_WriteByte(PmcAddrType.E, 4501, 0);//啟動 OFF
+
+                                btn_DG_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 28, "儲存");
+                                pic_DressGwStep.Image = null;
+                                pic_DressGwStep.Visible = false;
+                                la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 27, "完成設定，是否要儲存座標系。");
                                 break;
                         }
 
@@ -12239,18 +12319,23 @@ namespace OIG
                         TB_G56Z.Text = la_DressGwMachAxis2Value.Text;
 
                         //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G57.png";
-                        string fileStep4 = filename + "\\DressGW\\G57.png";
-                        if (GWType[gw_no - 1] == MachineType.OCD2)
-                        {
-                            fileStep4 = filename + "\\DressGW\\G57.png";
-                        }
-                        if (GWType[gw_no - 1] == MachineType.OCD3)
-                        {
-                            fileStep4 = filename + "\\DressGW\\G57.png";
-                        }
-                        pic_DressGwStep.Image = File.Exists(fileStep4) ? Image.FromFile(fileStep4) : null;
+                        //string fileStep4 = filename + "\\DressGW\\G57.png";
+                        //if (GWType[gw_no - 1] == MachineType.OCD2)
+                        //{
+                        //    fileStep4 = filename + "\\DressGW\\G57.png";
+                        //}
+                        //if (GWType[gw_no - 1] == MachineType.OCD3)
+                        //{
+                        //    fileStep4 = filename + "\\DressGW\\G57.png";
+                        //}
+                        //pic_DressGwStep.Image = File.Exists(fileStep4) ? Image.FromFile(fileStep4) : null;
+                        pic_DressGwStep.Image = imgG57;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 31, "請使用手輪移動X軸，使修整器離開砂輪。");
+                        if(shape == 8 && (GWType[gw_no - 1] == MachineType.OCD2 || GWType[gw_no - 1] == MachineType.OCD3))
+                        {
+                            DressGwStep = 6;
+                        }
                         break;
                     }
 
@@ -12263,6 +12348,7 @@ namespace OIG
                         switch (shape)
                         {
                             case 2://外徑+左側→儲存
+                            case 7: // 斜頭椎度(左椎頭 右椎頭)
                                 DressGwStep = 99;
 
                                 //focas.WriteMacro(964, 0);//無條件
@@ -12277,21 +12363,25 @@ namespace OIG
                                 break;
 
                             case 4://外徑+左右側→跳到右側流程
-                                DressGwStep = 5;
-                                //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                                string fileStep5_4 = filename + "\\DressGW\\G58.png";
-                                if (GWType[gw_no - 1] == MachineType.OCD2)
-                                {
-                                    fileStep5_4 = filename + "\\DressGW\\G57.png";
-                                }
-                                if (GWType[gw_no - 1] == MachineType.OCD3)
-                                {
-                                    fileStep5_4 = filename + "\\DressGW\\G57.png";
-                                }
-                                pic_DressGwStep.Image = File.Exists(fileStep5_4) ? Image.FromFile(fileStep5_4) : null;
-                                pic_DressGwStep.Visible = true;
-                                la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 30, "請使用手輪移動Z軸，使修整器接觸砂輪右側。");
-                                break;
+                            case 8:
+                                
+                            DressGwStep = 5;
+                            //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
+                            //string fileStep5_4 = filename + "\\DressGW\\G58.png";
+                            //if (GWType[gw_no - 1] == MachineType.OCD2)
+                            //{
+                            //    fileStep5_4 = filename + "\\DressGW\\G57.png";
+                            //}
+                            //if (GWType[gw_no - 1] == MachineType.OCD3)
+                            //{
+                            //    fileStep5_4 = filename + "\\DressGW\\G57.png";
+                            //}
+                            //pic_DressGwStep.Image = File.Exists(fileStep5_4) ? Image.FromFile(fileStep5_4) : null;
+                            pic_DressGwStep.Image = imgG58;
+                            pic_DressGwStep.Visible = true;
+                            la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 30, "請使用手輪移動Z軸，使修整器接觸砂輪右側。");
+                                
+                            break;
                         }
                         break;
                     }
@@ -12302,16 +12392,17 @@ namespace OIG
                         TB_G58Z.Text = la_DressGwMachAxis2Value.Text;
 
                         //filename = Application.StartupPath + "\\image\\" + (type == 0 ? "OIG" : "OCD") + "\\DressGW\\G58.png";
-                        string fileStep6 = filename + "\\DressGW\\G58.png";
-                        if (GWType[gw_no - 1] == MachineType.OCD2)
-                        {
-                            fileStep6 = filename + "\\DressGW\\G57.png";
-                        }
-                        if (GWType[gw_no - 1] == MachineType.OCD3)
-                        {
-                            fileStep6 = filename + "\\DressGW\\G57.png";
-                        }
-                        pic_DressGwStep.Image = File.Exists(fileStep6) ? Image.FromFile(fileStep6) : null;
+                        //string fileStep6 = filename + "\\DressGW\\G58.png";
+                        //if (GWType[gw_no - 1] == MachineType.OCD2)
+                        //{
+                        //    fileStep6 = filename + "\\DressGW\\G57.png";
+                        //}
+                        //if (GWType[gw_no - 1] == MachineType.OCD3)
+                        //{
+                        //    fileStep6 = filename + "\\DressGW\\G57.png";
+                        //}
+                        //pic_DressGwStep.Image = File.Exists(fileStep6) ? Image.FromFile(fileStep6) : null;
+                        pic_DressGwStep.Image = imgG58;
                         pic_DressGwStep.Visible = true;
                         la_DressGwMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 31, "請使用手輪移動X軸，使修整器離開砂輪。");
                         break;
@@ -12490,7 +12581,7 @@ namespace OIG
 
         }
 
-        private void ShowSetG54G59X()
+        private void ShowSetG54G59X(Image imgG5459X)
         {
             //focas.ReadMacro(506, out double val);
             //int gw_no = (int)Math.Round(val);
@@ -12505,13 +12596,14 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54G59X.png";
-            pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54G59X.png";
+            //pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            pic_DressPartsStep.Image = imgG5459X;
             pic_DressPartsStep.Visible = true;
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 34, "請使用手輪移動軸向，使砂輪接觸到工件外徑。");
         }
 
-        private void ShowSetG54Z()
+        private void ShowSetG54Z(Image imgG54Z)
         {
             //double val;
             //focas.ReadMacro(506, out val);
@@ -12521,13 +12613,14 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54Z.png";
-            pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54Z.png";
+            //pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            pic_DressPartsStep.Image = imgG54Z;
             pic_DressPartsStep.Visible = true;
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 35, "請使用手輪移動軸向，使砂輪接觸到工件的右端面。");
         }
 
-        private void ShowSetG59Z()
+        private void ShowSetG59Z(Image imgG59Z)
         {
             //double val;
             //focas.ReadMacro(506, out val);
@@ -12537,8 +12630,9 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G59Z.png";
-            pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G59Z.png";
+            //pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
+            pic_DressPartsStep.Image = imgG59Z;
             pic_DressPartsStep.Visible = true;
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 36, "請使用手輪移動軸向，使砂輪接觸到工件的左端面。");
         }
@@ -12616,13 +12710,88 @@ namespace OIG
             if (!bNext) Condition = M450_Condition.Pass; //0:無條件(下一步), 1:離開, 2:原設定(跳過)
 
 
-            double val;
-            //focas.ReadMacro(506, out val);
-            //int gw_no = (int)Math.Round(val);
-            focas.ReadMacro(505, out val);
-            int shape = (int)Math.Round(val);
+            //double val;
+            ////focas.ReadMacro(506, out val);
+            ////int gw_no = (int)Math.Round(val);
+            //focas.ReadMacro(505, out val);
+            //int shape = (int)Math.Round(val);
+            
+            int GwNo = 0;
+            bool bFinish = false;
+            int GwType = 0;
+            int shape = 0;
+            Actions.Enqueue(new Action(() =>
+            {
+                //目前砂輪號
+                focas.ReadMacro(506, out double no);
+                GwNo = (int)Math.Round(no);
+                if (GwNo < 1 || GwNo > 4)
+                {
+                    bFinish = true;
+                    return;//例外處理
+                }
+                int shift = (GwNo - 1) * 200;
 
+                //砂輪類型(0:內圓, 1:外圓(預留))
+                focas.ReadMacro(10004 + shift, out double type);
+                GwType = (int)Math.Round(type);
+                if (GwType < 0 || GwType > 1) GwType = 0; //例外處理
 
+                //修整模式(形狀)
+                focas.ReadMacro(10005 + shift, out double mode);
+                shape = (int)Math.Round(mode);
+                
+                bFinish = true;
+            }));
+
+            int iStart = Environment.TickCount;
+            while (!bFinish)
+            {
+                int iTime = Environment.TickCount - iStart;
+                if (iTime > 5000)
+                {
+
+                    //Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 45, "通訊異常"));
+                    return;
+                }
+                Application.DoEvents();
+            }
+
+            if (GwNo < 1 || GwNo > 4)
+            {
+                Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 164, "砂輪號錯誤"), "");
+                return;//例外處理
+            }
+            //加工對點 座標系顯示
+            string path = Application.StartupPath + "\\image\\" + (GwType == 1 ? "OIG" : "OCD") + "\\DressWorkpiece\\";
+            //XmlElement xmlCoordinate = (GwType == 0 ? machineSetting.xmlOIG_Coordinate : machineSetting.xmlOCD_Coordinate);
+            XmlElement xmlCoordinate = machineSetting.GetGwTypeCoordinate(GwType);
+            if (GWType[GwNo - 1] == MachineType.OCD2)
+            {
+                xmlCoordinate = machineSetting.GetGwTypeCoordinate(2);
+                path = Application.StartupPath + "\\image\\" + "OCD2" + "\\DressWorkpiece\\";
+                GwType = 2;
+            }
+            if (GWType[GwNo - 1] == MachineType.OCD3)
+            {
+                xmlCoordinate = machineSetting.GetGwTypeCoordinate(3);
+                path = Application.StartupPath + "\\image\\" + "OCD3" + "\\DressWorkpiece\\";
+                GwType = 3;
+            }
+            XmlElement xmlG54G59X = xmlCoordinate.GetChildNodeAt(0);
+            XmlElement xmlG54Z = xmlCoordinate.GetChildNodeAt(1);
+            XmlElement xmlG59Z = xmlCoordinate.GetChildNodeAt(2);
+            String filename;
+            filename = path + xmlG54G59X.GetAttribute("Image"); //研磨工件外徑
+            Image imgG5459X = File.Exists(filename) ? Image.FromFile(filename) : null;
+            
+           
+            filename = path + xmlG54Z.GetAttribute("Image"); //研磨工件右端面
+            Image imgG54Z = File.Exists(filename) ? Image.FromFile(filename) : null;
+            
+            filename = path + xmlG59Z.GetAttribute("Image"); //研磨工件左端面
+            Image imgG59Z = File.Exists(filename) ? Image.FromFile(filename) : null;
+            
             switch (DressPartsStep)
             {
                 case 0://即將開啟砂輪→下一步
@@ -12634,7 +12803,7 @@ namespace OIG
                         focas.WriteMacro(980, 2);//O8999 執行加工對點
                         OneKeyCall(8999);
 
-                        ShowSetG54G59X();
+                        ShowSetG54G59X(imgG5459X);
                         break;
                     }
                 case 1://移動X軸，砂輪接觸工件 → 下一步
@@ -12650,17 +12819,25 @@ namespace OIG
 
 
                         //這顆砂輪，對外徑是使用G54 還是 G59
-                        TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
-                        if (ini.ReadString("Shape", "GW" + SelectGwNo + "_DiamCoor", "G54") == "G54")
+                        //TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
+                        //if (ini.ReadString("Shape", "GW" + SelectGwNo + "_DiamCoor", "G54") == "G54")
+                        //{
+                        //    ShowSetG54Z(imgG54Z);
+                        //}
+                        //else
+                        //{
+                        //    ShowSetG59Z(imgG59Z);
+                        //    bPassG54Z = true;
+                        //}
+                        if(GwType == 0)
                         {
-                            ShowSetG54Z();
+                            ShowSetG54Z(imgG54Z);
                         }
                         else
                         {
-                            ShowSetG59Z();
+                            ShowSetG59Z(imgG59Z);
                             bPassG54Z = true;
                         }
-
 
                         //ThrWaitM450 = new Thread(() =>
                         //{
@@ -12691,27 +12868,28 @@ namespace OIG
                         btn_DP_Btn3.Visible = false;
                         M450_Finish(Condition);
 
-                        if (shape == 3 || shape == 4)
-                        {
-                            ShowSetG59Z();
-                        }
-                        else
-                        {
-                            bPassG59Z = true;
-                            if (!bPassX)
-                            {
-                                ShowSetDiam();
-                            }
-                            else if (!bPassG54Z)
-                            {
-                                ShowSetG54Length();
-                            }
-                            else
-                            {
-                                DressPartsStep = 0;
-                                btn_Prev.PerformClick();
-                            }
-                        }
+                        ShowSetG59Z(imgG59Z);
+                        //if (shape == 3 || shape == 4)
+                        //{
+                        //    ShowSetG59Z(imgG59Z);
+                        //}
+                        //else
+                        //{
+                        //    bPassG59Z = true;
+                        //    if (!bPassX)
+                        //    {
+                        //        ShowSetDiam();
+                        //    }
+                        //    else if (!bPassG54Z)
+                        //    {
+                        //        ShowSetG54Length();
+                        //    }
+                        //    else
+                        //    {
+                        //        DressPartsStep = 0;
+                        //        btn_Prev.PerformClick();
+                        //    }
+                        //}
                         /*
                         ThrWaitM450 = new Thread(() =>
                         {
@@ -13257,6 +13435,7 @@ namespace OIG
 
             ThrScreenDisplay = new Thread(ScanScreenDisplay);
             ThrScreenDisplay.Start();
+            
         }
 
         private void ScanScreenDisplay()
@@ -21050,8 +21229,9 @@ namespace OIG
             if (pic.Tag != null)
             {
                 double val = double.Parse(pic.Tag.ToString());
-                Action_WriteMacro(558, val);
-                btn_Prev.PerformClick();
+                //Action_WriteMacro(558, val);
+                WaitAction_WriteMacro(558, val);
+                InitDressGwSetting(false);
             }
         }
     }

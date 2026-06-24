@@ -156,8 +156,8 @@
 					<G58 Visible="0" Image="G58.png"/>
 				</Tool3>
 				<Tool2>
-					<G55 Visible="0" Image="G55.png"/>
-					<G57 Visible="1" Image="G57.png"/>
+					<G55 Visible="1" Image="G57.png"/>
+					<G57 Visible="0" Image="G57.png"/>
 					<G58 Visible="0" Image="G58.png"/>
 				</Tool2>			
 			</Tools>
@@ -259,7 +259,7 @@
 			<Param Macro="10022" Memo="右側超切量" />
 			<Tools>
 				<Tool3>
-					<G55 Visible="1" Image="G58.png"/>
+					<G55 Visible="1" Image="G55Right.png"/>
 					<G57 Visible="0" Image="G57.png"/>
 					<G58 Visible="0" Image="G58.png"/>
 				</Tool3>
@@ -278,7 +278,7 @@
 					<G58 Visible="1" Image="G58.png"/>
 				</Tool3>
 				<Tool2>
-					<G55 Visible="1" Image="G57.png"/>
+					<G55 Visible="1" Image="G55.png"/>
 					<G57 Visible="1" Image="G57.png"/>
 					<G58 Visible="1" Image="G58.png"/>
 				</Tool2>
@@ -411,8 +411,8 @@
 		</ShapeDef>
 		<Coordinate>			
 			<G54G59X Visible="1" Image="G54X.png"/>
-			<G54Z Visible="0" Image="G54X1.png"/>
-			<G59Z Visible="1" Image="G54Z.png"/>	
+			<G54Z Visible="1" Image="G54Z.png"/>
+			<G59Z Visible="0" Image="G59Z.png"/>	
 		</Coordinate>
 	</GwType1>
 	<GwType2 Memo="外圓斜頭正角度砂輪參數定義">
@@ -490,8 +490,8 @@
 		</ShapeDef>
 		<Coordinate>
 			<G54G59X Visible="1" Image="G54G59X.png"/>
-			<G54Z Visible="0" Image="G54X.png"/>
-			<G59Z Visible="1" Image="G54Z.png"/>
+			<G54Z Visible="1" Image="G54Z.png"/>
+			<G59Z Visible="0" Image="G59Z.png"/>
 		</Coordinate>
 	</GwType2>
 	<GwType3 Memo="外圓斜頭負角度砂輪參數定義">
@@ -569,8 +569,8 @@
 		</ShapeDef>
 		<Coordinate>
 			<G54G59X Visible="1" Image="G54G59X.png"/>
-			<G54Z Visible="0" Image="G54X.png"/>
-			<G59Z Visible="1" Image="G54Z.png"/>
+			<G54Z Visible="1" Image="G54Z.png"/>
+			<G59Z Visible="0" Image="G59Z.png"/>
 		</Coordinate>
 	</GwType3>
 	<MacroLimit>

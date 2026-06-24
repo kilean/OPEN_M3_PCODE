@@ -277,6 +277,7 @@
             this.btn_Path_Add = new Uc_RoundBtn();
             this.la_OD_Path = new System.Windows.Forms.Label();
             this.tab_DressGwSetting = new System.Windows.Forms.TabPage();
+            this.pa_DressTool = new System.Windows.Forms.Panel();
             this.pa_DressTool_2P = new System.Windows.Forms.Panel();
             this.pa_DressTool_3P = new System.Windows.Forms.Panel();
             this.pic_DressTool_2P = new System.Windows.Forms.PictureBox();
@@ -1437,6 +1438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditPath)).BeginInit();
             this.tab_DressGwSetting.SuspendLayout();
+            this.pa_DressTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_2P)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_3P)).BeginInit();
             this.pa_DressAbs.SuspendLayout();
@@ -1850,7 +1852,7 @@
             this.la_Version.Name = "la_Version";
             this.la_Version.Size = new System.Drawing.Size(205, 25);
             this.la_Version.TabIndex = 10;
-            this.la_Version.Text = "Ver : 1.26.0623.1412";
+            this.la_Version.Text = "Ver : 1.26.0624.1007";
             // 
             // pa_Alarm
             // 
@@ -5258,10 +5260,7 @@
             // tab_DressGwSetting
             // 
             this.tab_DressGwSetting.BackColor = System.Drawing.SystemColors.Control;
-            this.tab_DressGwSetting.Controls.Add(this.pa_DressTool_2P);
-            this.tab_DressGwSetting.Controls.Add(this.pa_DressTool_3P);
-            this.tab_DressGwSetting.Controls.Add(this.pic_DressTool_2P);
-            this.tab_DressGwSetting.Controls.Add(this.pic_DressTool_3P);
+            this.tab_DressGwSetting.Controls.Add(this.pa_DressTool);
             this.tab_DressGwSetting.Controls.Add(this.btn_SaveDressGw);
             this.tab_DressGwSetting.Controls.Add(this.pa_DressAbs);
             this.tab_DressGwSetting.Controls.Add(this.pa_DressMach);
@@ -5277,24 +5276,37 @@
             this.tab_DressGwSetting.Size = new System.Drawing.Size(936, 561);
             this.tab_DressGwSetting.TabIndex = 13;
             this.tab_DressGwSetting.Text = "修砂對點";
+            this.tab_DressGwSetting.Click += new System.EventHandler(this.pic_DressTool_Click);
             this.tab_DressGwSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_DressGwSetting.Leave += new System.EventHandler(this.tab_DressGwSetting_Leave);
+            // 
+            // pa_DressTool
+            // 
+            this.pa_DressTool.BackColor = System.Drawing.Color.Transparent;
+            this.pa_DressTool.Controls.Add(this.pa_DressTool_2P);
+            this.pa_DressTool.Controls.Add(this.pa_DressTool_3P);
+            this.pa_DressTool.Controls.Add(this.pic_DressTool_2P);
+            this.pa_DressTool.Controls.Add(this.pic_DressTool_3P);
+            this.pa_DressTool.Location = new System.Drawing.Point(472, 56);
+            this.pa_DressTool.Name = "pa_DressTool";
+            this.pa_DressTool.Size = new System.Drawing.Size(136, 80);
+            this.pa_DressTool.TabIndex = 146;
             // 
             // pa_DressTool_2P
             // 
             this.pa_DressTool_2P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pa_DressTool_2P.Location = new System.Drawing.Point(552, 56);
+            this.pa_DressTool_2P.Location = new System.Drawing.Point(72, 0);
             this.pa_DressTool_2P.Name = "pa_DressTool_2P";
             this.pa_DressTool_2P.Size = new System.Drawing.Size(64, 16);
-            this.pa_DressTool_2P.TabIndex = 145;
+            this.pa_DressTool_2P.TabIndex = 149;
             // 
             // pa_DressTool_3P
             // 
             this.pa_DressTool_3P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pa_DressTool_3P.Location = new System.Drawing.Point(480, 56);
+            this.pa_DressTool_3P.Location = new System.Drawing.Point(0, 0);
             this.pa_DressTool_3P.Name = "pa_DressTool_3P";
             this.pa_DressTool_3P.Size = new System.Drawing.Size(64, 16);
-            this.pa_DressTool_3P.TabIndex = 144;
+            this.pa_DressTool_3P.TabIndex = 148;
             // 
             // pic_DressTool_2P
             // 
@@ -5302,11 +5314,11 @@
             this.pic_DressTool_2P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_DressTool_2P.Image = ((System.Drawing.Image)(resources.GetObject("pic_DressTool_2P.Image")));
             this.pic_DressTool_2P.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pic_DressTool_2P.Location = new System.Drawing.Point(552, 72);
+            this.pic_DressTool_2P.Location = new System.Drawing.Point(72, 16);
             this.pic_DressTool_2P.Name = "pic_DressTool_2P";
             this.pic_DressTool_2P.Size = new System.Drawing.Size(64, 64);
             this.pic_DressTool_2P.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_DressTool_2P.TabIndex = 143;
+            this.pic_DressTool_2P.TabIndex = 147;
             this.pic_DressTool_2P.TabStop = false;
             this.pic_DressTool_2P.Tag = "1";
             this.pic_DressTool_2P.Click += new System.EventHandler(this.pic_DressTool_Click);
@@ -5317,11 +5329,11 @@
             this.pic_DressTool_3P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_DressTool_3P.Image = ((System.Drawing.Image)(resources.GetObject("pic_DressTool_3P.Image")));
             this.pic_DressTool_3P.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pic_DressTool_3P.Location = new System.Drawing.Point(480, 72);
+            this.pic_DressTool_3P.Location = new System.Drawing.Point(0, 16);
             this.pic_DressTool_3P.Name = "pic_DressTool_3P";
             this.pic_DressTool_3P.Size = new System.Drawing.Size(64, 64);
             this.pic_DressTool_3P.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_DressTool_3P.TabIndex = 142;
+            this.pic_DressTool_3P.TabIndex = 146;
             this.pic_DressTool_3P.TabStop = false;
             this.pic_DressTool_3P.Tag = "0";
             this.pic_DressTool_3P.Click += new System.EventHandler(this.pic_DressTool_Click);
@@ -5517,7 +5529,7 @@
             this.GB_G58.Size = new System.Drawing.Size(504, 112);
             this.GB_G58.TabIndex = 56;
             this.GB_G58.TabStop = false;
-            this.GB_G58.Text = "右側修砂位置";
+            this.GB_G58.Text = "G58";
             this.GB_G58.Visible = false;
             // 
             // btn_G58Z_Input
@@ -5621,7 +5633,7 @@
             this.GB_G56.Size = new System.Drawing.Size(504, 112);
             this.GB_G56.TabIndex = 55;
             this.GB_G56.TabStop = false;
-            this.GB_G56.Text = "左側修砂位置";
+            this.GB_G56.Text = "G57";
             // 
             // btn_G56Z_Input
             // 
@@ -20183,6 +20195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EditPath)).EndInit();
             this.tab_DressGwSetting.ResumeLayout(false);
+            this.pa_DressTool.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_2P)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DressTool_3P)).EndInit();
             this.pa_DressAbs.ResumeLayout(false);
@@ -21837,6 +21850,7 @@
         private System.Windows.Forms.Panel panel9;
         private Uc_RoundBtn btn_dgvScrollDown;
         private Uc_RoundBtn btn_dgvScrollUp;
+        private System.Windows.Forms.Panel pa_DressTool;
         private System.Windows.Forms.Panel pa_DressTool_2P;
         private System.Windows.Forms.Panel pa_DressTool_3P;
         private System.Windows.Forms.PictureBox pic_DressTool_2P;
