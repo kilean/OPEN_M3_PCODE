@@ -933,6 +933,12 @@
             this.la_MessageTitle = new System.Windows.Forms.Label();
             this.LB_CurrentAlarm = new System.Windows.Forms.ListBox();
             this.tab_Maintenance = new System.Windows.Forms.TabPage();
+            this.pa_RotationCenterOffset = new System.Windows.Forms.Panel();
+            this.la_Rotation_Pos_Setting = new System.Windows.Forms.Label();
+            this.pic_RotationCenterOffset = new System.Windows.Forms.PictureBox();
+            this.pa_GWRPS = new System.Windows.Forms.Panel();
+            this.la_GWRPS = new System.Windows.Forms.Label();
+            this.pic_GWRPS = new System.Windows.Forms.PictureBox();
             this.pa_FuncSW = new System.Windows.Forms.Panel();
             this.la_FuncSwitch = new System.Windows.Forms.Label();
             this.pic_FuncSwitch = new System.Windows.Forms.PictureBox();
@@ -1172,6 +1178,9 @@
             this.tab_ScreenDisplay = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.tab_PosSet = new System.Windows.Forms.TabPage();
+            this.btn_PosSet_DressBaseMaxMin = new Uc_RoundBtn();
+            this.btn_PosSet_IDRevSafePos = new Uc_RoundBtn();
+            this.btn_PosSet_TowerSafePos = new Uc_RoundBtn();
             this.btn_PosSetSave = new Uc_RoundBtn();
             this.btn_PosSet_ODSafePos = new Uc_RoundBtn();
             this.tc_PositionSet = new System.Windows.Forms.TabControl();
@@ -1208,6 +1217,32 @@
             this.pic_OD_SafePos = new System.Windows.Forms.PictureBox();
             this.la_ODSafePosX = new System.Windows.Forms.Label();
             this.tb_Gw2_OD_SafePosX = new System.Windows.Forms.TextBox();
+            this.tab_PosSet_TowerSafePos = new System.Windows.Forms.TabPage();
+            this.gb_TowerSafePos = new System.Windows.Forms.GroupBox();
+            this.pic_TowerSafePos = new System.Windows.Forms.PictureBox();
+            this.btn_TowerSafePosZ = new Uc_RoundBtn();
+            this.btn_TowerSafePosX = new Uc_RoundBtn();
+            this.la_Tower_SafePos_X = new System.Windows.Forms.Label();
+            this.TB_TowerSafePosX = new System.Windows.Forms.TextBox();
+            this.la_Tower_SafePos_Z = new System.Windows.Forms.Label();
+            this.TB_TowerSafePosZ = new System.Windows.Forms.TextBox();
+            this.tab_PosSet_IDRevSafePos = new System.Windows.Forms.TabPage();
+            this.gb_IDRevSafePos = new System.Windows.Forms.GroupBox();
+            this.pic_IDRevSafePos = new System.Windows.Forms.PictureBox();
+            this.btn_ID_DressRevZ2 = new Uc_RoundBtn();
+            this.btn_ID_DressRevZ1 = new Uc_RoundBtn();
+            this.la_ID_DirRevZ1 = new System.Windows.Forms.Label();
+            this.TB_ID_DressRevZ1 = new System.Windows.Forms.TextBox();
+            this.la_ID_DirRevZ2 = new System.Windows.Forms.Label();
+            this.TB_ID_DressRevZ2 = new System.Windows.Forms.TextBox();
+            this.tab_PosSet_DressMaxMinValue = new System.Windows.Forms.TabPage();
+            this.gb_DressBaseMaxMin = new System.Windows.Forms.GroupBox();
+            this.btn_DressBaseMin = new Uc_RoundBtn();
+            this.btn_DressBaseMax = new Uc_RoundBtn();
+            this.la_DressBaseMax = new System.Windows.Forms.Label();
+            this.TB_DressBaseMax = new System.Windows.Forms.TextBox();
+            this.la_DressBaseMin = new System.Windows.Forms.Label();
+            this.TB_DressBaseMin = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.la_PosSetMach_6 = new System.Windows.Forms.Label();
             this.la_PosSetMach6 = new System.Windows.Forms.Label();
@@ -1365,12 +1400,6 @@
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.masterSerialBus2 = new MasterSerialBus(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.pa_GWRPS = new System.Windows.Forms.Panel();
-            this.la_GWRPS = new System.Windows.Forms.Label();
-            this.pic_GWRPS = new System.Windows.Forms.PictureBox();
-            this.pa_RotationCenterOffset = new System.Windows.Forms.Panel();
-            this.la_Rotation_Pos_Setting = new System.Windows.Forms.Label();
-            this.pic_RotationCenterOffset = new System.Windows.Forms.PictureBox();
             this.pa_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -1570,6 +1599,10 @@
             this.GB_DEV_MsgHis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AlarmHistory)).BeginInit();
             this.tab_Maintenance.SuspendLayout();
+            this.pa_RotationCenterOffset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).BeginInit();
+            this.pa_GWRPS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).BeginInit();
             this.pa_FuncSW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_FuncSwitch)).BeginInit();
             this.pa_Warmup.SuspendLayout();
@@ -1661,6 +1694,14 @@
             this.tab_PosSet_ODSafePos.SuspendLayout();
             this.GB_ODParam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_OD_SafePos)).BeginInit();
+            this.tab_PosSet_TowerSafePos.SuspendLayout();
+            this.gb_TowerSafePos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_TowerSafePos)).BeginInit();
+            this.tab_PosSet_IDRevSafePos.SuspendLayout();
+            this.gb_IDRevSafePos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IDRevSafePos)).BeginInit();
+            this.tab_PosSet_DressMaxMinValue.SuspendLayout();
+            this.gb_DressBaseMaxMin.SuspendLayout();
             this.panel12.SuspendLayout();
             this.tab_EditSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EditSelectValue)).BeginInit();
@@ -1693,10 +1734,6 @@
             this.tab_RotationCenterOffset.SuspendLayout();
             this.gb_Gw2_XRotationCenter.SuspendLayout();
             this.gb_Gw1_XRotationCenter.SuspendLayout();
-            this.pa_GWRPS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).BeginInit();
-            this.pa_RotationCenterOffset.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).BeginInit();
             this.SuspendLayout();
             // 
             // pa_Top
@@ -14298,6 +14335,76 @@
             this.tab_Maintenance.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_Maintenance.DoubleClick += new System.EventHandler(this.tab_Maintenance_DoubleClick);
             // 
+            // pa_RotationCenterOffset
+            // 
+            this.pa_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
+            this.pa_RotationCenterOffset.Controls.Add(this.la_Rotation_Pos_Setting);
+            this.pa_RotationCenterOffset.Controls.Add(this.pic_RotationCenterOffset);
+            this.pa_RotationCenterOffset.Location = new System.Drawing.Point(560, 424);
+            this.pa_RotationCenterOffset.Name = "pa_RotationCenterOffset";
+            this.pa_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
+            this.pa_RotationCenterOffset.TabIndex = 93;
+            // 
+            // la_Rotation_Pos_Setting
+            // 
+            this.la_Rotation_Pos_Setting.BackColor = System.Drawing.Color.Black;
+            this.la_Rotation_Pos_Setting.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.la_Rotation_Pos_Setting.ForeColor = System.Drawing.Color.White;
+            this.la_Rotation_Pos_Setting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_Rotation_Pos_Setting.Location = new System.Drawing.Point(0, 16);
+            this.la_Rotation_Pos_Setting.Name = "la_Rotation_Pos_Setting";
+            this.la_Rotation_Pos_Setting.Size = new System.Drawing.Size(176, 24);
+            this.la_Rotation_Pos_Setting.TabIndex = 93;
+            this.la_Rotation_Pos_Setting.Text = "旋轉中心位置補正";
+            this.la_Rotation_Pos_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_RotationCenterOffset
+            // 
+            this.pic_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
+            this.pic_RotationCenterOffset.Image = ((System.Drawing.Image)(resources.GetObject("pic_RotationCenterOffset.Image")));
+            this.pic_RotationCenterOffset.Location = new System.Drawing.Point(0, 0);
+            this.pic_RotationCenterOffset.Name = "pic_RotationCenterOffset";
+            this.pic_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
+            this.pic_RotationCenterOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_RotationCenterOffset.TabIndex = 92;
+            this.pic_RotationCenterOffset.TabStop = false;
+            this.pic_RotationCenterOffset.Click += new System.EventHandler(this.pic_RotationCenterOffset_Click);
+            // 
+            // pa_GWRPS
+            // 
+            this.pa_GWRPS.BackColor = System.Drawing.Color.Transparent;
+            this.pa_GWRPS.Controls.Add(this.la_GWRPS);
+            this.pa_GWRPS.Controls.Add(this.pic_GWRPS);
+            this.pa_GWRPS.Location = new System.Drawing.Point(376, 424);
+            this.pa_GWRPS.Name = "pa_GWRPS";
+            this.pa_GWRPS.Size = new System.Drawing.Size(176, 176);
+            this.pa_GWRPS.TabIndex = 92;
+            // 
+            // la_GWRPS
+            // 
+            this.la_GWRPS.BackColor = System.Drawing.Color.Black;
+            this.la_GWRPS.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.la_GWRPS.ForeColor = System.Drawing.Color.White;
+            this.la_GWRPS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_GWRPS.Location = new System.Drawing.Point(0, 16);
+            this.la_GWRPS.Name = "la_GWRPS";
+            this.la_GWRPS.Size = new System.Drawing.Size(176, 24);
+            this.la_GWRPS.TabIndex = 91;
+            this.la_GWRPS.Text = "砂輪基準點設定";
+            this.la_GWRPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_GWRPS
+            // 
+            this.pic_GWRPS.BackColor = System.Drawing.Color.Transparent;
+            this.pic_GWRPS.Image = ((System.Drawing.Image)(resources.GetObject("pic_GWRPS.Image")));
+            this.pic_GWRPS.Location = new System.Drawing.Point(0, 0);
+            this.pic_GWRPS.Name = "pic_GWRPS";
+            this.pic_GWRPS.Size = new System.Drawing.Size(176, 176);
+            this.pic_GWRPS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_GWRPS.TabIndex = 90;
+            this.pic_GWRPS.TabStop = false;
+            this.pic_GWRPS.Click += new System.EventHandler(this.pic_GWRPS_Click);
+            // 
             // pa_FuncSW
             // 
             this.pa_FuncSW.BackColor = System.Drawing.Color.Transparent;
@@ -17269,6 +17376,9 @@
             // tab_PosSet
             // 
             this.tab_PosSet.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_PosSet.Controls.Add(this.btn_PosSet_DressBaseMaxMin);
+            this.tab_PosSet.Controls.Add(this.btn_PosSet_IDRevSafePos);
+            this.tab_PosSet.Controls.Add(this.btn_PosSet_TowerSafePos);
             this.tab_PosSet.Controls.Add(this.btn_PosSetSave);
             this.tab_PosSet.Controls.Add(this.btn_PosSet_ODSafePos);
             this.tab_PosSet.Controls.Add(this.tc_PositionSet);
@@ -17284,6 +17394,63 @@
             this.tab_PosSet.Text = "位置設定";
             this.tab_PosSet.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_PosSet.Leave += new System.EventHandler(this.tab_PosSet_Leave);
+            // 
+            // btn_PosSet_DressBaseMaxMin
+            // 
+            this.btn_PosSet_DressBaseMaxMin.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PosSet_DressBaseMaxMin.DisplayText = "修整座\r\n最大最小值";
+            this.btn_PosSet_DressBaseMaxMin.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_PosSet_DressBaseMaxMin.ForeColor = System.Drawing.Color.White;
+            this.btn_PosSet_DressBaseMaxMin.Image = null;
+            this.btn_PosSet_DressBaseMaxMin.Lamp = false;
+            this.btn_PosSet_DressBaseMaxMin.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_DressBaseMaxMin.Location = new System.Drawing.Point(544, 128);
+            this.btn_PosSet_DressBaseMaxMin.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_DressBaseMaxMin.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_DressBaseMaxMin.Name = "btn_PosSet_DressBaseMaxMin";
+            this.btn_PosSet_DressBaseMaxMin.Size = new System.Drawing.Size(144, 64);
+            this.btn_PosSet_DressBaseMaxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_PosSet_DressBaseMaxMin.Switch = false;
+            this.btn_PosSet_DressBaseMaxMin.TabIndex = 143;
+            this.btn_PosSet_DressBaseMaxMin.Click += new System.EventHandler(this.btn_PosSet_DressMaxMinValue_Click);
+            // 
+            // btn_PosSet_IDRevSafePos
+            // 
+            this.btn_PosSet_IDRevSafePos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PosSet_IDRevSafePos.DisplayText = "內圓修砂反向\r\n安全區間";
+            this.btn_PosSet_IDRevSafePos.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_PosSet_IDRevSafePos.ForeColor = System.Drawing.Color.White;
+            this.btn_PosSet_IDRevSafePos.Image = null;
+            this.btn_PosSet_IDRevSafePos.Lamp = false;
+            this.btn_PosSet_IDRevSafePos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_IDRevSafePos.Location = new System.Drawing.Point(392, 128);
+            this.btn_PosSet_IDRevSafePos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_IDRevSafePos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_IDRevSafePos.Name = "btn_PosSet_IDRevSafePos";
+            this.btn_PosSet_IDRevSafePos.Size = new System.Drawing.Size(144, 64);
+            this.btn_PosSet_IDRevSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_PosSet_IDRevSafePos.Switch = false;
+            this.btn_PosSet_IDRevSafePos.TabIndex = 142;
+            this.btn_PosSet_IDRevSafePos.Click += new System.EventHandler(this.btn_PosSet_IDRevSafePos_Click);
+            // 
+            // btn_PosSet_TowerSafePos
+            // 
+            this.btn_PosSet_TowerSafePos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_PosSet_TowerSafePos.DisplayText = "轉頭安全位置";
+            this.btn_PosSet_TowerSafePos.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_PosSet_TowerSafePos.ForeColor = System.Drawing.Color.White;
+            this.btn_PosSet_TowerSafePos.Image = null;
+            this.btn_PosSet_TowerSafePos.Lamp = false;
+            this.btn_PosSet_TowerSafePos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_TowerSafePos.Location = new System.Drawing.Point(240, 128);
+            this.btn_PosSet_TowerSafePos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_TowerSafePos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_TowerSafePos.Name = "btn_PosSet_TowerSafePos";
+            this.btn_PosSet_TowerSafePos.Size = new System.Drawing.Size(144, 64);
+            this.btn_PosSet_TowerSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_PosSet_TowerSafePos.Switch = false;
+            this.btn_PosSet_TowerSafePos.TabIndex = 141;
+            this.btn_PosSet_TowerSafePos.Click += new System.EventHandler(this.btn_PosSet_TowerSafePos_Click);
             // 
             // btn_PosSetSave
             // 
@@ -17330,6 +17497,9 @@
             this.tc_PositionSet.Controls.Add(this.tab_PosSet_ChangePartPos);
             this.tc_PositionSet.Controls.Add(this.tab_PosSet_IDCenterPos);
             this.tc_PositionSet.Controls.Add(this.tab_PosSet_ODSafePos);
+            this.tc_PositionSet.Controls.Add(this.tab_PosSet_TowerSafePos);
+            this.tc_PositionSet.Controls.Add(this.tab_PosSet_IDRevSafePos);
+            this.tc_PositionSet.Controls.Add(this.tab_PosSet_DressMaxMinValue);
             this.tc_PositionSet.Location = new System.Drawing.Point(0, 248);
             this.tc_PositionSet.Name = "tc_PositionSet";
             this.tc_PositionSet.SelectedIndex = 0;
@@ -17803,6 +17973,372 @@
             this.tb_Gw2_OD_SafePosX.Tag = "957";
             this.tb_Gw2_OD_SafePosX.Click += new System.EventHandler(this.tb_Gw2_OD_SafePosX_Click);
             this.tb_Gw2_OD_SafePosX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Gw2_OD_SafePosX_KeyPress);
+            // 
+            // tab_PosSet_TowerSafePos
+            // 
+            this.tab_PosSet_TowerSafePos.Controls.Add(this.gb_TowerSafePos);
+            this.tab_PosSet_TowerSafePos.Location = new System.Drawing.Point(4, 25);
+            this.tab_PosSet_TowerSafePos.Name = "tab_PosSet_TowerSafePos";
+            this.tab_PosSet_TowerSafePos.Size = new System.Drawing.Size(936, 355);
+            this.tab_PosSet_TowerSafePos.TabIndex = 3;
+            this.tab_PosSet_TowerSafePos.Text = "轉頭安全位置";
+            this.tab_PosSet_TowerSafePos.UseVisualStyleBackColor = true;
+            this.tab_PosSet_TowerSafePos.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
+            // 
+            // gb_TowerSafePos
+            // 
+            this.gb_TowerSafePos.BackColor = System.Drawing.Color.Transparent;
+            this.gb_TowerSafePos.Controls.Add(this.pic_TowerSafePos);
+            this.gb_TowerSafePos.Controls.Add(this.btn_TowerSafePosZ);
+            this.gb_TowerSafePos.Controls.Add(this.btn_TowerSafePosX);
+            this.gb_TowerSafePos.Controls.Add(this.la_Tower_SafePos_X);
+            this.gb_TowerSafePos.Controls.Add(this.TB_TowerSafePosX);
+            this.gb_TowerSafePos.Controls.Add(this.la_Tower_SafePos_Z);
+            this.gb_TowerSafePos.Controls.Add(this.TB_TowerSafePosZ);
+            this.gb_TowerSafePos.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gb_TowerSafePos.Location = new System.Drawing.Point(8, 8);
+            this.gb_TowerSafePos.Name = "gb_TowerSafePos";
+            this.gb_TowerSafePos.Size = new System.Drawing.Size(904, 368);
+            this.gb_TowerSafePos.TabIndex = 79;
+            this.gb_TowerSafePos.TabStop = false;
+            this.gb_TowerSafePos.Text = "轉頭安全位置(P1243)";
+            // 
+            // pic_TowerSafePos
+            // 
+            this.pic_TowerSafePos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_TowerSafePos.Image = ((System.Drawing.Image)(resources.GetObject("pic_TowerSafePos.Image")));
+            this.pic_TowerSafePos.Location = new System.Drawing.Point(360, 24);
+            this.pic_TowerSafePos.Name = "pic_TowerSafePos";
+            this.pic_TowerSafePos.Size = new System.Drawing.Size(192, 192);
+            this.pic_TowerSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_TowerSafePos.TabIndex = 101;
+            this.pic_TowerSafePos.TabStop = false;
+            // 
+            // btn_TowerSafePosZ
+            // 
+            this.btn_TowerSafePosZ.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TowerSafePosZ.DisplayText = "使用目前座標";
+            this.btn_TowerSafePosZ.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_TowerSafePosZ.ForeColor = System.Drawing.Color.White;
+            this.btn_TowerSafePosZ.Image = null;
+            this.btn_TowerSafePosZ.Lamp = false;
+            this.btn_TowerSafePosZ.LampOnImage = null;
+            this.btn_TowerSafePosZ.Location = new System.Drawing.Point(184, 120);
+            this.btn_TowerSafePosZ.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_TowerSafePosZ.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_TowerSafePosZ.Name = "btn_TowerSafePosZ";
+            this.btn_TowerSafePosZ.Size = new System.Drawing.Size(160, 48);
+            this.btn_TowerSafePosZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_TowerSafePosZ.Switch = false;
+            this.btn_TowerSafePosZ.TabIndex = 59;
+            this.btn_TowerSafePosZ.Tag = "Z";
+            this.btn_TowerSafePosZ.Click += new System.EventHandler(this.btn_TowerSafePos_Click);
+            // 
+            // btn_TowerSafePosX
+            // 
+            this.btn_TowerSafePosX.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TowerSafePosX.DisplayText = "使用目前座標";
+            this.btn_TowerSafePosX.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_TowerSafePosX.ForeColor = System.Drawing.Color.White;
+            this.btn_TowerSafePosX.Image = null;
+            this.btn_TowerSafePosX.Lamp = false;
+            this.btn_TowerSafePosX.LampOnImage = null;
+            this.btn_TowerSafePosX.Location = new System.Drawing.Point(184, 48);
+            this.btn_TowerSafePosX.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_TowerSafePosX.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_TowerSafePosX.Name = "btn_TowerSafePosX";
+            this.btn_TowerSafePosX.Size = new System.Drawing.Size(160, 48);
+            this.btn_TowerSafePosX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_TowerSafePosX.Switch = false;
+            this.btn_TowerSafePosX.TabIndex = 58;
+            this.btn_TowerSafePosX.Tag = "X";
+            this.btn_TowerSafePosX.Click += new System.EventHandler(this.btn_TowerSafePos_Click);
+            // 
+            // la_Tower_SafePos_X
+            // 
+            this.la_Tower_SafePos_X.BackColor = System.Drawing.Color.Transparent;
+            this.la_Tower_SafePos_X.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_Tower_SafePos_X.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_Tower_SafePos_X.Location = new System.Drawing.Point(8, 32);
+            this.la_Tower_SafePos_X.Name = "la_Tower_SafePos_X";
+            this.la_Tower_SafePos_X.Size = new System.Drawing.Size(30, 32);
+            this.la_Tower_SafePos_X.TabIndex = 19;
+            this.la_Tower_SafePos_X.Text = "X";
+            this.la_Tower_SafePos_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_TowerSafePosX
+            // 
+            this.TB_TowerSafePosX.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_TowerSafePosX.Location = new System.Drawing.Point(8, 64);
+            this.TB_TowerSafePosX.Name = "TB_TowerSafePosX";
+            this.TB_TowerSafePosX.Size = new System.Drawing.Size(168, 34);
+            this.TB_TowerSafePosX.TabIndex = 17;
+            this.TB_TowerSafePosX.Tag = "Tower";
+            this.TB_TowerSafePosX.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_TowerSafePosX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
+            // 
+            // la_Tower_SafePos_Z
+            // 
+            this.la_Tower_SafePos_Z.BackColor = System.Drawing.Color.Transparent;
+            this.la_Tower_SafePos_Z.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_Tower_SafePos_Z.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_Tower_SafePos_Z.Location = new System.Drawing.Point(8, 104);
+            this.la_Tower_SafePos_Z.Name = "la_Tower_SafePos_Z";
+            this.la_Tower_SafePos_Z.Size = new System.Drawing.Size(30, 32);
+            this.la_Tower_SafePos_Z.TabIndex = 15;
+            this.la_Tower_SafePos_Z.Text = "Z";
+            this.la_Tower_SafePos_Z.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_TowerSafePosZ
+            // 
+            this.TB_TowerSafePosZ.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_TowerSafePosZ.Location = new System.Drawing.Point(8, 136);
+            this.TB_TowerSafePosZ.Name = "TB_TowerSafePosZ";
+            this.TB_TowerSafePosZ.Size = new System.Drawing.Size(168, 34);
+            this.TB_TowerSafePosZ.TabIndex = 11;
+            this.TB_TowerSafePosZ.Tag = "Tower";
+            this.TB_TowerSafePosZ.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_TowerSafePosZ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
+            // 
+            // tab_PosSet_IDRevSafePos
+            // 
+            this.tab_PosSet_IDRevSafePos.Controls.Add(this.gb_IDRevSafePos);
+            this.tab_PosSet_IDRevSafePos.Location = new System.Drawing.Point(4, 25);
+            this.tab_PosSet_IDRevSafePos.Name = "tab_PosSet_IDRevSafePos";
+            this.tab_PosSet_IDRevSafePos.Size = new System.Drawing.Size(936, 355);
+            this.tab_PosSet_IDRevSafePos.TabIndex = 4;
+            this.tab_PosSet_IDRevSafePos.Text = "內圓修砂反向安全位置";
+            this.tab_PosSet_IDRevSafePos.UseVisualStyleBackColor = true;
+            this.tab_PosSet_IDRevSafePos.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
+            // 
+            // gb_IDRevSafePos
+            // 
+            this.gb_IDRevSafePos.BackColor = System.Drawing.Color.Transparent;
+            this.gb_IDRevSafePos.Controls.Add(this.pic_IDRevSafePos);
+            this.gb_IDRevSafePos.Controls.Add(this.btn_ID_DressRevZ2);
+            this.gb_IDRevSafePos.Controls.Add(this.btn_ID_DressRevZ1);
+            this.gb_IDRevSafePos.Controls.Add(this.la_ID_DirRevZ1);
+            this.gb_IDRevSafePos.Controls.Add(this.TB_ID_DressRevZ1);
+            this.gb_IDRevSafePos.Controls.Add(this.la_ID_DirRevZ2);
+            this.gb_IDRevSafePos.Controls.Add(this.TB_ID_DressRevZ2);
+            this.gb_IDRevSafePos.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gb_IDRevSafePos.Location = new System.Drawing.Point(8, 8);
+            this.gb_IDRevSafePos.Name = "gb_IDRevSafePos";
+            this.gb_IDRevSafePos.Size = new System.Drawing.Size(904, 368);
+            this.gb_IDRevSafePos.TabIndex = 80;
+            this.gb_IDRevSafePos.TabStop = false;
+            this.gb_IDRevSafePos.Text = "內圓修砂反向安全區間";
+            // 
+            // pic_IDRevSafePos
+            // 
+            this.pic_IDRevSafePos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_IDRevSafePos.Image = ((System.Drawing.Image)(resources.GetObject("pic_IDRevSafePos.Image")));
+            this.pic_IDRevSafePos.Location = new System.Drawing.Point(356, 24);
+            this.pic_IDRevSafePos.Name = "pic_IDRevSafePos";
+            this.pic_IDRevSafePos.Size = new System.Drawing.Size(192, 192);
+            this.pic_IDRevSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_IDRevSafePos.TabIndex = 100;
+            this.pic_IDRevSafePos.TabStop = false;
+            // 
+            // btn_ID_DressRevZ2
+            // 
+            this.btn_ID_DressRevZ2.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ID_DressRevZ2.DisplayText = "使用目前座標";
+            this.btn_ID_DressRevZ2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_ID_DressRevZ2.ForeColor = System.Drawing.Color.White;
+            this.btn_ID_DressRevZ2.Image = null;
+            this.btn_ID_DressRevZ2.Lamp = false;
+            this.btn_ID_DressRevZ2.LampOnImage = null;
+            this.btn_ID_DressRevZ2.Location = new System.Drawing.Point(184, 120);
+            this.btn_ID_DressRevZ2.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_DressRevZ2.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_DressRevZ2.Name = "btn_ID_DressRevZ2";
+            this.btn_ID_DressRevZ2.Size = new System.Drawing.Size(160, 48);
+            this.btn_ID_DressRevZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_ID_DressRevZ2.Switch = false;
+            this.btn_ID_DressRevZ2.TabIndex = 59;
+            this.btn_ID_DressRevZ2.Tag = "Z2";
+            this.btn_ID_DressRevZ2.Click += new System.EventHandler(this.btn_ID_DressRevZ_Click);
+            // 
+            // btn_ID_DressRevZ1
+            // 
+            this.btn_ID_DressRevZ1.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ID_DressRevZ1.DisplayText = "使用目前座標";
+            this.btn_ID_DressRevZ1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_ID_DressRevZ1.ForeColor = System.Drawing.Color.White;
+            this.btn_ID_DressRevZ1.Image = null;
+            this.btn_ID_DressRevZ1.Lamp = false;
+            this.btn_ID_DressRevZ1.LampOnImage = null;
+            this.btn_ID_DressRevZ1.Location = new System.Drawing.Point(184, 48);
+            this.btn_ID_DressRevZ1.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_DressRevZ1.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_DressRevZ1.Name = "btn_ID_DressRevZ1";
+            this.btn_ID_DressRevZ1.Size = new System.Drawing.Size(160, 48);
+            this.btn_ID_DressRevZ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_ID_DressRevZ1.Switch = false;
+            this.btn_ID_DressRevZ1.TabIndex = 58;
+            this.btn_ID_DressRevZ1.Tag = "Z1";
+            this.btn_ID_DressRevZ1.Click += new System.EventHandler(this.btn_ID_DressRevZ_Click);
+            // 
+            // la_ID_DirRevZ1
+            // 
+            this.la_ID_DirRevZ1.BackColor = System.Drawing.Color.Transparent;
+            this.la_ID_DirRevZ1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_ID_DirRevZ1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_ID_DirRevZ1.Location = new System.Drawing.Point(8, 32);
+            this.la_ID_DirRevZ1.Name = "la_ID_DirRevZ1";
+            this.la_ID_DirRevZ1.Size = new System.Drawing.Size(48, 32);
+            this.la_ID_DirRevZ1.TabIndex = 19;
+            this.la_ID_DirRevZ1.Text = "Z1";
+            this.la_ID_DirRevZ1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_ID_DressRevZ1
+            // 
+            this.TB_ID_DressRevZ1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_ID_DressRevZ1.Location = new System.Drawing.Point(8, 64);
+            this.TB_ID_DressRevZ1.Name = "TB_ID_DressRevZ1";
+            this.TB_ID_DressRevZ1.Size = new System.Drawing.Size(168, 34);
+            this.TB_ID_DressRevZ1.TabIndex = 17;
+            this.TB_ID_DressRevZ1.Tag = "ID_DressRevZ";
+            this.TB_ID_DressRevZ1.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_ID_DressRevZ1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
+            // 
+            // la_ID_DirRevZ2
+            // 
+            this.la_ID_DirRevZ2.BackColor = System.Drawing.Color.Transparent;
+            this.la_ID_DirRevZ2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_ID_DirRevZ2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_ID_DirRevZ2.Location = new System.Drawing.Point(8, 104);
+            this.la_ID_DirRevZ2.Name = "la_ID_DirRevZ2";
+            this.la_ID_DirRevZ2.Size = new System.Drawing.Size(48, 32);
+            this.la_ID_DirRevZ2.TabIndex = 15;
+            this.la_ID_DirRevZ2.Text = "Z2";
+            this.la_ID_DirRevZ2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_ID_DressRevZ2
+            // 
+            this.TB_ID_DressRevZ2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_ID_DressRevZ2.Location = new System.Drawing.Point(8, 136);
+            this.TB_ID_DressRevZ2.Name = "TB_ID_DressRevZ2";
+            this.TB_ID_DressRevZ2.Size = new System.Drawing.Size(168, 34);
+            this.TB_ID_DressRevZ2.TabIndex = 11;
+            this.TB_ID_DressRevZ2.Tag = "ID_DressRevZ";
+            this.TB_ID_DressRevZ2.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_ID_DressRevZ2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
+            // 
+            // tab_PosSet_DressMaxMinValue
+            // 
+            this.tab_PosSet_DressMaxMinValue.Controls.Add(this.gb_DressBaseMaxMin);
+            this.tab_PosSet_DressMaxMinValue.Location = new System.Drawing.Point(4, 25);
+            this.tab_PosSet_DressMaxMinValue.Name = "tab_PosSet_DressMaxMinValue";
+            this.tab_PosSet_DressMaxMinValue.Size = new System.Drawing.Size(936, 355);
+            this.tab_PosSet_DressMaxMinValue.TabIndex = 5;
+            this.tab_PosSet_DressMaxMinValue.Text = "修整座上下最大最小值";
+            this.tab_PosSet_DressMaxMinValue.UseVisualStyleBackColor = true;
+            this.tab_PosSet_DressMaxMinValue.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_PaintRect);
+            // 
+            // gb_DressBaseMaxMin
+            // 
+            this.gb_DressBaseMaxMin.BackColor = System.Drawing.Color.Transparent;
+            this.gb_DressBaseMaxMin.Controls.Add(this.btn_DressBaseMin);
+            this.gb_DressBaseMaxMin.Controls.Add(this.btn_DressBaseMax);
+            this.gb_DressBaseMaxMin.Controls.Add(this.la_DressBaseMax);
+            this.gb_DressBaseMaxMin.Controls.Add(this.TB_DressBaseMax);
+            this.gb_DressBaseMaxMin.Controls.Add(this.la_DressBaseMin);
+            this.gb_DressBaseMaxMin.Controls.Add(this.TB_DressBaseMin);
+            this.gb_DressBaseMaxMin.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gb_DressBaseMaxMin.Location = new System.Drawing.Point(8, 8);
+            this.gb_DressBaseMaxMin.Name = "gb_DressBaseMaxMin";
+            this.gb_DressBaseMaxMin.Size = new System.Drawing.Size(904, 368);
+            this.gb_DressBaseMaxMin.TabIndex = 80;
+            this.gb_DressBaseMaxMin.TabStop = false;
+            this.gb_DressBaseMaxMin.Text = "修整座最大最小值";
+            // 
+            // btn_DressBaseMin
+            // 
+            this.btn_DressBaseMin.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DressBaseMin.DisplayText = "使用目前座標";
+            this.btn_DressBaseMin.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_DressBaseMin.ForeColor = System.Drawing.Color.White;
+            this.btn_DressBaseMin.Image = null;
+            this.btn_DressBaseMin.Lamp = false;
+            this.btn_DressBaseMin.LampOnImage = null;
+            this.btn_DressBaseMin.Location = new System.Drawing.Point(184, 120);
+            this.btn_DressBaseMin.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DressBaseMin.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_DressBaseMin.Name = "btn_DressBaseMin";
+            this.btn_DressBaseMin.Size = new System.Drawing.Size(160, 48);
+            this.btn_DressBaseMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_DressBaseMin.Switch = false;
+            this.btn_DressBaseMin.TabIndex = 59;
+            this.btn_DressBaseMin.Tag = "Min";
+            this.btn_DressBaseMin.Click += new System.EventHandler(this.btn_DressBaseMaxMin_Click);
+            // 
+            // btn_DressBaseMax
+            // 
+            this.btn_DressBaseMax.BackColor = System.Drawing.Color.Transparent;
+            this.btn_DressBaseMax.DisplayText = "使用目前座標";
+            this.btn_DressBaseMax.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn_DressBaseMax.ForeColor = System.Drawing.Color.White;
+            this.btn_DressBaseMax.Image = null;
+            this.btn_DressBaseMax.Lamp = false;
+            this.btn_DressBaseMax.LampOnImage = null;
+            this.btn_DressBaseMax.Location = new System.Drawing.Point(184, 48);
+            this.btn_DressBaseMax.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DressBaseMax.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_DressBaseMax.Name = "btn_DressBaseMax";
+            this.btn_DressBaseMax.Size = new System.Drawing.Size(160, 48);
+            this.btn_DressBaseMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
+            this.btn_DressBaseMax.Switch = false;
+            this.btn_DressBaseMax.TabIndex = 58;
+            this.btn_DressBaseMax.Tag = "Max";
+            this.btn_DressBaseMax.Click += new System.EventHandler(this.btn_DressBaseMaxMin_Click);
+            // 
+            // la_DressBaseMax
+            // 
+            this.la_DressBaseMax.BackColor = System.Drawing.Color.Transparent;
+            this.la_DressBaseMax.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_DressBaseMax.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_DressBaseMax.Location = new System.Drawing.Point(8, 32);
+            this.la_DressBaseMax.Name = "la_DressBaseMax";
+            this.la_DressBaseMax.Size = new System.Drawing.Size(104, 32);
+            this.la_DressBaseMax.TabIndex = 19;
+            this.la_DressBaseMax.Text = "最大值";
+            this.la_DressBaseMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_DressBaseMax
+            // 
+            this.TB_DressBaseMax.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_DressBaseMax.Location = new System.Drawing.Point(8, 64);
+            this.TB_DressBaseMax.Name = "TB_DressBaseMax";
+            this.TB_DressBaseMax.Size = new System.Drawing.Size(168, 34);
+            this.TB_DressBaseMax.TabIndex = 17;
+            this.TB_DressBaseMax.Tag = "DressBase";
+            this.TB_DressBaseMax.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_DressBaseMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
+            // 
+            // la_DressBaseMin
+            // 
+            this.la_DressBaseMin.BackColor = System.Drawing.Color.Transparent;
+            this.la_DressBaseMin.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold);
+            this.la_DressBaseMin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_DressBaseMin.Location = new System.Drawing.Point(8, 104);
+            this.la_DressBaseMin.Name = "la_DressBaseMin";
+            this.la_DressBaseMin.Size = new System.Drawing.Size(104, 32);
+            this.la_DressBaseMin.TabIndex = 15;
+            this.la_DressBaseMin.Text = "最小值";
+            this.la_DressBaseMin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TB_DressBaseMin
+            // 
+            this.TB_DressBaseMin.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TB_DressBaseMin.Location = new System.Drawing.Point(8, 136);
+            this.TB_DressBaseMin.Name = "TB_DressBaseMin";
+            this.TB_DressBaseMin.Size = new System.Drawing.Size(168, 34);
+            this.TB_DressBaseMin.TabIndex = 11;
+            this.TB_DressBaseMin.Tag = "DressBase";
+            this.TB_DressBaseMin.Click += new System.EventHandler(this.TB_MatainPosition_Click);
+            this.TB_DressBaseMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_MatainPosition_KeyPress);
             // 
             // panel12
             // 
@@ -20055,76 +20591,6 @@
             this.masterSerialBus2.OnReceive += new MasterSerialReceiveEventHandler(this.masterSerialBus2_OnReceive);
             this.masterSerialBus2.OnError += new MasterSerialErrorEventHandler(this.masterSerialBus1_OnError);
             // 
-            // pa_GWRPS
-            // 
-            this.pa_GWRPS.BackColor = System.Drawing.Color.Transparent;
-            this.pa_GWRPS.Controls.Add(this.la_GWRPS);
-            this.pa_GWRPS.Controls.Add(this.pic_GWRPS);
-            this.pa_GWRPS.Location = new System.Drawing.Point(376, 424);
-            this.pa_GWRPS.Name = "pa_GWRPS";
-            this.pa_GWRPS.Size = new System.Drawing.Size(176, 176);
-            this.pa_GWRPS.TabIndex = 92;
-            // 
-            // la_GWRPS
-            // 
-            this.la_GWRPS.BackColor = System.Drawing.Color.Black;
-            this.la_GWRPS.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.la_GWRPS.ForeColor = System.Drawing.Color.White;
-            this.la_GWRPS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_GWRPS.Location = new System.Drawing.Point(0, 16);
-            this.la_GWRPS.Name = "la_GWRPS";
-            this.la_GWRPS.Size = new System.Drawing.Size(176, 24);
-            this.la_GWRPS.TabIndex = 91;
-            this.la_GWRPS.Text = "砂輪基準點設定";
-            this.la_GWRPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pic_GWRPS
-            // 
-            this.pic_GWRPS.BackColor = System.Drawing.Color.Transparent;
-            this.pic_GWRPS.Image = ((System.Drawing.Image)(resources.GetObject("pic_GWRPS.Image")));
-            this.pic_GWRPS.Location = new System.Drawing.Point(0, 0);
-            this.pic_GWRPS.Name = "pic_GWRPS";
-            this.pic_GWRPS.Size = new System.Drawing.Size(176, 176);
-            this.pic_GWRPS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_GWRPS.TabIndex = 90;
-            this.pic_GWRPS.TabStop = false;
-            this.pic_GWRPS.Click += new System.EventHandler(this.pic_GWRPS_Click);
-            // 
-            // pa_RotationCenterOffset
-            // 
-            this.pa_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
-            this.pa_RotationCenterOffset.Controls.Add(this.la_Rotation_Pos_Setting);
-            this.pa_RotationCenterOffset.Controls.Add(this.pic_RotationCenterOffset);
-            this.pa_RotationCenterOffset.Location = new System.Drawing.Point(560, 424);
-            this.pa_RotationCenterOffset.Name = "pa_RotationCenterOffset";
-            this.pa_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
-            this.pa_RotationCenterOffset.TabIndex = 93;
-            // 
-            // la_Rotation_Pos_Setting
-            // 
-            this.la_Rotation_Pos_Setting.BackColor = System.Drawing.Color.Black;
-            this.la_Rotation_Pos_Setting.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.la_Rotation_Pos_Setting.ForeColor = System.Drawing.Color.White;
-            this.la_Rotation_Pos_Setting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_Rotation_Pos_Setting.Location = new System.Drawing.Point(0, 16);
-            this.la_Rotation_Pos_Setting.Name = "la_Rotation_Pos_Setting";
-            this.la_Rotation_Pos_Setting.Size = new System.Drawing.Size(176, 24);
-            this.la_Rotation_Pos_Setting.TabIndex = 93;
-            this.la_Rotation_Pos_Setting.Text = "旋轉中心位置補正";
-            this.la_Rotation_Pos_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pic_RotationCenterOffset
-            // 
-            this.pic_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
-            this.pic_RotationCenterOffset.Image = ((System.Drawing.Image)(resources.GetObject("pic_RotationCenterOffset.Image")));
-            this.pic_RotationCenterOffset.Location = new System.Drawing.Point(0, 0);
-            this.pic_RotationCenterOffset.Name = "pic_RotationCenterOffset";
-            this.pic_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
-            this.pic_RotationCenterOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_RotationCenterOffset.TabIndex = 92;
-            this.pic_RotationCenterOffset.TabStop = false;
-            this.pic_RotationCenterOffset.Click += new System.EventHandler(this.pic_RotationCenterOffset_Click);
-            // 
             // Fo_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -20390,6 +20856,10 @@
             this.GB_DEV_MsgHis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AlarmHistory)).EndInit();
             this.tab_Maintenance.ResumeLayout(false);
+            this.pa_RotationCenterOffset.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).EndInit();
+            this.pa_GWRPS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).EndInit();
             this.pa_FuncSW.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_FuncSwitch)).EndInit();
             this.pa_Warmup.ResumeLayout(false);
@@ -20496,6 +20966,17 @@
             this.GB_ODParam.ResumeLayout(false);
             this.GB_ODParam.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_OD_SafePos)).EndInit();
+            this.tab_PosSet_TowerSafePos.ResumeLayout(false);
+            this.gb_TowerSafePos.ResumeLayout(false);
+            this.gb_TowerSafePos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_TowerSafePos)).EndInit();
+            this.tab_PosSet_IDRevSafePos.ResumeLayout(false);
+            this.gb_IDRevSafePos.ResumeLayout(false);
+            this.gb_IDRevSafePos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_IDRevSafePos)).EndInit();
+            this.tab_PosSet_DressMaxMinValue.ResumeLayout(false);
+            this.gb_DressBaseMaxMin.ResumeLayout(false);
+            this.gb_DressBaseMaxMin.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.tab_EditSP.ResumeLayout(false);
             this.tab_EditSP.PerformLayout();
@@ -20529,10 +21010,6 @@
             this.tab_RotationCenterOffset.ResumeLayout(false);
             this.gb_Gw2_XRotationCenter.ResumeLayout(false);
             this.gb_Gw1_XRotationCenter.ResumeLayout(false);
-            this.pa_GWRPS.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).EndInit();
-            this.pa_RotationCenterOffset.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -21881,6 +22358,35 @@
         public System.Windows.Forms.Panel pa_RotationCenterOffset;
         public System.Windows.Forms.Label la_Rotation_Pos_Setting;
         private System.Windows.Forms.PictureBox pic_RotationCenterOffset;
+        private System.Windows.Forms.TabPage tab_PosSet_TowerSafePos;
+        private System.Windows.Forms.TabPage tab_PosSet_IDRevSafePos;
+        private System.Windows.Forms.TabPage tab_PosSet_DressMaxMinValue;
+        private Uc_RoundBtn btn_PosSet_DressBaseMaxMin;
+        private Uc_RoundBtn btn_PosSet_IDRevSafePos;
+        private Uc_RoundBtn btn_PosSet_TowerSafePos;
+        private System.Windows.Forms.GroupBox gb_TowerSafePos;
+        private Uc_RoundBtn btn_TowerSafePosZ;
+        private Uc_RoundBtn btn_TowerSafePosX;
+        public System.Windows.Forms.Label la_Tower_SafePos_X;
+        public System.Windows.Forms.TextBox TB_TowerSafePosX;
+        public System.Windows.Forms.Label la_Tower_SafePos_Z;
+        public System.Windows.Forms.TextBox TB_TowerSafePosZ;
+        private System.Windows.Forms.PictureBox pic_TowerSafePos;
+        private System.Windows.Forms.GroupBox gb_IDRevSafePos;
+        private System.Windows.Forms.PictureBox pic_IDRevSafePos;
+        private Uc_RoundBtn btn_ID_DressRevZ2;
+        private Uc_RoundBtn btn_ID_DressRevZ1;
+        public System.Windows.Forms.Label la_ID_DirRevZ1;
+        public System.Windows.Forms.TextBox TB_ID_DressRevZ1;
+        public System.Windows.Forms.Label la_ID_DirRevZ2;
+        public System.Windows.Forms.TextBox TB_ID_DressRevZ2;
+        private System.Windows.Forms.GroupBox gb_DressBaseMaxMin;
+        private Uc_RoundBtn btn_DressBaseMin;
+        private Uc_RoundBtn btn_DressBaseMax;
+        public System.Windows.Forms.Label la_DressBaseMax;
+        public System.Windows.Forms.TextBox TB_DressBaseMax;
+        public System.Windows.Forms.Label la_DressBaseMin;
+        public System.Windows.Forms.TextBox TB_DressBaseMin;
     }
 }
 
