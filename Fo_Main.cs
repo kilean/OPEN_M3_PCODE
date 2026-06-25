@@ -5455,7 +5455,14 @@ namespace OIG
                 btn_DP_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 23, "繼續");
                 btn_DP_Btn3.Visible = false;
                 tb_DP_Field1.Visible = false;
-
+                if(GwType == 0 && GWType[GwNo - 1] == MachineType.OCD)
+                {
+                    gb_DP_G59Pos.Visible = true;
+                }
+                else
+                {
+                    gb_DP_G59Pos.Visible = false;
+                }
                 TC_Main.SelectedTab = tab_DressPartsConv;
                 PrevPage.Push(tab_DressPartsConv);
                 btn_Prev.Visible = true;
@@ -5505,10 +5512,10 @@ namespace OIG
                 pic_G5459X.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
                 pic_G5459X.Tag = GwType.ToString();
 
-                filename = path + xmlG54Z.GetAttribute("Image"); //研磨工件右端面
+                filename = path + xmlG54Z.GetAttribute("Image"); //研磨工件左端面
                 pic_G54Z.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
-                filename = path + xmlG59Z.GetAttribute("Image"); //研磨工件左端面
+                filename = path + xmlG59Z.GetAttribute("Image"); //研磨工件右端面
                 pic_G59Z.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
 
                 if (GwType == 0)
@@ -12111,8 +12118,6 @@ namespace OIG
                 Application.DoEvents();
             }
 
-
-
             if (gw_no < 1 || gw_no > 4)
             {
                 Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 164, "砂輪號錯誤"), "");
@@ -12581,7 +12586,7 @@ namespace OIG
 
         }
 
-        private void ShowSetG54G59X(Image imgG5459X)
+        private void ShowSetG54G59X(int gwNo, Image imgG5459X)
         {
             //focas.ReadMacro(506, out double val);
             //int gw_no = (int)Math.Round(val);
@@ -12600,7 +12605,14 @@ namespace OIG
             //pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
             pic_DressPartsStep.Image = imgG5459X;
             pic_DressPartsStep.Visible = true;
-            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 34, "請使用手輪移動軸向，使砂輪接觸到工件外徑。");
+            if (GWType[gwNo - 1] != MachineType.OIG)
+            {
+                la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 34, "請使用手輪移動軸向，使砂輪接觸到工件外徑。");
+            }
+            else
+            {
+                la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 170, "請使用手輪移動軸向，使砂輪接觸到工件內徑。");
+            }
         }
 
         private void ShowSetG54Z(Image imgG54Z)
@@ -12637,7 +12649,7 @@ namespace OIG
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 36, "請使用手輪移動軸向，使砂輪接觸到工件的左端面。");
         }
 
-        private void ShowSetDiam()
+        private void ShowSetDiam(int gwNo, string imgPath)
         {
             //focas.ReadMacro(506, out double val);
             //int gw_no = (int)Math.Round(val);
@@ -12646,15 +12658,23 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54G59X_Diam.png";
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54G59X_Diam.png";
+            String filename = imgPath + "G54G59X_Diam.png";
             pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
             pic_DressPartsStep.Visible = true;
-            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 37, "請輸入工件外徑尺寸");
+            if (GWType[gwNo - 1] != MachineType.OIG)
+            {
+                la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 37, "請輸入工件外徑尺寸");
+            }
+            else
+            {
+                la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 169, "請輸入工件內徑尺寸");
+            }
             tb_DP_Field1.Text = "";
             tb_DP_Field1.Visible = true;
         }
 
-        private void ShowSetG54Length()
+        private void ShowSetG54Length(string imgPath)
         {
             //focas.ReadMacro(506, out double val);
             //int gw_no = (int)Math.Round(val);
@@ -12663,7 +12683,8 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54Z_Length.png";
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G54Z_Length.png";
+            String filename = imgPath + "G54Z_Length.png";
             pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
             pic_DressPartsStep.Visible = true;
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 38, "請輸入工件右端面位置");
@@ -12671,7 +12692,7 @@ namespace OIG
             tb_DP_Field1.Visible = true;
         }
 
-        private void ShowSetG59Length()
+        private void ShowSetG59Length(string imgPath)
         {
             //focas.ReadMacro(506, out double val);
             //int gw_no = (int)Math.Round(val);
@@ -12680,7 +12701,8 @@ namespace OIG
             btn_DP_Btn1.Visible = true;
             btn_DP_Btn2.Visible = true;
             btn_DP_Btn3.Visible = true;
-            String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G59Z_Length.png";
+            //String filename = Application.StartupPath + "\\image\\GW" + SelectGwNo + "\\DressWorkpiece\\G59Z_Length.png";
+            String filename = imgPath + "G59Z_Length.png";
             pic_DressPartsStep.Image = File.Exists(filename) ? Image.FromFile(filename) : null;
             pic_DressPartsStep.Visible = true;
             la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 39, "請輸入工件左端面位置");
@@ -12730,17 +12752,22 @@ namespace OIG
                     bFinish = true;
                     return;//例外處理
                 }
+                ReadGwMacro(GwNo);
                 int shift = (GwNo - 1) * 200;
 
                 //砂輪類型(0:內圓, 1:外圓(預留))
-                focas.ReadMacro(10004 + shift, out double type);
-                GwType = (int)Math.Round(type);
+                //focas.ReadMacro(10004 + shift, out double type);
+                int type = (int)Math.Round(CurrentGwMacro[10004 + shift]);//砂輪型式(0:內圓, 1:外圓)
+                GwType = type;
                 if (GwType < 0 || GwType > 1) GwType = 0; //例外處理
 
                 //修整模式(形狀)
-                focas.ReadMacro(10005 + shift, out double mode);
-                shape = (int)Math.Round(mode);
+                //focas.ReadMacro(10005 + shift, out double mode);
+                //shape = (int)Math.Round(mode);
+
+                shape = (int)Math.Round(CurrentGwMacro[10005 + shift]);//砂輪形狀(修整模式)
                 
+
                 bFinish = true;
             }));
 
@@ -12786,10 +12813,10 @@ namespace OIG
             Image imgG5459X = File.Exists(filename) ? Image.FromFile(filename) : null;
             
            
-            filename = path + xmlG54Z.GetAttribute("Image"); //研磨工件右端面
+            filename = path + xmlG54Z.GetAttribute("Image"); //研磨工件左端面
             Image imgG54Z = File.Exists(filename) ? Image.FromFile(filename) : null;
             
-            filename = path + xmlG59Z.GetAttribute("Image"); //研磨工件左端面
+            filename = path + xmlG59Z.GetAttribute("Image"); //研磨工件右端面
             Image imgG59Z = File.Exists(filename) ? Image.FromFile(filename) : null;
             
             switch (DressPartsStep)
@@ -12803,7 +12830,7 @@ namespace OIG
                         focas.WriteMacro(980, 2);//O8999 執行加工對點
                         OneKeyCall(8999);
 
-                        ShowSetG54G59X(imgG5459X);
+                        ShowSetG54G59X(GwNo, imgG5459X);
                         break;
                     }
                 case 1://移動X軸，砂輪接觸工件 → 下一步
@@ -12829,15 +12856,16 @@ namespace OIG
                         //    ShowSetG59Z(imgG59Z);
                         //    bPassG54Z = true;
                         //}
-                        if(GwType == 0)
-                        {
-                            ShowSetG54Z(imgG54Z);
-                        }
-                        else
-                        {
-                            ShowSetG59Z(imgG59Z);
-                            bPassG54Z = true;
-                        }
+                        ShowSetG54Z(imgG54Z);
+                        //if (GwType != 0)
+                        //{
+                        //    bPassG54Z = true;
+                        //}
+                        //else
+                        //{
+                        //    ShowSetG59Z(imgG59Z);
+                            
+                        //}
 
                         //ThrWaitM450 = new Thread(() =>
                         //{
@@ -12867,8 +12895,34 @@ namespace OIG
                         btn_DP_Btn2.Visible = false;
                         btn_DP_Btn3.Visible = false;
                         M450_Finish(Condition);
-
-                        ShowSetG59Z(imgG59Z);
+                        if (GwType == 0)
+                        {
+                            ShowSetG59Z(imgG59Z);
+                        }
+                        else
+                        {
+                            //DressPartsStep = 3;
+                            //btn_DP_Btn1.Visible = true;
+                            //btn_DP_Btn2.Visible = true;
+                            //btn_DP_Btn3.Visible = true;
+                            bPassG59Z = true;
+                            if (!bPassX)
+                            {
+                                ShowSetDiam(GwNo, path);
+                                
+                            }
+                            else
+                            {
+                                if (!bPassG54Z)
+                                {
+                                    ShowSetG54Length(path);
+                                }
+                                else
+                                {
+                                    ShowSetFinish();
+                                }
+                            }
+                        }
                         //if (shape == 3 || shape == 4)
                         //{
                         //    ShowSetG59Z(imgG59Z);
@@ -12923,20 +12977,31 @@ namespace OIG
 
                         if (!bPassX)
                         {
-                            ShowSetDiam();
+                            ShowSetDiam(GwNo, path);
                         }
                         else if (!bPassG54Z)
                         {
-                            ShowSetG54Length();
+                            ShowSetG54Length(path);
                         }
                         else if (!bPassG59Z)
                         {
-                            ShowSetG59Length();
+                            ShowSetG59Length(path);
                         }
                         else
                         {
-                            DressPartsStep = 0;
-                            btn_Prev.PerformClick();
+                            //DressPartsStep = 0;
+                            //btn_Prev.PerformClick();
+                            DressPartsStep = 99;
+
+                            pic_DressPartsStep.Image = null;
+                            pic_DressPartsStep.Visible = false;
+                            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 27, "設定完成，是否要儲存座標系。");
+                            btn_DP_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 28, "儲存");
+                            btn_DP_Btn1.Visible = true;
+                            btn_DP_Btn2.Visible = true;
+                            btn_DP_Btn3.Visible = false;
+                            tb_DP_Field1.Text = "";
+                            tb_DP_Field1.Visible = false;
                         }
 
                         /*
@@ -12981,16 +13046,27 @@ namespace OIG
 
                         if (!bPassG54Z)
                         {
-                            ShowSetG54Length();
+                            ShowSetG54Length(path);
                         }
                         else if (!bPassG59Z)
                         {
-                            ShowSetG59Length();
+                            ShowSetG59Length(path);
                         }
                         else if (bPassG59Z && bPassG54Z && bPassX)
                         {
-                            DressPartsStep = 0;
-                            btn_Prev.PerformClick();
+                            //DressPartsStep = 0;
+                            //btn_Prev.PerformClick();
+                            DressPartsStep = 99;
+
+                            pic_DressPartsStep.Image = null;
+                            pic_DressPartsStep.Visible = false;
+                            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 27, "設定完成，是否要儲存座標系。");
+                            btn_DP_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 28, "儲存");
+                            btn_DP_Btn1.Visible = true;
+                            btn_DP_Btn2.Visible = true;
+                            btn_DP_Btn3.Visible = false;
+                            tb_DP_Field1.Text = "";
+                            tb_DP_Field1.Visible = false;
                         }
                         else
                         {
@@ -13004,12 +13080,22 @@ namespace OIG
                         if (bNext) TB_G54Cal_Length.Text = tb_DP_Field1.Text;
                         if (!bPassG59Z)
                         {
-                            ShowSetG59Length();
+                            ShowSetG59Length(path);
                         }
                         else if (bPassG59Z && bPassG54Z && bPassX)
                         {
-                            DressPartsStep = 0;
-                            btn_Prev.PerformClick();
+                            DressPartsStep = 99;
+                            
+                            pic_DressPartsStep.Image = null;
+                            pic_DressPartsStep.Visible = false;
+                            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 27, "設定完成，是否要儲存座標系。");
+                            btn_DP_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 28, "儲存");
+                            btn_DP_Btn1.Visible = true;
+                            btn_DP_Btn2.Visible = true;
+                            btn_DP_Btn3.Visible = false;
+                            tb_DP_Field1.Text = "";
+                            tb_DP_Field1.Visible = false;
+                            //btn_Prev.PerformClick();
                         }
                         else
                         {
@@ -13024,8 +13110,19 @@ namespace OIG
 
                         if (bPassG59Z && bPassG54Z && bPassX)
                         {
-                            DressPartsStep = 0;
-                            btn_Prev.PerformClick();
+                            //DressPartsStep = 0;
+                            //btn_Prev.PerformClick();
+                            DressPartsStep = 99;
+
+                            pic_DressPartsStep.Image = null;
+                            pic_DressPartsStep.Visible = false;
+                            la_DressPartsMsg.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 27, "設定完成，是否要儲存座標系。");
+                            btn_DP_Btn2.DisplayText = LanguageManager.LoadMessage(Units.langfile, "Message", 28, "儲存");
+                            btn_DP_Btn1.Visible = true;
+                            btn_DP_Btn2.Visible = true;
+                            btn_DP_Btn3.Visible = false;
+                            tb_DP_Field1.Text = "";
+                            tb_DP_Field1.Visible = false;
                         }
                         else
                         {
@@ -13055,17 +13152,17 @@ namespace OIG
                         if (TB_G59Cal_Length.Text == "")
                             TB_G59Cal_Length.Text = "0";
 
-                        double PosX = double.Parse(TB_G54G59X.Text);
+                        double PosX = 15;// double.Parse(TB_G54G59X.Text);
                         double Diam = double.Parse(TB_G54G59Cal_Diam.Text);
-                        double LPosZ = double.Parse(TB_G54Z.Text);
-                        double RPosZ = double.Parse(TB_G59Z.Text);
+                        double LPosZ = 16;// double.Parse(TB_G54Z.Text);
+                        double RPosZ = 16;// double.Parse(TB_G59Z.Text);
                         double LLength = double.Parse(TB_G54Cal_Length.Text);
                         double RLength = double.Parse(TB_G59Cal_Length.Text);
 
-                        la_CV_G54XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
-                        la_CV_G54ZValue.Text = (LPosZ - LLength).ToString(Units.DisplayFmt);
-                        la_CV_G59XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
-                        la_CV_G59ZValue.Text = (RPosZ - RLength).ToString(Units.DisplayFmt);
+                        //la_CV_G54XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
+                        //la_CV_G54ZValue.Text = (LPosZ - LLength).ToString(Units.DisplayFmt);
+                        //la_CV_G59XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
+                        //la_CV_G59ZValue.Text = (RPosZ - RLength).ToString(Units.DisplayFmt);
 
                         //TB_G54G59X.Text = la_CV_G54XValue.Text;
                         //TB_G54Z.Text = la_CV_G54ZValue.Text;
@@ -13073,11 +13170,76 @@ namespace OIG
 
                         //G54         G55         G57         G58         G59
                         //#5221,#5222,#5241,#5242,#5281,#5282,#5301,#5302,#5321,#5322
-                        focas.WriteMacro(5221, PosX - Diam);
-                        focas.WriteMacro(5222, LPosZ - LLength);
+                        //focas.WriteMacro(5221, PosX - Diam);
+                        //focas.WriteMacro(5222, LPosZ - LLength);
 
-                        focas.WriteMacro(5321, PosX - Diam);
-                        focas.WriteMacro(5322, RPosZ - RLength);
+                        //focas.WriteMacro(5321, PosX - Diam);
+                        //focas.WriteMacro(5322, RPosZ - RLength);
+
+                        int shift = (GwNo - 1) * 200;
+
+                        Actions.Enqueue(new Action(() =>
+                        {
+                            double val;
+
+                            //focas.Param_ReadDouble(8210, 0, out double PRM8210);
+                            //double rad = PRM8210 * (Math.PI / 180);
+
+                            //G54          G55          G57          G58          G59
+                            //#5221,#5222, #5241,#5242, #5281,#5282, #5301,#5302, #5321,#5322
+                            val = PosX - Diam;
+                            //if (btn_CurrentRotationCenterClicked.Tag != null && btn_CurrentRotationCenterClicked.Tag.ToString() == "out")
+                            if (GwType == 0)
+                            {
+                                val = PosX + Diam;
+                            }
+                            focas.WriteMacro(5221, val); //控制器用的 G54X
+                            focas.WriteMacro(10100 + shift, val); //加工程式用的 G54X
+
+                            val = LPosZ - LLength;
+                            focas.WriteMacro(5222, val); //控制器用的 G54Z
+                            focas.WriteMacro(10101 + shift, val); //加工程式用的 G54Z
+
+                            val = PosX - Diam;
+                            focas.WriteMacro(5321, val); //控制器用的 G59X
+                            focas.WriteMacro(10110 + shift, val); //加工程式用的 G59X
+
+                            val = RPosZ - RLength;
+                            focas.WriteMacro(5322, val); //控制器用的 G59Z
+                            focas.WriteMacro(10111 + shift, val); //加工程式用的 G59Z
+
+                            bFinish = true;
+                        }));
+
+                        iStart = Environment.TickCount;
+                        while (!bFinish)
+                        {
+                            int iTime = Environment.TickCount - iStart;
+                            if (iTime > 5000)
+                            {
+
+                                //Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 45, "通訊異常"));
+                                return;
+                            }
+                            Application.DoEvents();
+                        }
+
+                        if (GwNo < 1 || GwNo > 4)
+                        {
+                            Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 164, "砂輪號錯誤"), "");
+                            return;
+                        }
+
+                        double valG54X = PosX - Diam;
+                        
+                        if (GwType == 0)
+                        {
+                            valG54X = PosX + Diam;
+                        }
+                        la_CV_G54XValue.Text = (valG54X).ToString(Units.DisplayFmt);
+                        la_CV_G54ZValue.Text = (LPosZ - LLength).ToString(Units.DisplayFmt);
+                        la_CV_G59XValue.Text = (PosX - Diam).ToString(Units.DisplayFmt);
+                        la_CV_G59ZValue.Text = (RPosZ - RLength).ToString(Units.DisplayFmt);
 
                         btn_Prev.PerformClick();
                         break;

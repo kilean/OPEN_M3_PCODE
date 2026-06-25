@@ -871,6 +871,8 @@ Message165=砂輪資料錯誤
 Message166=是否要全部重置
 Message167=請移動X軸,使砂輪接觸工件外徑
 Message168=工件外徑值
+Message169=請輸入工件內徑尺寸
+Message170=請使用手輪移動軸向，使砂輪接觸到工件內徑。
 
 [OIG_Shape]
 Shape1=外徑修整

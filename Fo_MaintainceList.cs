@@ -42,7 +42,8 @@ namespace OIG
             ch_Door.Tag = Units.Fo_Main.pa_MaintainDoor;
             ch_FuncSwitch.Tag = Units.Fo_Main.pa_FuncSW;
             ch_CNCDataManager.Tag = Units.Fo_Main.pa_CNCDataManager;
-
+            ch_GWRPS.Tag = Units.Fo_Main.pa_GWRPS;
+            ch_Rotation_Pos_Setting.Tag = Units.Fo_Main.pa_RotationCenterOffset;
             if (this.Visible)
             {
                 foreach (var obj in this.Controls)

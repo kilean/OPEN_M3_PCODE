@@ -748,6 +748,8 @@ Message163=Y
 Message164=Nieprawidłowy numer ściernicy
 Message165=Błąd danych ściernicy
 Message166=Confirm to Reset all?
+Message169=ŚR.WEW zewnętrzną detalu
+Message170=Za pomocą MPG przesunąć oś w , taki sposób, aby ściernica zetknęła się z DETALEM.
 
 [Fo_Msg]
 btn_Cancel3=Anuluj

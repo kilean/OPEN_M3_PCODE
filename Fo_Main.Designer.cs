@@ -933,8 +933,6 @@
             this.la_MessageTitle = new System.Windows.Forms.Label();
             this.LB_CurrentAlarm = new System.Windows.Forms.ListBox();
             this.tab_Maintenance = new System.Windows.Forms.TabPage();
-            this.la_Rotation_Pos_Setting = new System.Windows.Forms.Label();
-            this.la_GWRPS = new System.Windows.Forms.Label();
             this.pa_FuncSW = new System.Windows.Forms.Panel();
             this.la_FuncSwitch = new System.Windows.Forms.Label();
             this.pic_FuncSwitch = new System.Windows.Forms.PictureBox();
@@ -972,8 +970,6 @@
             this.la_MaintainLanguage = new System.Windows.Forms.Label();
             this.pic_Language = new System.Windows.Forms.PictureBox();
             this.la_MaintenanceTitle = new System.Windows.Forms.Label();
-            this.pic_RotationCenterOffset = new System.Windows.Forms.PictureBox();
-            this.pic_GWRPS = new System.Windows.Forms.PictureBox();
             this.tab_FuncSwitch = new System.Windows.Forms.TabPage();
             this.pa_SW10 = new System.Windows.Forms.Panel();
             this.btn_SW10_ON = new Uc_RoundBtn();
@@ -1369,6 +1365,12 @@
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.masterSerialBus2 = new MasterSerialBus(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.pa_GWRPS = new System.Windows.Forms.Panel();
+            this.la_GWRPS = new System.Windows.Forms.Label();
+            this.pic_GWRPS = new System.Windows.Forms.PictureBox();
+            this.pa_RotationCenterOffset = new System.Windows.Forms.Panel();
+            this.la_Rotation_Pos_Setting = new System.Windows.Forms.Label();
+            this.pic_RotationCenterOffset = new System.Windows.Forms.PictureBox();
             this.pa_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -1592,8 +1594,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_SP)).BeginInit();
             this.pa_Language.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Language)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).BeginInit();
             this.tab_FuncSwitch.SuspendLayout();
             this.pa_SW10.SuspendLayout();
             this.pa_SW9.SuspendLayout();
@@ -1693,6 +1693,10 @@
             this.tab_RotationCenterOffset.SuspendLayout();
             this.gb_Gw2_XRotationCenter.SuspendLayout();
             this.gb_Gw1_XRotationCenter.SuspendLayout();
+            this.pa_GWRPS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).BeginInit();
+            this.pa_RotationCenterOffset.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).BeginInit();
             this.SuspendLayout();
             // 
             // pa_Top
@@ -14271,8 +14275,8 @@
             // tab_Maintenance
             // 
             this.tab_Maintenance.BackColor = System.Drawing.SystemColors.Control;
-            this.tab_Maintenance.Controls.Add(this.la_Rotation_Pos_Setting);
-            this.tab_Maintenance.Controls.Add(this.la_GWRPS);
+            this.tab_Maintenance.Controls.Add(this.pa_RotationCenterOffset);
+            this.tab_Maintenance.Controls.Add(this.pa_GWRPS);
             this.tab_Maintenance.Controls.Add(this.pa_FuncSW);
             this.tab_Maintenance.Controls.Add(this.pa_Warmup);
             this.tab_Maintenance.Controls.Add(this.pa_RunSpindle);
@@ -14286,8 +14290,6 @@
             this.tab_Maintenance.Controls.Add(this.pa_ProcessParam);
             this.tab_Maintenance.Controls.Add(this.pa_Language);
             this.tab_Maintenance.Controls.Add(this.la_MaintenanceTitle);
-            this.tab_Maintenance.Controls.Add(this.pic_RotationCenterOffset);
-            this.tab_Maintenance.Controls.Add(this.pic_GWRPS);
             this.tab_Maintenance.Location = new System.Drawing.Point(4, 67);
             this.tab_Maintenance.Name = "tab_Maintenance";
             this.tab_Maintenance.Size = new System.Drawing.Size(936, 561);
@@ -14295,32 +14297,6 @@
             this.tab_Maintenance.Text = "維護";
             this.tab_Maintenance.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_Maintenance.DoubleClick += new System.EventHandler(this.tab_Maintenance_DoubleClick);
-            // 
-            // la_Rotation_Pos_Setting
-            // 
-            this.la_Rotation_Pos_Setting.BackColor = System.Drawing.Color.Black;
-            this.la_Rotation_Pos_Setting.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.la_Rotation_Pos_Setting.ForeColor = System.Drawing.Color.White;
-            this.la_Rotation_Pos_Setting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_Rotation_Pos_Setting.Location = new System.Drawing.Point(560, 440);
-            this.la_Rotation_Pos_Setting.Name = "la_Rotation_Pos_Setting";
-            this.la_Rotation_Pos_Setting.Size = new System.Drawing.Size(176, 24);
-            this.la_Rotation_Pos_Setting.TabIndex = 91;
-            this.la_Rotation_Pos_Setting.Text = "旋轉中心位置補正";
-            this.la_Rotation_Pos_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // la_GWRPS
-            // 
-            this.la_GWRPS.BackColor = System.Drawing.Color.Black;
-            this.la_GWRPS.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.la_GWRPS.ForeColor = System.Drawing.Color.White;
-            this.la_GWRPS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.la_GWRPS.Location = new System.Drawing.Point(376, 440);
-            this.la_GWRPS.Name = "la_GWRPS";
-            this.la_GWRPS.Size = new System.Drawing.Size(176, 24);
-            this.la_GWRPS.TabIndex = 89;
-            this.la_GWRPS.Text = "砂輪基準點設定";
-            this.la_GWRPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pa_FuncSW
             // 
@@ -14807,30 +14783,6 @@
             this.la_MaintenanceTitle.Text = "維護";
             this.la_MaintenanceTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.la_MaintenanceTitle.DoubleClick += new System.EventHandler(this.la_MaintenanceTitle_DoubleClick);
-            // 
-            // pic_RotationCenterOffset
-            // 
-            this.pic_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
-            this.pic_RotationCenterOffset.Image = ((System.Drawing.Image)(resources.GetObject("pic_RotationCenterOffset.Image")));
-            this.pic_RotationCenterOffset.Location = new System.Drawing.Point(560, 424);
-            this.pic_RotationCenterOffset.Name = "pic_RotationCenterOffset";
-            this.pic_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
-            this.pic_RotationCenterOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_RotationCenterOffset.TabIndex = 90;
-            this.pic_RotationCenterOffset.TabStop = false;
-            this.pic_RotationCenterOffset.Click += new System.EventHandler(this.pic_RotationCenterOffset_Click);
-            // 
-            // pic_GWRPS
-            // 
-            this.pic_GWRPS.BackColor = System.Drawing.Color.Transparent;
-            this.pic_GWRPS.Image = ((System.Drawing.Image)(resources.GetObject("pic_GWRPS.Image")));
-            this.pic_GWRPS.Location = new System.Drawing.Point(376, 424);
-            this.pic_GWRPS.Name = "pic_GWRPS";
-            this.pic_GWRPS.Size = new System.Drawing.Size(176, 176);
-            this.pic_GWRPS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_GWRPS.TabIndex = 88;
-            this.pic_GWRPS.TabStop = false;
-            this.pic_GWRPS.Click += new System.EventHandler(this.pic_GWRPS_Click);
             // 
             // tab_FuncSwitch
             // 
@@ -20103,6 +20055,76 @@
             this.masterSerialBus2.OnReceive += new MasterSerialReceiveEventHandler(this.masterSerialBus2_OnReceive);
             this.masterSerialBus2.OnError += new MasterSerialErrorEventHandler(this.masterSerialBus1_OnError);
             // 
+            // pa_GWRPS
+            // 
+            this.pa_GWRPS.BackColor = System.Drawing.Color.Transparent;
+            this.pa_GWRPS.Controls.Add(this.la_GWRPS);
+            this.pa_GWRPS.Controls.Add(this.pic_GWRPS);
+            this.pa_GWRPS.Location = new System.Drawing.Point(376, 424);
+            this.pa_GWRPS.Name = "pa_GWRPS";
+            this.pa_GWRPS.Size = new System.Drawing.Size(176, 176);
+            this.pa_GWRPS.TabIndex = 92;
+            // 
+            // la_GWRPS
+            // 
+            this.la_GWRPS.BackColor = System.Drawing.Color.Black;
+            this.la_GWRPS.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.la_GWRPS.ForeColor = System.Drawing.Color.White;
+            this.la_GWRPS.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_GWRPS.Location = new System.Drawing.Point(0, 16);
+            this.la_GWRPS.Name = "la_GWRPS";
+            this.la_GWRPS.Size = new System.Drawing.Size(176, 24);
+            this.la_GWRPS.TabIndex = 91;
+            this.la_GWRPS.Text = "砂輪基準點設定";
+            this.la_GWRPS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_GWRPS
+            // 
+            this.pic_GWRPS.BackColor = System.Drawing.Color.Transparent;
+            this.pic_GWRPS.Image = ((System.Drawing.Image)(resources.GetObject("pic_GWRPS.Image")));
+            this.pic_GWRPS.Location = new System.Drawing.Point(0, 0);
+            this.pic_GWRPS.Name = "pic_GWRPS";
+            this.pic_GWRPS.Size = new System.Drawing.Size(176, 176);
+            this.pic_GWRPS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_GWRPS.TabIndex = 90;
+            this.pic_GWRPS.TabStop = false;
+            this.pic_GWRPS.Click += new System.EventHandler(this.pic_GWRPS_Click);
+            // 
+            // pa_RotationCenterOffset
+            // 
+            this.pa_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
+            this.pa_RotationCenterOffset.Controls.Add(this.la_Rotation_Pos_Setting);
+            this.pa_RotationCenterOffset.Controls.Add(this.pic_RotationCenterOffset);
+            this.pa_RotationCenterOffset.Location = new System.Drawing.Point(560, 424);
+            this.pa_RotationCenterOffset.Name = "pa_RotationCenterOffset";
+            this.pa_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
+            this.pa_RotationCenterOffset.TabIndex = 93;
+            // 
+            // la_Rotation_Pos_Setting
+            // 
+            this.la_Rotation_Pos_Setting.BackColor = System.Drawing.Color.Black;
+            this.la_Rotation_Pos_Setting.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.la_Rotation_Pos_Setting.ForeColor = System.Drawing.Color.White;
+            this.la_Rotation_Pos_Setting.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.la_Rotation_Pos_Setting.Location = new System.Drawing.Point(0, 16);
+            this.la_Rotation_Pos_Setting.Name = "la_Rotation_Pos_Setting";
+            this.la_Rotation_Pos_Setting.Size = new System.Drawing.Size(176, 24);
+            this.la_Rotation_Pos_Setting.TabIndex = 93;
+            this.la_Rotation_Pos_Setting.Text = "旋轉中心位置補正";
+            this.la_Rotation_Pos_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pic_RotationCenterOffset
+            // 
+            this.pic_RotationCenterOffset.BackColor = System.Drawing.Color.Transparent;
+            this.pic_RotationCenterOffset.Image = ((System.Drawing.Image)(resources.GetObject("pic_RotationCenterOffset.Image")));
+            this.pic_RotationCenterOffset.Location = new System.Drawing.Point(0, 0);
+            this.pic_RotationCenterOffset.Name = "pic_RotationCenterOffset";
+            this.pic_RotationCenterOffset.Size = new System.Drawing.Size(176, 176);
+            this.pic_RotationCenterOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_RotationCenterOffset.TabIndex = 92;
+            this.pic_RotationCenterOffset.TabStop = false;
+            this.pic_RotationCenterOffset.Click += new System.EventHandler(this.pic_RotationCenterOffset_Click);
+            // 
             // Fo_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -20392,8 +20414,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_SP)).EndInit();
             this.pa_Language.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Language)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).EndInit();
             this.tab_FuncSwitch.ResumeLayout(false);
             this.pa_SW10.ResumeLayout(false);
             this.pa_SW9.ResumeLayout(false);
@@ -20509,6 +20529,10 @@
             this.tab_RotationCenterOffset.ResumeLayout(false);
             this.gb_Gw2_XRotationCenter.ResumeLayout(false);
             this.gb_Gw1_XRotationCenter.ResumeLayout(false);
+            this.pa_GWRPS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_GWRPS)).EndInit();
+            this.pa_RotationCenterOffset.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_RotationCenterOffset)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -21679,8 +21703,6 @@
         private Uc_RoundBtn btn_R_DDD;
         private Uc_RoundBtn btn_R_DS;
         private Uc_RoundBtn btn_R_DD;
-        public System.Windows.Forms.Label la_GWRPS;
-        private System.Windows.Forms.PictureBox pic_GWRPS;
         private System.Windows.Forms.TabPage tab_GWRPS;
         private System.Windows.Forms.TabPage tab_GWRPS2;
         private System.Windows.Forms.DataGridView dgv_GWRPSs;
@@ -21715,12 +21737,10 @@
         private System.Windows.Forms.PictureBox pic_GWRPSsetting2;
         private System.Windows.Forms.TabPage tab_RotationCenterOffset;
         public System.Windows.Forms.Label la_GWRPSmessage;
-        private System.Windows.Forms.PictureBox pic_RotationCenterOffset;
         public System.Windows.Forms.GroupBox gb_Gw1_XRotationCenter;
         public System.Windows.Forms.Label la_Gw1_XCenter;
         private Uc_RoundBtn btn_Gw1_XOffset;
         public System.Windows.Forms.Label la_Rotation_Center_Offset_TItle;
-        public System.Windows.Forms.Label la_Rotation_Pos_Setting;
         
         private UserNumLib.Uc_UserNum uc_UserNum_RotationCenter;
         private Uc_RoundBtn btn_Gw1_ZOffset;
@@ -21855,6 +21875,12 @@
         private System.Windows.Forms.Panel pa_DressTool_3P;
         private System.Windows.Forms.PictureBox pic_DressTool_2P;
         private System.Windows.Forms.PictureBox pic_DressTool_3P;
+        public System.Windows.Forms.Panel pa_GWRPS;
+        public System.Windows.Forms.Label la_GWRPS;
+        private System.Windows.Forms.PictureBox pic_GWRPS;
+        public System.Windows.Forms.Panel pa_RotationCenterOffset;
+        public System.Windows.Forms.Label la_Rotation_Pos_Setting;
+        private System.Windows.Forms.PictureBox pic_RotationCenterOffset;
     }
 }
 

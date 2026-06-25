@@ -859,6 +859,8 @@ Message165=GW Data Error.
 Message166=Confirm to Reset all?
 Message167=Use the MPG to move the X-Axis, so that the GW touches the workpiece out side diameter.
 Message168=Out Side diameter
+Message169=Please enter the inter diameter of the workpiece
+Message170=Use the MPG to move the axis, so that the GW touches the WORKPIECE.
 
 [OIG_Shape]
 Shape1=Diameter
