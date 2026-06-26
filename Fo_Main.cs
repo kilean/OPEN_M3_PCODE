@@ -1,5 +1,5 @@
-﻿using OIG;
-using OIG.Properties;
+﻿using OCD;
+using OCD.Properties;
 using pmcMessagadll;
 using System;
 using System.Collections;
@@ -30,7 +30,7 @@ using static Focas1;
 
 #pragma warning disable IDE1006
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_Main : Form
     {
@@ -6110,7 +6110,7 @@ namespace OIG
 
 
                 Bitmap bmpNo = new Bitmap(Col_R_No.Width, 30);
-                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".png");
+                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".bmp");
                 Graphics g = Graphics.FromImage(bmpNo);
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
                 int id = (int)process.ID - 1;
@@ -6228,7 +6228,7 @@ namespace OIG
                 }
 
                 Bitmap bmpNo = new Bitmap(Col_OffsetNo.Width, 30);
-                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".png");
+                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".bmp");
                 Graphics g = Graphics.FromImage(bmpNo);
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
                 int id = (int)process.ID - 1;
@@ -6688,6 +6688,7 @@ namespace OIG
                         a.Value = 1;
                         //continue;
                     }
+                   
                 }
 
                 if (!Rolleropen && (a.AddrCode == "19933" || a.AddrCode == "19944"))
@@ -6824,7 +6825,7 @@ namespace OIG
             {
                 XmlElement xmlProcess = machineSetting.xmlProcessList.GetChildNodeAt(i);
                 int.TryParse(xmlProcess.GetAttribute("ID"), out int id);
-                filename = Application.StartupPath + "\\image\\Process\\150x150\\Process" + id.ToString("00") + ".png";
+                filename = Application.StartupPath + "\\image\\Process\\150x150\\Process" + id.ToString("00") + ".bmp";
                 buf[i].Image = File.Exists(filename) ? Image.FromFile(filename) : null;
                 buf[i].Tag = id;
                 if (id == 0)
@@ -7112,7 +7113,7 @@ namespace OIG
                     continue;
 
 
-                String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".png";
+                String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".bmp";
                 Image img_Proc = File.Exists(FileName) ? Bitmap.FromFile(FileName) : new Bitmap(40, 40);
 
                 Image img_Btn = TempExecEnabled[i] ? Resources.SwitchOn : Resources.SwitchOff;
@@ -7417,7 +7418,7 @@ namespace OIG
             {
                 TProcess process = CurrentProgram.Processes[i];
                 Bitmap bmp = new Bitmap(100, 30);
-                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".png");
+                Bitmap icon = (Bitmap)Bitmap.FromFile(Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".bmp");
                 Graphics g = Graphics.FromImage(bmp);
                 //Point pt = new Point(0, 0);
                 int id = (int)process.ID - 1;
@@ -7552,7 +7553,7 @@ namespace OIG
                         if (index >= 0 && index <= 20000) macros[index] = arg.Value;
                     }
                     int len = 200;
-                    focas.WriteMacro(19801 + (i + 1) * 200, ref len, macros);
+                    int ret = focas.WriteMacro(19801 + (i + 1) * 200, ref len, macros);
 
                     prog += "\r\n";
                 }
@@ -7640,7 +7641,7 @@ namespace OIG
                 if (process == null) continue;
 
                 //工序圖路徑
-                String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".png";
+                String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + ((int)process.ID).ToString("00") + ".bmp";
                 Bitmap bmp = null;
                 if (File.Exists(FileName))
                 {
@@ -8100,6 +8101,11 @@ namespace OIG
             if (e == null) return;
             int.TryParse(ProcID, out int id);
 
+            bool bODGw = true;
+            if(id >= 50)
+            {
+                bODGw = false;
+            }
 
             var processNode = Units.xmlDefaultProcessLang.Descendants("Process").FirstOrDefault(x => x.Attribute("ID")?.Value == TempProcess.ID.ToString());
             var pcodesWithTexts = processNode.Elements("PCode")
@@ -8121,7 +8127,29 @@ namespace OIG
             {
                 if (a.AddrCode == "19865")
                 {
-                    focas.PMC_ReadWord(PmcAddrType.D, 68, out ushort val);
+                    
+                    bool bFinish = false;
+                    ushort val = 0;
+                    Actions.Enqueue(new Action(() =>
+                    {
+
+                        focas.PMC_ReadWord(PmcAddrType.D, 68, out val);
+                        bFinish = true;
+                    }));
+
+                    int iStart = Environment.TickCount;
+                    while (!bFinish)
+                    {
+                        int iTime = Environment.TickCount - iStart;
+                        if (iTime > 5000)
+                        {
+
+                            //Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 45, "通訊異常"));
+                            break;
+                        }
+                        Application.DoEvents();
+                    }
+
                     if (val < 1) val = 1;
                     for (int i = 0; i < val; i++)
                     {
@@ -8150,10 +8178,16 @@ namespace OIG
                         no++;
                         if (no > GwCount) break;
 
-                        if (Gw2CantUse && Gw2CantUseID.Contains(id) && no == 2) continue;
+                        //if (Gw2CantUse && Gw2CantUseID.Contains(id) && no == 2) continue;
+                        if(bODGw && GWType[no - 1] == MachineType.OIG)
+                        {
+                            continue;
+                        }
+                        if (!bODGw && GWType[no - 1] != MachineType.OIG)
+                        {
+                            continue;
+                        }
                         CB.Items.Add(vn.Name);
-
-
 
                     }
                     CB.Text = Edit_DGV.Rows[Row].Cells[Edit_DGV_Index["TextValue"]].Value.ToString();
@@ -17468,7 +17502,7 @@ namespace OIG
 
 
             //路徑
-            String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + (p.ID).ToString("00") + ".png";
+            String FileName = Application.StartupPath + "\\image\\Process\\40x40\\Process" + (p.ID).ToString("00") + ".bmp";
             if (File.Exists(FileName))
             {
                 //工序清單新增一筆
@@ -18591,7 +18625,28 @@ namespace OIG
             {
                 double.TryParse(uc_UserNumEditProc.la_Num.Text, out double data);
 
-                focas.PMC_ReadByte(PmcAddrType.F, 2, out byte F2);
+
+                bool bFinish = false;
+                byte F2 = 0;
+                Actions.Enqueue(new Action(() =>
+                {
+                    focas.PMC_ReadByte(PmcAddrType.F, 2, out F2);
+                    bFinish = true;
+                }));
+
+                int iStart = Environment.TickCount;
+                while (!bFinish)
+                {
+                    int iTime = Environment.TickCount - iStart;
+                    if (iTime > 5000)
+                    {
+
+                        //Fo_Msg.Show(LanguageManager.LoadMessage(Units.langfile, "Message", 45, "通訊異常"));
+                        break;
+                    }
+                    Application.DoEvents();
+                }
+                
                 if (F2.BIT_0()) //inch 0.04 ~ 4
                 {
                     if (data < 0.04) data = 0.04;
@@ -18700,7 +18755,10 @@ namespace OIG
                 //使用組別
                 if (a.AddrCode == "19865")
                 {
-                    focas.PMC_WriteWord(PmcAddrType.D, 68, (short)val);
+                    Actions.Enqueue(new Action(() =>
+                    {
+                        focas.PMC_WriteWord(PmcAddrType.D, 68, (short)val);
+                    }));                  
                 }
             }
             //uc_UserNumEditProc.la_Num.Text = "0";

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Palmary.Register;
 
-namespace OIG
+namespace OCD
 {
     static class Program
     {

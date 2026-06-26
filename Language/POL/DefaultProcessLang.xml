@@ -1,628 +1,1552 @@
-<DefaultProcessLang Version="1.26.0305.0908">
-  <Process ID="50" Name="Wgłębne">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+<DefaultProcessLang Version="1.25.1105.1058">
+  <Process ID="1" Name="ŚR.ZEW Szlifow. wgłębne">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
     </PCode>
-    <PCode No="19810" Name="Średnica końcowa"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
     <PCode No="19812" Name="Pozycja szlifowania"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19856" Name="Wycofanie i powrót"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Kąt startowy"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19855" Name="Wielkość wycofania przy szlifowaniu zgrubnym"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19841" Name="Wielkość szlifowania płaszczyzny"/>
+    <PCode No="19854" Name="Brak wyiskrzania na końcu"/>
+    <PCode No="19853" Name="Wielkość odejścia płaszczyzny"/>
+    <PCode No="19870" Name="Dystans wyiskrzania"/>
+    <PCode No="19872" Name="Ilosc wyiskrzen"/>
+    <PCode No="19871" Name="Predkosc wyiskrzania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="51" Name="Wielkość wycofania">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+  <Process ID="2" Name="ŚR.ZEW Szlifow. przelotowe">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
     </PCode>
-    <PCode No="19810" Name="Średnica końcowa 1"/>
-    <PCode No="19811" Name="Średnica końcowa 2"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu 1"/>
+    <PCode No="19811" Name="Zewnętrzna średnica detalu 2"/>
     <PCode No="19812" Name="Pozycja szlifowania 1"/>
     <PCode No="19813" Name="Pozycja szlifowania 2"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19839" Name="Tryb posuwu poprzecznego">
-      <Text Value="0" Name="Oba (A)"/>
-      <Text Value="-1" Name="Od końca (B)"/>
-      <Text Value="1" Name="Od początku (C)"/>
+    <PCode No="19817" Name="Przekroczenia zakresu punktu początkowego"/>
+    <PCode No="19818" Name="Przekroczenia zakresu punktu końcowego"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
     </PCode>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Kąt startowy"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19827" Name="Wielkość dosuwu V"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19833" Name="Prędkość posuwu poprzecznego V"/>
-    <PCode No="19842" Name="Czas postoju 1 V"/>
-    <PCode No="19843" Name="Czas postoju 2 V"/>
-    <PCode No="19828" Name="Wielkość dosuwu VV"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19834" Name="Prędkość posuwu poprzecznego VV"/>
-    <PCode No="19844" Name="Czas postoju 1 VV"/>
-    <PCode No="19845" Name="Czas postoju 2 VV"/>
-    <PCode No="19829" Name="Wielkość dosuwu VVV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19835" Name="Prędkość posuwu poprzecznego VVV"/>
-    <PCode No="19846" Name="Czas postoju 1 VVV"/>
-    <PCode No="19847" Name="Czas postoju 2 VVV"/>
-    <PCode No="19837" Name="Liczba doszlifowań"/>
-    <PCode No="19836" Name="Prędkość posuwu poprzecznego VVVV"/>
-    <PCode No="19848" Name="Czas postoju 1 VVVV"/>
-    <PCode No="19849" Name="Czas postoju 2 VVVV"/>
-    <PCode No="19856" Name="Wycofanie i powrót"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19877" Name="Powtorz szlifowanie">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19862" Name="Pojedynczy dosuw w szczelinie"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19855" Name="Wielkość wycofania przy szlifowaniu zgrubnym"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19862" Name="Wielkość pojedynczego posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="52" Name="Prawa powierzchnia">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
-    </PCode>
-    <PCode No="19812" Name="Wielkość barku"/>
+  <Process ID="3" Name="ŚR.ZEW Szlifow. prawej płaszczyzny">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
     <PCode No="19810" Name="Pozycja szlifowania"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania w osi X"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
-    <PCode No="19860" Name="Wielkość szlifowania stałego"/>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19860" Name="Tryb ilościowy"/>
+    <PCode No="19864" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="53" Name="Drgania">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
+  <Process ID="4" Name="ŚR.ZEW Szlifow. lewej płaszczyzny">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
       <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
+    <PCode No="19810" Name="Pozycja szlifowania"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania w osi X"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19810" Name="Średnica końcowa"/>
-    <PCode No="19812" Name="Pozycja szlifowania 1"/>
-    <PCode No="19815" Name="Dystans oscylacji"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Kąt startowy"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19836" Name="Prędkość posuwu poprzecznego VVVV"/>
-    <PCode No="19848" Name="Czas postoju 1 VVVV"/>
-    <PCode No="19849" Name="Czas postoju 2 VVVV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19856" Name="Wycofanie i powrót"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19860" Name="Tryb ilościowy"/>
+    <PCode No="19864" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="54" Name="Kąt prawej strony">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+  <Process ID="5" Name="ŚR.ZEW Wielokro. wgłębne i przelotowe">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
     </PCode>
-    <PCode No="19810" Name="Średnica końcowa"/>
-    <PCode No="19812" Name="Wielkość barku"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
-    <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
-      <Text Value="0" Name="Obroty w prawo"/>
-      <Text Value="1" Name="Obroty w lewo"/>
-    </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
-      <Text Value="0" Name="Obroty w prawo"/>
-      <Text Value="1" Name="Obroty w lewo"/>
-    </PCode>
-  </Process>
-  <Process ID="55" Name="ŚR.ZEW Wgłębne">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
-    </PCode>
-    <PCode No="19810" Name="Średnica końcowa"/>
-    <PCode No="19812" Name="Pozycja szlifowania"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19803" Name="ŚR.ZEW Średnica bezpieczeństwa"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19856" Name="Wycofanie i powrót"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Kąt startowy"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
-    <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
-      <Text Value="0" Name="Obroty w prawo"/>
-      <Text Value="1" Name="Obroty w lewo"/>
-    </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
-    </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
-      <Text Value="0" Name="Obroty w prawo"/>
-      <Text Value="1" Name="Obroty w lewo"/>
-    </PCode>
-  </Process>
-  <Process ID="56" Name="ŚR.ZEW poprzeczne">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
-    </PCode>
-    <PCode No="19810" Name="Średnica końcowa 1"/>
-    <PCode No="19811" Name="Średnica końcowa 2"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu 1"/>
+    <PCode No="19811" Name="Zewnętrzna średnica detalu 2"/>
     <PCode No="19812" Name="Pozycja szlifowania 1"/>
     <PCode No="19813" Name="Pozycja szlifowania 2"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19839" Name="Tryb posuwu poprzecznego">
-      <Text Value="0" Name="Oba (A)"/>
-      <Text Value="-1" Name="Od końca (B)"/>
-      <Text Value="1" Name="Od początku (C)"/>
+    <PCode No="19858" Name="Nakladanie się"/>
+    <PCode No="19817" Name="Przekroczenia zakresu punktu początkowego"/>
+    <PCode No="19818" Name="Przekroczenia zakresu punktu końcowego"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19840" Name="Tryb posuwu wgłębnego">
+      <Text Value="0" Name="Przez elementy następujące po sobie(A)"/>
+      <Text Value="1" Name="Przez krok(B)"/>
     </PCode>
-    <PCode No="19803" Name="ŚR.ZEW Średnica bezpieczeństwa"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Kąt startowy"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19827" Name="Wielkość dosuwu V"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19833" Name="Prędkość posuwu poprzecznego V"/>
-    <PCode No="19842" Name="Czas postoju 1 V"/>
-    <PCode No="19843" Name="Czas postoju 2 V"/>
-    <PCode No="19828" Name="Wielkość dosuwu VV"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19834" Name="Prędkość posuwu poprzecznego VV"/>
-    <PCode No="19844" Name="Czas postoju 1 VV"/>
-    <PCode No="19845" Name="Czas postoju 2 VV"/>
-    <PCode No="19829" Name="Wielkość dosuwu VVV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19835" Name="Prędkość posuwu poprzecznego VVV"/>
-    <PCode No="19846" Name="Czas postoju 1 VVV"/>
-    <PCode No="19847" Name="Czas postoju 2 VVV"/>
-    <PCode No="19837" Name="Liczba doszlifowań"/>
-    <PCode No="19836" Name="Prędkość posuwu poprzecznego VVVV"/>
-    <PCode No="19848" Name="Czas postoju 1 VVVV"/>
-    <PCode No="19849" Name="Czas postoju 2 VVVV"/>
-    <PCode No="19856" Name="Wycofanie i powrót"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
     </PCode>
-    <PCode No="19862" Name="Pojedynczy dosuw w szczelinie"/>
+    <PCode No="19877" Name="Powtorz szlifowanie">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19850" Name="Czas szlifowania wgłębnego bez wyiskrzania"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19855" Name="Wielkość wycofania przy szlifowaniu zgrubnym"/>
+    <PCode No="19857" Name="Wartość wycofania przy przelocie"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19841" Name="Wielkość szlifowania płaszczyzny"/>
+    <PCode No="19854" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19853" Name="Wielkość odejścia płaszczyzny"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19876" Name="Ilosc wjazdu do diamentowania"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="57" Name="ŚR.ZEW prawa powierzchnia">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
-      <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+  <Process ID="6" Name="ŚR.ZEW Drgania">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
     </PCode>
-    <PCode No="19812" Name="Wielkość barku"/>
-    <PCode No="19810" Name="Pozycja szlifowania"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19803" Name="ŚR.ZEW Średnica bezpieczeństwa"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19838" Name="Czas doszlifowania VVVV"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19859" Name="Funkcja szczeliny">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania"/>
+    <PCode No="19815" Name="Odległość wychylenia (kierunkowość)"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19855" Name="Wielkość wycofania przy szlifowaniu zgrubnym"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19861" Name="Prędkość dosuwu w szczelinie"/>
-    <PCode No="19860" Name="Wielkość szlifowania stałego"/>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
     <PCode No="19920" Name="Przed szlifowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19875" Name="Wielkość zgrubnego kroku"/>
-    <PCode No="19924" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19925" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19926" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19927" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19930" Name="Liczba obciągań"/>
-    <PCode No="19933" Name="Kierunek obrotu rolki">
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19922" Name="Przed polerowaniem">
-      <Text Value="0" Name="Wyłącz"/>
-      <Text Value="1" Name="Włączono"/>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19935" Name="ŚR.ZEW Wielk. obciąg."/>
-    <PCode No="19936" Name="ŚR.ZEW Prędkość obciągania"/>
-    <PCode No="19937" Name="Wielkość obciągania lewej strony"/>
-    <PCode No="19938" Name="Prędkość obciągania lewej strony"/>
-    <PCode No="19941" Name="Liczba obciągań"/>
-    <PCode No="19942" Name="Liczba cięć zerowych"/>
-    <PCode No="19943" Name="Powrót po obciąganiu"/>
-    <PCode No="19944" Name="Kierunek obrotu rolki">
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
       <Text Value="0" Name="Obroty w prawo"/>
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="58" Name="ŚR.WEW Łuk">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
+  <Process ID="7" Name="ŚR.ZEW Szlifow. kątowe z prawej strony">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
       <Text Value="1" Name="Ściernicy1"/>
       <Text Value="2" Name="Ściernicy2"/>
       <Text Value="3" Name="Ściernicy3"/>
       <Text Value="4" Name="Ściernicy4"/>
     </PCode>
-    <PCode No="19810" Name="Średnica początkowa łuku"/>
-    <PCode No="19812" Name="Początek łuku"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19839" Name="Tryb posuwu poprzecznego">
-      <Text Value="0" Name="Oba (A)"/>
-      <Text Value="-1" Name="Od końca (B)"/>
-      <Text Value="1" Name="Od początku (C)"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
     </PCode>
-    <PCode No="19884" Name="Promień łuku"/>
-    <PCode No="19881" Name="Kąt startowy"/>
-    <PCode No="19883" Name="Kąt końcowy"/>
-    <PCode No="19815" Name="Dystans oscylacji"/>
-    <PCode No="19836" Name="Prędkość posuwu poprzecznego VVVV"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19889"	Name="Wielkość czołowa"/>
-    <PCode No="19827" Name="Wielkość dosuwu V"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19885" Name="Prędkość dosuwu osi B V"/>
-    <PCode No="19842" Name="Czas postoju 1 V"/>
-    <PCode No="19843" Name="Czas postoju 2 V"/>
-    <PCode No="19828" Name="Wielkość dosuwu VV"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19886" Name="Prędkość dosuwu osi B VV"/>
-    <PCode No="19844" Name="Czas postoju 1 VV"/>
-    <PCode No="19845" Name="Czas postoju 2 VV"/>
-    <PCode No="19829" Name="Wielkość dosuwu VVV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19887" Name="Prędkość dosuwu osi B VVV"/>
-    <PCode No="19846" Name="Czas postoju 1 VVV"/>
-    <PCode No="19847" Name="Czas postoju 2 VVV"/>
-    <PCode No="19837" Name="Liczba doszlifowań"/>
-    <PCode No="19888" Name="Prędkość dosuwu osi B VVVV"/>
-    <PCode No="19848" Name="Czas postoju 1 VVVV"/>
-    <PCode No="19849" Name="Czas postoju 2 VVVV"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19890" Name="Przesunięcie promienia łuku"/>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
   </Process>
-  <Process ID="59" Name="ŚR.ZEW Łuk">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="Numer ściernicy">
-      <Text Value="1" Name="Ściernicy1"/>
+  <Process ID="8" Name="ŚR.ZEW Szlifow. kątowe z lewej strony">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19868" Name="Pomiar wyiskrzania"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="9" Name="ŚR.ZEW Right Taper Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
       <Text Value="2" Name="Ściernicy2"/>
-      <Text Value="3" Name="Ściernicy3"/>
-      <Text Value="4" Name="Ściernicy4"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
     </PCode>
-    <PCode No="19810" Name="Średnica początkowa łuku"/>
-    <PCode No="19812" Name="Początek łuku"/>
-    <PCode No="19824" Name="Wrzeciono robocze"/>
-    <PCode No="19839" Name="Tryb posuwu poprzecznego">
-      <Text Value="0" Name="Oba (A)"/>
-      <Text Value="-1" Name="Od końca (B)"/>
-      <Text Value="1" Name="Od początku (C)"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania 1"/>
+    <PCode No="19813" Name="Pozycja szlifowania 2"/>
+    <PCode No="19873" Name="Kąt stożka"/>
+    <PCode No="19874" Name="Offset stozka"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
     </PCode>
-    <PCode No="19884" Name="Promień łuku"/>
-    <PCode No="19881" Name="Kąt startowy"/>
-    <PCode No="19883" Name="Kąt końcowy"/>
-    <PCode No="19815" Name="Dystans oscylacji"/>
-    <PCode No="19836" Name="Prędkość posuwu poprzecznego VVVV"/>
-    <PCode No="19803" Name="ŚR.ZEW Średnica bezpieczeństwa"/>
-    <PCode No="19821" Name="Suma całkowita"/>
-    <PCode No="19822" Name="Wielkość wykończenia"/>
-    <PCode No="19823" Name="Wielkość polerowania"/>
-    <PCode No="19889"	Name="Wielkość czołowa"/>
-    <PCode No="19827" Name="Wielkość dosuwu V"/>
-    <PCode No="19830" Name="Prędkość dosuwu V"/>
-    <PCode No="19885" Name="Prędkość dosuwu osi B V"/>
-    <PCode No="19842" Name="Czas postoju 1 V"/>
-    <PCode No="19843" Name="Czas postoju 2 V"/>
-    <PCode No="19828" Name="Wielkość dosuwu VV"/>
-    <PCode No="19831" Name="Prędkość dosuwu VV"/>
-    <PCode No="19886" Name="Prędkość dosuwu osi B VV"/>
-    <PCode No="19844" Name="Czas postoju 1 VV"/>
-    <PCode No="19845" Name="Czas postoju 2 VV"/>
-    <PCode No="19829" Name="Wielkość dosuwu VVV"/>
-    <PCode No="19832" Name="Prędkość dosuwu VVV"/>
-    <PCode No="19887" Name="Prędkość dosuwu osi B VVV"/>
-    <PCode No="19846" Name="Czas postoju 1 VVV"/>
-    <PCode No="19847" Name="Czas postoju 2 VVV"/>
-    <PCode No="19837" Name="Liczba doszlifowań"/>
-    <PCode No="19888" Name="Prędkość dosuwu osi B VVVV"/>
-    <PCode No="19848" Name="Czas postoju 1 VVVV"/>
-    <PCode No="19849" Name="Czas postoju 2 VVVV"/>
-    <PCode No="19825" Name="Precyzyjne wrzeciono robocze"/>
-    <PCode No="19890" Name="Przesunięcie promienia łuku"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19862" Name="Wielkość pojedynczego posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="11" Name="ŚR.ZEW Przelot. stożkowe">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
+    </PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania 1"/>
+    <PCode No="19813" Name="Pozycja szlifowania 2"/>
+    <PCode No="19873" Name="Kąt stożka"/>
+    <PCode No="19874" Name="Offset stozka"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
+    </PCode>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19862" Name="Wielkość pojedynczego posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="10" Name="ŚR.ZEW Szlifow. przelo. pra. czoła">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
+    <PCode No="19813" Name="Ugięcie końcowe"/>
+    <PCode No="19810" Name="Pozycja szlifowania 1"/>
+    <PCode No="19811" Name="Pozycja szlifowania 2"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
+    </PCode>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19864" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="12" Name="ŚR.ZEW Szlifow. przelotowe">
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19816" Name="Punkt szlifowania Z">
+      <Text Value="0" Name="Lewo(A)"/>
+      <Text Value="1" Name="Prawo(B)"/>
+    </PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu 1"/>
+    <PCode No="19811" Name="Zewnętrzna średnica detalu 2"/>
+    <PCode No="19812" Name="Wielkość płaszczyzny"/>
+    <PCode No="19813" Name="Ugięcie końcowe"/>
+    <PCode No="19817" Name="Przekroczenia zakresu punktu początkowego"/>
+    <PCode No="19818" Name="Przekroczenia zakresu punktu końcowego"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
+    </PCode>
+    <PCode No="19877" Name="Powtorz szlifowanie">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19819" Name="Wielkość wycofania"/>
+    <PCode No="19855" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19862" Name="Wielkość pojedynczego posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19801" Name="Process number"/>
+    <PCode No="19949" Name="funkcja wieloetapowego szlifowania">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19950" Name="liczba odcinków"/>
+    <PCode No="19951" Name="korekcja średnicy XO1"/>
+    <PCode No="19952" Name="korekcja średnicy XO2"/>
+    <PCode No="19953" Name="korekcja średnicy XO3"/>
+    <PCode No="19954" Name="korekcja średnicy XO4"/>
+    <PCode No="19955" Name="korekcja średnicy XO5"/>
+    <PCode No="19956" Name="korekcja średnicy XO6"/>
+    <PCode No="19957" Name="korekcja średnicy XO7"/>
+    <PCode No="19958" Name="korekcja średnicy XO8"/>
+    <PCode No="19959" Name="korekcja średnicy XO9"/>
+    <PCode No="19960" Name="korekcja średnicy XO10"/>
+    <PCode No="19961" Name="korekcja średnicy XO11"/>
+    <PCode No="19962" Name="korekcja średnicy XO12"/>
+    <PCode No="19963" Name="korekcja średnicy XO13"/>
+    <PCode No="19964" Name="korekcja średnicy XO14"/>
+    <PCode No="19965" Name="korekcja średnicy XO15"/>
+    <PCode No="19966" Name="korekcja średnicy XO16"/>
+    <PCode No="19967" Name="korekcja średnicy XO17"/>
+    <PCode No="19968" Name="korekcja średnicy XO18"/>
+    <PCode No="19969" Name="korekcja średnicy XO19"/>
+    <PCode No="19970" Name="korekcja średnicy XO20"/>
+    <PCode No="19971" Name="pozycja ZO1"/>
+    <PCode No="19972" Name="pozycja ZO2"/>
+    <PCode No="19973" Name="pozycja ZO3"/>
+    <PCode No="19974" Name="pozycja ZO4"/>
+    <PCode No="19975" Name="pozycja ZO5"/>
+    <PCode No="19976" Name="pozycja ZO6"/>
+    <PCode No="19977" Name="pozycja ZO7"/>
+    <PCode No="19978" Name="pozycja ZO8"/>
+    <PCode No="19979" Name="pozycja ZO9"/>
+    <PCode No="19980" Name="pozycja ZO10"/>
+    <PCode No="19981" Name="pozycja ZO11"/>
+    <PCode No="19982" Name="pozycja ZO12"/>
+    <PCode No="19983" Name="pozycja ZO13"/>
+    <PCode No="19984" Name="pozycja ZO14"/>
+    <PCode No="19985" Name="pozycja ZO15"/>
+    <PCode No="19986" Name="pozycja ZO16"/>
+    <PCode No="19987" Name="pozycja ZO17"/>
+    <PCode No="19988" Name="pozycja ZO18"/>
+    <PCode No="19989" Name="pozycja ZO19"/>
+    <PCode No="19990" Name="pozycja ZO20"/>
+  </Process>
+  <Process ID="101" Name="ŚR.WEW Szlifowanie wgłębne">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19856" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="102" Name="ŚR.WEW Szlifowanie przelotowe">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu 1"/>
+    <PCode No="19811" Name="Zewnętrzna średnica detalu 2"/>
+    <PCode No="19812" Name="Pozycja szlifowania 1"/>
+    <PCode No="19813" Name="Pozycja szlifowania 2"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
+    </PCode>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19856" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19862" Name="Wielkość pojedynczego posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="103" Name="ŚR.WEW Szlifowanie prawej płaszczyzny">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19812" Name="Pozycja szlifowania"/>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19860" Name="Tryb ilościowy"/>
+    <PCode No="19864" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="104" Name="ŚR.WEW Drgania">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania"/>
+    <PCode No="19815" Name="Odległość wychylenia (kierunkowość)"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19856" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+  </Process>
+  <Process ID="105" Name="ŚR.WEW Szlifowanie kątowe z prawej strony">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19830" Name="Posuw szlifowania zgrubnego"/>
+    <PCode No="19831" Name="Posuw szlifowania dokładnego"/>
+    <PCode No="19832" Name="Posuw szlifowania precyzyjnego"/>
+    <PCode No="19838" Name="Brak czasu wyiskrzania"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19863" Name="Pomiar średnicy zewnętrznej">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19865" Name="Użyj grupy">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Posuw P4"/>
+    <PCode No="19866" Name="Tolerancja"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+  </Process>
+  <Process ID="106" Name="ŚR.WEW Przelotowe stożkowe">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="Numer ściernicy">
+	  <Text Value="1" Name="Ściernicy1"/>
+	  <Text Value="2" Name="Ściernicy2"/>
+	  <Text Value="3" Name="Ściernicy3"/>
+	  <Text Value="4" Name="Ściernicy4"/>
+	</PCode>
+    <PCode No="19810" Name="Zewnętrzna średnica detalu"/>
+    <PCode No="19812" Name="Pozycja szlifowania 1"/>
+    <PCode No="19813" Name="Pozycja szlifowania 2"/>
+    <PCode No="19873" Name="Kąt stożka"/>
+    <PCode No="19874" Name="Offset stozka"/>
+    <PCode No="19824" Name="Prędkość wrzeciona"/>
+    <PCode No="19839" Name="Tryb posuwu">
+      <Text Value="0" Name="Oba(A)"/>
+      <Text Value="1" Name="Od początku(B)"/>
+      <Text Value="-1" Name="Od końca(C)"/>
+    </PCode>
+    <PCode No="19821" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19822" Name="Wielkość szlifowania dokładnego"/>
+    <PCode No="19823" Name="Wielkość szlifowania precyzyjnego"/>
+    <PCode No="19827" Name="Całkowita wielkość szlifowania"/>
+    <PCode No="19833" Name="Prędkość poprzecznego szlifowania zgrubnego"/>
+    <PCode No="19842" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19843" Name="Czas szlifowania zgrubnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19828" Name="Wielkość pojedynczego posuwu przy szlifowaniu dokładnym"/>
+    <PCode No="19834" Name="Prędkość dokładnego szlifowania przelotowego"/>
+    <PCode No="19844" Name="Czas zatrzymania w punkcie początkowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19845" Name="Czas zatrzymania w punkcie końcowym przy szlifowaniu dokładnym w sekundach"/>
+    <PCode No="19829" Name="Wielkość pojedynczego posuwu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19835" Name="Prędkość przelotu przy szlifowaniu precyzyjnym"/>
+    <PCode No="19846" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach początkowych w sekundach"/>
+    <PCode No="19847" Name="Czas szlifowania precyzyjnego przy zatrzymaniu w punktach końcowych w sekundach"/>
+    <PCode No="19837" Name="Ilosc wyiskrzen"/>
+    <PCode No="19836" Name="Brak prędkości wyiskrzania"/>
+    <PCode No="19848" Name="Czas bez wyiskrzania w punktach początkowych w sekundach"/>
+    <PCode No="19849" Name="Czas bez wyiskrzania w punktach końcowych w sekundach"/>
+    <PCode No="19820" Name="Wielkość wycofania w osi Z"/>
+    <PCode No="19826" Name="Obroty detalu podczas wykanczania"/>
+    <PCode No="19859" Name="Usuwanie luzu">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19861" Name="Prędkość posuwu przy szlifowaniu na sucho"/>
+    <PCode No="19920" Name="Przed szlifowaniem">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19875" Name="Zgrubna wartosc"/>
+    <PCode No="19924" Name="Wartosc diamentowania zew"/>
+    <PCode No="19925" Name="Predkosc diamentowania zew"/>
+    <PCode No="19926" Name="Wartosc diamentowania lew"/>
+    <PCode No="19927" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19928" Name="Wartosc diamentowania praw"/>
+    <PCode No="19929" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19930" Name="Ilosc diamentowania"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19931" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
+    <PCode No="19922" Name="Przed wykanczajacym">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19935" Name="Wartosc diamentowania zew"/>
+    <PCode No="19936" Name="Predkosc diamentowania zew"/>
+    <PCode No="19937" Name="Wartosc diamentowania lew"/>
+    <PCode No="19938" Name="Predkosc diamentowanie lew"/>
+    <PCode No="19939" Name="Wartosc diamentowania praw"/>
+    <PCode No="19940" Name="Predkosc diamentowanie praw"/>
+    <PCode No="19941" Name="Ilosc diamentowania"/>
+    <PCode No="19942" Name="Ilosc diamentowania suchego"/>
+    <PCode No="19943" Name="Powrot po diamentowaniu"/>
+    <PCode No="19944" Name="Obroty rolki">
+      <Text Value="0" Name="Obroty w prawo"/>
+      <Text Value="1" Name="Obroty w lewo"/>
+    </PCode>
   </Process>
   <Process ID="201" Name="SONDA">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19902" Name="Funkcja sondy"/>
-    <PCode No="19905" Name="Kierunek pomiaru"/>
-    <PCode No="19906" Name="Odległość pomiaru"/>
-    <PCode No="19903" Name="Punkt początkowy pomiaru X"/>
-    <PCode No="19904" Name="Punkt początkowy pomiaru Z"/>
-    <PCode No="19908" Name="Pozycja bezpieczna X "/>
-    <PCode No="19907" Name="Pozycja bazowa"/>
+    <PCode No="19801" Name="Process number"/>
+    <PCode No="19901" Name="Ustawienie sondy dotykowej"> 
+      <Text Value="0" Name="Nie jest ukończony"/>
+      <Text Value="1" Name="Ustawienie zakończone"/>
+    </PCode>
+    <PCode No="19902" Name="funkcja SONDA">
+      <Text Value="0" Name="Nieaktywne"/>
+      <Text Value="1" Name="Aktywne"/>
+    </PCode>
+    <PCode No="19903" Name="Poz. osi X"/>
+    <PCode No="19904" Name="Poz. osi Z"/>
+    <PCode No="19905" Name="Kierunek sondy dotykowej">
+      <Text Value="-1" Name="Workpiece face of right side"/>
+      <Text Value="1" Name="Workpiece face of left side"/>
+    </PCode>
+    <PCode No="19906" Name="Odległość sondy"/>
+    <PCode No="19907" Name="Wartość nadrz."/>
+    <PCode No="19908" Name="Pozycja bezp X"/>
   </Process>
-  <Process ID="202" Name="ŚR.WEW Pomiar">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19911" Name="Pozycja bezpieczna sondy " />
-    <PCode No="19908" Name="Pozycja pomiarowa Z"/>
-    <PCode No="19909" Name="Pozycja pomiarowa X1"/>
-    <PCode No="19910" Name="Pozycja pomiarowa X2"/>
+  <Process ID="202" Name="Servo Tail Stoc">
+    <PCode No="19801" Name="Process number"/>
+    <PCode No="19991" Name="Pozycja Y"/>
+    <PCode No="19992" Name="Predkosc Y"/>
   </Process>
-  <Process ID="203" Name="ŚR.ZEW Pomiar">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19911" Name="Pozycja bezpieczna sondy " />
-    <PCode No="19908" Name="Pozycja pomiarowa Z"/>
-    <PCode No="19909" Name="Pozycja pomiarowa X1"/>
-    <PCode No="19910" Name="Pozycja pomiarowa X2"/>
+  <Process ID="203" Name="DUAL SV STOCK">
+	<PCode No="19880" Name="YA(Sp.)Work Pos."/>
+	<PCode No="19881" Name="YA(Sp.)Load Pos."/>
+	<PCode No="19882" Name="YB(Tail.)Fwd Pos."/>
+	<PCode No="19883" Name="YB(Tail.)Load Pos."/>
+	<PCode No="19884" Name="YB(Tail.)Slow Dis."/>
+	<PCode No="19885" Name="YA(Sp.)Move Speed"/>
+	<PCode No="19886" Name="YB(Tail.)Move Speed"/>
+	<PCode No="19887" Name="YB(Tail.)Slow Speed"/>
+	<PCode No="19888" Name="Mode"/>
   </Process>
-  <Process ID="999" Name="Polecenie">
-    <PCode No="19801" Name="Number"/>
+  <Process ID="999" Name="Kod">
+    <PCode No="19801" Name="Process number"/>
   </Process>
 </DefaultProcessLang>

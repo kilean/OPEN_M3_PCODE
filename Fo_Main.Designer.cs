@@ -1,4 +1,4 @@
-﻿namespace OIG
+﻿namespace OCD
 {
     partial class Fo_Main
     {
@@ -1760,7 +1760,7 @@
             // 
             // pic_User
             // 
-            this.pic_User.Image = global::OIG.Properties.Resources.user1s;
+            this.pic_User.Image = global::OCD.Properties.Resources.user1s;
             this.pic_User.Location = new System.Drawing.Point(952, 24);
             this.pic_User.Name = "pic_User";
             this.pic_User.Size = new System.Drawing.Size(64, 56);
@@ -1771,7 +1771,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::OIG.Properties.Resources.pic_fanuc_Image2;
+            this.pictureBox5.Image = global::OCD.Properties.Resources.pic_fanuc_Image2;
             this.pictureBox5.Location = new System.Drawing.Point(640, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(384, 24);
@@ -1893,7 +1893,7 @@
             this.la_Version.Name = "la_Version";
             this.la_Version.Size = new System.Drawing.Size(205, 25);
             this.la_Version.TabIndex = 10;
-            this.la_Version.Text = "Ver : 1.26.0624.1007";
+            this.la_Version.Text = "Ver : 1.26.0626.1551";
             // 
             // pa_Alarm
             // 
@@ -1999,10 +1999,10 @@
             this.btn_ToolSelect.ForeColor = System.Drawing.Color.White;
             this.btn_ToolSelect.Image = null;
             this.btn_ToolSelect.Lamp = false;
-            this.btn_ToolSelect.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ToolSelect.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ToolSelect.Location = new System.Drawing.Point(544, 8);
-            this.btn_ToolSelect.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ToolSelect.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_ToolSelect.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ToolSelect.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_ToolSelect.Name = "btn_ToolSelect";
             this.btn_ToolSelect.Size = new System.Drawing.Size(73, 73);
             this.btn_ToolSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2018,10 +2018,10 @@
             this.btn_MeasureList.ForeColor = System.Drawing.Color.White;
             this.btn_MeasureList.Image = null;
             this.btn_MeasureList.Lamp = false;
-            this.btn_MeasureList.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_MeasureList.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_MeasureList.Location = new System.Drawing.Point(464, 8);
-            this.btn_MeasureList.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_MeasureList.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_MeasureList.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_MeasureList.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_MeasureList.Name = "btn_MeasureList";
             this.btn_MeasureList.Size = new System.Drawing.Size(73, 73);
             this.btn_MeasureList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2037,10 +2037,10 @@
             this.btn_Monitor_ToChgPos2.ForeColor = System.Drawing.Color.White;
             this.btn_Monitor_ToChgPos2.Image = null;
             this.btn_Monitor_ToChgPos2.Lamp = false;
-            this.btn_Monitor_ToChgPos2.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Monitor_ToChgPos2.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Monitor_ToChgPos2.Location = new System.Drawing.Point(624, 8);
-            this.btn_Monitor_ToChgPos2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Monitor_ToChgPos2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Monitor_ToChgPos2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Monitor_ToChgPos2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Monitor_ToChgPos2.Name = "btn_Monitor_ToChgPos2";
             this.btn_Monitor_ToChgPos2.Size = new System.Drawing.Size(73, 73);
             this.btn_Monitor_ToChgPos2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2056,10 +2056,10 @@
             this.btn_DressGw1.ForeColor = System.Drawing.Color.White;
             this.btn_DressGw1.Image = null;
             this.btn_DressGw1.Lamp = false;
-            this.btn_DressGw1.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_DressGw1.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_DressGw1.Location = new System.Drawing.Point(704, 8);
-            this.btn_DressGw1.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DressGw1.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DressGw1.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DressGw1.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DressGw1.Name = "btn_DressGw1";
             this.btn_DressGw1.Size = new System.Drawing.Size(72, 72);
             this.btn_DressGw1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2075,10 +2075,10 @@
             this.btn_SoftPanel.ForeColor = System.Drawing.Color.White;
             this.btn_SoftPanel.Image = null;
             this.btn_SoftPanel.Lamp = true;
-            this.btn_SoftPanel.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_SoftPanel.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_SoftPanel.Location = new System.Drawing.Point(944, 8);
-            this.btn_SoftPanel.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_SoftPanel.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_SoftPanel.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_SoftPanel.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_SoftPanel.Name = "btn_SoftPanel";
             this.btn_SoftPanel.Size = new System.Drawing.Size(72, 72);
             this.btn_SoftPanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2114,10 +2114,10 @@
             this.btn_Redo.ForeColor = System.Drawing.Color.White;
             this.btn_Redo.Image = null;
             this.btn_Redo.Lamp = false;
-            this.btn_Redo.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Redo.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Redo.Location = new System.Drawing.Point(784, 8);
-            this.btn_Redo.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo.Name = "btn_Redo";
             this.btn_Redo.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2133,10 +2133,10 @@
             this.btn_Offset.ForeColor = System.Drawing.Color.White;
             this.btn_Offset.Image = null;
             this.btn_Offset.Lamp = false;
-            this.btn_Offset.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Offset.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Offset.Location = new System.Drawing.Point(864, 8);
-            this.btn_Offset.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Offset.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Offset.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Offset.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Offset.Name = "btn_Offset";
             this.btn_Offset.Size = new System.Drawing.Size(72, 72);
             this.btn_Offset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2152,10 +2152,10 @@
             this.btn_Maintenance.ForeColor = System.Drawing.Color.White;
             this.btn_Maintenance.Image = null;
             this.btn_Maintenance.Lamp = false;
-            this.btn_Maintenance.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Maintenance.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Maintenance.Location = new System.Drawing.Point(368, 8);
-            this.btn_Maintenance.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Maintenance.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Maintenance.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Maintenance.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Maintenance.Name = "btn_Maintenance";
             this.btn_Maintenance.Size = new System.Drawing.Size(72, 72);
             this.btn_Maintenance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2171,10 +2171,10 @@
             this.btn_Message.ForeColor = System.Drawing.Color.White;
             this.btn_Message.Image = null;
             this.btn_Message.Lamp = false;
-            this.btn_Message.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Message.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Message.Location = new System.Drawing.Point(288, 8);
-            this.btn_Message.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Message.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Message.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Message.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Message.Name = "btn_Message";
             this.btn_Message.Size = new System.Drawing.Size(72, 72);
             this.btn_Message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2190,10 +2190,10 @@
             this.btn_Program.ForeColor = System.Drawing.Color.White;
             this.btn_Program.Image = null;
             this.btn_Program.Lamp = false;
-            this.btn_Program.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Program.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Program.Location = new System.Drawing.Point(208, 8);
-            this.btn_Program.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Program.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Program.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Program.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Program.Name = "btn_Program";
             this.btn_Program.Size = new System.Drawing.Size(72, 72);
             this.btn_Program.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2209,10 +2209,10 @@
             this.btn_Monitor.ForeColor = System.Drawing.Color.White;
             this.btn_Monitor.Image = null;
             this.btn_Monitor.Lamp = true;
-            this.btn_Monitor.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Monitor.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Monitor.Location = new System.Drawing.Point(128, 8);
-            this.btn_Monitor.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Monitor.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Monitor.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Monitor.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Monitor.Name = "btn_Monitor";
             this.btn_Monitor.Size = new System.Drawing.Size(72, 72);
             this.btn_Monitor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2228,10 +2228,10 @@
             this.btn_Regist.ForeColor = System.Drawing.Color.White;
             this.btn_Regist.Image = null;
             this.btn_Regist.Lamp = false;
-            this.btn_Regist.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Regist.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Regist.Location = new System.Drawing.Point(48, 8);
-            this.btn_Regist.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Regist.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Regist.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Regist.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Regist.Name = "btn_Regist";
             this.btn_Regist.Size = new System.Drawing.Size(72, 72);
             this.btn_Regist.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2263,10 +2263,10 @@
             this.btn_RMT.ForeColor = System.Drawing.Color.White;
             this.btn_RMT.Image = null;
             this.btn_RMT.Lamp = false;
-            this.btn_RMT.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_RMT.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_RMT.Location = new System.Drawing.Point(8, 8);
-            this.btn_RMT.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_RMT.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_RMT.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_RMT.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_RMT.Name = "btn_RMT";
             this.btn_RMT.Size = new System.Drawing.Size(64, 64);
             this.btn_RMT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2284,10 +2284,10 @@
             this.btn_HOME.ForeColor = System.Drawing.Color.White;
             this.btn_HOME.Image = null;
             this.btn_HOME.Lamp = false;
-            this.btn_HOME.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_HOME.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_HOME.Location = new System.Drawing.Point(8, 440);
-            this.btn_HOME.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_HOME.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_HOME.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_HOME.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_HOME.Name = "btn_HOME";
             this.btn_HOME.Size = new System.Drawing.Size(64, 64);
             this.btn_HOME.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2304,10 +2304,10 @@
             this.btn_AUTO.ForeColor = System.Drawing.Color.White;
             this.btn_AUTO.Image = null;
             this.btn_AUTO.Lamp = false;
-            this.btn_AUTO.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_AUTO.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_AUTO.Location = new System.Drawing.Point(8, 152);
-            this.btn_AUTO.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_AUTO.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_AUTO.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_AUTO.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_AUTO.Name = "btn_AUTO";
             this.btn_AUTO.Size = new System.Drawing.Size(64, 64);
             this.btn_AUTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2324,10 +2324,10 @@
             this.btn_JOG.ForeColor = System.Drawing.Color.White;
             this.btn_JOG.Image = null;
             this.btn_JOG.Lamp = false;
-            this.btn_JOG.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_JOG.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_JOG.Location = new System.Drawing.Point(8, 368);
-            this.btn_JOG.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_JOG.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_JOG.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_JOG.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_JOG.Name = "btn_JOG";
             this.btn_JOG.Size = new System.Drawing.Size(64, 64);
             this.btn_JOG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2344,10 +2344,10 @@
             this.btn_MPG.ForeColor = System.Drawing.Color.White;
             this.btn_MPG.Image = null;
             this.btn_MPG.Lamp = false;
-            this.btn_MPG.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_MPG.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_MPG.Location = new System.Drawing.Point(8, 296);
-            this.btn_MPG.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_MPG.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_MPG.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_MPG.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_MPG.Name = "btn_MPG";
             this.btn_MPG.Size = new System.Drawing.Size(64, 64);
             this.btn_MPG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2364,10 +2364,10 @@
             this.btn_EDIT.ForeColor = System.Drawing.Color.White;
             this.btn_EDIT.Image = null;
             this.btn_EDIT.Lamp = false;
-            this.btn_EDIT.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_EDIT.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_EDIT.Location = new System.Drawing.Point(8, 80);
-            this.btn_EDIT.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_EDIT.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_EDIT.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_EDIT.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_EDIT.Name = "btn_EDIT";
             this.btn_EDIT.Size = new System.Drawing.Size(64, 64);
             this.btn_EDIT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2384,10 +2384,10 @@
             this.btn_MDI.ForeColor = System.Drawing.Color.White;
             this.btn_MDI.Image = null;
             this.btn_MDI.Lamp = false;
-            this.btn_MDI.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_MDI.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_MDI.Location = new System.Drawing.Point(8, 224);
-            this.btn_MDI.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_MDI.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_MDI.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_MDI.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_MDI.Name = "btn_MDI";
             this.btn_MDI.Size = new System.Drawing.Size(64, 64);
             this.btn_MDI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -2612,10 +2612,10 @@
             this.btn_Gw_DressCondition.ForeColor = System.Drawing.Color.White;
             this.btn_Gw_DressCondition.Image = null;
             this.btn_Gw_DressCondition.Lamp = false;
-            this.btn_Gw_DressCondition.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Gw_DressCondition.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Gw_DressCondition.Location = new System.Drawing.Point(248, 480);
-            this.btn_Gw_DressCondition.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Gw_DressCondition.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Gw_DressCondition.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Gw_DressCondition.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Gw_DressCondition.Name = "btn_Gw_DressCondition";
             this.btn_Gw_DressCondition.Size = new System.Drawing.Size(72, 72);
             this.btn_Gw_DressCondition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2632,10 +2632,10 @@
             this.btn_Gw_ShapeData.ForeColor = System.Drawing.Color.White;
             this.btn_Gw_ShapeData.Image = null;
             this.btn_Gw_ShapeData.Lamp = false;
-            this.btn_Gw_ShapeData.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Gw_ShapeData.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Gw_ShapeData.Location = new System.Drawing.Point(168, 480);
-            this.btn_Gw_ShapeData.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Gw_ShapeData.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Gw_ShapeData.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Gw_ShapeData.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Gw_ShapeData.Name = "btn_Gw_ShapeData";
             this.btn_Gw_ShapeData.Size = new System.Drawing.Size(72, 72);
             this.btn_Gw_ShapeData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2678,10 +2678,10 @@
             this.btn_Gw_GwData.ForeColor = System.Drawing.Color.White;
             this.btn_Gw_GwData.Image = null;
             this.btn_Gw_GwData.Lamp = false;
-            this.btn_Gw_GwData.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Gw_GwData.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Gw_GwData.Location = new System.Drawing.Point(8, 480);
-            this.btn_Gw_GwData.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Gw_GwData.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Gw_GwData.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Gw_GwData.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Gw_GwData.Name = "btn_Gw_GwData";
             this.btn_Gw_GwData.Size = new System.Drawing.Size(72, 72);
             this.btn_Gw_GwData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2700,8 +2700,8 @@
             this.btn_RegisterGw_Save.Lamp = false;
             this.btn_RegisterGw_Save.LampOnImage = null;
             this.btn_RegisterGw_Save.Location = new System.Drawing.Point(328, 480);
-            this.btn_RegisterGw_Save.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_RegisterGw_Save.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_RegisterGw_Save.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_RegisterGw_Save.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_RegisterGw_Save.Name = "btn_RegisterGw_Save";
             this.btn_RegisterGw_Save.Size = new System.Drawing.Size(72, 72);
             this.btn_RegisterGw_Save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2744,10 +2744,10 @@
             this.btn_Gw_ShapeSelect.ForeColor = System.Drawing.Color.White;
             this.btn_Gw_ShapeSelect.Image = null;
             this.btn_Gw_ShapeSelect.Lamp = false;
-            this.btn_Gw_ShapeSelect.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Gw_ShapeSelect.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Gw_ShapeSelect.Location = new System.Drawing.Point(88, 480);
-            this.btn_Gw_ShapeSelect.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_Gw_ShapeSelect.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_Gw_ShapeSelect.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_Gw_ShapeSelect.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_Gw_ShapeSelect.Name = "btn_Gw_ShapeSelect";
             this.btn_Gw_ShapeSelect.Size = new System.Drawing.Size(72, 72);
             this.btn_Gw_ShapeSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -2905,10 +2905,10 @@
             this.btn_GWAngle.ForeColor = System.Drawing.Color.Black;
             this.btn_GWAngle.Image = null;
             this.btn_GWAngle.Lamp = false;
-            this.btn_GWAngle.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWAngle.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWAngle.Location = new System.Drawing.Point(304, 256);
-            this.btn_GWAngle.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWAngle.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWAngle.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWAngle.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWAngle.Name = "btn_GWAngle";
             this.btn_GWAngle.Size = new System.Drawing.Size(96, 32);
             this.btn_GWAngle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3137,10 +3137,10 @@
             this.btn_GWHL.ForeColor = System.Drawing.Color.Black;
             this.btn_GWHL.Image = null;
             this.btn_GWHL.Lamp = false;
-            this.btn_GWHL.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWHL.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWHL.Location = new System.Drawing.Point(304, 216);
-            this.btn_GWHL.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWHL.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWHL.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWHL.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWHL.Name = "btn_GWHL";
             this.btn_GWHL.Size = new System.Drawing.Size(96, 32);
             this.btn_GWHL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3157,10 +3157,10 @@
             this.btn_GWMinWidth.ForeColor = System.Drawing.Color.Black;
             this.btn_GWMinWidth.Image = null;
             this.btn_GWMinWidth.Lamp = false;
-            this.btn_GWMinWidth.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWMinWidth.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWMinWidth.Location = new System.Drawing.Point(304, 176);
-            this.btn_GWMinWidth.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWMinWidth.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWMinWidth.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWMinWidth.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWMinWidth.Name = "btn_GWMinWidth";
             this.btn_GWMinWidth.Size = new System.Drawing.Size(96, 32);
             this.btn_GWMinWidth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3177,10 +3177,10 @@
             this.btn_GWWidth.ForeColor = System.Drawing.Color.Black;
             this.btn_GWWidth.Image = null;
             this.btn_GWWidth.Lamp = false;
-            this.btn_GWWidth.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWWidth.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWWidth.Location = new System.Drawing.Point(304, 136);
-            this.btn_GWWidth.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWWidth.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWWidth.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWWidth.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWWidth.Name = "btn_GWWidth";
             this.btn_GWWidth.Size = new System.Drawing.Size(96, 32);
             this.btn_GWWidth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3197,10 +3197,10 @@
             this.btn_GWMinDiameter.ForeColor = System.Drawing.Color.Black;
             this.btn_GWMinDiameter.Image = null;
             this.btn_GWMinDiameter.Lamp = false;
-            this.btn_GWMinDiameter.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWMinDiameter.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWMinDiameter.Location = new System.Drawing.Point(304, 96);
-            this.btn_GWMinDiameter.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWMinDiameter.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWMinDiameter.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWMinDiameter.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWMinDiameter.Name = "btn_GWMinDiameter";
             this.btn_GWMinDiameter.Size = new System.Drawing.Size(96, 32);
             this.btn_GWMinDiameter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3217,10 +3217,10 @@
             this.btn_GWDiameter.ForeColor = System.Drawing.Color.Black;
             this.btn_GWDiameter.Image = null;
             this.btn_GWDiameter.Lamp = false;
-            this.btn_GWDiameter.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWDiameter.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWDiameter.Location = new System.Drawing.Point(304, 56);
-            this.btn_GWDiameter.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_GWDiameter.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWDiameter.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_GWDiameter.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWDiameter.Name = "btn_GWDiameter";
             this.btn_GWDiameter.Size = new System.Drawing.Size(96, 32);
             this.btn_GWDiameter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3522,9 +3522,9 @@
             this.btn_dgvScrollDown.ForeColor = System.Drawing.Color.White;
             this.btn_dgvScrollDown.Image = ((System.Drawing.Image)(resources.GetObject("btn_dgvScrollDown.Image")));
             this.btn_dgvScrollDown.Lamp = false;
-            this.btn_dgvScrollDown.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_dgvScrollDown.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_dgvScrollDown.Location = new System.Drawing.Point(0, 50);
-            this.btn_dgvScrollDown.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_dgvScrollDown.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
             this.btn_dgvScrollDown.MouseUpImage = null;
             this.btn_dgvScrollDown.Name = "btn_dgvScrollDown";
             this.btn_dgvScrollDown.Size = new System.Drawing.Size(40, 48);
@@ -3542,9 +3542,9 @@
             this.btn_dgvScrollUp.ForeColor = System.Drawing.Color.White;
             this.btn_dgvScrollUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_dgvScrollUp.Image")));
             this.btn_dgvScrollUp.Lamp = false;
-            this.btn_dgvScrollUp.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_dgvScrollUp.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_dgvScrollUp.Location = new System.Drawing.Point(0, 2);
-            this.btn_dgvScrollUp.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_dgvScrollUp.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
             this.btn_dgvScrollUp.MouseUpImage = null;
             this.btn_dgvScrollUp.Name = "btn_dgvScrollUp";
             this.btn_dgvScrollUp.Size = new System.Drawing.Size(40, 40);
@@ -3702,10 +3702,10 @@
             this.btn_D_DDD.ForeColor = System.Drawing.Color.Black;
             this.btn_D_DDD.Image = null;
             this.btn_D_DDD.Lamp = false;
-            this.btn_D_DDD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_D_DDD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_D_DDD.Location = new System.Drawing.Point(416, 200);
-            this.btn_D_DDD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_D_DDD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_D_DDD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_D_DDD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_D_DDD.Name = "btn_D_DDD";
             this.btn_D_DDD.Size = new System.Drawing.Size(80, 32);
             this.btn_D_DDD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3722,10 +3722,10 @@
             this.btn_D_DS.ForeColor = System.Drawing.Color.Black;
             this.btn_D_DS.Image = null;
             this.btn_D_DS.Lamp = false;
-            this.btn_D_DS.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_D_DS.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_D_DS.Location = new System.Drawing.Point(264, 200);
-            this.btn_D_DS.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_D_DS.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_D_DS.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_D_DS.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_D_DS.Name = "btn_D_DS";
             this.btn_D_DS.Size = new System.Drawing.Size(80, 32);
             this.btn_D_DS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -3742,10 +3742,10 @@
             this.btn_D_DD.ForeColor = System.Drawing.Color.Black;
             this.btn_D_DD.Image = null;
             this.btn_D_DD.Lamp = false;
-            this.btn_D_DD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_D_DD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_D_DD.Location = new System.Drawing.Point(136, 200);
-            this.btn_D_DD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_D_DD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_D_DD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_D_DD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_D_DD.Name = "btn_D_DD";
             this.btn_D_DD.Size = new System.Drawing.Size(80, 32);
             this.btn_D_DD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4080,10 +4080,10 @@
             this.btn_L_DDD.ForeColor = System.Drawing.Color.Black;
             this.btn_L_DDD.Image = null;
             this.btn_L_DDD.Lamp = false;
-            this.btn_L_DDD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_L_DDD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_L_DDD.Location = new System.Drawing.Point(416, 8);
-            this.btn_L_DDD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_L_DDD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_L_DDD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_L_DDD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_L_DDD.Name = "btn_L_DDD";
             this.btn_L_DDD.Size = new System.Drawing.Size(80, 32);
             this.btn_L_DDD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4100,10 +4100,10 @@
             this.btn_L_DS.ForeColor = System.Drawing.Color.Black;
             this.btn_L_DS.Image = null;
             this.btn_L_DS.Lamp = false;
-            this.btn_L_DS.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_L_DS.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_L_DS.Location = new System.Drawing.Point(264, 8);
-            this.btn_L_DS.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_L_DS.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_L_DS.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_L_DS.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_L_DS.Name = "btn_L_DS";
             this.btn_L_DS.Size = new System.Drawing.Size(80, 32);
             this.btn_L_DS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4120,10 +4120,10 @@
             this.btn_L_DD.ForeColor = System.Drawing.Color.Black;
             this.btn_L_DD.Image = null;
             this.btn_L_DD.Lamp = false;
-            this.btn_L_DD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_L_DD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_L_DD.Location = new System.Drawing.Point(136, 8);
-            this.btn_L_DD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_L_DD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_L_DD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_L_DD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_L_DD.Name = "btn_L_DD";
             this.btn_L_DD.Size = new System.Drawing.Size(80, 32);
             this.btn_L_DD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4214,10 +4214,10 @@
             this.btn_R_DDD.ForeColor = System.Drawing.Color.Black;
             this.btn_R_DDD.Image = null;
             this.btn_R_DDD.Lamp = false;
-            this.btn_R_DDD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_R_DDD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_R_DDD.Location = new System.Drawing.Point(416, 8);
-            this.btn_R_DDD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_R_DDD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_R_DDD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_R_DDD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_R_DDD.Name = "btn_R_DDD";
             this.btn_R_DDD.Size = new System.Drawing.Size(80, 32);
             this.btn_R_DDD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4234,10 +4234,10 @@
             this.btn_R_DS.ForeColor = System.Drawing.Color.Black;
             this.btn_R_DS.Image = null;
             this.btn_R_DS.Lamp = false;
-            this.btn_R_DS.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_R_DS.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_R_DS.Location = new System.Drawing.Point(264, 8);
-            this.btn_R_DS.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_R_DS.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_R_DS.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_R_DS.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_R_DS.Name = "btn_R_DS";
             this.btn_R_DS.Size = new System.Drawing.Size(80, 32);
             this.btn_R_DS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4254,10 +4254,10 @@
             this.btn_R_DD.ForeColor = System.Drawing.Color.Black;
             this.btn_R_DD.Image = null;
             this.btn_R_DD.Lamp = false;
-            this.btn_R_DD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_R_DD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_R_DD.Location = new System.Drawing.Point(136, 8);
-            this.btn_R_DD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_R_DD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_R_DD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_R_DD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_R_DD.Name = "btn_R_DD";
             this.btn_R_DD.Size = new System.Drawing.Size(80, 32);
             this.btn_R_DD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4512,10 +4512,10 @@
             this.btn_GWAirDress.ForeColor = System.Drawing.Color.Black;
             this.btn_GWAirDress.Image = null;
             this.btn_GWAirDress.Lamp = false;
-            this.btn_GWAirDress.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWAirDress.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWAirDress.Location = new System.Drawing.Point(216, 360);
-            this.btn_GWAirDress.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_GWAirDress.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWAirDress.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_GWAirDress.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWAirDress.Name = "btn_GWAirDress";
             this.btn_GWAirDress.Size = new System.Drawing.Size(88, 32);
             this.btn_GWAirDress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4532,10 +4532,10 @@
             this.btn_GWDressTimes.ForeColor = System.Drawing.Color.Black;
             this.btn_GWDressTimes.Image = null;
             this.btn_GWDressTimes.Lamp = false;
-            this.btn_GWDressTimes.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_GWDressTimes.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_GWDressTimes.Location = new System.Drawing.Point(216, 320);
-            this.btn_GWDressTimes.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_GWDressTimes.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_GWDressTimes.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_GWDressTimes.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_GWDressTimes.Name = "btn_GWDressTimes";
             this.btn_GWDressTimes.Size = new System.Drawing.Size(88, 32);
             this.btn_GWDressTimes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4552,10 +4552,10 @@
             this.btn_ToAndBack.ForeColor = System.Drawing.Color.Black;
             this.btn_ToAndBack.Image = null;
             this.btn_ToAndBack.Lamp = false;
-            this.btn_ToAndBack.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_ToAndBack.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_ToAndBack.Location = new System.Drawing.Point(216, 520);
-            this.btn_ToAndBack.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_ToAndBack.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_ToAndBack.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_ToAndBack.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_ToAndBack.Name = "btn_ToAndBack";
             this.btn_ToAndBack.Size = new System.Drawing.Size(168, 32);
             this.btn_ToAndBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4571,10 +4571,10 @@
             this.btn_RollerRotation.ForeColor = System.Drawing.Color.Black;
             this.btn_RollerRotation.Image = null;
             this.btn_RollerRotation.Lamp = false;
-            this.btn_RollerRotation.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_RollerRotation.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_RollerRotation.Location = new System.Drawing.Point(216, 480);
-            this.btn_RollerRotation.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_RollerRotation.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_RollerRotation.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_RollerRotation.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_RollerRotation.Name = "btn_RollerRotation";
             this.btn_RollerRotation.Size = new System.Drawing.Size(168, 32);
             this.btn_RollerRotation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4590,10 +4590,10 @@
             this.btn_AfterMachining.ForeColor = System.Drawing.Color.Black;
             this.btn_AfterMachining.Image = null;
             this.btn_AfterMachining.Lamp = false;
-            this.btn_AfterMachining.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_AfterMachining.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_AfterMachining.Location = new System.Drawing.Point(216, 440);
-            this.btn_AfterMachining.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_AfterMachining.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_AfterMachining.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_AfterMachining.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_AfterMachining.Name = "btn_AfterMachining";
             this.btn_AfterMachining.Size = new System.Drawing.Size(168, 32);
             this.btn_AfterMachining.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4609,10 +4609,10 @@
             this.btn_DressGwNoOffset.ForeColor = System.Drawing.Color.Black;
             this.btn_DressGwNoOffset.Image = null;
             this.btn_DressGwNoOffset.Lamp = false;
-            this.btn_DressGwNoOffset.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_DressGwNoOffset.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_DressGwNoOffset.Location = new System.Drawing.Point(216, 400);
-            this.btn_DressGwNoOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_W;
-            this.btn_DressGwNoOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_DressGwNoOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_W;
+            this.btn_DressGwNoOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_DressGwNoOffset.Name = "btn_DressGwNoOffset";
             this.btn_DressGwNoOffset.Size = new System.Drawing.Size(168, 32);
             this.btn_DressGwNoOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4663,8 +4663,8 @@
             this.btn_Path_Save.Lamp = false;
             this.btn_Path_Save.LampOnImage = null;
             this.btn_Path_Save.Location = new System.Drawing.Point(20, 358);
-            this.btn_Path_Save.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_Save.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_Save.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_Save.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_Save.Name = "btn_Path_Save";
             this.btn_Path_Save.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_Save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4680,10 +4680,10 @@
             this.btn_EditPath.ForeColor = System.Drawing.Color.White;
             this.btn_EditPath.Image = null;
             this.btn_EditPath.Lamp = true;
-            this.btn_EditPath.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_EditPath.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_EditPath.Location = new System.Drawing.Point(0, 256);
-            this.btn_EditPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_EditPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_EditPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_EditPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_EditPath.Name = "btn_EditPath";
             this.btn_EditPath.Size = new System.Drawing.Size(112, 48);
             this.btn_EditPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4700,10 +4700,10 @@
             this.btn_OffsetPath.ForeColor = System.Drawing.Color.White;
             this.btn_OffsetPath.Image = null;
             this.btn_OffsetPath.Lamp = false;
-            this.btn_OffsetPath.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_OffsetPath.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_OffsetPath.Location = new System.Drawing.Point(0, 304);
-            this.btn_OffsetPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_OffsetPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_OffsetPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_OffsetPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_OffsetPath.Name = "btn_OffsetPath";
             this.btn_OffsetPath.Size = new System.Drawing.Size(112, 48);
             this.btn_OffsetPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4720,10 +4720,10 @@
             this.btn_PathPreview.ForeColor = System.Drawing.Color.White;
             this.btn_PathPreview.Image = null;
             this.btn_PathPreview.Lamp = false;
-            this.btn_PathPreview.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_PathPreview.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_PathPreview.Location = new System.Drawing.Point(0, 0);
-            this.btn_PathPreview.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_PathPreview.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_PathPreview.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_PathPreview.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_PathPreview.Name = "btn_PathPreview";
             this.btn_PathPreview.Size = new System.Drawing.Size(112, 48);
             this.btn_PathPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4739,10 +4739,10 @@
             this.btn_EditRightPath.ForeColor = System.Drawing.Color.White;
             this.btn_EditRightPath.Image = null;
             this.btn_EditRightPath.Lamp = false;
-            this.btn_EditRightPath.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_EditRightPath.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_EditRightPath.Location = new System.Drawing.Point(0, 144);
-            this.btn_EditRightPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_EditRightPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_EditRightPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_EditRightPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_EditRightPath.Name = "btn_EditRightPath";
             this.btn_EditRightPath.Size = new System.Drawing.Size(112, 48);
             this.btn_EditRightPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4759,10 +4759,10 @@
             this.btn_EditLeftPath.ForeColor = System.Drawing.Color.White;
             this.btn_EditLeftPath.Image = null;
             this.btn_EditLeftPath.Lamp = false;
-            this.btn_EditLeftPath.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_EditLeftPath.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_EditLeftPath.Location = new System.Drawing.Point(0, 48);
-            this.btn_EditLeftPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_EditLeftPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_EditLeftPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_EditLeftPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_EditLeftPath.Name = "btn_EditLeftPath";
             this.btn_EditLeftPath.Size = new System.Drawing.Size(112, 48);
             this.btn_EditLeftPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4778,10 +4778,10 @@
             this.btn_EditDiamPath.ForeColor = System.Drawing.Color.White;
             this.btn_EditDiamPath.Image = null;
             this.btn_EditDiamPath.Lamp = false;
-            this.btn_EditDiamPath.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_EditDiamPath.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_EditDiamPath.Location = new System.Drawing.Point(0, 96);
-            this.btn_EditDiamPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_EditDiamPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_EditDiamPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_EditDiamPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_EditDiamPath.Name = "btn_EditDiamPath";
             this.btn_EditDiamPath.Size = new System.Drawing.Size(112, 48);
             this.btn_EditDiamPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -4868,8 +4868,8 @@
             this.btn_Path_Export.Lamp = false;
             this.btn_Path_Export.LampOnImage = null;
             this.btn_Path_Export.Location = new System.Drawing.Point(544, 88);
-            this.btn_Path_Export.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_Export.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_Export.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_Export.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_Export.Name = "btn_Path_Export";
             this.btn_Path_Export.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_Export.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -4896,8 +4896,8 @@
             this.btn_Path_Import.Lamp = false;
             this.btn_Path_Import.LampOnImage = null;
             this.btn_Path_Import.Location = new System.Drawing.Point(544, 8);
-            this.btn_Path_Import.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_Import.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_Import.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_Import.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_Import.Name = "btn_Path_Import";
             this.btn_Path_Import.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_Import.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5147,7 +5147,7 @@
             // 
             // pic_Z
             // 
-            this.pic_Z.Image = global::OIG.Properties.Resources.Z_Dir;
+            this.pic_Z.Image = global::OCD.Properties.Resources.Z_Dir;
             this.pic_Z.Location = new System.Drawing.Point(23, 240);
             this.pic_Z.Name = "pic_Z";
             this.pic_Z.Size = new System.Drawing.Size(240, 24);
@@ -5156,7 +5156,7 @@
             // 
             // pic_X
             // 
-            this.pic_X.Image = global::OIG.Properties.Resources.X_Dir;
+            this.pic_X.Image = global::OCD.Properties.Resources.X_Dir;
             this.pic_X.Location = new System.Drawing.Point(0, 0);
             this.pic_X.Name = "pic_X";
             this.pic_X.Size = new System.Drawing.Size(24, 240);
@@ -5173,8 +5173,8 @@
             this.btn_Path_NewFile.Lamp = false;
             this.btn_Path_NewFile.LampOnImage = null;
             this.btn_Path_NewFile.Location = new System.Drawing.Point(632, 408);
-            this.btn_Path_NewFile.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_NewFile.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_NewFile.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_NewFile.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_NewFile.Name = "btn_Path_NewFile";
             this.btn_Path_NewFile.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_NewFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5192,8 +5192,8 @@
             this.btn_Path_InsertBack.Lamp = false;
             this.btn_Path_InsertBack.LampOnImage = null;
             this.btn_Path_InsertBack.Location = new System.Drawing.Point(472, 408);
-            this.btn_Path_InsertBack.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_InsertBack.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_InsertBack.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_InsertBack.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_InsertBack.Name = "btn_Path_InsertBack";
             this.btn_Path_InsertBack.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_InsertBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5211,8 +5211,8 @@
             this.btn_Path_InsertFront.Lamp = false;
             this.btn_Path_InsertFront.LampOnImage = null;
             this.btn_Path_InsertFront.Location = new System.Drawing.Point(392, 408);
-            this.btn_Path_InsertFront.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_InsertFront.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_InsertFront.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_InsertFront.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_InsertFront.Name = "btn_Path_InsertFront";
             this.btn_Path_InsertFront.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_InsertFront.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5238,8 +5238,8 @@
             this.btn_ClearAllOffsetPath.Lamp = false;
             this.btn_ClearAllOffsetPath.LampOnImage = null;
             this.btn_ClearAllOffsetPath.Location = new System.Drawing.Point(312, 328);
-            this.btn_ClearAllOffsetPath.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ClearAllOffsetPath.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_ClearAllOffsetPath.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ClearAllOffsetPath.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_ClearAllOffsetPath.Name = "btn_ClearAllOffsetPath";
             this.btn_ClearAllOffsetPath.Size = new System.Drawing.Size(72, 72);
             this.btn_ClearAllOffsetPath.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5257,8 +5257,8 @@
             this.btn_Path_Delete.Lamp = false;
             this.btn_Path_Delete.LampOnImage = null;
             this.btn_Path_Delete.Location = new System.Drawing.Point(552, 408);
-            this.btn_Path_Delete.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_Delete.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_Delete.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_Delete.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_Delete.Name = "btn_Path_Delete";
             this.btn_Path_Delete.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5276,8 +5276,8 @@
             this.btn_Path_Add.Lamp = false;
             this.btn_Path_Add.LampOnImage = null;
             this.btn_Path_Add.Location = new System.Drawing.Point(312, 408);
-            this.btn_Path_Add.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Path_Add.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Path_Add.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Path_Add.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Path_Add.Name = "btn_Path_Add";
             this.btn_Path_Add.Size = new System.Drawing.Size(72, 72);
             this.btn_Path_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5389,8 +5389,8 @@
             this.btn_SaveDressGw.Lamp = false;
             this.btn_SaveDressGw.LampOnImage = null;
             this.btn_SaveDressGw.Location = new System.Drawing.Point(856, 512);
-            this.btn_SaveDressGw.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_SaveDressGw.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_SaveDressGw.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_SaveDressGw.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_SaveDressGw.Name = "btn_SaveDressGw";
             this.btn_SaveDressGw.Size = new System.Drawing.Size(72, 72);
             this.btn_SaveDressGw.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5936,8 +5936,8 @@
             this.btn_DG_Btn2.Lamp = false;
             this.btn_DG_Btn2.LampOnImage = null;
             this.btn_DG_Btn2.Location = new System.Drawing.Point(504, 392);
-            this.btn_DG_Btn2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DG_Btn2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DG_Btn2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DG_Btn2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DG_Btn2.Name = "btn_DG_Btn2";
             this.btn_DG_Btn2.Size = new System.Drawing.Size(104, 104);
             this.btn_DG_Btn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -5955,8 +5955,8 @@
             this.btn_DG_Btn1.Lamp = false;
             this.btn_DG_Btn1.LampOnImage = null;
             this.btn_DG_Btn1.Location = new System.Drawing.Point(392, 392);
-            this.btn_DG_Btn1.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DG_Btn1.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DG_Btn1.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DG_Btn1.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DG_Btn1.Name = "btn_DG_Btn1";
             this.btn_DG_Btn1.Size = new System.Drawing.Size(104, 104);
             this.btn_DG_Btn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -6201,10 +6201,10 @@
             this.btn_DiamOut.ForeColor = System.Drawing.Color.Black;
             this.btn_DiamOut.Image = null;
             this.btn_DiamOut.Lamp = false;
-            this.btn_DiamOut.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_DiamOut.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_DiamOut.Location = new System.Drawing.Point(16, 88);
-            this.btn_DiamOut.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_DiamOut.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_DiamOut.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DiamOut.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_DiamOut.Name = "btn_DiamOut";
             this.btn_DiamOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_DiamOut.Size = new System.Drawing.Size(144, 40);
@@ -6223,10 +6223,10 @@
             this.btn_DiamIn.ForeColor = System.Drawing.Color.Black;
             this.btn_DiamIn.Image = null;
             this.btn_DiamIn.Lamp = false;
-            this.btn_DiamIn.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_DiamIn.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_DiamIn.Location = new System.Drawing.Point(16, 32);
-            this.btn_DiamIn.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_DiamIn.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_DiamIn.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DiamIn.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_DiamIn.Name = "btn_DiamIn";
             this.btn_DiamIn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_DiamIn.Size = new System.Drawing.Size(144, 40);
@@ -6890,8 +6890,8 @@
             this.btn_SaveGrindCoor.Lamp = false;
             this.btn_SaveGrindCoor.LampOnImage = null;
             this.btn_SaveGrindCoor.Location = new System.Drawing.Point(856, 512);
-            this.btn_SaveGrindCoor.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_SaveGrindCoor.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_SaveGrindCoor.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_SaveGrindCoor.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_SaveGrindCoor.Name = "btn_SaveGrindCoor";
             this.btn_SaveGrindCoor.Size = new System.Drawing.Size(72, 72);
             this.btn_SaveGrindCoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -6962,8 +6962,8 @@
             this.btn_DP_Rel_ZeroZ.Lamp = false;
             this.btn_DP_Rel_ZeroZ.LampOnImage = null;
             this.btn_DP_Rel_ZeroZ.Location = new System.Drawing.Point(144, 160);
-            this.btn_DP_Rel_ZeroZ.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
-            this.btn_DP_Rel_ZeroZ.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_DP_Rel_ZeroZ.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_DP_Rel_ZeroZ.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_DP_Rel_ZeroZ.Name = "btn_DP_Rel_ZeroZ";
             this.btn_DP_Rel_ZeroZ.Size = new System.Drawing.Size(72, 40);
             this.btn_DP_Rel_ZeroZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -7005,8 +7005,8 @@
             this.btn_DP_Rel_Zero.Lamp = false;
             this.btn_DP_Rel_Zero.LampOnImage = null;
             this.btn_DP_Rel_Zero.Location = new System.Drawing.Point(144, 72);
-            this.btn_DP_Rel_Zero.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
-            this.btn_DP_Rel_Zero.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_DP_Rel_Zero.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_DP_Rel_Zero.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_DP_Rel_Zero.Name = "btn_DP_Rel_Zero";
             this.btn_DP_Rel_Zero.Size = new System.Drawing.Size(72, 40);
             this.btn_DP_Rel_Zero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -7452,8 +7452,8 @@
             this.btn_DP_Btn3.Lamp = false;
             this.btn_DP_Btn3.LampOnImage = null;
             this.btn_DP_Btn3.Location = new System.Drawing.Point(784, 448);
-            this.btn_DP_Btn3.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DP_Btn3.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DP_Btn3.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DP_Btn3.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DP_Btn3.Name = "btn_DP_Btn3";
             this.btn_DP_Btn3.Size = new System.Drawing.Size(104, 104);
             this.btn_DP_Btn3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -7471,8 +7471,8 @@
             this.btn_DP_Btn2.Lamp = false;
             this.btn_DP_Btn2.LampOnImage = null;
             this.btn_DP_Btn2.Location = new System.Drawing.Point(672, 448);
-            this.btn_DP_Btn2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DP_Btn2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DP_Btn2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DP_Btn2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DP_Btn2.Name = "btn_DP_Btn2";
             this.btn_DP_Btn2.Size = new System.Drawing.Size(104, 104);
             this.btn_DP_Btn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -7490,8 +7490,8 @@
             this.btn_DP_Btn1.Lamp = false;
             this.btn_DP_Btn1.LampOnImage = null;
             this.btn_DP_Btn1.Location = new System.Drawing.Point(560, 448);
-            this.btn_DP_Btn1.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_DP_Btn1.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_DP_Btn1.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_DP_Btn1.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_DP_Btn1.Name = "btn_DP_Btn1";
             this.btn_DP_Btn1.Size = new System.Drawing.Size(104, 104);
             this.btn_DP_Btn1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -7559,7 +7559,7 @@
             this.btn_Gw3CmdRpm.DisplayText = "-";
             this.btn_Gw3CmdRpm.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Gw3CmdRpm.ForeColor = System.Drawing.Color.Black;
-            this.btn_Gw3CmdRpm.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw3CmdRpm.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw3CmdRpm.Lamp = false;
             this.btn_Gw3CmdRpm.LampOnImage = null;
             this.btn_Gw3CmdRpm.Location = new System.Drawing.Point(120, 32);
@@ -7675,7 +7675,7 @@
             this.btn_Gw4CmdRpm.DisplayText = "-";
             this.btn_Gw4CmdRpm.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Gw4CmdRpm.ForeColor = System.Drawing.Color.Black;
-            this.btn_Gw4CmdRpm.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw4CmdRpm.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw4CmdRpm.Lamp = false;
             this.btn_Gw4CmdRpm.LampOnImage = null;
             this.btn_Gw4CmdRpm.Location = new System.Drawing.Point(120, 32);
@@ -7893,7 +7893,7 @@
             this.btn_SpSpeed3.DisplayText = "-";
             this.btn_SpSpeed3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_SpSpeed3.ForeColor = System.Drawing.Color.Black;
-            this.btn_SpSpeed3.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_SpSpeed3.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_SpSpeed3.Lamp = false;
             this.btn_SpSpeed3.LampOnImage = null;
             this.btn_SpSpeed3.Location = new System.Drawing.Point(120, 32);
@@ -7979,7 +7979,7 @@
             this.btn_SpRate.DisplayText = "-";
             this.btn_SpRate.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_SpRate.ForeColor = System.Drawing.Color.Black;
-            this.btn_SpRate.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_SpRate.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_SpRate.Lamp = false;
             this.btn_SpRate.LampOnImage = null;
             this.btn_SpRate.Location = new System.Drawing.Point(120, 32);
@@ -8042,7 +8042,7 @@
             this.btn_Gw1CmdRpm.DisplayText = "-";
             this.btn_Gw1CmdRpm.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Gw1CmdRpm.ForeColor = System.Drawing.Color.Black;
-            this.btn_Gw1CmdRpm.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw1CmdRpm.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw1CmdRpm.Lamp = false;
             this.btn_Gw1CmdRpm.LampOnImage = null;
             this.btn_Gw1CmdRpm.Location = new System.Drawing.Point(120, 32);
@@ -8159,7 +8159,7 @@
             this.btn_RollerCmdSpeed.DisplayText = "-";
             this.btn_RollerCmdSpeed.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_RollerCmdSpeed.ForeColor = System.Drawing.Color.Black;
-            this.btn_RollerCmdSpeed.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_RollerCmdSpeed.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_RollerCmdSpeed.Lamp = false;
             this.btn_RollerCmdSpeed.LampOnImage = null;
             this.btn_RollerCmdSpeed.Location = new System.Drawing.Point(120, 32);
@@ -8273,7 +8273,7 @@
             this.btn_SpSpeed.DisplayText = "-";
             this.btn_SpSpeed.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_SpSpeed.ForeColor = System.Drawing.Color.Black;
-            this.btn_SpSpeed.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_SpSpeed.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_SpSpeed.Lamp = false;
             this.btn_SpSpeed.LampOnImage = null;
             this.btn_SpSpeed.Location = new System.Drawing.Point(120, 32);
@@ -8364,8 +8364,8 @@
             this.btn_Monitor_RelZ_Zero.Lamp = false;
             this.btn_Monitor_RelZ_Zero.LampOnImage = null;
             this.btn_Monitor_RelZ_Zero.Location = new System.Drawing.Point(152, 64);
-            this.btn_Monitor_RelZ_Zero.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
-            this.btn_Monitor_RelZ_Zero.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_Monitor_RelZ_Zero.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Monitor_RelZ_Zero.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_Monitor_RelZ_Zero.Name = "btn_Monitor_RelZ_Zero";
             this.btn_Monitor_RelZ_Zero.Size = new System.Drawing.Size(64, 26);
             this.btn_Monitor_RelZ_Zero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -8407,8 +8407,8 @@
             this.btn_Monitor_Rel_Zero.Lamp = false;
             this.btn_Monitor_Rel_Zero.LampOnImage = null;
             this.btn_Monitor_Rel_Zero.Location = new System.Drawing.Point(152, 30);
-            this.btn_Monitor_Rel_Zero.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
-            this.btn_Monitor_Rel_Zero.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_Monitor_Rel_Zero.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Monitor_Rel_Zero.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_Monitor_Rel_Zero.Name = "btn_Monitor_Rel_Zero";
             this.btn_Monitor_Rel_Zero.Size = new System.Drawing.Size(64, 24);
             this.btn_Monitor_Rel_Zero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -8765,7 +8765,7 @@
             this.btn_Gw2CmdRpm.DisplayText = "-";
             this.btn_Gw2CmdRpm.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Gw2CmdRpm.ForeColor = System.Drawing.Color.Black;
-            this.btn_Gw2CmdRpm.Image = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw2CmdRpm.Image = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw2CmdRpm.Lamp = false;
             this.btn_Gw2CmdRpm.LampOnImage = null;
             this.btn_Gw2CmdRpm.Location = new System.Drawing.Point(120, 32);
@@ -9646,8 +9646,8 @@
             this.btn_FinishCountClear.Lamp = false;
             this.btn_FinishCountClear.LampOnImage = null;
             this.btn_FinishCountClear.Location = new System.Drawing.Point(144, 54);
-            this.btn_FinishCountClear.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
-            this.btn_FinishCountClear.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_FinishCountClear.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_FinishCountClear.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_FinishCountClear.Name = "btn_FinishCountClear";
             this.btn_FinishCountClear.Size = new System.Drawing.Size(73, 25);
             this.btn_FinishCountClear.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -9978,8 +9978,8 @@
             this.btn_Prog_Call.Lamp = false;
             this.btn_Prog_Call.LampOnImage = null;
             this.btn_Prog_Call.Location = new System.Drawing.Point(328, 520);
-            this.btn_Prog_Call.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Prog_Call.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Prog_Call.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Prog_Call.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Prog_Call.Name = "btn_Prog_Call";
             this.btn_Prog_Call.Size = new System.Drawing.Size(72, 72);
             this.btn_Prog_Call.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -9998,8 +9998,8 @@
             this.btn_Prog_Open.Lamp = false;
             this.btn_Prog_Open.LampOnImage = null;
             this.btn_Prog_Open.Location = new System.Drawing.Point(248, 520);
-            this.btn_Prog_Open.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Prog_Open.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Prog_Open.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Prog_Open.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Prog_Open.Name = "btn_Prog_Open";
             this.btn_Prog_Open.Size = new System.Drawing.Size(72, 72);
             this.btn_Prog_Open.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10017,8 +10017,8 @@
             this.btn_Prog_SaveAs.Lamp = false;
             this.btn_Prog_SaveAs.LampOnImage = null;
             this.btn_Prog_SaveAs.Location = new System.Drawing.Point(168, 520);
-            this.btn_Prog_SaveAs.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Prog_SaveAs.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Prog_SaveAs.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Prog_SaveAs.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Prog_SaveAs.Name = "btn_Prog_SaveAs";
             this.btn_Prog_SaveAs.Size = new System.Drawing.Size(72, 72);
             this.btn_Prog_SaveAs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10036,8 +10036,8 @@
             this.btn_Prog_Del.Lamp = false;
             this.btn_Prog_Del.LampOnImage = null;
             this.btn_Prog_Del.Location = new System.Drawing.Point(88, 520);
-            this.btn_Prog_Del.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Prog_Del.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Prog_Del.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Prog_Del.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Prog_Del.Name = "btn_Prog_Del";
             this.btn_Prog_Del.Size = new System.Drawing.Size(72, 72);
             this.btn_Prog_Del.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10055,8 +10055,8 @@
             this.btn_Prog_Add.Lamp = false;
             this.btn_Prog_Add.LampOnImage = null;
             this.btn_Prog_Add.Location = new System.Drawing.Point(8, 520);
-            this.btn_Prog_Add.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Prog_Add.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Prog_Add.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Prog_Add.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Prog_Add.Name = "btn_Prog_Add";
             this.btn_Prog_Add.Size = new System.Drawing.Size(72, 72);
             this.btn_Prog_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10215,8 +10215,8 @@
             this.btn_ProgList.Lamp = false;
             this.btn_ProgList.LampOnImage = null;
             this.btn_ProgList.Location = new System.Drawing.Point(856, 512);
-            this.btn_ProgList.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_ProgList.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_ProgList.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_ProgList.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_ProgList.Name = "btn_ProgList";
             this.btn_ProgList.Size = new System.Drawing.Size(72, 72);
             this.btn_ProgList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10234,8 +10234,8 @@
             this.btn_EditProc.Lamp = false;
             this.btn_EditProc.LampOnImage = null;
             this.btn_EditProc.Location = new System.Drawing.Point(856, 8);
-            this.btn_EditProc.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_EditProc.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_EditProc.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_EditProc.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_EditProc.Name = "btn_EditProc";
             this.btn_EditProc.Size = new System.Drawing.Size(72, 72);
             this.btn_EditProc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10254,8 +10254,8 @@
             this.btn_SaveProg.Lamp = false;
             this.btn_SaveProg.LampOnImage = null;
             this.btn_SaveProg.Location = new System.Drawing.Point(856, 440);
-            this.btn_SaveProg.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_SaveProg.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_SaveProg.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_SaveProg.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_SaveProg.Name = "btn_SaveProg";
             this.btn_SaveProg.Size = new System.Drawing.Size(72, 72);
             this.btn_SaveProg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10275,8 +10275,8 @@
             this.btn_Copy.Lamp = false;
             this.btn_Copy.LampOnImage = null;
             this.btn_Copy.Location = new System.Drawing.Point(856, 368);
-            this.btn_Copy.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Copy.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Copy.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Copy.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Copy.Name = "btn_Copy";
             this.btn_Copy.Size = new System.Drawing.Size(72, 72);
             this.btn_Copy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10295,8 +10295,8 @@
             this.btn_InsertProcBack.Lamp = false;
             this.btn_InsertProcBack.LampOnImage = null;
             this.btn_InsertProcBack.Location = new System.Drawing.Point(856, 224);
-            this.btn_InsertProcBack.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_InsertProcBack.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_InsertProcBack.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_InsertProcBack.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_InsertProcBack.Name = "btn_InsertProcBack";
             this.btn_InsertProcBack.Size = new System.Drawing.Size(72, 72);
             this.btn_InsertProcBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10315,8 +10315,8 @@
             this.btn_InsertProcFront.Lamp = false;
             this.btn_InsertProcFront.LampOnImage = null;
             this.btn_InsertProcFront.Location = new System.Drawing.Point(856, 152);
-            this.btn_InsertProcFront.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_InsertProcFront.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_InsertProcFront.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_InsertProcFront.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_InsertProcFront.Name = "btn_InsertProcFront";
             this.btn_InsertProcFront.Size = new System.Drawing.Size(72, 72);
             this.btn_InsertProcFront.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10335,8 +10335,8 @@
             this.btn_RemoveProc.Lamp = false;
             this.btn_RemoveProc.LampOnImage = null;
             this.btn_RemoveProc.Location = new System.Drawing.Point(856, 296);
-            this.btn_RemoveProc.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_RemoveProc.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_RemoveProc.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_RemoveProc.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_RemoveProc.Name = "btn_RemoveProc";
             this.btn_RemoveProc.Size = new System.Drawing.Size(72, 72);
             this.btn_RemoveProc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10355,8 +10355,8 @@
             this.btn_AddProc.Lamp = false;
             this.btn_AddProc.LampOnImage = null;
             this.btn_AddProc.Location = new System.Drawing.Point(856, 80);
-            this.btn_AddProc.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_AddProc.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_AddProc.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_AddProc.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_AddProc.Name = "btn_AddProc";
             this.btn_AddProc.Size = new System.Drawing.Size(72, 72);
             this.btn_AddProc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -10404,10 +10404,10 @@
             this.btn_ArgParam.ForeColor = System.Drawing.Color.White;
             this.btn_ArgParam.Image = null;
             this.btn_ArgParam.Lamp = true;
-            this.btn_ArgParam.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgParam.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgParam.Location = new System.Drawing.Point(0, 0);
-            this.btn_ArgParam.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgParam.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgParam.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgParam.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgParam.Name = "btn_ArgParam";
             this.btn_ArgParam.Size = new System.Drawing.Size(83, 48);
             this.btn_ArgParam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10424,10 +10424,10 @@
             this.btn_ArgParam2.ForeColor = System.Drawing.Color.White;
             this.btn_ArgParam2.Image = null;
             this.btn_ArgParam2.Lamp = false;
-            this.btn_ArgParam2.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgParam2.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgParam2.Location = new System.Drawing.Point(83, 0);
-            this.btn_ArgParam2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgParam2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgParam2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgParam2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgParam2.Name = "btn_ArgParam2";
             this.btn_ArgParam2.Size = new System.Drawing.Size(80, 48);
             this.btn_ArgParam2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10444,10 +10444,10 @@
             this.btn_ArgDress2.ForeColor = System.Drawing.Color.White;
             this.btn_ArgDress2.Image = null;
             this.btn_ArgDress2.Lamp = false;
-            this.btn_ArgDress2.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgDress2.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgDress2.Location = new System.Drawing.Point(412, 0);
-            this.btn_ArgDress2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgDress2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgDress2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgDress2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgDress2.Name = "btn_ArgDress2";
             this.btn_ArgDress2.Size = new System.Drawing.Size(82, 48);
             this.btn_ArgDress2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10464,10 +10464,10 @@
             this.btn_ArgDress1.ForeColor = System.Drawing.Color.White;
             this.btn_ArgDress1.Image = null;
             this.btn_ArgDress1.Lamp = false;
-            this.btn_ArgDress1.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgDress1.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgDress1.Location = new System.Drawing.Point(329, 0);
-            this.btn_ArgDress1.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgDress1.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgDress1.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgDress1.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgDress1.Name = "btn_ArgDress1";
             this.btn_ArgDress1.Size = new System.Drawing.Size(83, 48);
             this.btn_ArgDress1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10484,10 +10484,10 @@
             this.btn_ArgAdvance.ForeColor = System.Drawing.Color.White;
             this.btn_ArgAdvance.Image = null;
             this.btn_ArgAdvance.Lamp = false;
-            this.btn_ArgAdvance.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgAdvance.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgAdvance.Location = new System.Drawing.Point(246, 0);
-            this.btn_ArgAdvance.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgAdvance.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgAdvance.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgAdvance.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgAdvance.Name = "btn_ArgAdvance";
             this.btn_ArgAdvance.Size = new System.Drawing.Size(83, 48);
             this.btn_ArgAdvance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -10504,10 +10504,10 @@
             this.btn_ArgParam3.ForeColor = System.Drawing.Color.White;
             this.btn_ArgParam3.Image = null;
             this.btn_ArgParam3.Lamp = false;
-            this.btn_ArgParam3.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_ArgParam3.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_ArgParam3.Location = new System.Drawing.Point(163, 0);
-            this.btn_ArgParam3.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_ArgParam3.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_DG;
+            this.btn_ArgParam3.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_ArgParam3.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_DG;
             this.btn_ArgParam3.Name = "btn_ArgParam3";
             this.btn_ArgParam3.Size = new System.Drawing.Size(83, 48);
             this.btn_ArgParam3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -11816,8 +11816,8 @@
             this.btn_keyboard.Lamp = false;
             this.btn_keyboard.LampOnImage = null;
             this.btn_keyboard.Location = new System.Drawing.Point(16, 312);
-            this.btn_keyboard.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_keyboard.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_keyboard.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_keyboard.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_keyboard.Name = "btn_keyboard";
             this.btn_keyboard.Size = new System.Drawing.Size(136, 64);
             this.btn_keyboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11836,8 +11836,8 @@
             this.btn_MoveDown.Lamp = false;
             this.btn_MoveDown.LampOnImage = null;
             this.btn_MoveDown.Location = new System.Drawing.Point(88, 240);
-            this.btn_MoveDown.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_MoveDown.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_MoveDown.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_MoveDown.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_MoveDown.Name = "btn_MoveDown";
             this.btn_MoveDown.Size = new System.Drawing.Size(64, 64);
             this.btn_MoveDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11856,8 +11856,8 @@
             this.btn_MoveUp.Lamp = false;
             this.btn_MoveUp.LampOnImage = null;
             this.btn_MoveUp.Location = new System.Drawing.Point(16, 240);
-            this.btn_MoveUp.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_MoveUp.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_MoveUp.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_MoveUp.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_MoveUp.Name = "btn_MoveUp";
             this.btn_MoveUp.Size = new System.Drawing.Size(64, 64);
             this.btn_MoveUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11876,8 +11876,8 @@
             this.btn_AddLine.Lamp = false;
             this.btn_AddLine.LampOnImage = null;
             this.btn_AddLine.Location = new System.Drawing.Point(16, 168);
-            this.btn_AddLine.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_AddLine.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_AddLine.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_AddLine.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_AddLine.Name = "btn_AddLine";
             this.btn_AddLine.Size = new System.Drawing.Size(64, 64);
             this.btn_AddLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11896,8 +11896,8 @@
             this.btn_InsertLine.Lamp = false;
             this.btn_InsertLine.LampOnImage = null;
             this.btn_InsertLine.Location = new System.Drawing.Point(88, 168);
-            this.btn_InsertLine.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_InsertLine.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_InsertLine.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_InsertLine.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_InsertLine.Name = "btn_InsertLine";
             this.btn_InsertLine.Size = new System.Drawing.Size(64, 64);
             this.btn_InsertLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11916,8 +11916,8 @@
             this.btn_ClearLine.Lamp = false;
             this.btn_ClearLine.LampOnImage = null;
             this.btn_ClearLine.Location = new System.Drawing.Point(160, 168);
-            this.btn_ClearLine.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_RL;
-            this.btn_ClearLine.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_R;
+            this.btn_ClearLine.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_RL;
+            this.btn_ClearLine.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_R;
             this.btn_ClearLine.Name = "btn_ClearLine";
             this.btn_ClearLine.Size = new System.Drawing.Size(64, 64);
             this.btn_ClearLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11936,8 +11936,8 @@
             this.btn_changeenter.Lamp = false;
             this.btn_changeenter.LampOnImage = null;
             this.btn_changeenter.Location = new System.Drawing.Point(160, 312);
-            this.btn_changeenter.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.btn_changeenter.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.btn_changeenter.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.btn_changeenter.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.btn_changeenter.Name = "btn_changeenter";
             this.btn_changeenter.Size = new System.Drawing.Size(64, 64);
             this.btn_changeenter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -11956,8 +11956,8 @@
             this.btn_ClearAllLine.Lamp = false;
             this.btn_ClearAllLine.LampOnImage = null;
             this.btn_ClearAllLine.Location = new System.Drawing.Point(160, 240);
-            this.btn_ClearAllLine.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_RL;
-            this.btn_ClearAllLine.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_R;
+            this.btn_ClearAllLine.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_RL;
+            this.btn_ClearAllLine.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_R;
             this.btn_ClearAllLine.Name = "btn_ClearAllLine";
             this.btn_ClearAllLine.Size = new System.Drawing.Size(64, 64);
             this.btn_ClearAllLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -12867,8 +12867,8 @@
             this.uc_RoundBtn2.Lamp = false;
             this.uc_RoundBtn2.LampOnImage = null;
             this.uc_RoundBtn2.Location = new System.Drawing.Point(360, 16);
-            this.uc_RoundBtn2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uc_RoundBtn2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uc_RoundBtn2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uc_RoundBtn2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uc_RoundBtn2.Name = "uc_RoundBtn2";
             this.uc_RoundBtn2.Size = new System.Drawing.Size(72, 72);
             this.uc_RoundBtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -12938,8 +12938,8 @@
             this.uBtn_ManualZero.Lamp = false;
             this.uBtn_ManualZero.LampOnImage = null;
             this.uBtn_ManualZero.Location = new System.Drawing.Point(360, 24);
-            this.uBtn_ManualZero.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uBtn_ManualZero.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uBtn_ManualZero.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uBtn_ManualZero.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uBtn_ManualZero.Name = "uBtn_ManualZero";
             this.uBtn_ManualZero.Size = new System.Drawing.Size(72, 72);
             this.uBtn_ManualZero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -13016,10 +13016,10 @@
             this.uBtn_M_COOLT.ForeColor = System.Drawing.Color.White;
             this.uBtn_M_COOLT.Image = ((System.Drawing.Image)(resources.GetObject("uBtn_M_COOLT.Image")));
             this.uBtn_M_COOLT.Lamp = false;
-            this.uBtn_M_COOLT.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.uBtn_M_COOLT.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.uBtn_M_COOLT.Location = new System.Drawing.Point(8, 88);
-            this.uBtn_M_COOLT.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.uBtn_M_COOLT.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.uBtn_M_COOLT.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.uBtn_M_COOLT.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.uBtn_M_COOLT.Name = "uBtn_M_COOLT";
             this.uBtn_M_COOLT.Size = new System.Drawing.Size(64, 64);
             this.uBtn_M_COOLT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -13035,10 +13035,10 @@
             this.uBtn_M_SPCW.ForeColor = System.Drawing.Color.White;
             this.uBtn_M_SPCW.Image = ((System.Drawing.Image)(resources.GetObject("uBtn_M_SPCW.Image")));
             this.uBtn_M_SPCW.Lamp = false;
-            this.uBtn_M_SPCW.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.uBtn_M_SPCW.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.uBtn_M_SPCW.Location = new System.Drawing.Point(8, 16);
-            this.uBtn_M_SPCW.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_L;
-            this.uBtn_M_SPCW.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60;
+            this.uBtn_M_SPCW.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_L;
+            this.uBtn_M_SPCW.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60;
             this.uBtn_M_SPCW.Name = "uBtn_M_SPCW";
             this.uBtn_M_SPCW.Size = new System.Drawing.Size(64, 64);
             this.uBtn_M_SPCW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -13151,8 +13151,8 @@
             this.uBtn_ManualSave.Lamp = false;
             this.uBtn_ManualSave.LampOnImage = null;
             this.uBtn_ManualSave.Location = new System.Drawing.Point(368, 56);
-            this.uBtn_ManualSave.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uBtn_ManualSave.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uBtn_ManualSave.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uBtn_ManualSave.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uBtn_ManualSave.Name = "uBtn_ManualSave";
             this.uBtn_ManualSave.Size = new System.Drawing.Size(72, 72);
             this.uBtn_ManualSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -13487,8 +13487,8 @@
             this.btn_Redo_Input2.Lamp = false;
             this.btn_Redo_Input2.LampOnImage = null;
             this.btn_Redo_Input2.Location = new System.Drawing.Point(216, 496);
-            this.btn_Redo_Input2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_Input2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_Input2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_Input2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_Input2.Name = "btn_Redo_Input2";
             this.btn_Redo_Input2.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_Input2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13507,8 +13507,8 @@
             this.btn_Redo_Input.Lamp = false;
             this.btn_Redo_Input.LampOnImage = null;
             this.btn_Redo_Input.Location = new System.Drawing.Point(296, 496);
-            this.btn_Redo_Input.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_Input.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_Input.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_Input.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_Input.Name = "btn_Redo_Input";
             this.btn_Redo_Input.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_Input.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13527,8 +13527,8 @@
             this.btn_Redo_N01.Lamp = false;
             this.btn_Redo_N01.LampOnImage = null;
             this.btn_Redo_N01.Location = new System.Drawing.Point(456, 496);
-            this.btn_Redo_N01.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_N01.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_N01.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_N01.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_N01.Name = "btn_Redo_N01";
             this.btn_Redo_N01.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_N01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13548,8 +13548,8 @@
             this.btn_Redo_P01.Lamp = false;
             this.btn_Redo_P01.LampOnImage = null;
             this.btn_Redo_P01.Location = new System.Drawing.Point(376, 496);
-            this.btn_Redo_P01.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_P01.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_P01.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_P01.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_P01.Name = "btn_Redo_P01";
             this.btn_Redo_P01.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_P01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13708,8 +13708,8 @@
             this.btn_RedoStart.Lamp = false;
             this.btn_RedoStart.LampOnImage = null;
             this.btn_RedoStart.Location = new System.Drawing.Point(856, 496);
-            this.btn_RedoStart.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_RedoStart.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_RedoStart.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_RedoStart.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_RedoStart.Name = "btn_RedoStart";
             this.btn_RedoStart.Size = new System.Drawing.Size(72, 72);
             this.btn_RedoStart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13728,8 +13728,8 @@
             this.btn_Redo_N0001.Lamp = false;
             this.btn_Redo_N0001.LampOnImage = null;
             this.btn_Redo_N0001.Location = new System.Drawing.Point(776, 496);
-            this.btn_Redo_N0001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_N0001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_N0001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_N0001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_N0001.Name = "btn_Redo_N0001";
             this.btn_Redo_N0001.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_N0001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13749,8 +13749,8 @@
             this.btn_Redo_P001.Lamp = false;
             this.btn_Redo_P001.LampOnImage = null;
             this.btn_Redo_P001.Location = new System.Drawing.Point(536, 496);
-            this.btn_Redo_P001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_P001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_P001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_P001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_P001.Name = "btn_Redo_P001";
             this.btn_Redo_P001.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_P001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13770,8 +13770,8 @@
             this.btn_Redo_P0001.Lamp = false;
             this.btn_Redo_P0001.LampOnImage = null;
             this.btn_Redo_P0001.Location = new System.Drawing.Point(696, 496);
-            this.btn_Redo_P0001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_P0001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_P0001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_P0001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_P0001.Name = "btn_Redo_P0001";
             this.btn_Redo_P0001.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_P0001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13791,8 +13791,8 @@
             this.btn_Redo_N001.Lamp = false;
             this.btn_Redo_N001.LampOnImage = null;
             this.btn_Redo_N001.Location = new System.Drawing.Point(616, 496);
-            this.btn_Redo_N001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Redo_N001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Redo_N001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Redo_N001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Redo_N001.Name = "btn_Redo_N001";
             this.btn_Redo_N001.Size = new System.Drawing.Size(72, 72);
             this.btn_Redo_N001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -13835,8 +13835,8 @@
             this.btn_Offset_Input2.Lamp = false;
             this.btn_Offset_Input2.LampOnImage = null;
             this.btn_Offset_Input2.Location = new System.Drawing.Point(152, 496);
-            this.btn_Offset_Input2.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Offset_Input2.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Offset_Input2.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Offset_Input2.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Offset_Input2.Name = "btn_Offset_Input2";
             this.btn_Offset_Input2.Size = new System.Drawing.Size(72, 72);
             this.btn_Offset_Input2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14023,8 +14023,8 @@
             this.btn_SaveOffset.Lamp = false;
             this.btn_SaveOffset.LampOnImage = null;
             this.btn_SaveOffset.Location = new System.Drawing.Point(856, 496);
-            this.btn_SaveOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_SaveOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_SaveOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_SaveOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_SaveOffset.Name = "btn_SaveOffset";
             this.btn_SaveOffset.Size = new System.Drawing.Size(72, 72);
             this.btn_SaveOffset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14043,8 +14043,8 @@
             this.btn_Offset_Input.Lamp = false;
             this.btn_Offset_Input.LampOnImage = null;
             this.btn_Offset_Input.Location = new System.Drawing.Point(232, 496);
-            this.btn_Offset_Input.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Offset_Input.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Offset_Input.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Offset_Input.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Offset_Input.Name = "btn_Offset_Input";
             this.btn_Offset_Input.Size = new System.Drawing.Size(72, 72);
             this.btn_Offset_Input.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14063,8 +14063,8 @@
             this.btn_Ofs_N01.Lamp = false;
             this.btn_Ofs_N01.LampOnImage = null;
             this.btn_Ofs_N01.Location = new System.Drawing.Point(408, 496);
-            this.btn_Ofs_N01.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_N01.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_N01.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_N01.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_N01.Name = "btn_Ofs_N01";
             this.btn_Ofs_N01.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_N01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14084,8 +14084,8 @@
             this.btn_Ofs_P01.Lamp = false;
             this.btn_Ofs_P01.LampOnImage = null;
             this.btn_Ofs_P01.Location = new System.Drawing.Point(328, 496);
-            this.btn_Ofs_P01.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_P01.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_P01.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_P01.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_P01.Name = "btn_Ofs_P01";
             this.btn_Ofs_P01.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_P01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14105,8 +14105,8 @@
             this.btn_Ofs_N0001.Lamp = false;
             this.btn_Ofs_N0001.LampOnImage = null;
             this.btn_Ofs_N0001.Location = new System.Drawing.Point(760, 496);
-            this.btn_Ofs_N0001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_N0001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_N0001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_N0001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_N0001.Name = "btn_Ofs_N0001";
             this.btn_Ofs_N0001.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_N0001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14126,8 +14126,8 @@
             this.btn_Ofs_P001.Lamp = false;
             this.btn_Ofs_P001.LampOnImage = null;
             this.btn_Ofs_P001.Location = new System.Drawing.Point(504, 496);
-            this.btn_Ofs_P001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_P001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_P001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_P001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_P001.Name = "btn_Ofs_P001";
             this.btn_Ofs_P001.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_P001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14147,8 +14147,8 @@
             this.btn_Ofs_P0001.Lamp = false;
             this.btn_Ofs_P0001.LampOnImage = null;
             this.btn_Ofs_P0001.Location = new System.Drawing.Point(680, 496);
-            this.btn_Ofs_P0001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_P0001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_P0001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_P0001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_P0001.Name = "btn_Ofs_P0001";
             this.btn_Ofs_P0001.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_P0001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14168,8 +14168,8 @@
             this.btn_Ofs_N001.Lamp = false;
             this.btn_Ofs_N001.LampOnImage = null;
             this.btn_Ofs_N001.Location = new System.Drawing.Point(584, 496);
-            this.btn_Ofs_N001.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_Ofs_N001.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_Ofs_N001.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_Ofs_N001.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_Ofs_N001.Name = "btn_Ofs_N001";
             this.btn_Ofs_N001.Size = new System.Drawing.Size(72, 72);
             this.btn_Ofs_N001.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -14929,10 +14929,10 @@
             this.btn_SW10_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW10_ON.Image = null;
             this.btn_SW10_ON.Lamp = false;
-            this.btn_SW10_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW10_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW10_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW10_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW10_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW10_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW10_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW10_ON.Name = "btn_SW10_ON";
             this.btn_SW10_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW10_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -14950,10 +14950,10 @@
             this.btn_SW10_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW10_OFF.Image = null;
             this.btn_SW10_OFF.Lamp = false;
-            this.btn_SW10_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW10_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW10_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW10_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW10_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW10_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW10_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW10_OFF.Name = "btn_SW10_OFF";
             this.btn_SW10_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW10_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -14980,10 +14980,10 @@
             this.btn_SW9_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW9_ON.Image = null;
             this.btn_SW9_ON.Lamp = false;
-            this.btn_SW9_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW9_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW9_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW9_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW9_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW9_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW9_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW9_ON.Name = "btn_SW9_ON";
             this.btn_SW9_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW9_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15001,10 +15001,10 @@
             this.btn_SW9_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW9_OFF.Image = null;
             this.btn_SW9_OFF.Lamp = false;
-            this.btn_SW9_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW9_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW9_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW9_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW9_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW9_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW9_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW9_OFF.Name = "btn_SW9_OFF";
             this.btn_SW9_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW9_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15031,10 +15031,10 @@
             this.btn_SW8_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW8_ON.Image = null;
             this.btn_SW8_ON.Lamp = false;
-            this.btn_SW8_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW8_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW8_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW8_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW8_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW8_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW8_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW8_ON.Name = "btn_SW8_ON";
             this.btn_SW8_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW8_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15052,10 +15052,10 @@
             this.btn_SW8_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW8_OFF.Image = null;
             this.btn_SW8_OFF.Lamp = false;
-            this.btn_SW8_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW8_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW8_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW8_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW8_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW8_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW8_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW8_OFF.Name = "btn_SW8_OFF";
             this.btn_SW8_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW8_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15082,10 +15082,10 @@
             this.btn_SW7_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW7_ON.Image = null;
             this.btn_SW7_ON.Lamp = false;
-            this.btn_SW7_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW7_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW7_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW7_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW7_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW7_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW7_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW7_ON.Name = "btn_SW7_ON";
             this.btn_SW7_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW7_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15103,10 +15103,10 @@
             this.btn_SW7_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW7_OFF.Image = null;
             this.btn_SW7_OFF.Lamp = false;
-            this.btn_SW7_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW7_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW7_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW7_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW7_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW7_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW7_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW7_OFF.Name = "btn_SW7_OFF";
             this.btn_SW7_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW7_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15133,10 +15133,10 @@
             this.btn_SW6_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW6_ON.Image = null;
             this.btn_SW6_ON.Lamp = false;
-            this.btn_SW6_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW6_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW6_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW6_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW6_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW6_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW6_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW6_ON.Name = "btn_SW6_ON";
             this.btn_SW6_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW6_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15154,10 +15154,10 @@
             this.btn_SW6_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW6_OFF.Image = null;
             this.btn_SW6_OFF.Lamp = false;
-            this.btn_SW6_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW6_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW6_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW6_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW6_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW6_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW6_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW6_OFF.Name = "btn_SW6_OFF";
             this.btn_SW6_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW6_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15184,10 +15184,10 @@
             this.btn_SW5_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW5_ON.Image = null;
             this.btn_SW5_ON.Lamp = false;
-            this.btn_SW5_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW5_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW5_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW5_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW5_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW5_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW5_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW5_ON.Name = "btn_SW5_ON";
             this.btn_SW5_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW5_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15205,10 +15205,10 @@
             this.btn_SW5_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW5_OFF.Image = null;
             this.btn_SW5_OFF.Lamp = false;
-            this.btn_SW5_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW5_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW5_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW5_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW5_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW5_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW5_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW5_OFF.Name = "btn_SW5_OFF";
             this.btn_SW5_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW5_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15235,10 +15235,10 @@
             this.btn_SW4_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW4_ON.Image = null;
             this.btn_SW4_ON.Lamp = false;
-            this.btn_SW4_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW4_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW4_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW4_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW4_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW4_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW4_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW4_ON.Name = "btn_SW4_ON";
             this.btn_SW4_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW4_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15256,10 +15256,10 @@
             this.btn_SW4_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW4_OFF.Image = null;
             this.btn_SW4_OFF.Lamp = false;
-            this.btn_SW4_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW4_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW4_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW4_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW4_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW4_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW4_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW4_OFF.Name = "btn_SW4_OFF";
             this.btn_SW4_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW4_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15286,10 +15286,10 @@
             this.btn_SW3_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW3_ON.Image = null;
             this.btn_SW3_ON.Lamp = false;
-            this.btn_SW3_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW3_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW3_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW3_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW3_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW3_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW3_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW3_ON.Name = "btn_SW3_ON";
             this.btn_SW3_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW3_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15307,10 +15307,10 @@
             this.btn_SW3_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW3_OFF.Image = null;
             this.btn_SW3_OFF.Lamp = false;
-            this.btn_SW3_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW3_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW3_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW3_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW3_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW3_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW3_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW3_OFF.Name = "btn_SW3_OFF";
             this.btn_SW3_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW3_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15337,10 +15337,10 @@
             this.btn_SW2_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW2_OFF.Image = null;
             this.btn_SW2_OFF.Lamp = false;
-            this.btn_SW2_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW2_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW2_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW2_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW2_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW2_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW2_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW2_OFF.Name = "btn_SW2_OFF";
             this.btn_SW2_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW2_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15358,10 +15358,10 @@
             this.btn_SW2_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW2_ON.Image = null;
             this.btn_SW2_ON.Lamp = false;
-            this.btn_SW2_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW2_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW2_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW2_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW2_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW2_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW2_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW2_ON.Name = "btn_SW2_ON";
             this.btn_SW2_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW2_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15388,10 +15388,10 @@
             this.btn_SW1_ON.ForeColor = System.Drawing.Color.Black;
             this.btn_SW1_ON.Image = null;
             this.btn_SW1_ON.Lamp = false;
-            this.btn_SW1_ON.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW1_ON.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW1_ON.Location = new System.Drawing.Point(0, 40);
-            this.btn_SW1_ON.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW1_ON.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW1_ON.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW1_ON.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW1_ON.Name = "btn_SW1_ON";
             this.btn_SW1_ON.Size = new System.Drawing.Size(432, 40);
             this.btn_SW1_ON.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -15409,10 +15409,10 @@
             this.btn_SW1_OFF.ForeColor = System.Drawing.Color.Black;
             this.btn_SW1_OFF.Image = null;
             this.btn_SW1_OFF.Lamp = false;
-            this.btn_SW1_OFF.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_SW1_OFF.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_SW1_OFF.Location = new System.Drawing.Point(0, 0);
-            this.btn_SW1_OFF.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_SW1_OFF.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray;
+            this.btn_SW1_OFF.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_SW1_OFF.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray;
             this.btn_SW1_OFF.Name = "btn_SW1_OFF";
             this.btn_SW1_OFF.Size = new System.Drawing.Size(432, 40);
             this.btn_SW1_OFF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -16425,7 +16425,7 @@
             // 
             // pic_ClearCrash
             // 
-            this.pic_ClearCrash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_ClearCrash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_ClearCrash.Location = new System.Drawing.Point(8, 8);
             this.pic_ClearCrash.Name = "pic_ClearCrash";
             this.pic_ClearCrash.Size = new System.Drawing.Size(24, 24);
@@ -16435,7 +16435,7 @@
             // 
             // pic_Gw2Crash
             // 
-            this.pic_Gw2Crash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw2Crash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw2Crash.Location = new System.Drawing.Point(200, 168);
             this.pic_Gw2Crash.Name = "pic_Gw2Crash";
             this.pic_Gw2Crash.Size = new System.Drawing.Size(24, 24);
@@ -16445,7 +16445,7 @@
             // 
             // pic_Gw1Crash
             // 
-            this.pic_Gw1Crash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw1Crash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw1Crash.Location = new System.Drawing.Point(8, 168);
             this.pic_Gw1Crash.Name = "pic_Gw1Crash";
             this.pic_Gw1Crash.Size = new System.Drawing.Size(24, 24);
@@ -16455,7 +16455,7 @@
             // 
             // pic_Gw2Gap
             // 
-            this.pic_Gw2Gap.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw2Gap.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw2Gap.Location = new System.Drawing.Point(200, 136);
             this.pic_Gw2Gap.Name = "pic_Gw2Gap";
             this.pic_Gw2Gap.Size = new System.Drawing.Size(24, 24);
@@ -16465,7 +16465,7 @@
             // 
             // pic_Gw2DressCrash
             // 
-            this.pic_Gw2DressCrash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw2DressCrash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw2DressCrash.Location = new System.Drawing.Point(200, 104);
             this.pic_Gw2DressCrash.Name = "pic_Gw2DressCrash";
             this.pic_Gw2DressCrash.Size = new System.Drawing.Size(24, 24);
@@ -16475,7 +16475,7 @@
             // 
             // pic_Gw2GrindCrash
             // 
-            this.pic_Gw2GrindCrash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw2GrindCrash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw2GrindCrash.Location = new System.Drawing.Point(200, 72);
             this.pic_Gw2GrindCrash.Name = "pic_Gw2GrindCrash";
             this.pic_Gw2GrindCrash.Size = new System.Drawing.Size(24, 24);
@@ -16485,7 +16485,7 @@
             // 
             // pic_Gw2CrashEnabled
             // 
-            this.pic_Gw2CrashEnabled.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw2CrashEnabled.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw2CrashEnabled.Location = new System.Drawing.Point(200, 40);
             this.pic_Gw2CrashEnabled.Name = "pic_Gw2CrashEnabled";
             this.pic_Gw2CrashEnabled.Size = new System.Drawing.Size(24, 24);
@@ -16495,7 +16495,7 @@
             // 
             // pic_Gw1Gap
             // 
-            this.pic_Gw1Gap.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw1Gap.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw1Gap.Location = new System.Drawing.Point(8, 136);
             this.pic_Gw1Gap.Name = "pic_Gw1Gap";
             this.pic_Gw1Gap.Size = new System.Drawing.Size(24, 24);
@@ -16505,7 +16505,7 @@
             // 
             // pic_Gw1DressCrash
             // 
-            this.pic_Gw1DressCrash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw1DressCrash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw1DressCrash.Location = new System.Drawing.Point(8, 104);
             this.pic_Gw1DressCrash.Name = "pic_Gw1DressCrash";
             this.pic_Gw1DressCrash.Size = new System.Drawing.Size(24, 24);
@@ -16515,7 +16515,7 @@
             // 
             // pic_Gw1GrindCrash
             // 
-            this.pic_Gw1GrindCrash.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw1GrindCrash.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw1GrindCrash.Location = new System.Drawing.Point(8, 72);
             this.pic_Gw1GrindCrash.Name = "pic_Gw1GrindCrash";
             this.pic_Gw1GrindCrash.Size = new System.Drawing.Size(24, 24);
@@ -16525,7 +16525,7 @@
             // 
             // pic_Gw1CrashEnabled
             // 
-            this.pic_Gw1CrashEnabled.Image = global::OIG.Properties.Resources.Lamp_E_Off;
+            this.pic_Gw1CrashEnabled.Image = global::OCD.Properties.Resources.Lamp_E_Off;
             this.pic_Gw1CrashEnabled.Location = new System.Drawing.Point(8, 40);
             this.pic_Gw1CrashEnabled.Name = "pic_Gw1CrashEnabled";
             this.pic_Gw1CrashEnabled.Size = new System.Drawing.Size(24, 24);
@@ -17304,8 +17304,8 @@
             this.uBtn_UnitChange.Lamp = false;
             this.uBtn_UnitChange.LampOnImage = null;
             this.uBtn_UnitChange.Location = new System.Drawing.Point(8, 496);
-            this.uBtn_UnitChange.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uBtn_UnitChange.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uBtn_UnitChange.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uBtn_UnitChange.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uBtn_UnitChange.Name = "uBtn_UnitChange";
             this.uBtn_UnitChange.Size = new System.Drawing.Size(88, 88);
             this.uBtn_UnitChange.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17323,8 +17323,8 @@
             this.uBtn_Default.Lamp = false;
             this.uBtn_Default.LampOnImage = null;
             this.uBtn_Default.Location = new System.Drawing.Point(104, 496);
-            this.uBtn_Default.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uBtn_Default.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uBtn_Default.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uBtn_Default.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uBtn_Default.Name = "uBtn_Default";
             this.uBtn_Default.Size = new System.Drawing.Size(88, 88);
             this.uBtn_Default.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17342,8 +17342,8 @@
             this.uBtn_ProcessParam.Lamp = false;
             this.uBtn_ProcessParam.LampOnImage = null;
             this.uBtn_ProcessParam.Location = new System.Drawing.Point(200, 496);
-            this.uBtn_ProcessParam.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.uBtn_ProcessParam.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.uBtn_ProcessParam.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.uBtn_ProcessParam.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.uBtn_ProcessParam.Name = "uBtn_ProcessParam";
             this.uBtn_ProcessParam.Size = new System.Drawing.Size(88, 88);
             this.uBtn_ProcessParam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17403,10 +17403,10 @@
             this.btn_PosSet_DressBaseMaxMin.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_DressBaseMaxMin.Image = null;
             this.btn_PosSet_DressBaseMaxMin.Lamp = false;
-            this.btn_PosSet_DressBaseMaxMin.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_DressBaseMaxMin.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_DressBaseMaxMin.Location = new System.Drawing.Point(544, 128);
-            this.btn_PosSet_DressBaseMaxMin.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_DressBaseMaxMin.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_DressBaseMaxMin.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_DressBaseMaxMin.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_DressBaseMaxMin.Name = "btn_PosSet_DressBaseMaxMin";
             this.btn_PosSet_DressBaseMaxMin.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_DressBaseMaxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17422,10 +17422,10 @@
             this.btn_PosSet_IDRevSafePos.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_IDRevSafePos.Image = null;
             this.btn_PosSet_IDRevSafePos.Lamp = false;
-            this.btn_PosSet_IDRevSafePos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_IDRevSafePos.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_IDRevSafePos.Location = new System.Drawing.Point(392, 128);
-            this.btn_PosSet_IDRevSafePos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_IDRevSafePos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_IDRevSafePos.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_IDRevSafePos.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_IDRevSafePos.Name = "btn_PosSet_IDRevSafePos";
             this.btn_PosSet_IDRevSafePos.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_IDRevSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17441,10 +17441,10 @@
             this.btn_PosSet_TowerSafePos.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_TowerSafePos.Image = null;
             this.btn_PosSet_TowerSafePos.Lamp = false;
-            this.btn_PosSet_TowerSafePos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_TowerSafePos.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_TowerSafePos.Location = new System.Drawing.Point(240, 128);
-            this.btn_PosSet_TowerSafePos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_TowerSafePos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_TowerSafePos.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_TowerSafePos.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_TowerSafePos.Name = "btn_PosSet_TowerSafePos";
             this.btn_PosSet_TowerSafePos.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_TowerSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17463,8 +17463,8 @@
             this.btn_PosSetSave.Lamp = false;
             this.btn_PosSetSave.LampOnImage = null;
             this.btn_PosSetSave.Location = new System.Drawing.Point(848, 56);
-            this.btn_PosSetSave.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_PosSetSave.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_PosSetSave.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_PosSetSave.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_PosSetSave.Name = "btn_PosSetSave";
             this.btn_PosSetSave.Size = new System.Drawing.Size(72, 72);
             this.btn_PosSetSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17481,10 +17481,10 @@
             this.btn_PosSet_ODSafePos.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_ODSafePos.Image = null;
             this.btn_PosSet_ODSafePos.Lamp = false;
-            this.btn_PosSet_ODSafePos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_ODSafePos.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_ODSafePos.Location = new System.Drawing.Point(544, 56);
-            this.btn_PosSet_ODSafePos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_ODSafePos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_ODSafePos.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_ODSafePos.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_ODSafePos.Name = "btn_PosSet_ODSafePos";
             this.btn_PosSet_ODSafePos.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_ODSafePos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17547,8 +17547,8 @@
             this.btn_ID_RetractPosZ.Lamp = false;
             this.btn_ID_RetractPosZ.LampOnImage = null;
             this.btn_ID_RetractPosZ.Location = new System.Drawing.Point(184, 120);
-            this.btn_ID_RetractPosZ.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_RetractPosZ.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_RetractPosZ.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_RetractPosZ.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_RetractPosZ.Name = "btn_ID_RetractPosZ";
             this.btn_ID_RetractPosZ.Size = new System.Drawing.Size(160, 48);
             this.btn_ID_RetractPosZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17566,8 +17566,8 @@
             this.btn_ID_RetractPosX.Lamp = false;
             this.btn_ID_RetractPosX.LampOnImage = null;
             this.btn_ID_RetractPosX.Location = new System.Drawing.Point(184, 48);
-            this.btn_ID_RetractPosX.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_RetractPosX.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_RetractPosX.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_RetractPosX.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_RetractPosX.Name = "btn_ID_RetractPosX";
             this.btn_ID_RetractPosX.Size = new System.Drawing.Size(160, 48);
             this.btn_ID_RetractPosX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17655,10 +17655,10 @@
             this.btn_WorkCenterPosByOD.ForeColor = System.Drawing.Color.Black;
             this.btn_WorkCenterPosByOD.Image = null;
             this.btn_WorkCenterPosByOD.Lamp = false;
-            this.btn_WorkCenterPosByOD.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_WorkCenterPosByOD.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_WorkCenterPosByOD.Location = new System.Drawing.Point(16, 88);
-            this.btn_WorkCenterPosByOD.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_WorkCenterPosByOD.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_WorkCenterPosByOD.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_WorkCenterPosByOD.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_WorkCenterPosByOD.Name = "btn_WorkCenterPosByOD";
             this.btn_WorkCenterPosByOD.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_WorkCenterPosByOD.Size = new System.Drawing.Size(144, 40);
@@ -17677,10 +17677,10 @@
             this.btn_WorkCenterPosByID.ForeColor = System.Drawing.Color.Black;
             this.btn_WorkCenterPosByID.Image = null;
             this.btn_WorkCenterPosByID.Lamp = false;
-            this.btn_WorkCenterPosByID.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_G;
+            this.btn_WorkCenterPosByID.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_G;
             this.btn_WorkCenterPosByID.Location = new System.Drawing.Point(16, 32);
-            this.btn_WorkCenterPosByID.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_WorkCenterPosByID.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_WorkCenterPosByID.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_WorkCenterPosByID.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_WorkCenterPosByID.Name = "btn_WorkCenterPosByID";
             this.btn_WorkCenterPosByID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_WorkCenterPosByID.Size = new System.Drawing.Size(144, 40);
@@ -17717,7 +17717,7 @@
             // pic_ODCenterPos_Gw1_X2
             // 
             this.pic_ODCenterPos_Gw1_X2.BackColor = System.Drawing.Color.RosyBrown;
-            this.pic_ODCenterPos_Gw1_X2.Image = global::OIG.Properties.Resources.OD_X2_128x128;
+            this.pic_ODCenterPos_Gw1_X2.Image = global::OCD.Properties.Resources.OD_X2_128x128;
             this.pic_ODCenterPos_Gw1_X2.Location = new System.Drawing.Point(136, 208);
             this.pic_ODCenterPos_Gw1_X2.Name = "pic_ODCenterPos_Gw1_X2";
             this.pic_ODCenterPos_Gw1_X2.Size = new System.Drawing.Size(128, 128);
@@ -17728,7 +17728,7 @@
             // pic_ODCenterPos_Gw1_X1
             // 
             this.pic_ODCenterPos_Gw1_X1.BackColor = System.Drawing.Color.RosyBrown;
-            this.pic_ODCenterPos_Gw1_X1.Image = global::OIG.Properties.Resources.OD_X1_128x128;
+            this.pic_ODCenterPos_Gw1_X1.Image = global::OCD.Properties.Resources.OD_X1_128x128;
             this.pic_ODCenterPos_Gw1_X1.Location = new System.Drawing.Point(136, 72);
             this.pic_ODCenterPos_Gw1_X1.Name = "pic_ODCenterPos_Gw1_X1";
             this.pic_ODCenterPos_Gw1_X1.Size = new System.Drawing.Size(128, 128);
@@ -17746,8 +17746,8 @@
             this.btn_ID_PosX2.Lamp = false;
             this.btn_ID_PosX2.LampOnImage = null;
             this.btn_ID_PosX2.Location = new System.Drawing.Point(272, 272);
-            this.btn_ID_PosX2.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_PosX2.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_PosX2.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_PosX2.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_PosX2.Name = "btn_ID_PosX2";
             this.btn_ID_PosX2.Size = new System.Drawing.Size(168, 48);
             this.btn_ID_PosX2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17765,8 +17765,8 @@
             this.btn_ID_PosX1.Lamp = false;
             this.btn_ID_PosX1.LampOnImage = null;
             this.btn_ID_PosX1.Location = new System.Drawing.Point(272, 136);
-            this.btn_ID_PosX1.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_PosX1.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_PosX1.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_PosX1.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_PosX1.Name = "btn_ID_PosX1";
             this.btn_ID_PosX1.Size = new System.Drawing.Size(168, 48);
             this.btn_ID_PosX1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17802,7 +17802,7 @@
             // pic_IDCenterPos_Gw1_X2
             // 
             this.pic_IDCenterPos_Gw1_X2.BackColor = System.Drawing.Color.RosyBrown;
-            this.pic_IDCenterPos_Gw1_X2.Image = global::OIG.Properties.Resources.ID_X2_128x128;
+            this.pic_IDCenterPos_Gw1_X2.Image = global::OCD.Properties.Resources.ID_X2_128x128;
             this.pic_IDCenterPos_Gw1_X2.Location = new System.Drawing.Point(8, 208);
             this.pic_IDCenterPos_Gw1_X2.Name = "pic_IDCenterPos_Gw1_X2";
             this.pic_IDCenterPos_Gw1_X2.Size = new System.Drawing.Size(128, 128);
@@ -17813,7 +17813,7 @@
             // pic_IDCenterPos_Gw1_X1
             // 
             this.pic_IDCenterPos_Gw1_X1.BackColor = System.Drawing.Color.RosyBrown;
-            this.pic_IDCenterPos_Gw1_X1.Image = global::OIG.Properties.Resources.ID_X1_128x128;
+            this.pic_IDCenterPos_Gw1_X1.Image = global::OCD.Properties.Resources.ID_X1_128x128;
             this.pic_IDCenterPos_Gw1_X1.Location = new System.Drawing.Point(8, 72);
             this.pic_IDCenterPos_Gw1_X1.Name = "pic_IDCenterPos_Gw1_X1";
             this.pic_IDCenterPos_Gw1_X1.Size = new System.Drawing.Size(128, 128);
@@ -17931,8 +17931,8 @@
             this.btn_OD_PosX.Lamp = false;
             this.btn_OD_PosX.LampOnImage = null;
             this.btn_OD_PosX.Location = new System.Drawing.Point(144, 136);
-            this.btn_OD_PosX.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_OD_PosX.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_OD_PosX.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_OD_PosX.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_OD_PosX.Name = "btn_OD_PosX";
             this.btn_OD_PosX.Size = new System.Drawing.Size(168, 48);
             this.btn_OD_PosX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -17943,7 +17943,7 @@
             // pic_OD_SafePos
             // 
             this.pic_OD_SafePos.BackColor = System.Drawing.Color.RosyBrown;
-            this.pic_OD_SafePos.Image = global::OIG.Properties.Resources.OCDCoor;
+            this.pic_OD_SafePos.Image = global::OCD.Properties.Resources.OCDCoor;
             this.pic_OD_SafePos.Location = new System.Drawing.Point(8, 72);
             this.pic_OD_SafePos.Name = "pic_OD_SafePos";
             this.pic_OD_SafePos.Size = new System.Drawing.Size(128, 128);
@@ -18024,8 +18024,8 @@
             this.btn_TowerSafePosZ.Lamp = false;
             this.btn_TowerSafePosZ.LampOnImage = null;
             this.btn_TowerSafePosZ.Location = new System.Drawing.Point(184, 120);
-            this.btn_TowerSafePosZ.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_TowerSafePosZ.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_TowerSafePosZ.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_TowerSafePosZ.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_TowerSafePosZ.Name = "btn_TowerSafePosZ";
             this.btn_TowerSafePosZ.Size = new System.Drawing.Size(160, 48);
             this.btn_TowerSafePosZ.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18044,8 +18044,8 @@
             this.btn_TowerSafePosX.Lamp = false;
             this.btn_TowerSafePosX.LampOnImage = null;
             this.btn_TowerSafePosX.Location = new System.Drawing.Point(184, 48);
-            this.btn_TowerSafePosX.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_TowerSafePosX.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_TowerSafePosX.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_TowerSafePosX.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_TowerSafePosX.Name = "btn_TowerSafePosX";
             this.btn_TowerSafePosX.Size = new System.Drawing.Size(160, 48);
             this.btn_TowerSafePosX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18150,8 +18150,8 @@
             this.btn_ID_DressRevZ2.Lamp = false;
             this.btn_ID_DressRevZ2.LampOnImage = null;
             this.btn_ID_DressRevZ2.Location = new System.Drawing.Point(184, 120);
-            this.btn_ID_DressRevZ2.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_DressRevZ2.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_DressRevZ2.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_DressRevZ2.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_DressRevZ2.Name = "btn_ID_DressRevZ2";
             this.btn_ID_DressRevZ2.Size = new System.Drawing.Size(160, 48);
             this.btn_ID_DressRevZ2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18170,8 +18170,8 @@
             this.btn_ID_DressRevZ1.Lamp = false;
             this.btn_ID_DressRevZ1.LampOnImage = null;
             this.btn_ID_DressRevZ1.Location = new System.Drawing.Point(184, 48);
-            this.btn_ID_DressRevZ1.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_ID_DressRevZ1.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_ID_DressRevZ1.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_ID_DressRevZ1.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_ID_DressRevZ1.Name = "btn_ID_DressRevZ1";
             this.btn_ID_DressRevZ1.Size = new System.Drawing.Size(160, 48);
             this.btn_ID_DressRevZ1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18264,8 +18264,8 @@
             this.btn_DressBaseMin.Lamp = false;
             this.btn_DressBaseMin.LampOnImage = null;
             this.btn_DressBaseMin.Location = new System.Drawing.Point(184, 120);
-            this.btn_DressBaseMin.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_DressBaseMin.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_DressBaseMin.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DressBaseMin.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_DressBaseMin.Name = "btn_DressBaseMin";
             this.btn_DressBaseMin.Size = new System.Drawing.Size(160, 48);
             this.btn_DressBaseMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18284,8 +18284,8 @@
             this.btn_DressBaseMax.Lamp = false;
             this.btn_DressBaseMax.LampOnImage = null;
             this.btn_DressBaseMax.Location = new System.Drawing.Point(184, 48);
-            this.btn_DressBaseMax.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_DressBaseMax.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_B;
+            this.btn_DressBaseMax.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_DressBaseMax.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_B;
             this.btn_DressBaseMax.Name = "btn_DressBaseMax";
             this.btn_DressBaseMax.Size = new System.Drawing.Size(160, 48);
             this.btn_DressBaseMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18540,10 +18540,10 @@
             this.btn_PosSet_IDCenterPos.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_IDCenterPos.Image = null;
             this.btn_PosSet_IDCenterPos.Lamp = false;
-            this.btn_PosSet_IDCenterPos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_IDCenterPos.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_IDCenterPos.Location = new System.Drawing.Point(392, 56);
-            this.btn_PosSet_IDCenterPos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_IDCenterPos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_IDCenterPos.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_IDCenterPos.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_IDCenterPos.Name = "btn_PosSet_IDCenterPos";
             this.btn_PosSet_IDCenterPos.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_IDCenterPos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -18559,10 +18559,10 @@
             this.btn_PosSet_ChangePartPos.ForeColor = System.Drawing.Color.White;
             this.btn_PosSet_ChangePartPos.Image = null;
             this.btn_PosSet_ChangePartPos.Lamp = true;
-            this.btn_PosSet_ChangePartPos.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_PosSet_ChangePartPos.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_PosSet_ChangePartPos.Location = new System.Drawing.Point(240, 56);
-            this.btn_PosSet_ChangePartPos.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_PosSet_ChangePartPos.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_PosSet_ChangePartPos.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_PosSet_ChangePartPos.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_PosSet_ChangePartPos.Name = "btn_PosSet_ChangePartPos";
             this.btn_PosSet_ChangePartPos.Size = new System.Drawing.Size(144, 64);
             this.btn_PosSet_ChangePartPos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -19832,8 +19832,8 @@
             this.btn_GWRPS_Next.Lamp = false;
             this.btn_GWRPS_Next.LampOnImage = null;
             this.btn_GWRPS_Next.Location = new System.Drawing.Point(104, 496);
-            this.btn_GWRPS_Next.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_GWRPS_Next.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_GWRPS_Next.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_GWRPS_Next.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_GWRPS_Next.Name = "btn_GWRPS_Next";
             this.btn_GWRPS_Next.Size = new System.Drawing.Size(88, 88);
             this.btn_GWRPS_Next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -20100,8 +20100,8 @@
             this.btn_GWRPSxz_Reset.Lamp = false;
             this.btn_GWRPSxz_Reset.LampOnImage = null;
             this.btn_GWRPSxz_Reset.Location = new System.Drawing.Point(152, 480);
-            this.btn_GWRPSxz_Reset.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_GWRPSxz_Reset.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_GWRPSxz_Reset.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_GWRPSxz_Reset.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_GWRPSxz_Reset.Name = "btn_GWRPSxz_Reset";
             this.btn_GWRPSxz_Reset.Size = new System.Drawing.Size(88, 88);
             this.btn_GWRPSxz_Reset.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -20120,8 +20120,8 @@
             this.btn_GWRPSxz.Lamp = false;
             this.btn_GWRPSxz.LampOnImage = null;
             this.btn_GWRPSxz.Location = new System.Drawing.Point(248, 480);
-            this.btn_GWRPSxz.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_GWRPSxz.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_GWRPSxz.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_GWRPSxz.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_GWRPSxz.Name = "btn_GWRPSxz";
             this.btn_GWRPSxz.Size = new System.Drawing.Size(88, 88);
             this.btn_GWRPSxz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -20140,8 +20140,8 @@
             this.btn_GWRPS_save.Lamp = false;
             this.btn_GWRPS_save.LampOnImage = null;
             this.btn_GWRPS_save.Location = new System.Drawing.Point(344, 480);
-            this.btn_GWRPS_save.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_60x60_LG2;
-            this.btn_GWRPS_save.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_60x60_G;
+            this.btn_GWRPS_save.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_60x60_LG2;
+            this.btn_GWRPS_save.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_60x60_G;
             this.btn_GWRPS_save.Name = "btn_GWRPS_save";
             this.btn_GWRPS_save.Size = new System.Drawing.Size(88, 88);
             this.btn_GWRPS_save.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;
@@ -20352,10 +20352,10 @@
             this.btn_Gw2_ZOffset.ForeColor = System.Drawing.Color.Black;
             this.btn_Gw2_ZOffset.Image = null;
             this.btn_Gw2_ZOffset.Lamp = false;
-            this.btn_Gw2_ZOffset.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_Gw2_ZOffset.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_Gw2_ZOffset.Location = new System.Drawing.Point(328, 96);
-            this.btn_Gw2_ZOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_Gw2_ZOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw2_ZOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_Gw2_ZOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw2_ZOffset.Name = "btn_Gw2_ZOffset";
             this.btn_Gw2_ZOffset.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Gw2_ZOffset.Size = new System.Drawing.Size(160, 48);
@@ -20386,10 +20386,10 @@
             this.btn_Gw2_XOffset.ForeColor = System.Drawing.Color.Black;
             this.btn_Gw2_XOffset.Image = null;
             this.btn_Gw2_XOffset.Lamp = false;
-            this.btn_Gw2_XOffset.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_Gw2_XOffset.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_Gw2_XOffset.Location = new System.Drawing.Point(328, 32);
-            this.btn_Gw2_XOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_Gw2_XOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw2_XOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_Gw2_XOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw2_XOffset.Name = "btn_Gw2_XOffset";
             this.btn_Gw2_XOffset.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Gw2_XOffset.Size = new System.Drawing.Size(160, 48);
@@ -20482,10 +20482,10 @@
             this.btn_Gw1_ZOffset.ForeColor = System.Drawing.Color.Black;
             this.btn_Gw1_ZOffset.Image = null;
             this.btn_Gw1_ZOffset.Lamp = false;
-            this.btn_Gw1_ZOffset.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_Gw1_ZOffset.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_Gw1_ZOffset.Location = new System.Drawing.Point(328, 96);
-            this.btn_Gw1_ZOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_Gw1_ZOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw1_ZOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_Gw1_ZOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw1_ZOffset.Name = "btn_Gw1_ZOffset";
             this.btn_Gw1_ZOffset.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Gw1_ZOffset.Size = new System.Drawing.Size(160, 48);
@@ -20516,10 +20516,10 @@
             this.btn_Gw1_XOffset.ForeColor = System.Drawing.Color.Black;
             this.btn_Gw1_XOffset.Image = null;
             this.btn_Gw1_XOffset.Lamp = false;
-            this.btn_Gw1_XOffset.LampOnImage = global::OIG.Properties.Resources.Btn_S4_136x60_Y;
+            this.btn_Gw1_XOffset.LampOnImage = global::OCD.Properties.Resources.Btn_S4_136x60_Y;
             this.btn_Gw1_XOffset.Location = new System.Drawing.Point(328, 32);
-            this.btn_Gw1_XOffset.MouseDownImage = global::OIG.Properties.Resources.Btn_S4_136x60_BL;
-            this.btn_Gw1_XOffset.MouseUpImage = global::OIG.Properties.Resources.Btn_S4_136x60_Gray3;
+            this.btn_Gw1_XOffset.MouseDownImage = global::OCD.Properties.Resources.Btn_S4_136x60_BL;
+            this.btn_Gw1_XOffset.MouseUpImage = global::OCD.Properties.Resources.Btn_S4_136x60_Gray3;
             this.btn_Gw1_XOffset.Name = "btn_Gw1_XOffset";
             this.btn_Gw1_XOffset.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_Gw1_XOffset.Size = new System.Drawing.Size(160, 48);

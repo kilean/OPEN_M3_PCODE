@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.IO;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_SetSerial : Form
     {

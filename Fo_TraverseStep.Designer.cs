@@ -1,4 +1,4 @@
-﻿namespace OIG
+﻿namespace OCD
 {
     partial class Fo_TraverseStep
     {
@@ -573,7 +573,7 @@
             // Fo_TraverseStep
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::OIG.Properties.Resources.background2;
+            this.BackgroundImage = global::OCD.Properties.Resources.background2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(944, 608);
             this.Controls.Add(this.pa_EditMach);

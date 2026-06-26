@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace OIG
+namespace OCD
 {
     //維護手冊中的異常表
     public class AlarmFile

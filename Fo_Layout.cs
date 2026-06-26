@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_Layout : Form
     {

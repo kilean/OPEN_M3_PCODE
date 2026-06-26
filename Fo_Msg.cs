@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_Msg : Form
     {

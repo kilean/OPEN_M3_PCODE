@@ -1,11 +1,15 @@
-<DefaultProcessLang Version="1.26.0305.0915">
-  <Process ID="50" Name="Plunge">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
+<DefaultProcessLang Version="1.25.1105.1058">
+  <Process ID="1" Name="O.D. Plunge">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
     </PCode>
     <PCode No="19810" Name="Final Diameter"/>
     <PCode No="19812" Name="Grind Position"/>
@@ -16,18 +20,34 @@
     <PCode No="19830" Name="Infeed Speed V"/>
     <PCode No="19831" Name="Infeed Speed VV"/>
     <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19856" Name="Retract &amp; Rentry"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Start Angle"/>
+    <PCode No="19838" Name="Spark-out Time 1"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19855" Name="Rough Retract"/>
+    <PCode No="19826" Name="Pollish Work Spindle"/>
+    <PCode No="19841" Name="Face Grind Amount"/>
+    <PCode No="19854" Name="Spark-out Time 2"/>
+    <PCode No="19853" Name="Face Escape Amount"/>
+    <PCode No="19870" Name="Spark-out Distance"/>
+    <PCode No="19872" Name="Spark-out-times"/>
+    <PCode No="19871" Name="Spark-out Speed"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -35,48 +55,60 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
   </Process>
-  <Process ID="51" Name="Traverse">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
+  <Process ID="2" Name="O.D. Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
       <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
     </PCode>
     <PCode No="19810" Name="Final Diameter 1"/>
     <PCode No="19811" Name="Final Diameter 2"/>
     <PCode No="19812" Name="Grind Position 1"/>
     <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19817" Name="Start Overrun"/>
+    <PCode No="19818" Name="End Overrun"/>
     <PCode No="19824" Name="Work Spindle"/>
     <PCode No="19839" Name="Traverse Mode">
       <Text Value="0" Name="Both(A)"/>
-      <Text Value="-1" Name="From End(B)"/>
-      <Text Value="1" Name="From Start(C)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
     </PCode>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Start Angle"/>
+    <PCode No="19877" Name="Retract Grind">
+      <Text Value="0" Name="Disable(A)"/>
+      <Text Value="1" Name="Enabled(B)"/>
+    </PCode>
     <PCode No="19821" Name="Total Amount"/>
     <PCode No="19822" Name="Fine Amount"/>
     <PCode No="19823" Name="Polish Amount"/>
@@ -95,19 +127,29 @@
     <PCode No="19835" Name="Traverse Speed VVV"/>
     <PCode No="19846" Name="Dwell Time 1 VVV"/>
     <PCode No="19847" Name="Dwell Time 2 VVV"/>
-    <PCode No="19837" Name="Sparkout-times"/>
+    <PCode No="19837" Name="Spark-out-times"/>
     <PCode No="19836" Name="Traverse Speed VVVV"/>
     <PCode No="19848" Name="Dwell Time 1 VVVV"/>
     <PCode No="19849" Name="Dwell Time 2 VVVV"/>
-    <PCode No="19856" Name="Retract &amp; Rentry"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19855" Name="Rough Retract"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19862" Name="Gap Single Infeed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerance Limit"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -115,53 +157,70 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
   </Process>
-  <Process ID="52" Name="Right Surface">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19812" Name="Shoulder Size"/>
+  <Process ID="3" Name="O.D. Right Face">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19812" Name="Final Size"/>
     <PCode No="19810" Name="Grind Position"/>
     <PCode No="19824" Name="Work Spindle"/>
     <PCode No="19821" Name="Total Amount"/>
-    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
     <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19861" Name="Gap Infeed Speed"/>
     <PCode No="19860" Name="Grind Fix Amount"/>
+    <PCode No="19864" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -169,61 +228,70 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
   </Process>
-  <Process ID="53" Name="Oscillation">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19810" Name="Final Diameter"/>
-    <PCode No="19812" Name="Grind Position 1"/>
-    <PCode No="19815" Name="Oscillate Distance"/>
+  <Process ID="4" Name="O.D. Left Face">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19812" Name="Final Size"/>
+    <PCode No="19810" Name="Grind Position"/>
     <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Start Angle"/>
     <PCode No="19821" Name="Total Amount"/>
-    <PCode No="19822" Name="Fine Amount"/>
     <PCode No="19823" Name="Polish Amount"/>
     <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
     <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19836" Name="Traverse Speed"/>
-    <PCode No="19848" Name="Dwell Time 1"/>
-    <PCode No="19849" Name="Dwell Time 2"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19856" Name="Retract &amp; Rentry"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19860" Name="Grind Fix Amount"/>
+    <PCode No="19864" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -231,163 +299,383 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
   </Process>
-  <Process ID="54" Name="Right Angular">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
+  <Process ID="5" Name="O.D. Multi-Plunge &amp; Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
       <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19810" Name="Final Diameter"/>
-    <PCode No="19812" Name="Shoulder Size"/>
-    <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19821" Name="Total Amount"/>
-    <PCode No="19822" Name="Fine Amount"/>
-    <PCode No="19823" Name="Polish Amount"/>
-    <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
-    <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19861" Name="Gap Infeed Speed"/>
-    <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19875" Name="Rough Step Amount"/>
-    <PCode No="19924" Name="O.D. Dress Amount"/>
-    <PCode No="19925" Name="O.D. Dress Speed"/>
-    <PCode No="19926" Name="Left Dress Amount"/>
-    <PCode No="19927" Name="Left Dress Speed"/>
-    <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
-      <Text Value="0" Name="CW"/>
-      <Text Value="1" Name="CCW"/>
-    </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19935" Name="O.D. Dress Amount"/>
-    <PCode No="19936" Name="O.D. Dress Speed"/>
-    <PCode No="19937" Name="Left Dress Amount"/>
-    <PCode No="19938" Name="Left Dress Speed"/>
-    <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
-    <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
-      <Text Value="0" Name="CW"/>
-      <Text Value="1" Name="CCW"/>
-    </PCode>
-  </Process>
-  <Process ID="55" Name="O.D. Plunge">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19810" Name="Final Diameter"/>
-    <PCode No="19812" Name="Grind Position"/>
-    <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19803" Name="O.D. Safety Dia."/>
-    <PCode No="19821" Name="Total Amount"/>
-    <PCode No="19822" Name="Fine Amount"/>
-    <PCode No="19823" Name="Polish Amount"/>
-    <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19856" Name="Retract &amp; Rentry"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Start Angle"/>
-    <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19861" Name="Gap Infeed Speed"/>
-    <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19875" Name="Rough Step Amount"/>
-    <PCode No="19924" Name="O.D. Dress Amount"/>
-    <PCode No="19925" Name="O.D. Dress Speed"/>
-    <PCode No="19926" Name="Left Dress Amount"/>
-    <PCode No="19927" Name="Left Dress Speed"/>
-    <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
-      <Text Value="0" Name="CW"/>
-      <Text Value="1" Name="CCW"/>
-    </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
-      <Text Value="1" Name="Enabled"/>
-    </PCode>
-    <PCode No="19935" Name="O.D. Dress Amount"/>
-    <PCode No="19936" Name="O.D. Dress Speed"/>
-    <PCode No="19937" Name="Left Dress Amount"/>
-    <PCode No="19938" Name="Left Dress Speed"/>
-    <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
-    <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
-      <Text Value="0" Name="CW"/>
-      <Text Value="1" Name="CCW"/>
-    </PCode>
-  </Process>
-  <Process ID="56" Name="O.D. Traverse">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
     </PCode>
     <PCode No="19810" Name="Final Diameter 1"/>
     <PCode No="19811" Name="Final Diameter 2"/>
     <PCode No="19812" Name="Grind Position 1"/>
     <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19858" Name="Overlapping"/>
+    <PCode No="19817" Name="Start Overrun"/>
+    <PCode No="19818" Name="End Overrun"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19840" Name="Infeed Mode">
+      <Text Value="0" Name="By Queue(A)"/>
+      <Text Value="1" Name="By Step(B)"/>
+    </PCode>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
+    <PCode No="19877" Name="Retract Grind">
+      <Text Value="0" Name="Disable(A)"/>
+      <Text Value="1" Name="Enabled(B)"/>
+    </PCode>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19850" Name="Infeed Dwell"/>
+    <PCode No="19829" Name="Infeed Amount VVV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
+    <PCode No="19846" Name="Dwell Time 1 VVV"/>
+    <PCode No="19847" Name="Dwell Time 2 VVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19855" Name="Rough Retract"/>
+    <PCode No="19857" Name="Finish Retract"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19841" Name="Face Grind Amount"/>
+    <PCode No="19854" Name="Spark-out Time"/>
+    <PCode No="19853" Name="Face Escape Amount"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19876" Name="Plunge Time to Dress"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="6" Name="O.D. Oscillation">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+      <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
+    </PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position"/>
+    <PCode No="19815" Name="Oscillate Distance"/>
+    <PCode No="19833" Name="Traverse Speed"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19855" Name="Rough Retract"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="7" Name="O.D. Right Angular">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Final Size"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="8" Name="O.D. Left Angular">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Final Size"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19868" Name="Gauge Spark-out"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="9" Name="O.D. Right Taper Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
+    </PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position 1"/>
+    <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19873" Name="Taper Angle"/>
+    <PCode No="19874" Name="Taper Offset"/>
     <PCode No="19824" Name="Work Spindle"/>
     <PCode No="19839" Name="Traverse Mode">
       <Text Value="0" Name="Both(A)"/>
-      <Text Value="-1" Name="From End(B)"/>
-      <Text Value="1" Name="From Start(C)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
     </PCode>
-    <PCode No="19803" Name="O.D. Safety Dia."/>
-    <PCode No="19881" Name="Grind Angle"/>
-    <PCode No="19882" Name="Start Angle"/>
     <PCode No="19821" Name="Total Amount"/>
     <PCode No="19822" Name="Fine Amount"/>
     <PCode No="19823" Name="Polish Amount"/>
@@ -406,19 +694,19 @@
     <PCode No="19835" Name="Traverse Speed VVV"/>
     <PCode No="19846" Name="Dwell Time 1 VVV"/>
     <PCode No="19847" Name="Dwell Time 2 VVV"/>
-    <PCode No="19837" Name="Sparkout-times"/>
+    <PCode No="19837" Name="Spark-out-times"/>
     <PCode No="19836" Name="Traverse Speed VVVV"/>
     <PCode No="19848" Name="Dwell Time 1 VVVV"/>
     <PCode No="19849" Name="Dwell Time 2 VVVV"/>
-    <PCode No="19856" Name="Retract &amp; Rentry"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19862" Name="Gap Single Infeed"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -426,54 +714,548 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
   </Process>
-  <Process ID="57" Name="O.D. Right Surface">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
+  <Process ID="11" Name="O.D. Left Taper Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
     </PCode>
-    <PCode No="19812" Name="Shoulder Size"/>
-    <PCode No="19810" Name="Grind Position"/>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position 1"/>
+    <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19873" Name="Taper Angle"/>
+    <PCode No="19874" Name="Taper Offset"/>
     <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19803" Name="O.D. Safety Dia."/>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
     <PCode No="19821" Name="Total Amount"/>
     <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19827" Name="Infeed Amount V"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19833" Name="Traverse Speed V"/>
+    <PCode No="19842" Name="Dwell Time 1 V"/>
+    <PCode No="19843" Name="Dwell Time 2 V"/>
+    <PCode No="19828" Name="Infeed Amount VV"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19834" Name="Traverse Speed VV"/>
+    <PCode No="19844" Name="Dwell Time 1 VV"/>
+    <PCode No="19845" Name="Dwell Time 2 VV"/>
+    <PCode No="19829" Name="Infeed Amount VVV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
+    <PCode No="19846" Name="Dwell Time 1 VVV"/>
+    <PCode No="19847" Name="Dwell Time 2 VVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19862" Name="Gap Single Infeed"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="10" Name="O.D. Right Face Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19812" Name="Final Size 1"/>
+    <PCode No="19813" Name="Final Size 2"/>
+    <PCode No="19810" Name="Grind Position 1"/>
+    <PCode No="19811" Name="Grind Position 2"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19827" Name="Infeed Amount V"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19833" Name="Traverse Speed V"/>
+    <PCode No="19842" Name="Dwell Time 1 V"/>
+    <PCode No="19843" Name="Dwell Time 2 V"/>
+    <PCode No="19829" Name="Infeed Amount VVV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
+    <PCode No="19846" Name="Dwell Time 1 VVV"/>
+    <PCode No="19847" Name="Dwell Time 2 VVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19864" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="12" Name="O.D. Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19816" Name="Z Grind Point">
+      <Text Value="0" Name="Left(A)"/>
+      <Text Value="1" Name="Right(B)"/>
+    </PCode>
+    <PCode No="19810" Name="Final Diameter 1"/>
+    <PCode No="19811" Name="Final Diameter 2"/>
+    <PCode No="19812" Name="Final Size 1"/>
+    <PCode No="19813" Name="Final Size 2"/>
+    <PCode No="19817" Name="Start Overrun"/>
+    <PCode No="19818" Name="End Overrun"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
+    <PCode No="19877" Name="Retract Grind">
+      <Text Value="0" Name="Disable(A)"/>
+      <Text Value="1" Name="Enabled(B)"/>
+    </PCode>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19827" Name="Infeed Amount V"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19833" Name="Traverse Speed V"/>
+    <PCode No="19842" Name="Dwell Time 1 V"/>
+    <PCode No="19843" Name="Dwell Time 2 V"/>
+    <PCode No="19828" Name="Infeed Amount VV"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19834" Name="Traverse Speed VV"/>
+    <PCode No="19844" Name="Dwell Time 1 VV"/>
+    <PCode No="19845" Name="Dwell Time 2 VV"/>
+    <PCode No="19829" Name="Infeed Amount VVV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
+    <PCode No="19846" Name="Dwell Time 1 VVV"/>
+    <PCode No="19847" Name="Dwell Time 2 VVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19819" Name="X Retract Amount"/>
+    <PCode No="19855" Name="Retract &amp; Rentry"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19862" Name="Gap Single Infeed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19949" Name="Multi Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19950" Name="Multi Segments"/>
+    <PCode No="19951" Name="Diameter Offset XO1"/>
+    <PCode No="19952" Name="Diameter Offset XO2"/>
+    <PCode No="19953" Name="Diameter Offset XO3"/>
+    <PCode No="19954" Name="Diameter Offset XO4"/>
+    <PCode No="19955" Name="Diameter Offset XO5"/>
+    <PCode No="19956" Name="Diameter Offset XO6"/>
+    <PCode No="19957" Name="Diameter Offset XO7"/>
+    <PCode No="19958" Name="Diameter Offset XO8"/>
+    <PCode No="19959" Name="Diameter Offset XO9"/>
+    <PCode No="19960" Name="Diameter Offset XO10"/>
+    <PCode No="19961" Name="Diameter Offset XO11"/>
+    <PCode No="19962" Name="Diameter Offset XO12"/>
+    <PCode No="19963" Name="Diameter Offset XO13"/>
+    <PCode No="19964" Name="Diameter Offset XO14"/>
+    <PCode No="19965" Name="Diameter Offset XO15"/>
+    <PCode No="19966" Name="Diameter Offset XO16"/>
+    <PCode No="19967" Name="Diameter Offset XO17"/>
+    <PCode No="19968" Name="Diameter Offset XO18"/>
+    <PCode No="19969" Name="Diameter Offset XO19"/>
+    <PCode No="19970" Name="Diameter Offset XO20"/>
+    <PCode No="19971" Name="Position ZO1"/>
+    <PCode No="19972" Name="Position ZO2"/>
+    <PCode No="19973" Name="Position ZO3"/>
+    <PCode No="19974" Name="Position ZO4"/>
+    <PCode No="19975" Name="Position ZO5"/>
+    <PCode No="19976" Name="Position ZO6"/>
+    <PCode No="19977" Name="Position ZO7"/>
+    <PCode No="19978" Name="Position ZO8"/>
+    <PCode No="19979" Name="Position ZO9"/>
+    <PCode No="19980" Name="Position ZO10"/>
+    <PCode No="19981" Name="Position ZO11"/>
+    <PCode No="19982" Name="Position ZO12"/>
+    <PCode No="19983" Name="Position ZO13"/>
+    <PCode No="19984" Name="Position ZO14"/>
+    <PCode No="19985" Name="Position ZO15"/>
+    <PCode No="19986" Name="Position ZO16"/>
+    <PCode No="19987" Name="Position ZO17"/>
+    <PCode No="19988" Name="Position ZO18"/>
+    <PCode No="19989" Name="Position ZO19"/>
+    <PCode No="19990" Name="Position ZO20"/>
+  </Process>
+  <Process ID="101" Name="I.D. Plunge">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
     <PCode No="19830" Name="Infeed Speed V"/>
     <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19838" Name="Spark-out Time VVVV"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19856" Name="Retract &amp; Rentry"/>
     <PCode No="19859" Name="Gap Function">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="102" Name="I.D. Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter 1"/>
+    <PCode No="19811" Name="Final Diameter 2"/>
+    <PCode No="19812" Name="Grind Position 1"/>
+    <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19827" Name="Infeed Amount V"/>
+    <PCode No="19833" Name="Traverse Speed V"/>
+    <PCode No="19842" Name="Dwell Time 1 V"/>
+    <PCode No="19843" Name="Dwell Time 2 V"/>
+    <PCode No="19828" Name="Infeed Amount VV"/>
+    <PCode No="19834" Name="Traverse Speed VV"/>
+    <PCode No="19844" Name="Dwell Time 1 VV"/>
+    <PCode No="19845" Name="Dwell Time 2 VV"/>
+    <PCode No="19829" Name="Infeed Amount VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
+    <PCode No="19846" Name="Dwell Time 1 VVV"/>
+    <PCode No="19847" Name="Dwell Time 2 VVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19856" Name="Retract &amp; Rentry"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19862" Name="Gap Single Infeed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="103" Name="I.D. Right Face">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19812" Name="Final Size"/>
+    <PCode No="19810" Name="Grind Position"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19861" Name="Gap Infeed Speed"/>
     <PCode No="19860" Name="Grind Fix Amount"/>
+    <PCode No="19864" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
     <PCode No="19920" Name="Before Grind">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19875" Name="Rough Step Amount"/>
@@ -481,147 +1263,293 @@
     <PCode No="19925" Name="O.D. Dress Speed"/>
     <PCode No="19926" Name="Left Dress Amount"/>
     <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
     <PCode No="19930" Name="Dress Times"/>
-    <PCode No="19933" Name="Roller Rotation Direction">
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-    <PCode No="19943" Name="Back After Dress"/>
     <PCode No="19922" Name="Before Polish">
-      <Text Value="0" Name="Disabled"/>
+      <Text Value="0" Name="Disable"/>
       <Text Value="1" Name="Enabled"/>
     </PCode>
     <PCode No="19935" Name="O.D. Dress Amount"/>
     <PCode No="19936" Name="O.D. Dress Speed"/>
     <PCode No="19937" Name="Left Dress Amount"/>
     <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
     <PCode No="19941" Name="Dress Times"/>
-    <PCode No="19942" Name="Zero Cut Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
     <PCode No="19943" Name="Back After Dress"/>
-    <PCode No="19944" Name="Roller Rotation Direction">
+    <PCode No="19944" Name="Dress Roller Turn">
       <Text Value="0" Name="CW"/>
       <Text Value="1" Name="CCW"/>
     </PCode>
-  </Process>  
-  <Process ID="58" Name="I.D. Arc">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19810" Name="Arc Start Diameter"/>
-    <PCode No="19812" Name="Arc Start"/>
-    <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19839" Name="Traverse Mode">
-      <Text Value="0" Name="Both(A)"/>
-      <Text Value="-1" Name="From End(B)"/>
-      <Text Value="1" Name="From Start(C)"/>
-    </PCode>
-    <PCode No="19884" Name="Arc Radius"/>
-    <PCode No="19881" Name="Start Angle"/>
-    <PCode No="19883" Name="End Angle"/>
-    <PCode No="19815" Name="Oscillate Distance"/>
-    <PCode No="19836" Name="Traverse Speed"/>
-    <PCode No="19821" Name="Total Amount"/>
-    <PCode No="19822" Name="Fine Amount"/>
-    <PCode No="19823" Name="Polish Amount"/>
-    <PCode No="19889"	Name="Face Amount"/>
-    <PCode No="19827" Name="Infeed Amount V"/>
-    <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19885" Name="B-Axis Infeed Speed V"/>
-    <PCode No="19842" Name="Dwell Time 1 V"/>
-    <PCode No="19843" Name="Dwell Time 2 V"/>
-    <PCode No="19828" Name="Infeed Amount VV"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19886" Name="B-Axis Infeed Speed VV"/>
-    <PCode No="19844" Name="Dwell Time 1 VV"/>
-    <PCode No="19845" Name="Dwell Time 2 VV"/>
-    <PCode No="19829" Name="Infeed Amount VVV"/>
-    <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19887" Name="B-Axis Infeed Speed VVV"/>
-    <PCode No="19846" Name="Dwell Time 1 VVV"/>
-    <PCode No="19847" Name="Dwell Time 2 VVV"/>
-    <PCode No="19837" Name="Sparkout-times"/>
-    <PCode No="19888" Name="B-Axis Infeed Speed VVVV"/>
-    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
-    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
-    <PCode No="19890" Name="Arc Radius Offset"/>
   </Process>
-  <Process ID="59" Name="O.D. Arc">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19880" Name="GW Number">
-      <Text Value="1" Name="GW1"/>
-      <Text Value="2" Name="GW2"/>
-      <Text Value="3" Name="GW3"/>
-      <Text Value="4" Name="GW4"/>
-    </PCode>
-    <PCode No="19810" Name="Arc Start Diameter"/>
-    <PCode No="19812" Name="Arc Start"/>
-    <PCode No="19824" Name="Work Spindle"/>
-    <PCode No="19839" Name="Traverse Mode">
-      <Text Value="0" Name="Both(A)"/>
-      <Text Value="-1" Name="From End(B)"/>
-      <Text Value="1" Name="From Start(C)"/>
-    </PCode>
-    <PCode No="19884" Name="Arc Radius"/>
-    <PCode No="19881" Name="Start Angle"/>
-    <PCode No="19883" Name="End Angle"/>
+  <Process ID="104" Name="I.D. Oscillation">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position"/>
     <PCode No="19815" Name="Oscillate Distance"/>
-    <PCode No="19836" Name="Traverse Speed"/>
-    <PCode No="19803" Name="O.D. Safety Dia."/>
+    <PCode No="19833" Name="Traverse Speed"/>
+    <PCode No="19824" Name="Work Spindle"/>
     <PCode No="19821" Name="Total Amount"/>
     <PCode No="19822" Name="Fine Amount"/>
     <PCode No="19823" Name="Polish Amount"/>
-    <PCode No="19889"	Name="Face Amount"/>
-    <PCode No="19827" Name="Infeed Amount V"/>
     <PCode No="19830" Name="Infeed Speed V"/>
-    <PCode No="19885" Name="B-Axis Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19848" Name="Dwell Time 1 VVVV"/>
+    <PCode No="19849" Name="Dwell Time 2 VVVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19856" Name="Retract &amp; Rentry"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+  </Process>
+  <Process ID="105" Name="I.D. Right Angular">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Final Size"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19830" Name="Infeed Speed V"/>
+    <PCode No="19831" Name="Infeed Speed VV"/>
+    <PCode No="19832" Name="Infeed Speed VVV"/>
+    <PCode No="19838" Name="Spark-out Time"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19863" Name="Gauge Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19865" Name="Gauge Group Use">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="Gauge P4 Speed"/>
+    <PCode No="19866" Name="Tolerance Limit"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+  </Process>
+  <Process ID="106" Name="I.D. Taper Traverse">
+    <PCode No="19801" Name="Process number"/>
+	<PCode No="19880" Name="GW Number">
+	  <Text Value="1" Name="GW1"/>
+	  <Text Value="2" Name="GW2"/>
+	  <Text Value="3" Name="GW3"/>
+	  <Text Value="4" Name="GW4"/>
+	</PCode>
+    <PCode No="19810" Name="Final Diameter"/>
+    <PCode No="19812" Name="Grind Position 1"/>
+    <PCode No="19813" Name="Grind Position 2"/>
+    <PCode No="19873" Name="Taper Angle"/>
+    <PCode No="19874" Name="Taper Offset"/>
+    <PCode No="19824" Name="Work Spindle"/>
+    <PCode No="19839" Name="Traverse Mode">
+      <Text Value="0" Name="Both(A)"/>
+      <Text Value="1" Name="From Start(B)"/>
+      <Text Value="-1" Name="From End(C)"/>
+    </PCode>
+    <PCode No="19821" Name="Total Amount"/>
+    <PCode No="19822" Name="Fine Amount"/>
+    <PCode No="19823" Name="Polish Amount"/>
+    <PCode No="19827" Name="Infeed Amount V"/>
+    <PCode No="19833" Name="Traverse Speed V"/>
     <PCode No="19842" Name="Dwell Time 1 V"/>
     <PCode No="19843" Name="Dwell Time 2 V"/>
     <PCode No="19828" Name="Infeed Amount VV"/>
-    <PCode No="19831" Name="Infeed Speed VV"/>
-    <PCode No="19886" Name="B-Axis Infeed Speed VV"/>
+    <PCode No="19834" Name="Traverse Speed VV"/>
     <PCode No="19844" Name="Dwell Time 1 VV"/>
     <PCode No="19845" Name="Dwell Time 2 VV"/>
     <PCode No="19829" Name="Infeed Amount VVV"/>
-    <PCode No="19832" Name="Infeed Speed VVV"/>
-    <PCode No="19887" Name="B-Axis Infeed Speed VVV"/>
+    <PCode No="19835" Name="Traverse Speed VVV"/>
     <PCode No="19846" Name="Dwell Time 1 VVV"/>
     <PCode No="19847" Name="Dwell Time 2 VVV"/>
-    <PCode No="19837" Name="Sparkout-times"/>
-    <PCode No="19888" Name="B-Axis Infeed Speed VVVV"/>
+    <PCode No="19837" Name="Spark-out-times"/>
+    <PCode No="19836" Name="Traverse Speed VVVV"/>
     <PCode No="19848" Name="Dwell Time 1 VVVV"/>
     <PCode No="19849" Name="Dwell Time 2 VVVV"/>
-    <PCode No="19825" Name="Fine Work Spindle"/>
-    <PCode No="19890" Name="Arc Radius Offset"/>
+    <PCode No="19820" Name="Z Retract Amount"/>
+    <PCode No="19826" Name="Polish Work Spindle"/>
+    <PCode No="19859" Name="Gap Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19861" Name="Gap Infeed Speed"/>
+    <PCode No="19920" Name="Before Grind">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19875" Name="Rough Step Amount"/>
+    <PCode No="19924" Name="O.D. Dress Amount"/>
+    <PCode No="19925" Name="O.D. Dress Speed"/>
+    <PCode No="19926" Name="Left Dress Amount"/>
+    <PCode No="19927" Name="Left Dress Speed"/>
+    <PCode No="19928" Name="Right Dress Amount"/>
+    <PCode No="19929" Name="Right Dress Speed"/>
+    <PCode No="19930" Name="Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19931" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
+    <PCode No="19922" Name="Before Polish">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
+    <PCode No="19935" Name="O.D. Dress Amount"/>
+    <PCode No="19936" Name="O.D. Dress Speed"/>
+    <PCode No="19937" Name="Left Dress Amount"/>
+    <PCode No="19938" Name="Left Dress Speed"/>
+    <PCode No="19939" Name="Right Dress Amount"/>
+    <PCode No="19940" Name="Right Dress Speed"/>
+    <PCode No="19941" Name="Dress Times"/>
+    <PCode No="19942" Name="Dry Dress Times"/>
+    <PCode No="19943" Name="Back After Dress"/>
+    <PCode No="19944" Name="Dress Roller Turn">
+      <Text Value="0" Name="CW"/>
+      <Text Value="1" Name="CCW"/>
+    </PCode>
   </Process>
   <Process ID="201" Name="PROBE">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19902" Name="Probe Function"/>
-    <PCode No="19905" Name="Measure direction"/>
-    <PCode No="19906" Name="Measure distance"/>
+    <PCode No="19801" Name="Process number"/>
+    <PCode No="19901" Name="PROBE MASTER STATUS"> 
+      <Text Value="0" Name="Not Set"/>
+      <Text Value="1" Name="Set Finish"/>
+    </PCode>
+    <PCode No="19902" Name="Probe Function">
+      <Text Value="0" Name="Disable"/>
+      <Text Value="1" Name="Enabled"/>
+    </PCode>
     <PCode No="19903" Name="Measure start X"/>
     <PCode No="19904" Name="Measure start Z"/>
-    <PCode No="19908" Name="Safety Pos. X "/>
+    <PCode No="19905" Name="Measure direction">
+      <Text Value="-1" Name="Workpiece face of right side"/>
+      <Text Value="1" Name="Workpiece face of left side"/>
+    </PCode>
+    <PCode No="19906" Name="Measure distance"/>
     <PCode No="19907" Name="Master position"/>
+    <PCode No="19908" Name="Safety Pos. X "/>
   </Process>
-  <Process ID="202" Name="I.D. Measure">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19911" Name="Probe Safety Pos" />
-    <PCode No="19908" Name="Measure Position Z"/>
-    <PCode No="19909" Name="Measure Position X1"/>
-    <PCode No="19910" Name="Measure Position X2"/>
+  <Process ID="202" Name="Servo Tail Stoc">
+    <PCode No="19801" Name="Process number"/>
+    <PCode No="19991" Name="Y-Axis Position"/>
+    <PCode No="19992" Name="Y-Axis Speed"/>
   </Process>
-  <Process ID="203" Name="O.D. Measure">
-    <PCode No="19801" Name="Number"/>
-    <PCode No="19911" Name="Probe Safety Pos" />
-    <PCode No="19908" Name="Measure Position Z"/>
-    <PCode No="19909" Name="Measure Position X1"/>
-    <PCode No="19910" Name="Measure Position X2"/>
-  </Process>
-  <Process ID="999" Name="Command">
+  <Process ID="203" Name="DUAL SV STOCK">
+	<PCode No="19880" Name="YA(Sp.)Work Pos."/>
+	<PCode No="19881" Name="YA(Sp.)Load Pos."/>
+	<PCode No="19882" Name="YB(Tail.)Work Pos."/>
+	<PCode No="19883" Name="YB(Tail.)Load Pos."/>
+	<PCode No="19884" Name="YB(Tail.)Slow Dis."/>
+	<PCode No="19885" Name="YA(Sp.)Move Speed"/>
+	<PCode No="19886" Name="YB(Tail.)Move Speed"/>
+	<PCode No="19887" Name="YB(Tail.)Slow Speed"/>
+    <PCode No="19888" Name="Mode">
+      <Text Value="0" Name="Load"/>
+      <Text Value="1" Name="Work"/>
+    </PCode>>
+  </Process>	
+  <Process ID="999" Name="Code">
+    <PCode No="19801" Name="Process number"/>
   </Process>
 </DefaultProcessLang>

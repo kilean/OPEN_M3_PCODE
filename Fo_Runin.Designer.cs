@@ -1,4 +1,4 @@
-﻿namespace OIG
+﻿namespace OCD
 {
     partial class Fo_Runin
     {
@@ -104,7 +104,7 @@
             this.btn_Runin_Delete.ForeColor = System.Drawing.Color.White;
             this.btn_Runin_Delete.Image = null;
             this.btn_Runin_Delete.Lamp = false;
-            this.btn_Runin_Delete.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Runin_Delete.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Runin_Delete.Location = new System.Drawing.Point(88, 224);
             this.btn_Runin_Delete.MouseDownImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_Delete.MouseDownImage")));
             this.btn_Runin_Delete.MouseUpImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_Delete.MouseUpImage")));
@@ -132,7 +132,7 @@
             this.btn_Runin_DeleteAll.ForeColor = System.Drawing.Color.White;
             this.btn_Runin_DeleteAll.Image = null;
             this.btn_Runin_DeleteAll.Lamp = false;
-            this.btn_Runin_DeleteAll.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Runin_DeleteAll.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Runin_DeleteAll.Location = new System.Drawing.Point(168, 224);
             this.btn_Runin_DeleteAll.MouseDownImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_DeleteAll.MouseDownImage")));
             this.btn_Runin_DeleteAll.MouseUpImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_DeleteAll.MouseUpImage")));
@@ -167,7 +167,7 @@
             this.btn_Runin_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Runin_Add.Image = null;
             this.btn_Runin_Add.Lamp = false;
-            this.btn_Runin_Add.LampOnImage = global::OIG.Properties.Resources.Btn_S3_60x60_GrayL3;
+            this.btn_Runin_Add.LampOnImage = global::OCD.Properties.Resources.Btn_S3_60x60_GrayL3;
             this.btn_Runin_Add.Location = new System.Drawing.Point(168, 56);
             this.btn_Runin_Add.MouseDownImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_Add.MouseDownImage")));
             this.btn_Runin_Add.MouseUpImage = ((System.Drawing.Image)(resources.GetObject("btn_Runin_Add.MouseUpImage")));
@@ -224,10 +224,10 @@
             this.btn_Runin_Start.ForeColor = System.Drawing.Color.White;
             this.btn_Runin_Start.Image = null;
             this.btn_Runin_Start.Lamp = false;
-            this.btn_Runin_Start.LampOnImage = global::OIG.Properties.Resources.Btn_S3_128x60_GrayL3;
+            this.btn_Runin_Start.LampOnImage = global::OCD.Properties.Resources.Btn_S3_128x60_GrayL3;
             this.btn_Runin_Start.Location = new System.Drawing.Point(8, 520);
-            this.btn_Runin_Start.MouseDownImage = global::OIG.Properties.Resources.Btn_S3_128x60_L;
-            this.btn_Runin_Start.MouseUpImage = global::OIG.Properties.Resources.Btn_S3_128x60;
+            this.btn_Runin_Start.MouseDownImage = global::OCD.Properties.Resources.Btn_S3_128x60_L;
+            this.btn_Runin_Start.MouseUpImage = global::OCD.Properties.Resources.Btn_S3_128x60;
             this.btn_Runin_Start.Name = "btn_Runin_Start";
             this.btn_Runin_Start.Size = new System.Drawing.Size(152, 72);
             this.btn_Runin_Start.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Normal;

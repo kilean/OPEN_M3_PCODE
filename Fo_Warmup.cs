@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_Warmup : Form
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_CncConnect : Form
     {

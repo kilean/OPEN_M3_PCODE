@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_NumTitle : Form
     {

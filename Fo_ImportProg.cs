@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Collections.Generic;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_ImportProg : Form
     {

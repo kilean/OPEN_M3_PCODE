@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace OIG
+namespace OCD
 {
     public class MachineSetting
     {
@@ -30,7 +30,7 @@ namespace OIG
         
         public XmlElement xmlProcessList;//工序清單
 
-        XmlElement root = null;
+        public XmlElement root = null;
         public MachineSetting()
         {
         }

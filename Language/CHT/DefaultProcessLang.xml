@@ -1,325 +1,19 @@
-<DefaultProcessLang Version="1.26.0312.1330">
-  <Process ID="50" Name="直進刀">
+<DefaultProcessLang Version="1.25.1105.1058">
+  <Process ID="1" Name="外圓直進刀">
     <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
       <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19810" Name="工件內徑"/>
-    <PCode No="19812" Name="研磨位置"/>
-    <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19830" Name="粗磨進給速度"/>
-    <PCode No="19831" Name="細磨進給速度"/>
-    <PCode No="19832" Name="精磨進給速度"/>
-    <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19856" Name="彎曲退刀量"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19881" Name="研磨角度"/>
-    <PCode No="19882" Name="角度起始位置"/>
-    <PCode No="19859" Name="間隙消除">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19861" Name="空磨進給速度"/>
-    <PCode No="19920" Name="研磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19875" Name="粗磨分段量"/>
-    <PCode No="19924" Name="外徑修整量"/>
-    <PCode No="19925" Name="外徑修整速度"/>
-    <PCode No="19926" Name="左側修整量"/>
-    <PCode No="19927" Name="左側修整速度"/>
-    <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19922" Name="精磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19935" Name="外徑修整量"/>
-    <PCode No="19936" Name="外徑修整速度"/>
-    <PCode No="19937" Name="左側修整量"/>
-    <PCode No="19938" Name="左側修整速度"/>
-    <PCode No="19941" Name="修整次數"/>
-    <PCode No="19942" Name="空修次數"/>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-  </Process>
-  <Process ID="51" Name="橫進刀">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19810" Name="工件內徑1"/>
-    <PCode No="19811" Name="工件內徑2"/>
-    <PCode No="19812" Name="橫移起點"/>
-    <PCode No="19813" Name="橫移終點"/>
-    <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19839" Name="進刀模式">
-      <Text Value="0" Name="雙邊進刀(A)"/>
-      <Text Value="-1" Name="終點進刀(B)"/>
-      <Text Value="1" Name="起點進刀(C)"/>
-    </PCode>
-    <PCode No="19881" Name="研磨角度"/>
-    <PCode No="19882" Name="角度起始位置"/>
-    <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19827" Name="粗磨單次進給量"/>
-    <PCode No="19830" Name="粗磨進給速度"/>
-    <PCode No="19833" Name="粗磨橫移速度"/>
-    <PCode No="19842" Name="粗磨起點停秒"/>
-    <PCode No="19843" Name="粗磨終點停秒"/>
-    <PCode No="19828" Name="細磨單次進給量"/>
-    <PCode No="19831" Name="細磨進給速度"/>
-    <PCode No="19834" Name="細磨橫移速度"/>
-    <PCode No="19844" Name="細磨起點停秒"/>
-    <PCode No="19845" Name="細磨終點停秒"/>
-    <PCode No="19829" Name="精磨單次進給量"/>
-    <PCode No="19832" Name="精磨進給速度"/>
-    <PCode No="19835" Name="精磨橫移速度"/>
-    <PCode No="19846" Name="精磨起點停秒"/>
-    <PCode No="19847" Name="精磨終點停秒"/>
-    <PCode No="19837" Name="無火花次數"/>
-    <PCode No="19836" Name="無火花速度"/>
-    <PCode No="19848" Name="無火花起點停秒"/>
-    <PCode No="19849" Name="無火花終點停秒"/>
-    <PCode No="19856" Name="彎曲退刀量"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19862" Name="空磨單次進給量"/>
-    <PCode No="19920" Name="研磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19875" Name="粗磨分段量"/>
-    <PCode No="19924" Name="外徑修整量"/>
-    <PCode No="19925" Name="外徑修整速度"/>
-    <PCode No="19926" Name="左側修整量"/>
-    <PCode No="19927" Name="左側修整速度"/>
-    <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19922" Name="精磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19935" Name="外徑修整量"/>
-    <PCode No="19936" Name="外徑修整速度"/>
-    <PCode No="19937" Name="左側修整量"/>
-    <PCode No="19938" Name="左側修整速度"/>
-    <PCode No="19941" Name="修整次數"/>
-    <PCode No="19942" Name="空修次數"/>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-  </Process>
-  <Process ID="52" Name="右端面">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19812" Name="端面尺寸"/>
-    <PCode No="19810" Name="研磨位置"/>
-    <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19830" Name="粗磨速度"/>
-    <PCode No="19831" Name="細磨速度"/>
-    <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19861" Name="空磨進給速度"/>
-    <PCode No="19860" Name="定量模式研磨量"/>
-    <PCode No="19920" Name="研磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19875" Name="粗磨分段量"/>
-    <PCode No="19924" Name="外徑修整量"/>
-    <PCode No="19925" Name="外徑修整速度"/>
-    <PCode No="19926" Name="左側修整量"/>
-    <PCode No="19927" Name="左側修整速度"/>
-    <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19922" Name="精磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19935" Name="外徑修整量"/>
-    <PCode No="19936" Name="外徑修整速度"/>
-    <PCode No="19937" Name="左側修整量"/>
-    <PCode No="19938" Name="左側修整速度"/>
-    <PCode No="19941" Name="修整次數"/>
-    <PCode No="19942" Name="空修次數"/>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-  </Process>
-  <Process ID="53" Name="振動進刀">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19810" Name="工件內徑"/>
-    <PCode No="19812" Name="研磨位置"/>
-    <PCode No="19815" Name="振動距離"/>
-    <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19881" Name="研磨角度"/>
-    <PCode No="19882" Name="角度起始位置"/>
-    <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19830" Name="粗磨進給速度"/>
-    <PCode No="19831" Name="細磨進給速度"/>
-    <PCode No="19832" Name="精磨進給速度"/>
-    <PCode No="19836" Name="振動橫移速度"/>
-    <PCode No="19848" Name="橫移起點停秒"/>
-    <PCode No="19849" Name="橫移終點停秒"/>
-    <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19856" Name="彎曲退刀量"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19861" Name="空磨進給速度"/>
-    <PCode No="19920" Name="研磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19875" Name="粗磨分段量"/>
-    <PCode No="19924" Name="外徑修整量"/>
-    <PCode No="19925" Name="外徑修整速度"/>
-    <PCode No="19926" Name="左側修整量"/>
-    <PCode No="19927" Name="左側修整速度"/>
-    <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19922" Name="精磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19935" Name="外徑修整量"/>
-    <PCode No="19936" Name="外徑修整速度"/>
-    <PCode No="19937" Name="左側修整量"/>
-    <PCode No="19938" Name="左側修整速度"/>
-    <PCode No="19941" Name="修整次數"/>
-    <PCode No="19942" Name="空修次數"/>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-  </Process>
-  <Process ID="54" Name="右斜進刀">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19810" Name="工件內徑"/>
-    <PCode No="19812" Name="端面尺寸"/>
-    <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19830" Name="粗磨速度"/>
-    <PCode No="19831" Name="細磨速度"/>
-    <PCode No="19832" Name="精磨速度"/>
-    <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19861" Name="空磨進給速度"/>
-    <PCode No="19920" Name="研磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19875" Name="粗磨分段量"/>
-    <PCode No="19924" Name="外徑修整量"/>
-    <PCode No="19925" Name="外徑修整速度"/>
-    <PCode No="19926" Name="左側修整量"/>
-    <PCode No="19927" Name="左側修整速度"/>
-    <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19922" Name="精磨前修整">
-      <Text Value="0" Name="不使用"/>
-      <Text Value="1" Name="使用"/>
-    </PCode>
-    <PCode No="19935" Name="外徑修整量"/>
-    <PCode No="19936" Name="外徑修整速度"/>
-    <PCode No="19937" Name="左側修整量"/>
-    <PCode No="19938" Name="左側修整速度"/>
-    <PCode No="19941" Name="修整次數"/>
-    <PCode No="19942" Name="空修次數"/>
-    <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
-      <Text Value="0" Name="正轉"/>
-      <Text Value="1" Name="反轉"/>
-    </PCode>
-  </Process>
-  <Process ID="55" Name="外徑直進刀">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>  
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
     </PCode>
     <PCode No="19810" Name="工件外徑"/>
     <PCode No="19812" Name="研磨位置"/>
     <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19803" Name="外磨安全徑"/>
     <PCode No="19821" Name="總研磨量"/>
     <PCode No="19822" Name="細研磨量"/>
     <PCode No="19823" Name="精研磨量"/>
@@ -327,15 +21,31 @@
     <PCode No="19831" Name="細磨進給速度"/>
     <PCode No="19832" Name="精磨進給速度"/>
     <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19856" Name="彎曲退刀量"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19881" Name="研磨角度"/>
-    <PCode No="19882" Name="角度起始位置"/>
-    <PCode No="19859" Name="間隙消除">
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19855" Name="粗磨回退量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19841" Name="端面研磨量"/>
+    <PCode No="19854" Name="端面無火花"/>
+    <PCode No="19853" Name="端面逃離量"/>
+    <PCode No="19870" Name="無火花振動距離"/>
+    <PCode No="19872" Name="無火花振動次數"/>
+    <PCode No="19871" Name="無火花振動速度"/>
+    <PCode No="19859" Name="間隙消除功能">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
     </PCode>
     <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="外徑量測功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
     <PCode No="19920" Name="研磨前修整">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
@@ -345,12 +55,14 @@
     <PCode No="19925" Name="外徑修整速度"/>
     <PCode No="19926" Name="左側修整量"/>
     <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
     <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
-    <PCode No="19943" Name="修整回退量"/>
     <PCode No="19922" Name="精磨前修整">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
@@ -359,35 +71,44 @@
     <PCode No="19936" Name="外徑修整速度"/>
     <PCode No="19937" Name="左側修整量"/>
     <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
     <PCode No="19941" Name="修整次數"/>
     <PCode No="19942" Name="空修次數"/>
     <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
+    <PCode No="19944" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
   </Process>
-  <Process ID="56" Name="外徑橫進刀">
+  <Process ID="2" Name="外圓橫進刀">
     <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
       <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
+	  <Text Value="3" Name="砂輪3"/>
       <Text Value="4" Name="砂輪4"/>
+	</PCode>	  
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
     </PCode>
     <PCode No="19810" Name="工件外徑1"/>
     <PCode No="19811" Name="工件外徑2"/>
     <PCode No="19812" Name="橫移起點"/>
     <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19817" Name="起點超程"/>
+    <PCode No="19818" Name="終點超程"/>
     <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19839" Name="進刀模式">
+    <PCode No="19839" Name="橫進刀模式">
       <Text Value="0" Name="雙邊進刀(A)"/>
-      <Text Value="-1" Name="終點進刀(B)"/>
-      <Text Value="1" Name="起點進刀(C)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
     </PCode>
-    <PCode No="19803" Name="外磨安全徑"/>
-    <PCode No="19881" Name="研磨角度"/>
-    <PCode No="19882" Name="角度起始位置"/>
+    <PCode No="19877" Name="橫進退刀循環">
+      <Text Value="0" Name="不使用(A)"/>
+      <Text Value="1" Name="使用(B)"/>
+    </PCode>
     <PCode No="19821" Name="總研磨量"/>
     <PCode No="19822" Name="細研磨量"/>
     <PCode No="19823" Name="精研磨量"/>
@@ -410,9 +131,576 @@
     <PCode No="19836" Name="無火花速度"/>
     <PCode No="19848" Name="無火花起點停秒"/>
     <PCode No="19849" Name="無火花終點停秒"/>
-    <PCode No="19856" Name="彎曲退刀量"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19855" Name="粗磨回退量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19862" Name="空磨單次進給量"/>
+    <PCode No="19863" Name="外徑量測功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="3" Name="外圓右端面進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+      <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>  
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19810" Name="研磨位置"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19860" Name="定量模式"/>
+    <PCode No="19864" Name="厚度量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="4" Name="外圓左端面進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	 <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19810" Name="研磨位置"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19860" Name="定量模式"/>
+    <PCode No="19864" Name="厚度量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="5" Name="外圓多直橫進">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+      <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
+    </PCode>
+    <PCode No="19810" Name="工件外徑1"/>
+    <PCode No="19811" Name="工件外徑2"/>
+    <PCode No="19812" Name="橫移起點"/>
+    <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19858" Name="砂輪重疊量"/>
+    <PCode No="19817" Name="起點超程"/>
+    <PCode No="19818" Name="終點超程"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19840" Name="直進模式">
+      <Text Value="0" Name="順序進刀(A)"/>
+      <Text Value="1" Name="間隔進刀(B)"/>
+    </PCode>
+    <PCode No="19839" Name="橫進刀模式">
+      <Text Value="0" Name="雙邊進刀(A)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
+    </PCode>
+    <PCode No="19877" Name="橫進退刀循環">
+      <Text Value="0" Name="不使用(A)"/>
+      <Text Value="1" Name="使用(B)"/>
+    </PCode>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19850" Name="直進刀無火花"/>
+    <PCode No="19829" Name="精磨單次進給量"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
+    <PCode No="19846" Name="精磨起點停秒"/>
+    <PCode No="19847" Name="精磨終點停秒"/>
+    <PCode No="19837" Name="無火花次數"/>
+    <PCode No="19836" Name="無火花速度"/>
+    <PCode No="19848" Name="無火花起點停秒"/>
+    <PCode No="19849" Name="無火花終點停秒"/>
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19855" Name="粗磨回退量"/>
+    <PCode No="19857" Name="橫移回退量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19841" Name="端面研磨量"/>
+    <PCode No="19854" Name="端面無火花"/>
+    <PCode No="19853" Name="端面逃離量"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="外徑量測功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19876" Name="直進分次修整數"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="6" Name="外圓振動進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
+    </PCode>
+    <PCode No="19810" Name="最終尺寸"/>
+    <PCode No="19812" Name="研磨位置"/>
+    <PCode No="19815" Name="振動距離(方向性)"/>
+    <PCode No="19833" Name="振動速度"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19848" Name="橫移起點停秒"/>
+    <PCode No="19849" Name="橫移終點停秒"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19855" Name="粗磨回退量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="外徑量測功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="7" Name="外圓右斜進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件外徑"/>
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="外徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="8" Name="外圓左斜進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件外徑"/>
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="外徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19868" Name="量測到寸停秒"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="9" Name="外圓右錐度橫進">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
+    </PCode>
+    <PCode No="19810" Name="工件外徑"/>
+    <PCode No="19812" Name="橫移起點"/>
+    <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19873" Name="錐度度數"/>
+    <PCode No="19874" Name="錐度補正"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19839" Name="橫進刀模式">
+      <Text Value="0" Name="雙邊進刀(A)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
+    </PCode>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19827" Name="粗磨單次進給量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
+    <PCode No="19842" Name="粗磨起點停秒"/>
+    <PCode No="19843" Name="粗磨終點停秒"/>
+    <PCode No="19828" Name="細磨單次進給量"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19834" Name="細磨橫移速度"/>
+    <PCode No="19844" Name="細磨起點停秒"/>
+    <PCode No="19845" Name="細磨終點停秒"/>
+    <PCode No="19829" Name="精磨單次進給量"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
+    <PCode No="19846" Name="精磨起點停秒"/>
+    <PCode No="19847" Name="精磨終點停秒"/>
+    <PCode No="19837" Name="無火花次數"/>
+    <PCode No="19836" Name="無火花速度"/>
+    <PCode No="19848" Name="無火花起點停秒"/>
+    <PCode No="19849" Name="無火花終點停秒"/>
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
     </PCode>
@@ -426,12 +714,14 @@
     <PCode No="19925" Name="外徑修整速度"/>
     <PCode No="19926" Name="左側修整量"/>
     <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
     <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
-    <PCode No="19943" Name="修整回退量"/>
     <PCode No="19922" Name="精磨前修整">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
@@ -440,38 +730,68 @@
     <PCode No="19936" Name="外徑修整速度"/>
     <PCode No="19937" Name="左側修整量"/>
     <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
     <PCode No="19941" Name="修整次數"/>
     <PCode No="19942" Name="空修次數"/>
     <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
+    <PCode No="19944" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
   </Process>
-  <Process ID="57" Name="外徑右端面">
+  <Process ID="11" Name="外圓左錐度橫進">
     <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
     </PCode>
-    <PCode No="19812" Name="端面尺寸"/>
-    <PCode No="19810" Name="研磨位置"/>
+    <PCode No="19810" Name="工件外徑"/>
+    <PCode No="19812" Name="橫移起點"/>
+    <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19873" Name="錐度度數"/>
+    <PCode No="19874" Name="錐度補正"/>
     <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19803" Name="外磨安全徑"/>
+    <PCode No="19839" Name="橫進刀模式">
+      <Text Value="0" Name="雙邊進刀(A)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
+    </PCode>
     <PCode No="19821" Name="總研磨量"/>
     <PCode No="19822" Name="細研磨量"/>
-    <PCode No="19830" Name="粗磨速度"/>
-    <PCode No="19831" Name="細磨速度"/>
-    <PCode No="19838" Name="無火花時間"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19859" Name="間隙消除">
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19827" Name="粗磨單次進給量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
+    <PCode No="19842" Name="粗磨起點停秒"/>
+    <PCode No="19843" Name="粗磨終點停秒"/>
+    <PCode No="19828" Name="細磨單次進給量"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19834" Name="細磨橫移速度"/>
+    <PCode No="19844" Name="細磨起點停秒"/>
+    <PCode No="19845" Name="細磨終點停秒"/>
+    <PCode No="19829" Name="精磨單次進給量"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
+    <PCode No="19846" Name="精磨起點停秒"/>
+    <PCode No="19847" Name="精磨終點停秒"/>
+    <PCode No="19837" Name="無火花次數"/>
+    <PCode No="19836" Name="無火花速度"/>
+    <PCode No="19848" Name="無火花起點停秒"/>
+    <PCode No="19849" Name="無火花終點停秒"/>
+    <PCode No="19819" Name="退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
     </PCode>
-    <PCode No="19861" Name="空磨進給速度"/>
-    <PCode No="19860" Name="定量模式研磨量"/>
+    <PCode No="19862" Name="空磨單次進給量"/>
     <PCode No="19920" Name="研磨前修整">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
@@ -481,12 +801,14 @@
     <PCode No="19925" Name="外徑修整速度"/>
     <PCode No="19926" Name="左側修整量"/>
     <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
     <PCode No="19930" Name="修整次數"/>
-    <PCode No="19933" Name="滾輪轉向">
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
-    <PCode No="19943" Name="修整回退量"/>
     <PCode No="19922" Name="精磨前修整">
       <Text Value="0" Name="不使用"/>
       <Text Value="1" Name="使用"/>
@@ -495,133 +817,739 @@
     <PCode No="19936" Name="外徑修整速度"/>
     <PCode No="19937" Name="左側修整量"/>
     <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
     <PCode No="19941" Name="修整次數"/>
     <PCode No="19942" Name="空修次數"/>
     <PCode No="19943" Name="修整回退量"/>
-    <PCode No="19944" Name="滾輪轉向">
+    <PCode No="19944" Name="修整滾輪轉向">
       <Text Value="0" Name="正轉"/>
       <Text Value="1" Name="反轉"/>
     </PCode>
   </Process>
-  <Process ID="58" Name="內徑圓弧">
+  <Process ID="10" Name="外圓右端面橫進刀">
     <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
-    </PCode>
-    <PCode No="19810" Name="圓弧起點內徑"/>
-    <PCode No="19812" Name="圓孤起點"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19812" Name="端面尺寸1"/>
+    <PCode No="19813" Name="端面尺寸2"/>
+    <PCode No="19810" Name="橫移位置1"/>
+    <PCode No="19811" Name="橫移位置2"/>
     <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19839" Name="進刀模式">
+    <PCode No="19839" Name="橫進刀模式">
       <Text Value="0" Name="雙邊進刀(A)"/>
-      <Text Value="-1" Name="終點進刀(B)"/>
-      <Text Value="1" Name="起點進刀(C)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
     </PCode>
-    <PCode No="19884" Name="圓弧半徑"/>
-    <PCode No="19881" Name="起點角度"/>
-    <PCode No="19883" Name="終點角度"/>
-    <PCode No="19815" Name="振動距離"/>
-    <PCode No="19836" Name="振動速度"/>
     <PCode No="19821" Name="總研磨量"/>
-    <PCode No="19822" Name="細研磨量"/>
     <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19889"	Name="端面粗磨量"/>
     <PCode No="19827" Name="粗磨單次進給量"/>
     <PCode No="19830" Name="粗磨進給速度"/>
-    <PCode No="19885" Name="B軸粗研磨速度"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
     <PCode No="19842" Name="粗磨起點停秒"/>
     <PCode No="19843" Name="粗磨終點停秒"/>
-    <PCode No="19828" Name="細磨單次進給量"/>
-    <PCode No="19831" Name="細磨進給速度"/>
-    <PCode No="19886" Name="B軸細研磨速度"/>
-    <PCode No="19844" Name="細磨起點停秒"/>
-    <PCode No="19845" Name="細磨終點停秒"/>
     <PCode No="19829" Name="精磨單次進給量"/>
     <PCode No="19832" Name="精磨進給速度"/>
-    <PCode No="19887" Name="B軸精研磨速度"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
     <PCode No="19846" Name="精磨起點停秒"/>
     <PCode No="19847" Name="精磨終點停秒"/>
     <PCode No="19837" Name="無火花次數"/>
-    <PCode No="19888" Name="B軸無火花研磨速度"/>
+    <PCode No="19836" Name="無火花速度"/>
     <PCode No="19848" Name="無火花起點停秒"/>
     <PCode No="19849" Name="無火花終點停秒"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19890" Name="圓弧半徑補正值"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19864" Name="厚度量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
   </Process>
-  <Process ID="59" Name="外徑圓弧">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19880" Name="砂輪號">
-      <Text Value="1" Name="砂輪1"/>
-      <Text Value="2" Name="砂輪2"/>
-      <Text Value="3" Name="砂輪3"/>
-      <Text Value="4" Name="砂輪4"/>
+  <Process ID="12" Name="外圓橫進刀">
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19816" Name="原點位置">
+      <Text Value="0" Name="左原點(A)"/>
+      <Text Value="1" Name="右原點(B)"/>
     </PCode>
-    <PCode No="19810" Name="圓弧起點外徑"/>
-    <PCode No="19812" Name="圓孤起點"/>
+    <PCode No="19810" Name="工件外徑1"/>
+    <PCode No="19811" Name="工件外徑2"/>
+    <PCode No="19812" Name="橫移起點"/>
+    <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19817" Name="起點超程"/>
+    <PCode No="19818" Name="終點超程"/>
     <PCode No="19824" Name="工件轉速"/>
-    <PCode No="19839" Name="進刀模式">
+    <PCode No="19839" Name="橫進刀模式">
       <Text Value="0" Name="雙邊進刀(A)"/>
-      <Text Value="-1" Name="終點進刀(B)"/>
-      <Text Value="1" Name="起點進刀(C)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
     </PCode>
-    <PCode No="19884" Name="圓弧半徑"/>
-    <PCode No="19881" Name="起點角度"/>
-    <PCode No="19883" Name="終點角度"/>
-    <PCode No="19815" Name="振動距離"/>
-    <PCode No="19836" Name="振動速度"/>
-    <PCode No="19803" Name="外磨安全徑"/>
+    <PCode No="19877" Name="橫進退刀循環">
+      <Text Value="0" Name="不使用(A)"/>
+      <Text Value="1" Name="使用(B)"/>
+    </PCode>
     <PCode No="19821" Name="總研磨量"/>
     <PCode No="19822" Name="細研磨量"/>
     <PCode No="19823" Name="精研磨量"/>
-    <PCode No="19889"	Name="端面粗磨量"/>
     <PCode No="19827" Name="粗磨單次進給量"/>
     <PCode No="19830" Name="粗磨進給速度"/>
-    <PCode No="19885" Name="B軸粗研磨速度"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
     <PCode No="19842" Name="粗磨起點停秒"/>
     <PCode No="19843" Name="粗磨終點停秒"/>
     <PCode No="19828" Name="細磨單次進給量"/>
     <PCode No="19831" Name="細磨進給速度"/>
-    <PCode No="19886" Name="B軸細研磨速度"/>
+    <PCode No="19834" Name="細磨橫移速度"/>
     <PCode No="19844" Name="細磨起點停秒"/>
     <PCode No="19845" Name="細磨終點停秒"/>
     <PCode No="19829" Name="精磨單次進給量"/>
     <PCode No="19832" Name="精磨進給速度"/>
-    <PCode No="19887" Name="B軸精研磨速度"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
     <PCode No="19846" Name="精磨起點停秒"/>
     <PCode No="19847" Name="精磨終點停秒"/>
     <PCode No="19837" Name="無火花次數"/>
-    <PCode No="19888" Name="B軸無火花研磨速度"/>
+    <PCode No="19836" Name="無火花橫移速度"/>
     <PCode No="19848" Name="無火花起點停秒"/>
     <PCode No="19849" Name="無火花終點停秒"/>
-    <PCode No="19825" Name="細磨轉速"/>
-    <PCode No="19890" Name="圓弧半徑補正值"/>
+    <PCode No="19819" Name="X退刀量"/>
+    <PCode No="19855" Name="粗磨回退量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19862" Name="空單次進給量"/>
+    <PCode No="19863" Name="外徑量測功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19949" Name="多段橫進刀功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19950" Name="多段橫進刀段數"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19801" Name="工序號"/>
+    <PCode No="19951" Name="外徑補正XO1"/>
+    <PCode No="19952" Name="外徑補正XO2"/>
+    <PCode No="19953" Name="外徑補正XO3"/>
+    <PCode No="19954" Name="外徑補正XO4"/>
+    <PCode No="19955" Name="外徑補正XO5"/>
+    <PCode No="19956" Name="外徑補正XO6"/>
+    <PCode No="19957" Name="外徑補正XO7"/>
+    <PCode No="19958" Name="外徑補正XO8"/>
+    <PCode No="19959" Name="外徑補正XO9"/>
+    <PCode No="19960" Name="外徑補正XO10"/>
+    <PCode No="19961" Name="外徑補正XO11"/>
+    <PCode No="19962" Name="外徑補正XO12"/>
+    <PCode No="19963" Name="外徑補正XO13"/>
+    <PCode No="19964" Name="外徑補正XO14"/>
+    <PCode No="19965" Name="外徑補正XO15"/>
+    <PCode No="19966" Name="外徑補正XO16"/>
+    <PCode No="19967" Name="外徑補正XO17"/>
+    <PCode No="19968" Name="外徑補正XO18"/>
+    <PCode No="19969" Name="外徑補正XO19"/>
+    <PCode No="19970" Name="外徑補正XO20"/>
+    <PCode No="19971" Name="研磨位置ZO1"/>
+    <PCode No="19972" Name="研磨位置ZO2"/>
+    <PCode No="19973" Name="研磨位置ZO3"/>
+    <PCode No="19974" Name="研磨位置ZO4"/>
+    <PCode No="19975" Name="研磨位置ZO5"/>
+    <PCode No="19976" Name="研磨位置ZO6"/>
+    <PCode No="19977" Name="研磨位置ZO7"/>
+    <PCode No="19978" Name="研磨位置ZO8"/>
+    <PCode No="19979" Name="研磨位置ZO9"/>
+    <PCode No="19980" Name="研磨位置ZO10"/>
+    <PCode No="19981" Name="研磨位置ZO11"/>
+    <PCode No="19982" Name="研磨位置ZO12"/>
+    <PCode No="19983" Name="研磨位置ZO13"/>
+    <PCode No="19984" Name="研磨位置ZO14"/>
+    <PCode No="19985" Name="研磨位置ZO15"/>
+    <PCode No="19986" Name="研磨位置ZO16"/>
+    <PCode No="19987" Name="研磨位置ZO17"/>
+    <PCode No="19988" Name="研磨位置ZO18"/>
+    <PCode No="19989" Name="研磨位置ZO19"/>
+    <PCode No="19990" Name="研磨位置ZO20"/>
+  </Process>
+  <Process ID="101" Name="內圓直進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件內徑"/>
+    <PCode No="19812" Name="研磨位置"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19856" Name="彎曲退刀量"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="內徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="102" Name="內圓橫進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+      <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件內徑1"/>
+    <PCode No="19811" Name="工件內徑2"/>
+    <PCode No="19812" Name="橫移起點"/>
+    <PCode No="19813" Name="橫移終點"/>
+    <PCode No="19839" Name="橫進刀模式">
+      <Text Value="0" Name="雙邊進刀(A)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
+    </PCode>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19827" Name="粗磨單次進給量"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
+    <PCode No="19842" Name="粗磨起點停秒"/>
+    <PCode No="19843" Name="粗磨終點停秒"/>
+    <PCode No="19828" Name="細磨單次進給量"/>
+    <PCode No="19834" Name="細磨橫移速度"/>
+    <PCode No="19844" Name="細磨起點停秒"/>
+    <PCode No="19845" Name="細磨終點停秒"/>
+    <PCode No="19829" Name="精磨單次進給量"/>
+    <PCode No="19835" Name="精磨橫移速度"/>
+    <PCode No="19846" Name="精磨起點停秒"/>
+    <PCode No="19847" Name="精磨終點停秒"/>
+    <PCode No="19837" Name="無火花次數"/>
+    <PCode No="19836" Name="無火花速度"/>
+    <PCode No="19848" Name="無火花起點停秒"/>
+    <PCode No="19849" Name="無火花終點停秒"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19856" Name="彎曲退刀量"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19862" Name="空磨單次進給量"/>
+    <PCode No="19863" Name="內徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="103" Name="內圓右端面">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19810" Name="研磨位置"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19860" Name="定量模式"/>
+    <PCode No="19864" Name="內徑厚度量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="104" Name="內圓振動進刀">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件內徑"/>
+    <PCode No="19812" Name="研磨位置"/>
+    <PCode No="19815" Name="振動距離"/>
+    <PCode No="19833" Name="振動速度"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19848" Name="橫移起點停秒"/>
+    <PCode No="19849" Name="橫移終點停秒"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19856" Name="彎曲退刀量"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="內徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+  </Process>
+  <Process ID="105" Name="內圓右斜進">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件內徑"/>
+    <PCode No="19812" Name="端面尺寸"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19830" Name="粗磨進給速度"/>
+    <PCode No="19831" Name="細磨進給速度"/>
+    <PCode No="19832" Name="精磨進給速度"/>
+    <PCode No="19838" Name="無火花時間"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19863" Name="內徑量測">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19865" Name="使用第幾組">
+      <Text Value="1" Name="1"/>
+      <Text Value="2" Name="2"/>
+    </PCode>
+    <PCode No="19867" Name="P4進給速度"/>
+    <PCode No="19866" Name="量測誤差極限"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+  </Process>
+  <Process ID="106" Name="內圓錐度橫進">
+    <PCode No="19801" Name="工序號"/>
+	<PCode No="19880" Name="砂輪號">
+	  <Text Value="1" Name="砂輪1"/>
+	  <Text Value="2" Name="砂輪2"/>
+	  <Text Value="3" Name="砂輪3"/>
+	  <Text Value="4" Name="砂輪4"/>
+	</PCode>
+    <PCode No="19810" Name="工件內徑"/>
+    <PCode No="19812" Name="研磨位置1"/>
+    <PCode No="19813" Name="研磨位置2"/>
+    <PCode No="19873" Name="錐度度數"/>
+    <PCode No="19874" Name="錐度補正"/>
+    <PCode No="19824" Name="工件轉速"/>
+    <PCode No="19839" Name="橫進刀模式">
+      <Text Value="0" Name="雙邊進刀(A)"/>
+      <Text Value="1" Name="起點進刀(B)"/>
+      <Text Value="-1" Name="終點進刀(C)"/>
+    </PCode>
+    <PCode No="19821" Name="總研磨量"/>
+    <PCode No="19822" Name="細研磨量"/>
+    <PCode No="19823" Name="精研磨量"/>
+    <PCode No="19827" Name="粗磨單次進給量"/>
+    <PCode No="19833" Name="粗磨橫移速度"/>
+    <PCode No="19842" Name="粗磨起點停秒"/>
+    <PCode No="19843" Name="粗磨終點停秒"/>
+    <PCode No="19828" Name="細磨單次進給量"/>
+    <PCode No="19834" Name="細磨橫移速度"/>
+    <PCode No="19844" Name="細磨起點停秒"/>
+    <PCode No="19845" Name="細磨終點停秒"/>
+    <PCode No="19829" Name="精磨單次進給量"/>
+    <PCode No="19835" Name="磨精橫移速度"/>
+    <PCode No="19846" Name="精磨起點停秒"/>
+    <PCode No="19847" Name="精磨終點停秒"/>
+    <PCode No="19837" Name="無火花次數"/>
+    <PCode No="19836" Name="無火花速度"/>
+    <PCode No="19848" Name="無火花起點停秒"/>
+    <PCode No="19849" Name="無火花終點停秒"/>
+    <PCode No="19820" Name="Z退刀量"/>
+    <PCode No="19826" Name="精磨工件轉速"/>
+    <PCode No="19859" Name="間隙消除功能">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19861" Name="空磨進給速度"/>
+    <PCode No="19920" Name="研磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19875" Name="粗磨分段量"/>
+    <PCode No="19924" Name="外徑修整量"/>
+    <PCode No="19925" Name="外徑修整速度"/>
+    <PCode No="19926" Name="左側修整量"/>
+    <PCode No="19927" Name="左側修整速度"/>
+    <PCode No="19928" Name="右側修整量"/>
+    <PCode No="19929" Name="右側修整速度"/>
+    <PCode No="19930" Name="修整次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19931" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
+    <PCode No="19922" Name="精磨前修整">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
+    <PCode No="19935" Name="外徑修整量"/>
+    <PCode No="19936" Name="外徑修整速度"/>
+    <PCode No="19937" Name="左側修整量"/>
+    <PCode No="19938" Name="左側修整速度"/>
+    <PCode No="19939" Name="右側修整量"/>
+    <PCode No="19940" Name="右側修整速度"/>
+    <PCode No="19941" Name="修整次數"/>
+    <PCode No="19942" Name="空修次數"/>
+    <PCode No="19943" Name="修整回退量"/>
+    <PCode No="19944" Name="修整滾輪轉向">
+      <Text Value="0" Name="正轉"/>
+      <Text Value="1" Name="反轉"/>
+    </PCode>
   </Process>
   <Process ID="201" Name="端面量測">
     <PCode No="19801" Name="工序號"/>
-    <PCode No="19902" Name="端測使用"/>
-    <PCode No="19905" Name="量測方向"/>
-    <PCode No="19906" Name="量測距離"/>
+    <PCode No="19901" Name="端測有無MASTER成功變數">
+      <Text Value="0" Name="未設定"/>
+      <Text Value="1" Name="設定完成"/>
+    </PCode>
+    <PCode No="19902" Name="端測使用">
+      <Text Value="0" Name="不使用"/>
+      <Text Value="1" Name="使用"/>
+    </PCode>
     <PCode No="19903" Name="X量測起始位置"/>
     <PCode No="19904" Name="Z量測起始位置"/>
-    <PCode No="19908" Name="端完安全位置"/>
+    <PCode No="19905" Name="量測方向">
+      <Text Value="-1" Name="工件右側端面"/>
+      <Text Value="1" Name="工件左側端面"/>
+    </PCode>
+    <PCode No="19906" Name="量測距離"/>
     <PCode No="19907" Name="MASTER值"/>
+    <PCode No="19908" Name="端完安全位置"/>
   </Process>
-  <Process ID="202" Name="內徑量測">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19911" Name="端測安全位置"/>
-    <PCode No="19908" Name="量測位置Z"/>
-    <PCode No="19909" Name="量測位置X1"/>
-    <PCode No="19910" Name="量測位置X2"/>
+  <Process ID="202" Name="伺服尾座">
+    <PCode No="19803" Name="工序號"/>
+    <PCode No="19991" Name="伺服尾座位置"/>
+    <PCode No="19992" Name="伺服尾座速度"/>
   </Process>
-  <Process ID="203" Name="外徑量測">
-    <PCode No="19801" Name="工序號"/>
-    <PCode No="19911" Name="端測安全位置"/>
-    <PCode No="19908" Name="量測位置Z"/>
-    <PCode No="19909" Name="量測位置X1"/>
-    <PCode No="19910" Name="量測位置X2"/>
+  <Process ID="203" Name="雙伺服頂針">
+    <PCode No="19880" Name="YA(主軸)加工位置"/>
+    <PCode No="19881" Name="YA(主軸)換料位置"/>
+    <PCode No="19882" Name="YB(尾座)加工位置"/>
+    <PCode No="19883" Name="YB(尾座)換料位置"/>
+    <PCode No="19884" Name="YB(尾座)緩速行程"/>
+    <PCode No="19885" Name="YA(主軸)移動速度"/>
+    <PCode No="19886" Name="YB(尾座)移動速度"/>
+    <PCode No="19887" Name="YB(尾座)緩速速度"/>
+    <PCode No="19888" Name="模式">
+      <Text Value="0" Name="後退"/>
+      <Text Value="1" Name="前進"/>
+    </PCode>>
   </Process>
   <Process ID="999" Name="指令">
+    <PCode No="19801" Name="工序號"/>
   </Process>
 </DefaultProcessLang>

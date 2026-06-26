@@ -15,7 +15,7 @@ using static System.Windows.Forms.AxHost;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace OIG
+namespace OCD
 {
     public partial class Fo_Balance : Form
     {

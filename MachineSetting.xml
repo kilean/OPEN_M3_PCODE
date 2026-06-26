@@ -585,28 +585,28 @@
 	</MacroLimit>
 
 	<ProcessList Memo="目前共20個位置可設定工序">
-		<Process ID="50"/>
-		<Process ID="51"/>
-		<Process ID="52"/>
-		<Process ID="53"/>
-		<Process ID="54"/>
+		<Process ID="1"/>
+		<Process ID="2"/>
+		<Process ID="3"/>
+		<Process ID="4"/>
+		<Process ID="5"/>
 
-		<Process ID="55"/>
-		<Process ID="56"/>
-		<Process ID="57"/>
-		<Process ID="58"/>
-		<Process ID="59"/>
+		<Process ID="6"/>
+		<Process ID="7"/>
+		<Process ID="8"/>
+		<Process ID="9"/>
+		<Process ID="10"/>
 
-		<Process ID="0"/>
-		<Process ID="0"/>
-		<Process ID="0"/>
-		<Process ID="0"/>
-		<Process ID="0"/>
+		<Process ID="101"/>
+		<Process ID="102"/>
+		<Process ID="103"/>
+		<Process ID="104"/>
+		<Process ID="105"/>
 
-		<Process ID="0"/>
+		<Process ID="106"/>
 		<Process ID="201"/>
-		<Process ID="202"/>
-		<Process ID="203"/>
+		<Process ID=""/>
+		<Process ID=""/>
 		<Process ID="999"/>
 	</ProcessList>
 </MachineSetting>
