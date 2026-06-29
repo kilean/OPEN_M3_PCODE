@@ -408,10 +408,13 @@ namespace OCD
         private string ProcID = "";
         //private bool DressMode1 = false;
         //private bool DressMode2 = false;
- 
+        string machineSeries = "M";
         public MachineType[] GWType = new MachineType[3] { MachineType.OCD, MachineType.OCD2, MachineType.OIG }; // 砂輪直頭
         // 20260302 alan add 砂輪基準點設定
         public Dictionary<int, double> CurentGw_Data = new Dictionary<int, double>();
+        public bool bYAEnable = false;
+        public double dLast_Y_MPos = 0;
+        public double dLast_Y_APos = 0;
         public Fo_Main()
         {
             InitializeComponent();
@@ -746,7 +749,8 @@ namespace OCD
             TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
 
             //0:M2(2顆砂輪), 1:M3(2顆砂輪)
-            GwCount = ini.ReadInteger("System", "MPCODE Series", 3);
+            machineSeries = ini.ReadString("System", "MachineSeries", "M");
+            GwCount = ini.ReadInteger("System", "GWCount", 3);
             // 是否斜頭
             GWType[0] = (MachineType)ini.ReadInteger("System", "GW1Type", 0);
             GWType[1] = (MachineType)ini.ReadInteger("System", "GW2Type", 2);
@@ -759,6 +763,7 @@ namespace OCD
 
                 ini.WriteBool("System", "InchMode", false);
 
+                
                 //CNC
                 ini.WriteString("CNC", "IP", "192.168.168.2");
                 ini.WriteInteger("CNC", "Port", 8193);
@@ -835,6 +840,8 @@ namespace OCD
                 ini.WriteInteger("UI", "ProcessTag9", 58);//外圓右端面
                 ini.WriteInteger("UI", "ProcessTag19", 999);//code
 
+                // 使用小角度
+                ini.WriteBool("UI", "YAEnable", true);
             }
 
             // 維護頁面
@@ -849,7 +856,8 @@ namespace OCD
             pa_CNCDataManager.Visible = ini.ReadInteger("UI", "pa_CNCDataManager", 1) == 1;
             pa_GWRPS.Visible = ini.ReadInteger("UI", "pa_GWRPS", 0) == 1;
             pa_RotationCenterOffset.Visible = ini.ReadInteger("UI", "pa_RotationCenterOffset", 0) == 1;
-
+            bYAEnable = ini.ReadBool("UI", "YAEnable", true);// 使用小角度
+            
             Rolleropen = ini.ReadBool("System", "Rolleropen", false);//工序中 滾輪功能 顯示
             Measopen = ini.ReadBool("System", "Measopen", false);//工序中 量測功能 顯示
             Rightopen = ini.ReadBool("System", "Rightopen", false);//工序中 右側修整條件 顯示
@@ -857,6 +865,8 @@ namespace OCD
 
             btn_MeasureList.Visible = Measopen;
             //bInchTrans = ini.ReadBool("System", "InchMode", false);
+            
+            
 
             Gw1Dev = ini.ReadInteger("System", "Gw1Dev", 0);//0:士林變頻器, 1:台達變頻器, 2:三菱變頻器
             Gw2Dev = ini.ReadInteger("System", "Gw2Dev", 0);//0:士林變頻器, 1:台達變頻器, 2:三菱變頻器
@@ -2462,7 +2472,7 @@ namespace OCD
             //focas.ReadMacro(15050, out double gw_count);
             //GwCount = (int)Math.Round(gw_count);
 
-            focas.WriteMacro(977, 3);//OIG 300 R系列, 固定寫3
+            //focas.WriteMacro(977, 3);//OIG 300 R系列, 固定寫3
 
             //讀取回來目前的主軸(C軸)轉速設定值
             focas.PMC_ReadDbWord(PmcAddrType.D, 200, out uint D200);
@@ -2504,9 +2514,24 @@ namespace OCD
                 Path1Count++;
             }
 
+            if(machineSeries == "M")
+            {
+                foreach(var axiszKey in AxisNo.Keys.ToList())
+                {
+                    
+                    if (axiszKey == "X") AxisNo["X"] = 0;
+                    else if (axiszKey == "Z") AxisNo["Z"] = 1;
+                    else if (axiszKey == "B" && bYAEnable) AxisNo["B"] = 2;
+                    else if (axiszKey == "Y" && !bYAEnable) AxisNo["Y"] = 2;
+                    else if (axiszKey == "C") AxisNo["C"] = 3;
+                    else AxisNo[axiszKey] = -1;
+                }
+            }
+            Dictionary<string, int> tmpAxisNo = AxisNo.Where(k => k.Value != -1).ToDictionary(k => k.Key, k => k.Value);
+            
             //監視 - 依照系統設定顯示有在使用的元件
             //focas.SystemInfoEx(out SysInfoEx info);
-
+            string tmpAxisName = tmpAxisNo.Keys.ToList()[0];
             this.Invoke(new Action(() =>
             {
                 btn_SpSpeed3.DisplayText = D200.ToString("0");
@@ -2519,20 +2544,25 @@ namespace OCD
                 la_MonitorMachAxis1.Visible = AxisCount > 0;
                 la_MonitorMachAxis1Value.Visible = AxisCount > 0;
                 la_Monitor_Rel_X.Visible = AxisCount > 0;
-                la_MonitorAbsAxis1s.Visible = AxisCount > 0;
-                la_MonitorMachAxis1s.Visible = AxisCount > 0;
-                la_MonitorDistAxis1s.Visible = AxisCount > 0;
+                la_MonitorAbsAxis1s.Visible = AxisCount > 0 && machineSeries != "M";
+                la_MonitorMachAxis1s.Visible = AxisCount > 0 && machineSeries != "M";
+                la_MonitorDistAxis1s.Visible = AxisCount > 0 && machineSeries != "M";
                 pic_Axis1_Origin.Visible = AxisCount > 0;//原點燈號
-                if (AxisCount > 0) //第一軸 名稱
+                if (AxisCount > 0 && tmpAxisNo.Count > 0) //第一軸 名稱
                 {
-                    la_MonitorAbsAxis1.Text = dicName[1].ToString();
-                    la_MonitorDistAxis1.Text = dicName[1].ToString();
-                    la_MonitorMachAxis1.Text = dicName[1].ToString();
-                    la_Monitor_Rel_X.Text = dicName[1].ToString();
+                    //la_MonitorAbsAxis1.Text = dicName[1].ToString();
+                    //la_MonitorDistAxis1.Text = dicName[1].ToString();
+                    //la_MonitorMachAxis1.Text = dicName[1].ToString();
+                    //la_Monitor_Rel_X.Text = dicName[1].ToString();
 
-                    la_MonitorAbsAxis1s.Text = dicSubName[1].ToString();
-                    la_MonitorMachAxis1s.Text = dicSubName[1].ToString();
-                    la_MonitorDistAxis1s.Text = dicSubName[1].ToString();
+                    //la_MonitorAbsAxis1s.Text = dicSubName[1].ToString();
+                    //la_MonitorMachAxis1s.Text = dicSubName[1].ToString();
+                    //la_MonitorDistAxis1s.Text = dicSubName[1].ToString();
+                    
+                    la_MonitorAbsAxis1.Text = tmpAxisNo.Keys.ToList()[0];
+                    la_MonitorDistAxis1.Text = tmpAxisNo.Keys.ToList()[0];
+                    la_MonitorMachAxis1.Text = tmpAxisNo.Keys.ToList()[0];
+                    la_Monitor_Rel_X.Text = tmpAxisNo.Keys.ToList()[0];
                 }
 
                 //第二軸 顯示
@@ -2543,20 +2573,25 @@ namespace OCD
                 la_MonitorMachAxis2.Visible = AxisCount > 1;
                 la_MonitorMachAxis2Value.Visible = AxisCount > 1;
                 la_Monitor_Rel_Z.Visible = AxisCount > 1;
-                la_MonitorAbsAxis2s.Visible = AxisCount > 1;
-                la_MonitorMachAxis2s.Visible = AxisCount > 1;
-                la_MonitorDistAxis2s.Visible = AxisCount > 1;
+                la_MonitorAbsAxis2s.Visible = AxisCount > 1 && machineSeries != "M";
+                la_MonitorMachAxis2s.Visible = AxisCount > 1 && machineSeries != "M";
+                la_MonitorDistAxis2s.Visible = AxisCount > 1 && machineSeries != "M";
                 pic_Axis2_Origin.Visible = AxisCount > 1;//原點燈號
-                if (AxisCount > 1) //第二軸 名稱
+                if (AxisCount > 1 && tmpAxisNo.Count > 1) //第二軸 名稱
                 {
-                    la_MonitorAbsAxis2.Text = dicName[2].ToString();
-                    la_MonitorDistAxis2.Text = dicName[2].ToString();
-                    la_MonitorMachAxis2.Text = dicName[2].ToString();
-                    la_Monitor_Rel_Z.Text = dicName[2].ToString();
+                    //la_MonitorAbsAxis2.Text = dicName[2].ToString();
+                    //la_MonitorDistAxis2.Text = dicName[2].ToString();
+                    //la_MonitorMachAxis2.Text = dicName[2].ToString();
+                    //la_Monitor_Rel_Z.Text = dicName[2].ToString();
 
-                    la_MonitorAbsAxis2s.Text = dicSubName[2].ToString();
-                    la_MonitorMachAxis2s.Text = dicSubName[2].ToString();
-                    la_MonitorDistAxis2s.Text = dicSubName[2].ToString();
+                    //la_MonitorAbsAxis2s.Text = dicSubName[2].ToString();
+                    //la_MonitorMachAxis2s.Text = dicSubName[2].ToString();
+                    //la_MonitorDistAxis2s.Text = dicSubName[2].ToString();
+
+                    la_MonitorAbsAxis2.Text = tmpAxisNo.Keys.ToList()[1];
+                    la_MonitorDistAxis2.Text = tmpAxisNo.Keys.ToList()[1];
+                    la_MonitorMachAxis2.Text = tmpAxisNo.Keys.ToList()[1];
+                    la_Monitor_Rel_Z.Text = tmpAxisNo.Keys.ToList()[1];
                 }
 
                 //第三軸 顯示
@@ -2566,19 +2601,25 @@ namespace OCD
                 la_MonitorDistAxis3Value.Visible = AxisCount > 2;
                 la_MonitorMachAxis3.Visible = AxisCount > 2;
                 la_MonitorMachAxis3Value.Visible = AxisCount > 2;
-                la_MonitorAbsAxis3s.Visible = AxisCount > 2;
-                la_MonitorMachAxis3s.Visible = AxisCount > 2;
-                la_MonitorDistAxis3s.Visible = AxisCount > 2;
+                la_MonitorAbsAxis3s.Visible = AxisCount > 2 && machineSeries != "M";
+                la_MonitorMachAxis3s.Visible = AxisCount > 2 && machineSeries != "M";
+                la_MonitorDistAxis3s.Visible = AxisCount > 2 && machineSeries != "M";
                 pic_Axis3_Origin.Visible = AxisCount > 2;//原點燈號
-                if (AxisCount > 2) //第三軸 名稱
+                
+                if (AxisCount > 2 && tmpAxisNo.Count > 2) //第三軸 名稱
                 {
-                    la_MonitorAbsAxis3.Text = dicName[3].ToString();
-                    la_MonitorDistAxis3.Text = dicName[3].ToString();
-                    la_MonitorMachAxis3.Text = dicName[3].ToString();
+                    //la_MonitorAbsAxis3.Text = dicName[3].ToString();
+                    //la_MonitorDistAxis3.Text = dicName[3].ToString();
+                    //la_MonitorMachAxis3.Text = dicName[3].ToString();
 
-                    la_MonitorAbsAxis3s.Text = dicSubName[3].ToString();
-                    la_MonitorMachAxis3s.Text = dicSubName[3].ToString();
-                    la_MonitorDistAxis3s.Text = dicSubName[3].ToString();
+
+                    //la_MonitorAbsAxis3s.Text = dicSubName[3].ToString();
+                    //la_MonitorMachAxis3s.Text = dicSubName[3].ToString();
+                    //la_MonitorDistAxis3s.Text = dicSubName[3].ToString();
+
+                    la_MonitorAbsAxis3.Text = tmpAxisNo.Keys.ToList()[2];
+                    la_MonitorDistAxis3.Text = tmpAxisNo.Keys.ToList()[2];
+                    la_MonitorMachAxis3.Text = tmpAxisNo.Keys.ToList()[2];
                 }
 
                 //第四軸 顯示
@@ -2588,64 +2629,69 @@ namespace OCD
                 la_MonitorDistAxis4Value.Visible = AxisCount > 3;
                 la_MonitorMachAxis4.Visible = AxisCount > 3;
                 la_MonitorMachAxis4Value.Visible = AxisCount > 3;
-                la_MonitorAbsAxis4s.Visible = AxisCount > 3;
-                la_MonitorMachAxis4s.Visible = AxisCount > 3;
-                la_MonitorDistAxis4s.Visible = AxisCount > 3;
+                la_MonitorAbsAxis4s.Visible = AxisCount > 3 && machineSeries != "M";
+                la_MonitorMachAxis4s.Visible = AxisCount > 3 && machineSeries != "M";
+                la_MonitorDistAxis4s.Visible = AxisCount > 3 && machineSeries != "M";
                 pic_Axis4_Origin.Visible = AxisCount > 3;//原點燈號
-                if (AxisCount > 3) //第四軸 名稱
+                if (AxisCount > 3 && tmpAxisNo.Count > 3) //第四軸 名稱
                 {
-                    la_MonitorAbsAxis4.Text = dicName[4].ToString();
-                    la_MonitorDistAxis4.Text = dicName[4].ToString();
-                    la_MonitorMachAxis4.Text = dicName[4].ToString();
+                    //la_MonitorAbsAxis4.Text = dicName[4].ToString();
+                    //la_MonitorDistAxis4.Text = dicName[4].ToString();
+                    //la_MonitorMachAxis4.Text = dicName[4].ToString();
 
-                    la_MonitorAbsAxis4s.Text = dicSubName[4].ToString();
-                    la_MonitorMachAxis4s.Text = dicSubName[4].ToString();
-                    la_MonitorDistAxis4s.Text = dicSubName[4].ToString();
+
+                    //la_MonitorAbsAxis4s.Text = dicSubName[4].ToString();
+                    //la_MonitorMachAxis4s.Text = dicSubName[4].ToString();
+                    //la_MonitorDistAxis4s.Text = dicSubName[4].ToString();
+
+                    la_MonitorAbsAxis4.Text = tmpAxisNo.Keys.ToList()[3];
+                    la_MonitorDistAxis4.Text = tmpAxisNo.Keys.ToList()[3];
+                    la_MonitorMachAxis4.Text = tmpAxisNo.Keys.ToList()[3];
                 }
 
                 //第五軸
-                la_MonitorAbsAxis5.Visible = AxisCount > 4;
-                la_MonitorAbsAxis5Value.Visible = AxisCount > 4;
-                la_MonitorDistAxis5.Visible = AxisCount > 4;
-                la_MonitorDistAxis5Value.Visible = AxisCount > 4;
-                la_MonitorMachAxis5.Visible = AxisCount > 4;
-                la_MonitorMachAxis5Value.Visible = AxisCount > 4;
-                la_MonitorAbsAxis5s.Visible = AxisCount > 4;
-                la_MonitorMachAxis5s.Visible = AxisCount > 4;
-                la_MonitorDistAxis5s.Visible = AxisCount > 4;
-                pic_Axis5_Origin.Visible = AxisCount > 4;//原點燈號
-                if (AxisCount > 4) //第五軸 名稱
-                {
-                    la_MonitorAbsAxis5.Text = dicName[5].ToString();
-                    la_MonitorDistAxis5.Text = dicName[5].ToString();
-                    la_MonitorMachAxis5.Text = dicName[5].ToString();
+                //la_MonitorAbsAxis5.Visible = AxisCount > 4;
+                //la_MonitorAbsAxis5Value.Visible = AxisCount > 4;
+                //la_MonitorDistAxis5.Visible = AxisCount > 4;
+                //la_MonitorDistAxis5Value.Visible = AxisCount > 4;
+                //la_MonitorMachAxis5.Visible = AxisCount > 4;
+                //la_MonitorMachAxis5Value.Visible = AxisCount > 4;
+                //la_MonitorAbsAxis5s.Visible = AxisCount > 4;
+                //la_MonitorMachAxis5s.Visible = AxisCount > 4;
+                //la_MonitorDistAxis5s.Visible = AxisCount > 4;
+                //pic_Axis5_Origin.Visible = AxisCount > 4;//原點燈號
+                //if (AxisCount > 4) //第五軸 名稱
+                //{
+                //    la_MonitorAbsAxis5.Text = dicName[5].ToString();
+                //    la_MonitorDistAxis5.Text = dicName[5].ToString();
+                //    la_MonitorMachAxis5.Text = dicName[5].ToString();
 
-                    la_MonitorAbsAxis5s.Text = dicSubName[5].ToString();
-                    la_MonitorMachAxis5s.Text = dicSubName[5].ToString();
-                    la_MonitorDistAxis5s.Text = dicSubName[5].ToString();
-                }
+                //    la_MonitorAbsAxis5s.Text = dicSubName[5].ToString();
+                //    la_MonitorMachAxis5s.Text = dicSubName[5].ToString();
+                //    la_MonitorDistAxis5s.Text = dicSubName[5].ToString();
+                //}
 
-                //第六軸 顯示
-                la_MonitorAbsAxis6.Visible = AxisCount > 5;
-                la_MonitorAbsAxis6Value.Visible = AxisCount > 5;
-                la_MonitorDistAxis6.Visible = AxisCount > 5;
-                la_MonitorDistAxis6Value.Visible = AxisCount > 5;
-                la_MonitorMachAxis6.Visible = AxisCount > 5;
-                la_MonitorMachAxis6Value.Visible = AxisCount > 5;
-                la_MonitorAbsAxis6s.Visible = AxisCount > 5;
-                la_MonitorMachAxis6s.Visible = AxisCount > 5;
-                la_MonitorDistAxis6s.Visible = AxisCount > 5;
-                pic_Axis6_Origin.Visible = AxisCount > 5;//原點燈號
-                if (AxisCount > 5) //第六軸 名稱
-                {
-                    la_MonitorAbsAxis6.Text = dicName[6].ToString();
-                    la_MonitorDistAxis6.Text = dicName[6].ToString();
-                    la_MonitorMachAxis6.Text = dicName[6].ToString();
+                ////第六軸 顯示
+                //la_MonitorAbsAxis6.Visible = AxisCount > 5;
+                //la_MonitorAbsAxis6Value.Visible = AxisCount > 5;
+                //la_MonitorDistAxis6.Visible = AxisCount > 5;
+                //la_MonitorDistAxis6Value.Visible = AxisCount > 5;
+                //la_MonitorMachAxis6.Visible = AxisCount > 5;
+                //la_MonitorMachAxis6Value.Visible = AxisCount > 5;
+                //la_MonitorAbsAxis6s.Visible = AxisCount > 5;
+                //la_MonitorMachAxis6s.Visible = AxisCount > 5;
+                //la_MonitorDistAxis6s.Visible = AxisCount > 5;
+                //pic_Axis6_Origin.Visible = AxisCount > 5;//原點燈號
+                //if (AxisCount > 5) //第六軸 名稱
+                //{
+                //    la_MonitorAbsAxis6.Text = dicName[6].ToString();
+                //    la_MonitorDistAxis6.Text = dicName[6].ToString();
+                //    la_MonitorMachAxis6.Text = dicName[6].ToString();
 
-                    la_MonitorAbsAxis6s.Text = dicSubName[6].ToString();
-                    la_MonitorMachAxis6s.Text = dicSubName[6].ToString();
-                    la_MonitorDistAxis6s.Text = dicSubName[6].ToString();
-                }
+                //    la_MonitorAbsAxis6s.Text = dicSubName[6].ToString();
+                //    la_MonitorMachAxis6s.Text = dicSubName[6].ToString();
+                //    la_MonitorDistAxis6s.Text = dicSubName[6].ToString();
+                //}
             }));
 
 
@@ -2901,7 +2947,20 @@ namespace OCD
                 }));
 
                 ret = focas.ReadAllAxisPos(out Pos);
-
+                if (Pos.Machine.Length > 3)
+                {
+                    if (Pos.Machine[3] == 0) //當轉到0時，紀錄最後的座標，避免下降後位置跑掉，顯示非零的數值
+                    {
+                        if (Pos.Machine.Length > 2) dLast_Y_MPos = Math.Round(Pos.Machine[2]);
+                    }
+                }
+                if (Pos.Absolute.Length > 3) //當轉到0時，紀錄最後的座標，避免下降後位置跑掉，顯示非零的數值
+                {
+                    if (Pos.Absolute[3] == 0)
+                    {
+                        if (Pos.Absolute.Length > 2) dLast_Y_APos = Math.Round(Pos.Absolute[2]);
+                    }
+                }
                 this.Invoke(new Action(() =>
                 {
                     if (TC_Main.SelectedTab == tab_Monitor)
@@ -2929,13 +2988,61 @@ namespace OCD
                         if (Pos.Machine.Length > 0) la_MonitorMachAxis1Value.Text = Pos.Machine[0].ToString(Units.DisplayFmt);//X                        
                         if (Pos.Machine.Length > 1) la_Monitor_Rel_Z.Text = (Pos.Machine[1] - dManualZeroPointZ).ToString(Units.DisplayFmt);//相對位置
                         if (Pos.Machine.Length > 1) la_MonitorMachAxis2Value.Text = Pos.Machine[1].ToString(Units.DisplayFmt);//Z
-                        if (Pos.Machine.Length > 2) la_MonitorMachAxis3Value.Text = Pos.Machine[2].ToString(Axis3Fmt);//Y
+                        if (Pos.Machine.Length > 2)
+                        {
+                           
+                            if (la_MonitorMachAxis3.Text == "Y" && !bYAEnable)
+                            {
+                                // la_MonitorMachAxis3Value.Text = Pos.Machine[2].ToString(Axis3Fmt);//Y}
+                                int deg = (int)Math.Round(Pos.Machine[2]) % 360;
+                                la_MonitorMachAxis3Value.Text = deg.ToString(Axis3Fmt);//Y
+                            }
+                            if (la_MonitorMachAxis3.Text == "B" && bYAEnable)
+                            {
+                                //la_MonitorMachAxis3Value.Text = Pos.Machine[2].ToString(Axis3Fmt);//Y}
+                                if (Pos.Machine[3] == 0)
+                                {
+                                    double pos = Math.Round(Pos.Machine[2]) + (Pos.Machine[3] / 100.0);
+                                    if (pos >= 360) pos -= 360;
+                                    la_MonitorMachAxis3Value.Text = pos.ToString("0.000");//Y → 顯示為B
+                                }
+                                else
+                                {
+                                    double pos = dLast_Y_MPos + (Pos.Machine[3] / 100.0);
+                                    if (pos >= 360) pos -= 360;
+                                    la_MonitorMachAxis3Value.Text = pos.ToString("0.000");//Y → 顯示為B
+                                }
+                            }
+                        }
                         if (Pos.Machine.Length > 3) la_MonitorMachAxis4Value.Text = Pos.Machine[3].ToString(Axis4Fmt);//C
 
                         //絕對座標
                         if (Pos.Absolute.Length > 0) la_MonitorAbsAxis1Value.Text = Pos.Absolute[0].ToString(Units.DisplayFmt);//X
                         if (Pos.Absolute.Length > 1) la_MonitorAbsAxis2Value.Text = Pos.Absolute[1].ToString(Units.DisplayFmt);//Z
-                        if (Pos.Absolute.Length > 2) la_MonitorAbsAxis3Value.Text = Pos.Absolute[2].ToString(Axis3Fmt);//Y
+                        if (Pos.Absolute.Length > 2)
+                        {
+                            if (la_MonitorAbsAxis3.Text == "Y" && !bYAEnable)
+                            {
+                                //la_MonitorAbsAxis3Value.Text = Pos.Absolute[2].ToString(Axis3Fmt);//Y
+                                int deg = (int)Math.Round(Pos.Absolute[2]) % 360;
+                                la_MonitorAbsAxis3Value.Text = deg.ToString("0.000");//Y → 顯示為B
+                            }
+                            if (la_MonitorAbsAxis3.Text == "B" && bYAEnable)
+                            {
+                                if (Pos.Absolute[3] == 0)
+                                {
+                                    double pos = Math.Round(Pos.Absolute[2]) + (Pos.Absolute[3] / 100.0);
+                                    if (pos >= 360) pos -= 360;
+                                    la_MonitorAbsAxis3Value.Text = pos.ToString("0.000");//Y → 顯示為B
+                                }
+                                else
+                                {
+                                    double pos = dLast_Y_APos + (Pos.Absolute[3] / 100.0);
+                                    if (pos >= 360) pos -= 360;
+                                    la_MonitorAbsAxis3Value.Text = pos.ToString("0.000");//Y → 顯示為B
+                                }
+                            }
+                        }
                         if (Pos.Absolute.Length > 3) la_MonitorAbsAxis4Value.Text = Pos.Absolute[3].ToString(Axis4Fmt);//C
 
                         //殘移動量
@@ -3569,6 +3676,7 @@ namespace OCD
                 bool bMaintain = false;
                 bool bFuncSwitch = false;
                 bool bCondition = false;
+               
                 this.Invoke((Action)(() =>
                 {
                     bMonitor = TC_Main.SelectedTab == tab_Monitor;
@@ -3585,8 +3693,6 @@ namespace OCD
                     bMaintain = TC_Main.SelectedTab == tab_Maintenance;
                     bFuncSwitch = TC_Main.SelectedTab == tab_FuncSwitch;
                     bCondition = TC_Main.SelectedTab == tab_GwDb && TC_GW.SelectedTab == tab_Gw_DressCondition;
-
-
 
                 }));
 
@@ -3609,28 +3715,29 @@ namespace OCD
                 {
                     bMonitorBuzy = true;
 
-                    focas.PMC_ReadByte(PmcAddrType.K, 9, out byte K9);
-                    if (K9.BIT_7())
-                    {
-                        //馬達實際轉速*(參數2084*1000)/(參數2085*360)
-                        focas.PMC_ReadDbWord(PmcAddrType.E, 5120, out uint E5120);
-                        int m_spd = (int)E5120;
+                    // C 軸資料待確認
+                    //focas.PMC_ReadByte(PmcAddrType.K, 9, out byte K9);
+                    //if (K9.BIT_7())
+                    //{
+                    //    //馬達實際轉速*(參數2084*1000)/(參數2085*360)
+                    //    focas.PMC_ReadDbWord(PmcAddrType.E, 5120, out uint E5120);
+                    //    int m_spd = (int)E5120;
 
-                        //軸號, 依照機型不同,C軸可能在第三軸或第四軸
-                        int axis_no = AxisNo["C"] + 1;
+                    //    //軸號, 依照機型不同,C軸可能在第三軸或第四軸
+                    //    int axis_no = AxisNo["C"] + 1;
 
-                        //讀取該軸參數
-                        focas.Param_ReadWord(2084, (short)axis_no, out short P2084);
-                        focas.Param_ReadWord(2085, (short)axis_no, out short P2085);
+                    //    //讀取該軸參數
+                    //    focas.Param_ReadWord(2084, (short)axis_no, out short P2084);
+                    //    focas.Param_ReadWord(2085, (short)axis_no, out short P2085);
 
-                        //計算主軸轉速
-                        double sp_rpm = Math.Abs((double)m_spd * (P2084 * 1000.0) / (P2085 * 360.0));
+                    //    //計算主軸轉速
+                    //    double sp_rpm = Math.Abs((double)m_spd * (P2084 * 1000.0) / (P2085 * 360.0));
 
-                        this.Invoke((Action)(() =>
-                        {
-                            la_SpCurrentRpm_Val.Text = sp_rpm.ToString("0");
-                        }));
-                    }
+                    //    this.Invoke((Action)(() =>
+                    //    {
+                    //        la_SpCurrentRpm_Val.Text = sp_rpm.ToString("0");
+                    //    }));
+                    //}
 
                     //加工中, 顯示目前執行到哪個工序
                     focas.PMC_ReadByte(PmcAddrType.F, 0, out byte F0);
@@ -3858,7 +3965,7 @@ namespace OCD
 
                         if (Pos.Machine.Length > 0) la_PosSetMach_1.Text = Pos.Machine[0].ToString(Units.DisplayFmt);//X
                         if (Pos.Machine.Length > 1) la_PosSetMach_2.Text = Pos.Machine[1].ToString(Units.DisplayFmt);//Z
-                        if (Pos.Machine.Length > 2) la_PosSetMach_3.Text = Pos.Machine[2].ToString(Units.DisplayFmt);//Y
+                        if (Pos.Machine.Length > 2) la_PosSetMach_3.Text = Pos.Machine[2].ToString(Units.DisplayFmt);//Y or B
                         if (Pos.Machine.Length > 3) la_PosSetMach_4.Text = Pos.Machine[3].ToString(Units.DisplayFmt);//C
                         if (Pos.Machine.Length > 4) la_PosSetMach_5.Text = Pos.Machine[4].ToString(Units.DisplayFmt);//A
                         if (Pos.Machine.Length > 5) la_PosSetMach_6.Text = Pos.Machine[5].ToString(Units.DisplayFmt);//B
@@ -10752,12 +10859,14 @@ namespace OCD
             ch_Meas.Checked = Measopen;//量測
             ch_Right.Checked = Rightopen;//右側修整
 
-
+            ch_YAEnable.Checked = bYAEnable;
             //機型
-            rb_M3.Checked = GwCount == 3;
-            
-            rb_M2.Checked = GwCount == 2;
+            if (machineSeries == "M")
+            {
+                rb_M3.Checked = GwCount == 3;
 
+                rb_M2.Checked = GwCount == 2;
+            }
             //rb_Gw1Type0.Checked = GW1Type == MachineType.OCD;
             //rb_Gw1Type1.Checked = GW1Type == MachineType.OCD2;
             //rb_Gw1Type2.Checked = GW1Type == MachineType.OIG;
@@ -14987,14 +15096,15 @@ namespace OCD
             la_PosSetMach_2.Visible = la_PosSetMach2.Visible = info.Axis > 1;
             la_PosSetMach_3.Visible = la_PosSetMach3.Visible = info.Axis > 2;
             la_PosSetMach_4.Visible = la_PosSetMach4.Visible = info.Axis > 3;
-            la_PosSetMach_5.Visible = la_PosSetMach5.Visible = info.Axis > 4;
-            la_PosSetMach_6.Visible = la_PosSetMach6.Visible = info.Axis > 5;
+            la_PosSetMach_5.Visible = la_PosSetMach5.Visible = info.Axis > 4 && machineSeries != "M";
+            la_PosSetMach_6.Visible = la_PosSetMach6.Visible = info.Axis > 5 && machineSeries != "M";
             la_PosSetMach1.Text = la_MonitorAbsAxis1.Text;
             la_PosSetMach2.Text = la_MonitorAbsAxis2.Text;
             la_PosSetMach3.Text = la_MonitorAbsAxis3.Text;
             la_PosSetMach4.Text = la_MonitorAbsAxis4.Text;
             la_PosSetMach5.Text = la_MonitorAbsAxis5.Text;
             la_PosSetMach6.Text = la_MonitorAbsAxis6.Text;
+
 
             TIniFile ini = new TIniFile(Units.langfile);
 
@@ -18088,18 +18198,20 @@ namespace OCD
             {
                 return;
             }
-            
-            
+
+            ini = new TIniFile(Application.StartupPath + "\\sys.ini");
             if (rb_M2.Checked)
             {                
-                GwCount = 2;           
+                GwCount = 2;
+                ini.WriteString("System", "MachineSeries", "M");
             }
             else if (rb_M3.Checked)
             {   
                 GwCount = 3;
+                ini.WriteString("System", "MachineSeries", "M");
             }
-            ini = new TIniFile(Application.StartupPath + "\\sys.ini");
-            ini.WriteInteger("System", "MPCODE Series", GwCount);
+            ini.WriteInteger("System", "GWCount", GwCount);
+
 
             RadioButton rd = sender as RadioButton;
             if (rd == null) return;
@@ -21822,7 +21934,12 @@ namespace OCD
             
         }
 
-        
+        private void ch_YAEnable_Click(object sender, EventArgs e)
+        {
+            TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
+            ini.WriteBool("UI", "YAEnable", ch_YAEnable.Checked);
+            bYAEnable = ch_YAEnable.Checked;
+        }
     }
 }
 

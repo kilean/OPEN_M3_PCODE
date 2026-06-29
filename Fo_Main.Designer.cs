@@ -1029,6 +1029,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ch_YAEnable = new System.Windows.Forms.CheckBox();
             this.gb_Gw4Type = new System.Windows.Forms.GroupBox();
             this.la_Gw4Type = new System.Windows.Forms.Label();
             this.rb_Gw4Type1 = new System.Windows.Forms.RadioButton();
@@ -1893,7 +1894,7 @@
             this.la_Version.Name = "la_Version";
             this.la_Version.Size = new System.Drawing.Size(205, 25);
             this.la_Version.TabIndex = 10;
-            this.la_Version.Text = "Ver : 1.26.0626.1551";
+            this.la_Version.Text = "Ver : 1.26.0629.1058";
             // 
             // pa_Alarm
             // 
@@ -15701,6 +15702,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ch_YAEnable);
             this.tabPage1.Controls.Add(this.gb_Gw4Type);
             this.tabPage1.Controls.Add(this.gb_Gw3Type);
             this.tabPage1.Controls.Add(this.gb_Gw2Type);
@@ -15725,6 +15727,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "選配功能";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ch_YAEnable
+            // 
+            this.ch_YAEnable.AutoSize = true;
+            this.ch_YAEnable.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.ch_YAEnable.Location = new System.Drawing.Point(200, 88);
+            this.ch_YAEnable.Name = "ch_YAEnable";
+            this.ch_YAEnable.Size = new System.Drawing.Size(135, 23);
+            this.ch_YAEnable.TabIndex = 91;
+            this.ch_YAEnable.Tag = "654";
+            this.ch_YAEnable.Text = "使用小角度(YA)";
+            this.ch_YAEnable.UseVisualStyleBackColor = true;
+            this.ch_YAEnable.Click += new System.EventHandler(this.ch_YAEnable_Click);
             // 
             // gb_Gw4Type
             // 
@@ -16005,7 +16020,7 @@
             // la_JigWidth
             // 
             this.la_JigWidth.AutoSize = true;
-            this.la_JigWidth.Location = new System.Drawing.Point(200, 96);
+            this.la_JigWidth.Location = new System.Drawing.Point(200, 120);
             this.la_JigWidth.Name = "la_JigWidth";
             this.la_JigWidth.Size = new System.Drawing.Size(84, 19);
             this.la_JigWidth.TabIndex = 85;
@@ -16021,7 +16036,7 @@
             this.btn_JigWidth.Image = ((System.Drawing.Image)(resources.GetObject("btn_JigWidth.Image")));
             this.btn_JigWidth.Lamp = false;
             this.btn_JigWidth.LampOnImage = null;
-            this.btn_JigWidth.Location = new System.Drawing.Point(200, 109);
+            this.btn_JigWidth.Location = new System.Drawing.Point(200, 133);
             this.btn_JigWidth.MouseDownImage = null;
             this.btn_JigWidth.MouseUpImage = null;
             this.btn_JigWidth.Name = "btn_JigWidth";
@@ -22387,6 +22402,7 @@
         public System.Windows.Forms.TextBox TB_DressBaseMax;
         public System.Windows.Forms.Label la_DressBaseMin;
         public System.Windows.Forms.TextBox TB_DressBaseMin;
+        private System.Windows.Forms.CheckBox ch_YAEnable;
     }
 }
 
