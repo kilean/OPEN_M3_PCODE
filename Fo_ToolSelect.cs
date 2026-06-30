@@ -43,6 +43,10 @@ namespace OCD
 
                 for(int i=0; i<4; i++) { 
                     Units.Fo_Main.focas.ReadMacro(10005 + i * 200, out double mode);
+                    if (mode < 1 || mode > 8)
+                    {
+                        mode = 1;
+                    }
                     modes[i] = mode;
                 }
                 bFinish = true;

@@ -14539,7 +14539,7 @@ namespace OCD
                 btn_R_DS.DisplayText = CurrentGwMacro[10033 + GwMarcoOffset].ToString(Units.DisplayFmt);//右側修整速度
 
                 //tb_DiamOfsZ.Text = dgwFile.DGWDiamOffsetZ.ToString(Units.DisplayFmt);
-                tb_DiamOfsZ.Text = CurrentGwMacro[10048 + GwMarcoOffset].ToString(Units.DisplayFmt);//成形 - 外徑修整Z軸補正
+                tb_DiamOfsZ.Text = CurrentGwMacro[10049 + GwMarcoOffset].ToString(Units.DisplayFmt);//成形 - 外徑修整Z軸補正
 
                 //外徑修整啟始方向(位置) (0:從砂輪左側修到右側, 1:從砂輪右側修到左側)
                 if (Math.Round(CurrentGwMacro[10019 + GwMarcoOffset]) == 0)
@@ -16176,9 +16176,9 @@ namespace OCD
 
             SetPathLayout();
 
-
-            cb_ToolRCompFunc.SelectedIndex = (int)Math.Round(CurrentGwMacro[10058]);
-            tb_ToolR.Text = CurrentGwMacro[10059].ToString(Units.DisplayFmt);
+            int shift = (CurrentEditGwNo - 1) * 200;
+            cb_ToolRCompFunc.SelectedIndex = (int)Math.Round(CurrentGwMacro[10058 + shift]);
+            tb_ToolR.Text = CurrentGwMacro[10059 + shift].ToString(Units.DisplayFmt);
 
 
             dgv_Path.Rows.Clear();
@@ -16217,9 +16217,9 @@ namespace OCD
 
             SetPathLayout();
 
-
-            cb_ToolRCompFunc.SelectedIndex = (int)Math.Round(CurrentGwMacro[10056]);
-            tb_ToolR.Text = CurrentGwMacro[10057].ToString(Units.DisplayFmt);
+            int shift = (CurrentEditGwNo - 1) * 200;
+            cb_ToolRCompFunc.SelectedIndex = (int)Math.Round(CurrentGwMacro[10056 + shift]);
+            tb_ToolR.Text = CurrentGwMacro[10057 + shift].ToString(Units.DisplayFmt);
             la_DiamOfsZ.Text = LanguageManager.LoadMessage(Units.langfile, "Message", 158, "Z軸補正");
 
 
@@ -16259,6 +16259,10 @@ namespace OCD
             btn_EditRightPath.Lamp = true;
 
             SetPathLayout();
+
+            int shift = (CurrentEditGwNo - 1) * 200;
+            cb_ToolRCompFunc.SelectedIndex = (int)Math.Round(CurrentGwMacro[10060 + shift]);
+            tb_ToolR.Text = CurrentGwMacro[10061 + shift].ToString(Units.DisplayFmt);
 
             dgv_Path.Rows.Clear();
             un_PathNum.la_Num.Text = "";
@@ -16331,14 +16335,14 @@ namespace OCD
             //邊緣10 mm轉像素
             double edge = 10.0 / rate;//pixel
 
-
+            int shift = (CurrentEditGwNo - 1) * 200;
             //背景色
             if (bNew)
             {
                 g.FillRectangle(new SolidBrush(Color.Black), new Rectangle(0, 0, pic_width, pic_height));
 
 
-                if (CurrentGwMacro[10004] == 1)//GW2 外圓
+                if (CurrentGwMacro[10004 + shift] == 0)// 外圓
                 {
                     //外圓砂輪
                     int sx = (int)Math.Round(edge);
@@ -16391,7 +16395,7 @@ namespace OCD
 
                     double ox;//原點
                     double oy;//原點
-                    if (CurrentGwMacro[10004] == 1)//外圓修整方向不同
+                    if (CurrentGwMacro[10004 + shift] == 0)//外圓修整方向不同
                     {
                         if (origin == PathOrigin.Right)//右原點
                         {
@@ -16943,20 +16947,20 @@ namespace OCD
             if (dgwFile.LeftList.Count > 0) mode |= 1;//成形模式 - 包含左側修整
             if (dgwFile.DiamList.Count > 0) mode |= 2;//成形模式 - 包含外徑修整
             if (dgwFile.RightList.Count > 0) mode |= 4;//成形模式 - 包含右側修整(預留)
-            CurrentGwMacro[10048] = mode;//成形模式
+            CurrentGwMacro[10048 + shift] = mode;//成形模式
 
             tb_DiamOfsZ.Text = dgwFile.DGWDiamOffsetZ.ToString(Units.DisplayFmt);
-            CurrentGwMacro[10049] = dgwFile.DGWDiamOffsetZ;//成形外徑修整Z軸補正
-            CurrentGwMacro[10050] = dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].X * 2 : 0; //左側起始位置X
-            CurrentGwMacro[10051] = dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].Z : 0;//左側起始位置Z
-            CurrentGwMacro[10052] = dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].X * 2 : 0;//外徑起始位置X
-            CurrentGwMacro[10053] = dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].Z : 0;//外徑起始位置Z
-            CurrentGwMacro[10054] = dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].X * 2 : 0;//右側起始位置X
-            CurrentGwMacro[10055] = dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].Z : 0;//右側起始位置Z
-            CurrentGwMacro[10056] = dgwFile.Diam_ToolComp;//外徑刀尖補償方式
-            CurrentGwMacro[10057] = dgwFile.Diam_ToolR;//外徑刀尖半徑
-            CurrentGwMacro[10058] = dgwFile.Left_ToolComp;//左側刀尖補償方式
-            CurrentGwMacro[10059] = dgwFile.Left_ToolR;//左側刀尖半徑
+            CurrentGwMacro[10049 + shift] = dgwFile.DGWDiamOffsetZ;//成形外徑修整Z軸補正
+            CurrentGwMacro[10050 + shift] = dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].X * 2 : 0; //左側起始位置X
+            CurrentGwMacro[10051 + shift] = dgwFile.LeftList.Count > 0 ? dgwFile.LeftList[0].Z : 0;//左側起始位置Z
+            CurrentGwMacro[10052 + shift] = dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].X * 2 : 0;//外徑起始位置X
+            CurrentGwMacro[10053 + shift] = dgwFile.DiamList.Count > 0 ? dgwFile.DiamList[0].Z : 0;//外徑起始位置Z
+            CurrentGwMacro[10054 + shift] = dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].X * 2 : 0;//右側起始位置X
+            CurrentGwMacro[10055 + shift] = dgwFile.RightList.Count > 0 ? dgwFile.RightList[0].Z : 0;//右側起始位置Z
+            CurrentGwMacro[10056 + shift] = dgwFile.Diam_ToolComp;//外徑刀尖補償方式
+            CurrentGwMacro[10057 + shift] = dgwFile.Diam_ToolR;//外徑刀尖半徑
+            CurrentGwMacro[10058 + shift] = dgwFile.Left_ToolComp;//左側刀尖補償方式
+            CurrentGwMacro[10059 + shift] = dgwFile.Left_ToolR;//左側刀尖半徑
 
             DrawPath(dgwFile.LeftList, Color.Aqua, PathOrigin.Left, pic_PathPreview, true, -1);
             DrawPath(dgwFile.DiamList, Color.Lime, PathOrigin.Left, pic_PathPreview, false, -1);
@@ -16981,11 +16985,11 @@ namespace OCD
             if (double.TryParse(tb_DiamOfsZ.Text, out double offset_z)) dgwFile.DGWDiamOffsetZ = offset_z;
             else dgwFile.DGWDiamOffsetZ = 0;
 
-
-            dgwFile.Diam_ToolComp = CurrentGwMacro[10056];
-            dgwFile.Diam_ToolR = CurrentGwMacro[10057];
-            dgwFile.Left_ToolComp = CurrentGwMacro[10058];
-            dgwFile.Left_ToolR = CurrentGwMacro[10059];
+            int shift = (CurrentEditGwNo - 1) * 200;
+            dgwFile.Diam_ToolComp = CurrentGwMacro[10056 + shift];
+            dgwFile.Diam_ToolR = CurrentGwMacro[10057 + shift];
+            dgwFile.Left_ToolComp = CurrentGwMacro[10058 + shift];
+            dgwFile.Left_ToolR = CurrentGwMacro[10059 + shift];
 
             dgwFile.SaveToFile(dialog.FileName);
         }
@@ -19323,6 +19327,7 @@ namespace OCD
             pic_ODCenterPos_Gw1_X1.Visible = false;
             pic_ODCenterPos_Gw1_X2.Visible = false;
             tc_PositionSet.SelectedTab = tab_PosSet_IDCenterPos;
+            gb_WorkCenterPosWay.Visible = false;
             //if (MachType == MachineType.OIG_R)
             {
                 Label[] buf1 = { la_PosSetMach1, la_PosSetMach2, la_PosSetMach3, la_PosSetMach4, la_PosSetMach5, la_PosSetMach6 };
@@ -19733,6 +19738,7 @@ namespace OCD
 
         private void un_PathNum_OnBtnOkClick(object sender, EventArgs e)
         {
+            int shift = (CurrentEditGwNo - 1) * 200;
             if (tb_SelectTextBox != null) //有選擇欄位
             {
                 double.TryParse(un_PathNum.la_Num.Text, out double v);
@@ -19743,20 +19749,26 @@ namespace OCD
                     if (btn_EditDiamPath.Lamp)
                     {
                         dgwFile.Diam_ToolR = v;
-                        CurrentGwMacro[10057] = v;//修外徑 刀尖半徑
+                        CurrentGwMacro[10057 + shift] = v;//修外徑 刀尖半徑
                                                   //WriteGwMacro(CurrentEditGwNo, 10057, v);
                     }
-                    else
+                    else if (btn_EditLeftPath.Lamp)
                     {
                         dgwFile.Left_ToolR = v;
-                        CurrentGwMacro[10059] = v;//修左側 刀尖半徑
+                        CurrentGwMacro[10059 + shift] = v;//修左側 刀尖半徑
                                                   //WriteGwMacro(CurrentEditGwNo, 10059, v);
+                    }
+                    else if (btn_EditRightPath.Lamp)
+                    {
+                        dgwFile.Right_ToolR = v;
+                        CurrentGwMacro[10061 + shift] = v;//修左側 刀尖半徑
+                                                          //WriteGwMacro(CurrentEditGwNo, 10059, v);
                     }
                 }
                 else if (tb_SelectTextBox == tb_DiamOfsZ)
                 {
                     dgwFile.DGWDiamOffsetZ = v;
-                    CurrentGwMacro[10049] = v;
+                    CurrentGwMacro[10049 + shift] = v;
                     //WriteGwMacro(CurrentEditGwNo, 10049, v);//外徑修整Z軸補正
                 }
                 return; // 跳過後面路徑 DataGridView 
@@ -19808,7 +19820,7 @@ namespace OCD
                 feed = list[row].Feed;
                 if (feed == 0) //例外處理 數值零預設給 修整條件的速度
                 {
-                    feed = CurrentGwMacro[10025];
+                    feed = CurrentGwMacro[10025 + shift];
                     list[row].Feed = feed;
                 }
             }
@@ -19820,7 +19832,7 @@ namespace OCD
                 feed = list[row].Feed;
                 if (feed == 0) //例外處理 數值零預設給 修整條件的速度
                 {
-                    feed = CurrentGwMacro[10017];
+                    feed = CurrentGwMacro[10017 + shift];
                     list[row].Feed = feed;
                 }
             }
@@ -19832,7 +19844,7 @@ namespace OCD
                 feed = list[row].Feed;
                 if (feed == 0) //例外處理 數值零預設給 修整條件的速度
                 {
-                    feed = CurrentGwMacro[10033];
+                    feed = CurrentGwMacro[10033 + shift];
                     list[row].Feed = feed;
                 }
                 dir = PathOrigin.Right;
@@ -19933,14 +19945,16 @@ namespace OCD
             dgwFile.DiamList.Clear();
             dgwFile.RightList.Clear();
 
-            int shift = (CurrentEditGwNo - 1) * 100;
-            CurrentGwMacro[10056] = 0; //外徑刀尖半徑補償方式
-            CurrentGwMacro[10057] = 0;//外徑刀尖半徑
-            CurrentGwMacro[10058] = 0;//左側刀尖半徑補償方式
-            CurrentGwMacro[10059] = 0;//左側刀尖半徑
+            int shift = (CurrentEditGwNo - 1) * 200;
+            CurrentGwMacro[10056 + shift] = 0; //外徑刀尖半徑補償方式
+            CurrentGwMacro[10057 + shift] = 0;//外徑刀尖半徑
+            CurrentGwMacro[10058 + shift] = 0;//左側刀尖半徑補償方式
+            CurrentGwMacro[10059 + shift] = 0;//左側刀尖半徑
+            CurrentGwMacro[10060 + shift] = 0;//右側刀尖半徑補償方式
+            CurrentGwMacro[10061 + shift] = 0;//右側刀尖半徑
 
             tb_DiamOfsZ.Text = Units.DisplayFmt;
-            CurrentGwMacro[10049] = 0;//外徑修整Z軸補正
+            CurrentGwMacro[10049 + shift] = 0;//外徑修整Z軸補正
 
             cb_ToolRCompFunc.SelectedIndex = 0;
             tb_ToolR.Text = Units.DisplayFmt;
@@ -19957,26 +19971,27 @@ namespace OCD
 
             double feed = 0;
 
-
+            int shift = (CurrentEditGwNo - 1) * 200;
+           
             List<DGWData> list = null;
             Color color = Color.Black;
             PathOrigin dir = PathOrigin.Left;
             if (btn_EditLeftPath.Lamp)
             {
                 list = dgwFile.LeftList;
-                feed = CurrentGwMacro[10025];
+                feed = CurrentGwMacro[10025 + shift];
                 color = Color.Aqua;
             }
             else if (btn_EditDiamPath.Lamp)
             {
                 list = dgwFile.DiamList;
-                feed = CurrentGwMacro[10017];
+                feed = CurrentGwMacro[10017 + shift];
                 color = Color.Lime;
             }
             else if (btn_EditRightPath.Lamp)
             {
                 list = dgwFile.RightList;
-                feed = CurrentGwMacro[10033];
+                feed = CurrentGwMacro[10033 + shift];
                 color = Color.Yellow;
                 dir = PathOrigin.Right;
             }
@@ -20024,7 +20039,8 @@ namespace OCD
             }
             int index = dgv_Path.CurrentRow.Index;
 
-
+            int shift = (CurrentEditGwNo - 1) * 200;
+            
             double feed = 0;
             List<DGWData> list = null;
             Color color = Color.Black;
@@ -20033,21 +20049,21 @@ namespace OCD
             PathOrigin dir = PathOrigin.Left;
             if (btn_EditLeftPath.Lamp)
             {
-                feed = CurrentGwMacro[10025];
+                feed = CurrentGwMacro[10025 + shift];
                 data.Feed = feed;
                 list = dgwFile.LeftList;
                 color = Color.Aqua;
             }
             else if (btn_EditDiamPath.Lamp)
             {
-                feed = CurrentGwMacro[10017];
+                feed = CurrentGwMacro[10017 + shift];
                 data.Feed = feed;
                 list = dgwFile.DiamList;
                 color = Color.Lime;
             }
             else if (btn_EditRightPath.Lamp)
             {
-                feed = CurrentGwMacro[10033];
+                feed = CurrentGwMacro[10033 + shift];
                 data.Feed = feed;
                 list = dgwFile.RightList;
                 color = Color.Yellow;
@@ -20093,7 +20109,7 @@ namespace OCD
             }
 
             int index = dgv_Path.CurrentRow.Index + 1;
-
+            int shift = (CurrentEditGwNo - 1) * 200;
             double feed = 0;
             List<DGWData> list = null;
             Color color = Color.Black;
@@ -20102,21 +20118,21 @@ namespace OCD
             PathOrigin dir = PathOrigin.Left;
             if (btn_EditLeftPath.Lamp)
             {
-                feed = CurrentGwMacro[10025];
+                feed = CurrentGwMacro[10025 + shift];
                 data.Feed = feed;
                 list = dgwFile.LeftList;
                 color = Color.Aqua;
             }
             else if (btn_EditDiamPath.Lamp)
             {
-                feed = CurrentGwMacro[10017];
+                feed = CurrentGwMacro[10017 + shift];
                 data.Feed = feed;
                 list = dgwFile.DiamList;
                 color = Color.Lime;
             }
             else if (btn_EditRightPath.Lamp)
             {
-                feed = CurrentGwMacro[10033];
+                feed = CurrentGwMacro[10033 + shift];
                 data.Feed = feed;
                 list = dgwFile.RightList;
                 color = Color.Yellow;
@@ -20380,16 +20396,24 @@ namespace OCD
             int index = cb_ToolRCompFunc.SelectedIndex;
             //例外處理
             if (index < 0) return;
-
+            int shift = (CurrentEditGwNo - 1) * 200;
             if (btn_EditDiamPath.Lamp)
             {
-                CurrentGwMacro[10056] = index; //外徑 刀尖半徑補償方式
+                CurrentGwMacro[10056 + shift] = index; //外徑 刀尖半徑補償方式
                                                //WriteGwMacro(CurrentEditGwNo, 10056, index);
+                dgwFile.Diam_ToolComp = index;
             }
-            else
+            else if(btn_EditLeftPath.Lamp)
             {
-                CurrentGwMacro[10058] = index;//左側 刀尖半徑補償方式
+                CurrentGwMacro[10058 + shift] = index;//左側 刀尖半徑補償方式
                                               //WriteGwMacro(CurrentEditGwNo, 10058, index);
+                dgwFile.Left_ToolComp = index;
+            }
+            else if (btn_EditRightPath.Lamp)
+            {
+                CurrentGwMacro[10060 + shift] = index;//右側 刀尖半徑補償方式
+                                              //WriteGwMacro(CurrentEditGwNo, 10060, index);
+                dgwFile.Right_ToolComp = index;
             }
         }
 
@@ -20945,7 +20969,9 @@ namespace OCD
                 focas.WriteMacro(10056 + shift, CurrentGwMacro[10056 + shift]);//外徑刀尖功能
                 focas.WriteMacro(10057 + shift, CurrentGwMacro[10057 + shift]);//外徑刀尖半徑
                 focas.WriteMacro(10058 + shift, CurrentGwMacro[10058 + shift]);//左側刀尖功能
-                focas.WriteMacro(10059 + shift, CurrentGwMacro[10059 + shift]);//左側刀尖半徑           
+                focas.WriteMacro(10059 + shift, CurrentGwMacro[10059 + shift]);//左側刀尖半徑
+                focas.WriteMacro(10060 + shift, CurrentGwMacro[10060 + shift]);//右側刀尖功能
+                focas.WriteMacro(10061 + shift, CurrentGwMacro[10061 + shift]);//右側刀尖半徑  
 
             }));
             WritePath();//將路徑寫到控制器 GW1:O8002, GW2:O8003, GW3:O8004
@@ -21942,7 +21968,6 @@ namespace OCD
             ini.WriteBool("UI", "YAEnable", ch_YAEnable.Checked);
             bYAEnable = ch_YAEnable.Checked;
         }
-
     }
 }
 
@@ -21979,7 +22004,8 @@ public class DGWFile
     public double Diam_ToolR;//外徑刀尖半徑
     public double Left_ToolComp;//左側刀尖功能
     public double Left_ToolR;//左側刀尖半徑
-
+    public double Right_ToolComp;//左側刀尖功能
+    public double Right_ToolR;//左側刀尖半徑
     public DGWFile()
     {
     }
@@ -22025,7 +22051,13 @@ public class DGWFile
                 if (double.TryParse(xmlPath.GetAttribute("OffsetZ"), out double offset_z)) DGWDiamOffsetZ = offset_z;
                 else DGWDiamOffsetZ = 0;
             }
-
+            if (xmlPath.Name == "Right")
+            {
+                if (double.TryParse(xmlPath.GetAttribute("ToolComp"), out double r_tool_comp)) Right_ToolComp = r_tool_comp;
+                else Right_ToolComp = 0;
+                if (double.TryParse(xmlPath.GetAttribute("ToolR"), out double r_tool_r)) Right_ToolR = r_tool_r;
+                else r_tool_r = 0;
+            }
             for (int i = 0; i < xmlPath.ChildNodes.Count; i++)
             {
                 XmlElement xmlNode = (XmlElement)xmlPath.ChildNodes[i];
@@ -22087,6 +22119,9 @@ public class DGWFile
         diam.SetAttribute("ToolComp", Diam_ToolComp.ToString("0"));
         diam.SetAttribute("ToolR", Diam_ToolR.ToString(Units.DisplayFmt));
         diam.SetAttribute("OffsetZ", DGWDiamOffsetZ.ToString(Units.DisplayFmt));
+
+        right.SetAttribute("ToolComp", Right_ToolComp.ToString("0"));
+        right.SetAttribute("ToolR", Right_ToolR.ToString(Units.DisplayFmt));
 
         foreach (DGWData data in LeftList)
         {

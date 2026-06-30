@@ -653,7 +653,7 @@
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="9" Name="ŚR.ZEW Right Taper Traverse">
+  <Process ID="9" Name="ŚR.ZEW zewnętrzna Przelotowe stożkowe">
     <PCode No="19801" Name="Process number"/>
 	<PCode No="19880" Name="Numer ściernicy">
 	  <Text Value="1" Name="Ściernicy1"/>
@@ -827,7 +827,7 @@
       <Text Value="1" Name="Obroty w lewo"/>
     </PCode>
   </Process>
-  <Process ID="10" Name="ŚR.ZEW Szlifow. przelo. pra. czoła">
+  <Process ID="10" Name="ŚR.ZEW zewnętrzna Prawa powierzchnia">
     <PCode No="19801" Name="Process number"/>
 	<PCode No="19880" Name="Numer ściernicy">
 	  <Text Value="1" Name="Ściernicy1"/>
