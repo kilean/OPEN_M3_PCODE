@@ -42,12 +42,12 @@
   <Macro No="10040" Min="0" Max="0" Unit="mm" Memo="錐度直線幅"/>
   <Macro No="10041" Min="0" Max="0" Unit="mm" Memo="錐度幅"/>
   <Macro No="10042" Min="0" Max="0" Unit="deg" Memo="錐度修整角度"/>
-  <Macro No="10043" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10043" Min="0" Max="0" Unit="" Memo="端面逃離長(斜頭)"/>
   <Macro No="10044" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10045" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10046" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10047" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10048" Min="0" Max="0" Unit="" Memo="GW1 成形模式"/>
+  <Macro No="10048" Min="0" Max="0" Unit="" Memo="GW 成形模式"/>
   <Macro No="10049" Min="0" Max="0" Unit="mm" Memo="成形外徑修整Z軸補正"/>
   <Macro No="10050" Min="0" Max="0" Unit="mm" Memo="成形左端X起點"/>
   <Macro No="10051" Min="0" Max="0" Unit="mm" Memo="成形左端Z起點"/>
@@ -59,38 +59,38 @@
   <Macro No="10057" Min="0" Max="0" Unit="mm" Memo="外徑：刀尖半徑"/>
   <Macro No="10058" Min="0" Max="0" Unit="" Memo="左側：刀尖半徑補償方式"/>
   <Macro No="10059" Min="0" Max="0" Unit="mm" Memo="左側：刀尖半徑"/>
-  <Macro No="10060" Min="0" Max="0" Unit="" Memo="砂輪恆速使用"/>
-  <Macro No="10061" Min="0" Max="0" Unit="" Memo="砂輪恆速修砂使用"/>
-  <Macro No="10062" Min="0" Max="0" Unit="" Memo="研磨中線速度轉速"/>
-  <Macro No="10063" Min="0" Max="0" Unit="" Memo="修整中線速度轉速"/>
-  <Macro No="10064" Min="0" Max="0" Unit="" Memo="研磨中砂輪線速度"/>
-  <Macro No="10065" Min="0" Max="0" Unit="" Memo="修整中砂輪線速度"/>
-  <Macro No="10066" Min="0" Max="0" Unit="mm" Memo="G54 X座標"/>
-  <Macro No="10067" Min="0" Max="0" Unit="mm" Memo="G54 Z座標"/>
-  <Macro No="10068" Min="0" Max="0" Unit="mm" Memo="G55 X座標"/>
-  <Macro No="10069" Min="0" Max="0" Unit="mm" Memo="G55 Z座標"/>
-  <Macro No="10070" Min="0" Max="0" Unit="mm" Memo="G56 X座標"/>
-  <Macro No="10071" Min="0" Max="0" Unit="mm" Memo="G56 Z座標"/>
-  <Macro No="10072" Min="0" Max="0" Unit="mm" Memo="G56 X座標"/>
-  <Macro No="10073" Min="0" Max="0" Unit="mm" Memo="G56 Z座標"/>
-  <Macro No="10074" Min="0" Max="0" Unit="mm" Memo="G58 X座標"/>
-  <Macro No="10075" Min="0" Max="0" Unit="mm" Memo="G58 Z座標"/>
-  <Macro No="10076" Min="0" Max="0" Unit="mm" Memo="G59 X座標"/>
-  <Macro No="10077" Min="0" Max="0" Unit="mm" Memo="G59 Z座標"/>
+  <Macro No="10060" Min="0" Max="0" Unit="" Memo="右側：刀尖半徑補償方式"/>
+  <Macro No="10061" Min="0" Max="0" Unit="" Memo="右側：刀尖半徑"/>
+  <Macro No="10062" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10063" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10064" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10065" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10066" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10067" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10068" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10069" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10070" Min="0" Max="0" Unit="mm" Memo="修整座形式"/>
+  <Macro No="10071" Min="0" Max="0" Unit="mm" Memo="修整滾輪轉速(工件主軸式)"/>
+  <Macro No="10072" Min="0" Max="0" Unit="mm" Memo="修整滾輪正反轉選擇"/>
+  <Macro No="10073" Min="0" Max="0" Unit="mm" Memo="修整不補正加工座標"/>
+  <Macro No="10074" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10075" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10076" Min="0" Max="0" Unit="mm" Memo=""/>
+  <Macro No="10077" Min="0" Max="0" Unit="mm" Memo=""/>
   <Macro No="10078" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10079" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10080" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10081" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10082" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10083" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10084" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10085" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10080" Min="0" Max="0" Unit="" Memo="砂輪恆速使用"/>
+  <Macro No="10081" Min="0" Max="0" Unit="" Memo="砂輪恆速修砂使用"/>
+  <Macro No="10082" Min="0" Max="0" Unit="" Memo="研磨中線速度轉速"/>
+  <Macro No="10083" Min="0" Max="0" Unit="" Memo="修整中線速度轉速"/>
+  <Macro No="10084" Min="0" Max="0" Unit="" Memo="研磨中砂輪線速度"/>
+  <Macro No="10085" Min="0" Max="0" Unit="" Memo="修整中砂輪線速度"/>
   <Macro No="10086" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10087" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10088" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10089" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10090" Min="0" Max="0" Unit="" Memo=""/>
-  <Macro No="10091" Min="0" Max="0" Unit="" Memo=""/>
+  <Macro No="10090" Min="0" Max="0" Unit="" Memo="公制內圓中心位置"/>
+  <Macro No="10091" Min="0" Max="0" Unit="" Memo="英制內圓中心位置"/>
   <Macro No="10092" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10093" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10094" Min="0" Max="0" Unit="" Memo=""/>
@@ -99,7 +99,19 @@
   <Macro No="10097" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10098" Min="0" Max="0" Unit="" Memo=""/>
   <Macro No="10099" Min="0" Max="0" Unit="" Memo=""/>
-
+  <Macro No="10100" Min="0" Max="0" Unit="" Memo="G54 X座標"/>
+  <Macro No="10101" Min="0" Max="0" Unit="" Memo="G54 Z座標"/>
+  <Macro No="10102" Min="0" Max="0" Unit="" Memo="G55 X座標"/>
+  <Macro No="10103" Min="0" Max="0" Unit="" Memo="G55 Z座標"/>
+  <Macro No="10104" Min="0" Max="0" Unit="" Memo="G56 X座標"/>
+  <Macro No="10105" Min="0" Max="0" Unit="" Memo="G56 Z座標"/>
+  <Macro No="10106" Min="0" Max="0" Unit="" Memo="G56 X座標"/>
+  <Macro No="10107" Min="0" Max="0" Unit="" Memo="G56 Z座標"/>
+  <Macro No="10108" Min="0" Max="0" Unit="" Memo="G58 X座標"/>
+  <Macro No="10109" Min="0" Max="0" Unit="" Memo="G58 Z座標"/>
+  <Macro No="10110" Min="0" Max="0" Unit="" Memo="G59 X座標"/>
+  <Macro No="10111" Min="0" Max="0" Unit="" Memo="G59 Z座標"/>
+ 	
   <Macro No="15000" Min="0" Max="0" Unit="mm" Memo="砂輪內徑X軸安全行程"/>
   <Macro No="15001" Min="0" Max="0" Unit="mm" Memo="砂輪內徑Z軸安全行程"/>
   <Macro No="15002" Min="0" Max="0" Unit="mm/min" Memo="砂輪內徑X軸安全行程速度"/>

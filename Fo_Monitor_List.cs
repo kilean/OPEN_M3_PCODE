@@ -126,9 +126,9 @@ namespace OCD
 
         private void ch_GrindMode_Click(object sender, EventArgs e)
         {
-            Units.Fo_Main.pa_GrindInfo.Visible = ch_SpindleRate.Checked;
+            Units.Fo_Main.pa_GrindInfo.Visible = ch_GrindMode.Checked;
             TIniFile ini = new TIniFile(Application.StartupPath + "\\sys.ini");
-            ini.WriteInteger("UI", Units.Fo_Main.pa_Spindle2.Name, ch_SpindleRate.Checked ? 1 : 0);
+            ini.WriteInteger("UI", Units.Fo_Main.pa_GrindInfo.Name, ch_GrindMode.Checked ? 1 : 0);
         }
 
         private void Fo_Monitor_List_Load(object sender, EventArgs e)

@@ -188,7 +188,7 @@
             treeNode80,
             treeNode81,
             treeNode82});
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("MachineSetting", 32, 32, new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("MachineSetting", 42, 32, new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode16,
             treeNode24,
@@ -247,6 +247,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(512, 8);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(488, 264);
             this.dataGridView1.TabIndex = 1;
@@ -256,6 +257,7 @@
             // 
             this.Col_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Col_Name.HeaderText = "名稱";
+            this.Col_Name.MinimumWidth = 6;
             this.Col_Name.Name = "Col_Name";
             this.Col_Name.ReadOnly = true;
             this.Col_Name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -264,6 +266,7 @@
             // 
             this.Col_Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Col_Value.HeaderText = "數值";
+            this.Col_Value.MinimumWidth = 6;
             this.Col_Value.Name = "Col_Value";
             this.Col_Value.ReadOnly = true;
             this.Col_Value.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -271,10 +274,12 @@
             // Col_TreeNode
             // 
             this.Col_TreeNode.HeaderText = "節點(隱藏)";
+            this.Col_TreeNode.MinimumWidth = 6;
             this.Col_TreeNode.Name = "Col_TreeNode";
             this.Col_TreeNode.ReadOnly = true;
             this.Col_TreeNode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Col_TreeNode.Visible = false;
+            this.Col_TreeNode.Width = 125;
             // 
             // treeView1
             // 
@@ -615,7 +620,7 @@
             treeNode83.Name = "N_ProcessList";
             treeNode83.SelectedImageIndex = 33;
             treeNode83.Text = "工序清單";
-            treeNode84.ImageIndex = 32;
+            treeNode84.ImageIndex = 42;
             treeNode84.Name = "N_MachineSetting";
             treeNode84.SelectedImageIndex = 32;
             treeNode84.Text = "MachineSetting";
@@ -662,12 +667,22 @@
             this.imageList1.Images.SetKeyName(28, "OCD2_Shape8.png");
             this.imageList1.Images.SetKeyName(29, "NULL.png");
             this.imageList1.Images.SetKeyName(30, "NULL.png");
-            this.imageList1.Images.SetKeyName(31, "Setting.png");
-            this.imageList1.Images.SetKeyName(32, "Machine.png");
-            this.imageList1.Images.SetKeyName(33, "Edit.png");
-            this.imageList1.Images.SetKeyName(34, "OIG_DressGW.png");
-            this.imageList1.Images.SetKeyName(35, "OCD_DressGW.png");
-            this.imageList1.Images.SetKeyName(36, "Tool.png");
+            this.imageList1.Images.SetKeyName(31, "OCD3_Shape1.png");
+            this.imageList1.Images.SetKeyName(32, "NULL.png");
+            this.imageList1.Images.SetKeyName(33, "OCD3_Shape3.png");
+            this.imageList1.Images.SetKeyName(34, "NULL.png");
+            this.imageList1.Images.SetKeyName(35, "NULL.png");
+            this.imageList1.Images.SetKeyName(36, "NULL.png");
+            this.imageList1.Images.SetKeyName(37, "OCD3_Shape7.png");
+            this.imageList1.Images.SetKeyName(38, "OCD3_Shape8.png");
+            this.imageList1.Images.SetKeyName(39, "NULL.png");
+            this.imageList1.Images.SetKeyName(40, "NULL.png");
+            this.imageList1.Images.SetKeyName(41, "Setting.png");
+            this.imageList1.Images.SetKeyName(42, "Machine.png");
+            this.imageList1.Images.SetKeyName(43, "Edit.png");
+            this.imageList1.Images.SetKeyName(44, "OIG_DressGW.png");
+            this.imageList1.Images.SetKeyName(45, "OCD_DressGW.png");
+            this.imageList1.Images.SetKeyName(46, "Tool.png");
             // 
             // Fo_UI_Setting
             // 

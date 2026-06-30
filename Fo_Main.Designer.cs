@@ -1284,6 +1284,8 @@
             this.Col_SoftPanel_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Col_SoftPanel_Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_MacroLimit = new System.Windows.Forms.TabPage();
+            this.cb_SelectGwMarco = new System.Windows.Forms.ComboBox();
+            this.la_SelectGwMarco = new System.Windows.Forms.Label();
             this.la_MacroLimittTitle = new System.Windows.Forms.Label();
             this.dgv_MacroLimit = new System.Windows.Forms.DataGridView();
             this.Col_MacroNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1894,7 +1896,7 @@
             this.la_Version.Name = "la_Version";
             this.la_Version.Size = new System.Drawing.Size(205, 25);
             this.la_Version.TabIndex = 10;
-            this.la_Version.Text = "Ver : 1.26.0629.1058";
+            this.la_Version.Text = "Ver : 1.26.0630.1014";
             // 
             // pa_Alarm
             // 
@@ -5318,7 +5320,6 @@
             this.tab_DressGwSetting.Size = new System.Drawing.Size(936, 561);
             this.tab_DressGwSetting.TabIndex = 13;
             this.tab_DressGwSetting.Text = "修砂對點";
-            this.tab_DressGwSetting.Click += new System.EventHandler(this.pic_DressTool_Click);
             this.tab_DressGwSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_DressGwSetting.Leave += new System.EventHandler(this.tab_DressGwSetting_Leave);
             // 
@@ -18843,6 +18844,8 @@
             // 
             // tab_MacroLimit
             // 
+            this.tab_MacroLimit.Controls.Add(this.cb_SelectGwMarco);
+            this.tab_MacroLimit.Controls.Add(this.la_SelectGwMarco);
             this.tab_MacroLimit.Controls.Add(this.la_MacroLimittTitle);
             this.tab_MacroLimit.Controls.Add(this.dgv_MacroLimit);
             this.tab_MacroLimit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -18854,6 +18857,26 @@
             this.tab_MacroLimit.UseVisualStyleBackColor = true;
             this.tab_MacroLimit.Paint += new System.Windows.Forms.PaintEventHandler(this.tab_Paint);
             this.tab_MacroLimit.Leave += new System.EventHandler(this.tab_MacroLimit_Leave);
+            // 
+            // cb_SelectGwMarco
+            // 
+            this.cb_SelectGwMarco.FormattingEnabled = true;
+            this.cb_SelectGwMarco.Location = new System.Drawing.Point(824, 112);
+            this.cb_SelectGwMarco.Name = "cb_SelectGwMarco";
+            this.cb_SelectGwMarco.Size = new System.Drawing.Size(105, 39);
+            this.cb_SelectGwMarco.TabIndex = 146;
+            this.cb_SelectGwMarco.SelectedIndexChanged += new System.EventHandler(this.cb_SelectGwMarco_SelectedIndexChanged);
+            // 
+            // la_SelectGwMarco
+            // 
+            this.la_SelectGwMarco.AutoSize = true;
+            this.la_SelectGwMarco.BackColor = System.Drawing.Color.Transparent;
+            this.la_SelectGwMarco.Location = new System.Drawing.Point(816, 72);
+            this.la_SelectGwMarco.Name = "la_SelectGwMarco";
+            this.la_SelectGwMarco.Size = new System.Drawing.Size(110, 31);
+            this.la_SelectGwMarco.TabIndex = 145;
+            this.la_SelectGwMarco.Text = "選譯砂輪";
+            this.la_SelectGwMarco.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // la_MacroLimittTitle
             // 
@@ -21001,6 +21024,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SoftPanelList)).EndInit();
             this.tab_MacroLimit.ResumeLayout(false);
+            this.tab_MacroLimit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MacroLimit)).EndInit();
             this.tab_MeasureList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MeasureList)).EndInit();
@@ -22403,6 +22427,8 @@
         public System.Windows.Forms.Label la_DressBaseMin;
         public System.Windows.Forms.TextBox TB_DressBaseMin;
         private System.Windows.Forms.CheckBox ch_YAEnable;
+        private System.Windows.Forms.Label la_SelectGwMarco;
+        private System.Windows.Forms.ComboBox cb_SelectGwMarco;
     }
 }
 
